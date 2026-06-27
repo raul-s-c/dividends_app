@@ -55,23 +55,8 @@ jobs:
           VERSION_CODE: ${{ inputs.versionCode }}
           VERSION_NAME: ${{ inputs.versionName }}
 
-      - name: Prepare signing key
-        run: |
-          if [ -n "$ANDROID_KEYSTORE_BASE64" ]; then
-            echo "$ANDROID_KEYSTORE_BASE64" | base64 -d > android/app/release.keystore
-            printf "storeFile=app/release.keystore\nstorePassword=%s\nkeyAlias=%s\nkeyPassword=%s\n" \
-              "$ANDROID_KEYSTORE_PASSWORD" "$ANDROID_KEY_ALIAS" "$ANDROID_KEY_PASSWORD" > android/keystore.properties
-          else
-            echo "No signing secrets configured; building release APK with debug signing fallback."
-          fi
-        env:
-          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
-          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
-          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
-          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
-
       - name: Build APK
-        run: gradle -p android assembleRelease
+        run: gradle -p android assembleDebug
 
       - name: Publish APK manifest
         run: |
@@ -86,8 +71,8 @@ jobs:
           notes = os.environ["NOTES"]
           release_dir = Path("releases")
           release_dir.mkdir(exist_ok=True)
-          apk_name = f"DividendCalendar-{version_name}.apk"
-          shutil.copyfile("android/app/build/outputs/apk/release/app-release.apk", release_dir / apk_name)
+          apk_name = f"DividendCalendar-{version_name}-debug.apk"
+          shutil.copyfile("android/app/build/outputs/apk/debug/app-debug.apk", release_dir / apk_name)
           manifest = {
               "versionCode": version_code,
               "versionName": version_name,

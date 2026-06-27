@@ -86,7 +86,7 @@ Para construir/publicar un APK sin pasarlo manualmente:
 4. El workflow compila el APK y actualiza:
 
 ```text
-releases/DividendCalendar-<version>.apk
+releases/DividendCalendar-<version>-debug.apk
 releases/update.json
 ```
 
@@ -98,7 +98,7 @@ https://raw.githubusercontent.com/raul-s-c/dividends_app/main/releases/update.js
 
 Ese manifest sigue el mismo patron que `nubeplay-releases`: contiene
 `versionCode`, `versionName`, `apkUrl` y `notes`. Si hay una version superior,
-la app ofrece descargar e instalar el APK.
+la app ofrece abrir la descarga del APK.
 
 Para que una APK pueda actualizar encima de la anterior, configura en GitHub
 estos secretos con un keystore estable:
@@ -110,8 +110,9 @@ ANDROID_KEY_ALIAS
 ANDROID_KEY_PASSWORD
 ```
 
-Si no existen, el workflow usa firma debug como fallback para pruebas. Para Play
-Store o distribucion estable hay que firmar APK/AAB release con keystore fijo.
+Ahora el workflow publica APK debug para que el primer ciclo sea simple. Para
+Play Store o distribucion estable hay que firmar APK/AAB release con keystore
+fijo y cambiar el workflow a `assembleRelease`.
 
 ## ETFs
 

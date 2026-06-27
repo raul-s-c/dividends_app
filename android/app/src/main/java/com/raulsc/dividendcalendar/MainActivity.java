@@ -11,7 +11,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.provider.Settings;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -20,8 +19,6 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.core.content.FileProvider;
 
 import org.json.JSONObject;
 
@@ -317,34 +314,13 @@ public class MainActivity extends Activity {
         new AlertDialog.Builder(this)
                 .setTitle("Nueva versión " + versionName)
                 .setMessage(notes)
-                .setPositiveButton("Descargar", (d, which) -> downloadAndInstall(apkUrl))
+                .setPositiveButton("Abrir descarga", (d, which) -> openDownload(apkUrl))
                 .setNegativeButton("Luego", null)
                 .show();
     }
 
-    private void downloadAndInstall(String apkUrl) {
-        status.setText("Descargando APK...");
-        executor.execute(() -> {
-            try {
-                File apk = new File(getCacheDir(), "DividendCalendar-update.apk");
-                download(apkUrl, apk);
-                main.post(() -> installApk(apk));
-            } catch (Exception ex) {
-                main.post(() -> toast("No se pudo descargar el APK."));
-            }
-        });
-    }
-
-    private void installApk(File apk) {
-        if (android.os.Build.VERSION.SDK_INT >= 26 && !getPackageManager().canRequestPackageInstalls()) {
-            startActivity(new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES, Uri.parse("package:" + getPackageName())));
-            toast("Autoriza instalaciones de esta app y vuelve a pulsar actualizar.");
-            return;
-        }
-        Uri uri = FileProvider.getUriForFile(this, getPackageName() + ".fileprovider", apk);
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setDataAndType(uri, "application/vnd.android.package-archive");
-        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_NEW_TASK);
+    private void openDownload(String apkUrl) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(apkUrl));
         startActivity(intent);
     }
 

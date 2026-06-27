@@ -16,7 +16,7 @@ Usa `Actions -> Build Android APK -> Run workflow`.
 El workflow genera:
 
 ```text
-releases/DividendCalendar-<version>.apk
+releases/DividendCalendar-<version>-debug.apk
 releases/update.json
 ```
 
@@ -33,5 +33,6 @@ ANDROID_KEY_ALIAS
 ANDROID_KEY_PASSWORD
 ```
 
-Si no existen, el workflow usa firma debug como fallback para pruebas. Para
-Play Store o distribucion estable hay que firmar release con un keystore fijo.
+Ahora el workflow publica APK debug para pruebas. Para Play Store o distribucion
+estable hay que firmar release con un keystore fijo y cambiar el workflow a
+`assembleRelease`.

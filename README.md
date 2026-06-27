@@ -7,7 +7,8 @@ importe por accion y, cuando esta disponible, `payment date`.
 ## Datos incluidos
 
 - `data/us_universe.csv`: universo base de 3.904 tickers USA (`NYSE`,
-  `Nasdaq`, `CBOE`) exportado desde el proyecto SEC original.
+  `Nasdaq`, `CBOE`) exportado desde el proyecto SEC original y ampliado con
+  ETFs/ETNs/fondos desde el screener ETF de Nasdaq.
 - `data/dividends.db`: base SQLite con los eventos de dividendos.
 - `nasdaq_calendar`: fuente principal para `ex_dividend_date`, `pay_date`,
   `record_date`, `declaration_date` e importe.
@@ -37,7 +38,13 @@ El workflow usa actualizacion incremental:
 Comando diario:
 
 ```powershell
-python dividend_calendar_pipeline.py --source nasdaq --incremental --lookback-days 95 --forward-days 550 --workers 8 --include-unmatched
+python dividend_calendar_pipeline.py --daily-update --lookback-days 95 --forward-days 550 --workers 8
+```
+
+Actualizar solo el universo USA/ETF sin tocar dividendos:
+
+```powershell
+python dividend_calendar_pipeline.py --universe-only --workers 8
 ```
 
 Despues valida que haya eventos y commitea `data/dividends.db` si cambia.
@@ -47,7 +54,7 @@ Despues valida que haya eventos y commitea `data/dividends.db` si cambia.
 Actualizar datos:
 
 ```powershell
-python dividend_calendar_pipeline.py --source nasdaq --incremental --lookback-days 95 --forward-days 550 --workers 8 --include-unmatched
+python dividend_calendar_pipeline.py --daily-update --lookback-days 95 --forward-days 550 --workers 8
 ```
 
 O en Windows:
@@ -59,7 +66,7 @@ actualizar_dividendos.bat
 Rebuild amplio manual:
 
 ```powershell
-python dividend_calendar_pipeline.py --source nasdaq --rebuild --incremental --workers 8 --include-unmatched
+python dividend_calendar_pipeline.py --daily-update --rebuild --workers 8
 ```
 
 Abrir app:
@@ -118,6 +125,9 @@ fijo y cambiar el workflow a `assembleRelease`.
 
 Si. El pipeline ya soporta ETFs de forma practica:
 
+- `--daily-update` refresca primero `data/us_universe.csv` con ETFs/ETNs/fondos
+  del screener ETF de Nasdaq, no solo con valores presentes en SEC.
+- `--universe-only` permite actualizar solo ese universo de tickers.
 - `--include-unmatched` conserva eventos de Nasdaq que no estan en el universo
   SEC local.
 - Los no emparejados se clasifican como `ETF/Fund`, `Preferred`,
@@ -143,4 +153,5 @@ La base local actual contiene:
 - 21.746 eventos brutos.
 - 13.248 eventos desde `nasdaq_calendar`, todos con `pay_date`.
 - 8.498 eventos desde `yahoo_chart_dividends`.
-- 8.369 eventos clasificados como `ETF/Fund`.
+- 7.179 instrumentos en `data/us_universe.csv`.
+- 3.207 ETFs/ETNs/fondos unicos cargados desde el screener ETF.

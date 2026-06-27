@@ -22,14 +22,15 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Update Nasdaq calendar incrementally
+      - name: Daily universe and dividend update
         run: |
-          python dividend_calendar_pipeline.py --source nasdaq --incremental --lookback-days 95 --forward-days 550 --workers 8 --include-unmatched
+          python dividend_calendar_pipeline.py --daily-update --lookback-days 95 --forward-days 550 --workers 8
 
       - name: Validate database
         run: |
           python - <<'PY'
           import sqlite3
+          import csv
           conn = sqlite3.connect("data/dividends.db")
           total = conn.execute("select count(*) from dividend_events").fetchone()[0]
           nasdaq = conn.execute("select count(*) from dividend_events where source='nasdaq_calendar'").fetchone()[0]
@@ -38,10 +39,16 @@ jobs:
           if nasdaq == 0:
               raise SystemExit("No Nasdaq dividend events were loaded.")
           conn.close()
+          with open("data/us_universe.csv", encoding="utf-8", newline="") as fh:
+              rows = list(csv.DictReader(fh))
+          etfs = [r for r in rows if r.get("asset_type") in ("ETF/Fund", "Note/Bond")]
+          print({"universe": len(rows), "fund_like": len(etfs)})
+          if len(etfs) < 1000:
+              raise SystemExit("ETF/fund universe looks too small.")
           PY
 
       - name: Commit updated data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: update dividend calendar data"
-          file_pattern: data/dividends.db
+          file_pattern: data/dividends.db data/us_universe.csv

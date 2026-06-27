@@ -39,6 +39,7 @@ UNIVERSE_CSV = DATA_DIR / "us_universe.csv"
 REQ_TIMEOUT = 16
 YAHOO_SLEEP = 0.08
 DEFAULT_EXCHANGES = ("NYSE", "Nasdaq", "CBOE")
+NASDAQ_SCREENER_PAGE_SIZE = 50
 
 HTTP_HEADERS = {
     "User-Agent": "Mozilla/5.0 dividend-calendar-research/0.1",
@@ -172,6 +173,10 @@ def classify_unmatched_asset_type(company_name: str) -> str:
     return "Other Unmatched"
 
 
+def normalize_ticker(value: object) -> str:
+    return str(value or "").strip().upper().replace(".", "-")
+
+
 def get_conn() -> sqlite3.Connection:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(DIVIDENDS_DB, timeout=60)
@@ -256,14 +261,15 @@ def backfill_asset_types(conn: sqlite3.Connection) -> None:
     )
 
 
-def load_companies_from_csv(
+def read_companies_from_csv(
     ticker: str | None = None,
     exchanges: Iterable[str] = DEFAULT_EXCHANGES,
     limit: int | None = None,
+    include_non_stock: bool = True,
 ) -> list[Company]:
     if not UNIVERSE_CSV.exists():
         if ticker:
-            return [Company(ticker=ticker.strip().upper(), name="", exchange="", sector="", state="", asset_type="Unknown")]
+            return [Company(ticker=normalize_ticker(ticker), name="", exchange="", sector="", state="", asset_type="Unknown")]
         raise FileNotFoundError(f"Missing source database {FUNDAMENTALS_DB} and universe file {UNIVERSE_CSV}")
 
     exchange_set = {x.strip() for x in exchanges if x.strip()}
@@ -272,28 +278,31 @@ def load_companies_from_csv(
     with UNIVERSE_CSV.open("r", encoding="utf-8", newline="") as fh:
         reader = csv.DictReader(fh)
         for row in reader:
-            clean_ticker = str(row.get("ticker") or "").strip().upper()
+            clean_ticker = normalize_ticker(row.get("ticker"))
             if not clean_ticker or clean_ticker in seen:
                 continue
-            if ticker and clean_ticker != ticker.strip().upper():
+            asset_type = str(row.get("asset_type") or "Stock").strip() or "Stock"
+            if ticker and clean_ticker != normalize_ticker(ticker):
                 continue
-            if not ticker and exchange_set and str(row.get("exchange") or "").strip() not in exchange_set:
+            exchange = str(row.get("exchange") or "").strip()
+            is_non_stock = asset_type != "Stock"
+            if not ticker and exchange_set and exchange not in exchange_set and not (include_non_stock and is_non_stock):
                 continue
             seen.add(clean_ticker)
             companies.append(
                 Company(
                     ticker=clean_ticker,
                     name=str(row.get("name") or ""),
-                    exchange=str(row.get("exchange") or ""),
+                    exchange=exchange,
                     sector=str(row.get("sector") or ""),
                     state=str(row.get("state") or ""),
-                    asset_type=str(row.get("asset_type") or "Stock"),
+                    asset_type=asset_type,
                 )
             )
             if limit and len(companies) >= limit:
                 break
     if ticker and not companies:
-        companies.append(Company(ticker=ticker.strip().upper(), name="", exchange="", sector="", state="", asset_type="Unknown"))
+        companies.append(Company(ticker=normalize_ticker(ticker), name="", exchange="", sector="", state="", asset_type="Unknown"))
     return companies
 
 
@@ -302,8 +311,12 @@ def load_companies(
     exchanges: Iterable[str] = DEFAULT_EXCHANGES,
     limit: int | None = None,
 ) -> list[Company]:
+    csv_companies: list[Company] = []
+    if UNIVERSE_CSV.exists():
+        csv_companies = read_companies_from_csv(ticker=ticker, exchanges=exchanges, include_non_stock=True)
+
     if not FUNDAMENTALS_DB.exists():
-        return load_companies_from_csv(ticker=ticker, exchanges=exchanges, limit=limit)
+        return csv_companies[:limit] if limit else csv_companies
 
     exchange_list = [x.strip() for x in exchanges if x.strip()]
     params: list[object] = []
@@ -328,14 +341,14 @@ def load_companies(
     conn = sqlite3.connect(FUNDAMENTALS_DB)
     rows = conn.execute(sql, params).fetchall()
     conn.close()
-    companies: list[Company] = []
+    companies_by_ticker: dict[str, Company] = {}
     seen: set[str] = set()
     for ticker_value, name, exchange, sector, state in rows:
-        clean_ticker = str(ticker_value or "").strip().upper()
+        clean_ticker = normalize_ticker(ticker_value)
         if not clean_ticker or clean_ticker in seen:
             continue
         seen.add(clean_ticker)
-        companies.append(
+        companies_by_ticker[clean_ticker] = (
             Company(
                 ticker=clean_ticker,
                 name=str(name or ""),
@@ -345,9 +358,20 @@ def load_companies(
                 asset_type="Stock",
             )
         )
-    if ticker and not companies:
-        companies.append(Company(ticker=ticker.strip().upper(), name="", exchange="", sector="", state="", asset_type="Unknown"))
-    return companies
+    for company in csv_companies:
+        if company.ticker not in companies_by_ticker or company.asset_type != "Stock":
+            companies_by_ticker[company.ticker] = company
+    if ticker and not companies_by_ticker:
+        companies_by_ticker[normalize_ticker(ticker)] = Company(
+            ticker=normalize_ticker(ticker),
+            name="",
+            exchange="",
+            sector="",
+            state="",
+            asset_type="Unknown",
+        )
+    companies = sorted(companies_by_ticker.values(), key=lambda c: c.ticker)
+    return companies[:limit] if limit else companies
 
 
 def throttle() -> None:
@@ -415,6 +439,105 @@ def fetch_yahoo_dividends(company: Company, start_date: str, end_date: str) -> l
             }
         )
     return rows
+
+
+def fetch_nasdaq_etf_universe(workers: int = 4) -> list[Company]:
+    def fetch_page(offset: int) -> tuple[int, int, list[dict]]:
+        url = "https://api.nasdaq.com/api/screener/etf"
+        params = {"tableonly": "true", "limit": NASDAQ_SCREENER_PAGE_SIZE, "offset": offset}
+        headers = {
+            **HTTP_HEADERS,
+            "Origin": "https://www.nasdaq.com",
+            "Referer": "https://www.nasdaq.com/market-activity/etf/screener",
+        }
+        with urlopen(Request(url + "?" + urlencode(params), headers=headers), timeout=REQ_TIMEOUT) as response:
+            if response.status != 200:
+                raise RuntimeError(f"Nasdaq ETF screener status {response.status}")
+            payload = json.loads(response.read().decode("utf-8"))
+        records = ((payload.get("data") or {}).get("records") or {})
+        data = ((records.get("data") or {}).get("rows") or [])
+        total = int(records.get("totalrecords") or 0)
+        return offset, total, data
+
+    first_offset, total, first_rows = fetch_page(0)
+    offsets = list(range(NASDAQ_SCREENER_PAGE_SIZE, total, NASDAQ_SCREENER_PAGE_SIZE))
+    all_rows = list(first_rows)
+    if offsets:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, workers)) as executor:
+            futures = [executor.submit(fetch_page, offset) for offset in offsets]
+            for future in concurrent.futures.as_completed(futures):
+                _offset, _total, rows = future.result()
+                all_rows.extend(rows)
+
+    companies: list[Company] = []
+    seen: set[str] = set()
+    for row in all_rows:
+        ticker = normalize_ticker(row.get("symbol"))
+        if not ticker or ticker in seen:
+            continue
+        seen.add(ticker)
+        name = str(row.get("companyName") or "")
+        classified = classify_unmatched_asset_type(name)
+        companies.append(
+            Company(
+                ticker=ticker,
+                name=name,
+                exchange="US Listed",
+                sector="",
+                state="",
+                asset_type=classified if classified != "Other Unmatched" else "ETF/Fund",
+            )
+        )
+    return sorted(companies, key=lambda c: c.ticker)
+
+
+def update_us_universe(include_etfs: bool = True, workers: int = 4) -> dict:
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    existing: dict[str, dict] = {}
+    if UNIVERSE_CSV.exists():
+        with UNIVERSE_CSV.open("r", encoding="utf-8", newline="") as fh:
+            for row in csv.DictReader(fh):
+                ticker = normalize_ticker(row.get("ticker"))
+                if ticker:
+                    existing[ticker] = {
+                        "ticker": ticker,
+                        "name": row.get("name") or "",
+                        "exchange": row.get("exchange") or "",
+                        "sector": row.get("sector") or "",
+                        "state": row.get("state") or "",
+                        "asset_type": row.get("asset_type") or "Stock",
+                        "provider": row.get("provider") or "local",
+                        "updated_at": row.get("updated_at") or "",
+                    }
+
+    updated_at = now_utc()
+    etfs: list[Company] = []
+    if include_etfs:
+        etfs = fetch_nasdaq_etf_universe(workers=workers)
+        for etf in etfs:
+            existing[etf.ticker] = {
+                "ticker": etf.ticker,
+                "name": etf.name,
+                "exchange": etf.exchange,
+                "sector": etf.sector,
+                "state": etf.state,
+                "asset_type": etf.asset_type,
+                "provider": "nasdaq_etf_screener",
+                "updated_at": updated_at,
+            }
+
+    fields = ["ticker", "name", "exchange", "sector", "state", "asset_type", "provider", "updated_at"]
+    with UNIVERSE_CSV.open("w", encoding="utf-8", newline="") as fh:
+        writer = csv.DictWriter(fh, fieldnames=fields)
+        writer.writeheader()
+        for ticker in sorted(existing):
+            writer.writerow({field: existing[ticker].get(field, "") for field in fields})
+
+    return {
+        "universe_rows": len(existing),
+        "etfs_loaded": len(etfs),
+        "universe_file": str(UNIVERSE_CSV),
+    }
 
 
 def fetch_nasdaq_calendar(day: date, companies_by_ticker: dict[str, Company], include_unmatched: bool = False) -> list[dict]:
@@ -670,6 +793,31 @@ def run_nasdaq_calendar(
     }
 
 
+def run_daily_update(
+    start_date: str,
+    end_date: str,
+    workers: int = 8,
+    lookback_days: int = 95,
+    forward_days: int = 550,
+    rebuild: bool = False,
+) -> dict:
+    if not start_date or not end_date:
+        start_date, end_date = rolling_window_dates(
+            rebuild=rebuild,
+            lookback_days=lookback_days,
+            forward_days=forward_days,
+        )
+    universe = update_us_universe(include_etfs=True, workers=max(1, min(workers, 8)))
+    dividends = run_nasdaq_calendar(
+        start_date=start_date,
+        end_date=end_date,
+        workers=workers,
+        include_unmatched=True,
+        reconcile_window=True,
+    )
+    return {"universe": universe, "dividends": dividends}
+
+
 def load_events(start_date: str, end_date: str, ticker: str | None = None) -> list[dict]:
     conn = get_conn()
     conn.row_factory = sqlite3.Row
@@ -701,6 +849,9 @@ def main() -> None:
     parser.add_argument("--exchanges", default="NYSE,Nasdaq,CBOE", help="Comma-separated source exchanges")
     parser.add_argument("--source", choices=["yahoo", "nasdaq", "both"], default="nasdaq")
     parser.add_argument("--include-unmatched", action="store_true", help="Keep Nasdaq rows not found in local SEC universe")
+    parser.add_argument("--update-universe", action="store_true", help="Refresh the local USA universe before dividends")
+    parser.add_argument("--universe-only", action="store_true", help="Refresh the local USA universe and exit")
+    parser.add_argument("--daily-update", action="store_true", help="Single production command: update USA universe and reconcile incremental dividends")
     parser.add_argument("--incremental", action="store_true", help="Use a rolling window and replace only that source/date range")
     parser.add_argument("--rebuild", action="store_true", help="Use a broad moving rebuild range instead of the incremental window")
     parser.add_argument("--lookback-days", type=int, default=95, help="Incremental lookback window; default is roughly one quarter")
@@ -714,7 +865,25 @@ def main() -> None:
     )
     start_date = args.start or default_start
     end_date = args.end or default_end
+    if args.daily_update:
+        result = run_daily_update(
+            start_date=start_date,
+            end_date=end_date,
+            workers=args.workers,
+            lookback_days=args.lookback_days,
+            forward_days=args.forward_days,
+            rebuild=args.rebuild,
+        )
+        print(f"Done: {result}")
+        return
+
     results = []
+    if args.update_universe or args.universe_only:
+        universe_result = update_us_universe(include_etfs=True, workers=max(1, min(args.workers, 8)))
+        if args.universe_only:
+            print(f"Done: {universe_result}")
+            return
+        results.append(universe_result)
     if args.source in ("yahoo", "both"):
         results.append(
             run_yahoo(

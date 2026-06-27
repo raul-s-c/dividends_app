@@ -35,11 +35,24 @@ FUNDAMENTALS_DB = SOURCE_DATA_DIR / "fundamentals.db"
 DATA_DIR = APP_DIR / "data"
 DIVIDENDS_DB = DATA_DIR / "dividends.db"
 UNIVERSE_CSV = DATA_DIR / "us_universe.csv"
+EUROPE_ETF_CSV = DATA_DIR / "europe_etf_universe.csv"
 
 REQ_TIMEOUT = 16
 YAHOO_SLEEP = 0.08
 DEFAULT_EXCHANGES = ("NYSE", "Nasdaq", "CBOE")
 NASDAQ_SCREENER_PAGE_SIZE = 50
+EUROPE_YAHOO_SUFFIXES = {
+    ".DE": "Germany/Xetra",
+    ".L": "London Stock Exchange",
+    ".MI": "Borsa Italiana",
+    ".AS": "Euronext Amsterdam",
+}
+EUROPE_ETF_SEARCH_SEEDS = (
+    "JGPI", "JEPG", "JEPI", "JEPQ",
+    "VUSA", "VUAA", "VWRL", "VWCE", "VHYL", "VEVE", "VFEA",
+    "IWDA", "SWDA", "CSPX", "IUSA", "IWRD", "ISF", "IUKD", "EMIM",
+    "EQQQ", "EQQB", "EXS1", "SPY5", "TDIV", "IAEX", "IMAE", "IB01",
+)
 
 HTTP_HEADERS = {
     "User-Agent": "Mozilla/5.0 dividend-calendar-research/0.1",
@@ -174,7 +187,7 @@ def classify_unmatched_asset_type(company_name: str) -> str:
 
 
 def normalize_ticker(value: object) -> str:
-    return str(value or "").strip().upper().replace(".", "-")
+    return str(value or "").strip().upper()
 
 
 def get_conn() -> sqlite3.Connection:
@@ -540,6 +553,104 @@ def update_us_universe(include_etfs: bool = True, workers: int = 4) -> dict:
     }
 
 
+def fetch_yahoo_search_quotes(query: str) -> list[dict]:
+    url = "https://query1.finance.yahoo.com/v1/finance/search"
+    params = {"q": query, "quotesCount": 25, "newsCount": 0}
+    request = Request(url + "?" + urlencode(params), headers=HTTP_HEADERS)
+    with urlopen(request, timeout=REQ_TIMEOUT) as response:
+        if response.status != 200:
+            raise RuntimeError(f"Yahoo search status {response.status}")
+        payload = json.loads(response.read().decode("utf-8"))
+    return payload.get("quotes") or []
+
+
+def read_europe_etf_universe() -> list[Company]:
+    if not EUROPE_ETF_CSV.exists():
+        return []
+    companies: list[Company] = []
+    seen: set[str] = set()
+    with EUROPE_ETF_CSV.open("r", encoding="utf-8", newline="") as fh:
+        for row in csv.DictReader(fh):
+            ticker = normalize_ticker(row.get("ticker"))
+            if not ticker or ticker in seen:
+                continue
+            seen.add(ticker)
+            companies.append(
+                Company(
+                    ticker=ticker,
+                    name=row.get("name") or "",
+                    exchange=row.get("exchange") or "",
+                    sector=row.get("region") or "Europe",
+                    state=row.get("country") or "",
+                    asset_type=row.get("asset_type") or "ETF/Fund",
+                )
+            )
+    return sorted(companies, key=lambda c: c.ticker)
+
+
+def update_europe_etf_universe(workers: int = 4, seeds: Iterable[str] = EUROPE_ETF_SEARCH_SEEDS) -> dict:
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    existing: dict[str, dict] = {}
+    if EUROPE_ETF_CSV.exists():
+        with EUROPE_ETF_CSV.open("r", encoding="utf-8", newline="") as fh:
+            for row in csv.DictReader(fh):
+                ticker = normalize_ticker(row.get("ticker"))
+                if ticker:
+                    existing[ticker] = {
+                        "ticker": ticker,
+                        "name": row.get("name") or "",
+                        "exchange": row.get("exchange") or "",
+                        "country": row.get("country") or "",
+                        "region": row.get("region") or "Europe",
+                        "asset_type": row.get("asset_type") or "ETF/Fund",
+                        "provider": row.get("provider") or "manual",
+                        "updated_at": row.get("updated_at") or "",
+                    }
+
+    updated_at = now_utc()
+    seed_list = sorted({str(seed).strip().upper() for seed in seeds if str(seed).strip()})
+    discovered = 0
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, workers)) as executor:
+        futures = {executor.submit(fetch_yahoo_search_quotes, seed): seed for seed in seed_list}
+        for future in concurrent.futures.as_completed(futures):
+            seed = futures[future]
+            try:
+                quotes = future.result()
+            except Exception as exc:
+                print(f"ERR yahoo_search {seed}: {exc}")
+                continue
+            for quote in quotes:
+                ticker = normalize_ticker(quote.get("symbol"))
+                suffix = next((s for s in EUROPE_YAHOO_SUFFIXES if ticker.endswith(s)), "")
+                if not suffix or (quote.get("quoteType") or "").upper() != "ETF":
+                    continue
+                name = quote.get("shortname") or quote.get("longname") or ""
+                existing[ticker] = {
+                    "ticker": ticker,
+                    "name": name,
+                    "exchange": EUROPE_YAHOO_SUFFIXES[suffix],
+                    "country": EUROPE_YAHOO_SUFFIXES[suffix],
+                    "region": "Europe",
+                    "asset_type": "ETF/Fund",
+                    "provider": "yahoo_search",
+                    "updated_at": updated_at,
+                }
+                discovered += 1
+
+    fields = ["ticker", "name", "exchange", "country", "region", "asset_type", "provider", "updated_at"]
+    with EUROPE_ETF_CSV.open("w", encoding="utf-8", newline="") as fh:
+        writer = csv.DictWriter(fh, fieldnames=fields)
+        writer.writeheader()
+        for ticker in sorted(existing):
+            writer.writerow({field: existing[ticker].get(field, "") for field in fields})
+
+    return {
+        "europe_universe_rows": len(existing),
+        "discovered_quotes": discovered,
+        "universe_file": str(EUROPE_ETF_CSV),
+    }
+
+
 def fetch_nasdaq_calendar(day: date, companies_by_ticker: dict[str, Company], include_unmatched: bool = False) -> list[dict]:
     url = "https://api.nasdaq.com/api/calendar/dividends"
     params = {"date": day.isoformat()}
@@ -699,6 +810,41 @@ def run_yahoo(
     return {"tickers": len(companies), "events": events, "errors": errors, "run_id": run_id}
 
 
+def run_yahoo_for_companies(
+    companies: list[Company],
+    start_date: str,
+    end_date: str,
+    workers: int = 8,
+    label: str = "yahoo_chart_dividends",
+) -> dict:
+    errors = 0
+    events = 0
+    buffer: list[dict] = []
+    print(f"{label}: tickers={len(companies):,} range={start_date}..{end_date}")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, workers)) as executor:
+        futures = {executor.submit(fetch_yahoo_dividends, company, start_date, end_date): company for company in companies}
+        completed = 0
+        for future in concurrent.futures.as_completed(futures):
+            company = futures[future]
+            completed += 1
+            try:
+                rows = future.result()
+            except Exception as exc:
+                errors += 1
+                if errors <= 20:
+                    print(f"ERR {company.ticker}: {exc}")
+                rows = []
+            if rows:
+                buffer.extend(rows)
+            if len(buffer) >= 500:
+                events += upsert_events(buffer)
+                buffer.clear()
+            if completed % 100 == 0 or completed == len(companies):
+                print(f"  processed={completed:,}/{len(companies):,} events={events + len(buffer):,} errors={errors:,}")
+    events += upsert_events(buffer)
+    return {"tickers": len(companies), "events": events, "errors": errors}
+
+
 def run_nasdaq_calendar(
     start_date: str,
     end_date: str,
@@ -800,6 +946,7 @@ def run_daily_update(
     lookback_days: int = 95,
     forward_days: int = 550,
     rebuild: bool = False,
+    include_europe: bool = True,
 ) -> dict:
     if not start_date or not end_date:
         start_date, end_date = rolling_window_dates(
@@ -815,7 +962,20 @@ def run_daily_update(
         include_unmatched=True,
         reconcile_window=True,
     )
-    return {"universe": universe, "dividends": dividends}
+    result = {"universe": universe, "dividends": dividends}
+    if include_europe:
+        europe_universe = update_europe_etf_universe(workers=max(1, min(workers, 8)))
+        europe_companies = read_europe_etf_universe()
+        europe_dividends = run_yahoo_for_companies(
+            europe_companies,
+            start_date=start_date,
+            end_date=end_date,
+            workers=workers,
+            label="europe_yahoo_dividends",
+        )
+        result["europe_universe"] = europe_universe
+        result["europe_dividends"] = europe_dividends
+    return result
 
 
 def load_events(start_date: str, end_date: str, ticker: str | None = None) -> list[dict]:
@@ -851,6 +1011,9 @@ def main() -> None:
     parser.add_argument("--include-unmatched", action="store_true", help="Keep Nasdaq rows not found in local SEC universe")
     parser.add_argument("--update-universe", action="store_true", help="Refresh the local USA universe before dividends")
     parser.add_argument("--universe-only", action="store_true", help="Refresh the local USA universe and exit")
+    parser.add_argument("--update-europe-universe", action="store_true", help="Refresh the local Europe ETF universe before dividends")
+    parser.add_argument("--europe-universe-only", action="store_true", help="Refresh the local Europe ETF universe and exit")
+    parser.add_argument("--skip-europe", action="store_true", help="Skip Europe ETF Yahoo dividends during daily update")
     parser.add_argument("--daily-update", action="store_true", help="Single production command: update USA universe and reconcile incremental dividends")
     parser.add_argument("--incremental", action="store_true", help="Use a rolling window and replace only that source/date range")
     parser.add_argument("--rebuild", action="store_true", help="Use a broad moving rebuild range instead of the incremental window")
@@ -873,11 +1036,18 @@ def main() -> None:
             lookback_days=args.lookback_days,
             forward_days=args.forward_days,
             rebuild=args.rebuild,
+            include_europe=not args.skip_europe,
         )
         print(f"Done: {result}")
         return
 
     results = []
+    if args.update_europe_universe or args.europe_universe_only:
+        europe_result = update_europe_etf_universe(workers=max(1, min(args.workers, 8)))
+        if args.europe_universe_only:
+            print(f"Done: {europe_result}")
+            return
+        results.append(europe_result)
     if args.update_universe or args.universe_only:
         universe_result = update_us_universe(include_etfs=True, workers=max(1, min(args.workers, 8)))
         if args.universe_only:

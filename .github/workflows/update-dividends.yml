@@ -45,10 +45,15 @@ jobs:
           print({"universe": len(rows), "fund_like": len(etfs)})
           if len(etfs) < 1000:
               raise SystemExit("ETF/fund universe looks too small.")
+          with open("data/europe_etf_universe.csv", encoding="utf-8", newline="") as fh:
+              europe = list(csv.DictReader(fh))
+          print({"europe_universe": len(europe)})
+          if not any(r.get("ticker") == "JGPI.DE" for r in europe):
+              raise SystemExit("European ETF universe is missing JGPI.DE.")
           PY
 
       - name: Commit updated data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: update dividend calendar data"
-          file_pattern: data/dividends.db data/us_universe.csv
+          file_pattern: data/dividends.db data/us_universe.csv data/europe_etf_universe.csv

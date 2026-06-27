@@ -9,6 +9,8 @@ importe por accion y, cuando esta disponible, `payment date`.
 - `data/us_universe.csv`: universo base de 3.904 tickers USA (`NYSE`,
   `Nasdaq`, `CBOE`) exportado desde el proyecto SEC original y ampliado con
   ETFs/ETNs/fondos desde el screener ETF de Nasdaq.
+- `data/europe_etf_universe.csv`: universo europeo inicial para ETFs UCITS en
+  Alemania/Xetra, London Stock Exchange, Borsa Italiana y Euronext Amsterdam.
 - `data/dividends.db`: base SQLite con los eventos de dividendos.
 - `nasdaq_calendar`: fuente principal para `ex_dividend_date`, `pay_date`,
   `record_date`, `declaration_date` e importe.
@@ -45,6 +47,12 @@ Actualizar solo el universo USA/ETF sin tocar dividendos:
 
 ```powershell
 python dividend_calendar_pipeline.py --universe-only --workers 8
+```
+
+Actualizar solo el universo europeo sin tocar dividendos:
+
+```powershell
+python dividend_calendar_pipeline.py --europe-universe-only --workers 8
 ```
 
 Despues valida que haya eventos y commitea `data/dividends.db` si cambia.
@@ -127,7 +135,10 @@ Si. El pipeline ya soporta ETFs de forma practica:
 
 - `--daily-update` refresca primero `data/us_universe.csv` con ETFs/ETNs/fondos
   del screener ETF de Nasdaq, no solo con valores presentes en SEC.
+- Tambien refresca `data/europe_etf_universe.csv` para ETFs europeos con
+  simbolos Yahoo como `JGPI.DE`, `JEPG.L`, `JEPG.MI`, `VUSA.AS` o `IWDA.AS`.
 - `--universe-only` permite actualizar solo ese universo de tickers.
+- `--europe-universe-only` permite actualizar solo el universo europeo.
 - `--include-unmatched` conserva eventos de Nasdaq que no estan en el universo
   SEC local.
 - Los no emparejados se clasifican como `ETF/Fund`, `Preferred`,
@@ -138,6 +149,12 @@ Si. El pipeline ya soporta ETFs de forma practica:
 
 ```powershell
 python dividend_calendar_pipeline.py --source yahoo --ticker SPY --start 2025-01-01 --end 2027-01-01
+```
+
+Ejemplo europeo validado:
+
+```powershell
+python dividend_calendar_pipeline.py --source yahoo --ticker JGPI.DE --start 2025-01-01 --end 2027-01-01
 ```
 
 ## Notas para producto publico

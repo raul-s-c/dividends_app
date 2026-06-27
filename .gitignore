@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.streamlit/secrets.toml
+data/portfolio.csv
+data/*.db-shm
+data/*.db-wal

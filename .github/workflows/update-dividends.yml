@@ -1,0 +1,57 @@
+name: Update dividend calendar
+
+on:
+  schedule:
+    - cron: "20 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-dividends:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compute rolling date range
+        id: dates
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          from datetime import date
+          year = date.today().year
+          print(f"start={year - 1}-01-01")
+          print(f"end={year + 2}-01-01")
+          PY
+
+      - name: Update Nasdaq calendar
+        run: |
+          python dividend_calendar_pipeline.py --source nasdaq --start "${{ steps.dates.outputs.start }}" --end "${{ steps.dates.outputs.end }}" --workers 8 --include-unmatched
+
+      - name: Validate database
+        run: |
+          python - <<'PY'
+          import sqlite3
+          conn = sqlite3.connect("data/dividends.db")
+          total = conn.execute("select count(*) from dividend_events").fetchone()[0]
+          nasdaq = conn.execute("select count(*) from dividend_events where source='nasdaq_calendar'").fetchone()[0]
+          max_date = conn.execute("select max(ex_dividend_date) from dividend_events").fetchone()[0]
+          print({"total": total, "nasdaq": nasdaq, "max_date": max_date})
+          if nasdaq == 0:
+              raise SystemExit("No Nasdaq dividend events were loaded.")
+          conn.close()
+          PY
+
+      - name: Commit updated data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update dividend calendar data"
+          file_pattern: data/dividends.db

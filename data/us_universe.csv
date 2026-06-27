@@ -1,0 +1,3905 @@
+ticker,name,exchange,sector,state,asset_type
+A,"AGILENT TECHNOLOGIES, INC.",NYSE,3826,DE,Stock
+AA,Alcoa Corp,NYSE,3334,DE,Stock
+AAAU,Goldman Sachs Physical Gold ETF,CBOE,6221,NY,Stock
+AAL,American Airlines Group Inc.,Nasdaq,4512,DE,Stock
+AAME,ATLANTIC AMERICAN CORP,Nasdaq,6311,GA,Stock
+AAMI,Acadian Asset Management Inc.,NYSE,6282,DE,Stock
+AAOI,"APPLIED OPTOELECTRONICS, INC.",Nasdaq,3674,DE,Stock
+AAON,"AAON, INC.",Nasdaq,3585,NV,Stock
+AAP,ADVANCE AUTO PARTS INC,NYSE,5531,DE,Stock
+AAPL,Apple Inc.,Nasdaq,3571,CA,Stock
+AARD,"Aardvark Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+AB,ALLIANCEBERNSTEIN HOLDING L.P.,NYSE,6282,DE,Stock
+ABAT,AMERICAN BATTERY TECHNOLOGY Co,Nasdaq,1400,NV,Stock
+ABBV,AbbVie Inc.,NYSE,2834,DE,Stock
+ABCB,Ameris Bancorp,NYSE,6022,GA,Stock
+ABCL,AbCellera Biologics Inc.,Nasdaq,2834,A1,Stock
+ABEO,ABEONA THERAPEUTICS INC.,Nasdaq,2834,DE,Stock
+ABG,ASBURY AUTOMOTIVE GROUP INC,NYSE,5500,DE,Stock
+ABM,ABM INDUSTRIES INC /DE/,NYSE,7340,DE,Stock
+ABNB,"Airbnb, Inc.",Nasdaq,7340,DE,Stock
+ABOS,"Acumen Pharmaceuticals, Inc.",Nasdaq,2836,DE,Stock
+ABSI,Absci Corp,Nasdaq,8731,,Stock
+ABT,ABBOTT LABORATORIES,NYSE,2834,IL,Stock
+ABUS,Arbutus Biopharma Corp,Nasdaq,2834,A1,Stock
+ABVC,"ABVC BIOPHARMA, INC.",Nasdaq,2834,NV,Stock
+ABX,"Abacus Global Management, Inc.",NYSE,6282,DE,Stock
+ACA,"Arcosa, Inc.",NYSE,3440,DE,Stock
+ACAD,ACADIA PHARMACEUTICALS INC,Nasdaq,2834,DE,Stock
+ACCO,ACCO BRANDS Corp,NYSE,2780,DE,Stock
+ACCS,ACCESS Newswire Inc.,NYSE,8742,,Stock
+ACDC,ProFrac Holding Corp.,Nasdaq,1389,DE,Stock
+ACEL,"Accel Entertainment, Inc.",NYSE,7900,DE,Stock
+ACET,"Adicet Bio, Inc.",Nasdaq,2834,DE,Stock
+ACFN,"ACORN ENERGY, INC.",Nasdaq,8711,DE,Stock
+ACGL,ARCH CAPITAL GROUP LTD.,Nasdaq,6331,,Stock
+ACH,ACCENDRA HEALTH INC/VA/,NYSE,5047,VA,Stock
+ACHC,"Acadia Healthcare Company, Inc.",Nasdaq,8093,DE,Stock
+ACHR,Archer Aviation Inc.,NYSE,3721,,Stock
+ACHV,"ACHIEVE LIFE SCIENCES, INC.",Nasdaq,2835,DE,Stock
+ACI,"Albertsons Companies, Inc.",NYSE,5411,DE,Stock
+ACIC,AMERICAN COASTAL INSURANCE Corp,Nasdaq,6331,DE,Stock
+ACIW,"ACI WORLDWIDE, INC.",Nasdaq,7372,DE,Stock
+ACLS,AXCELIS TECHNOLOGIES INC,Nasdaq,3559,DE,Stock
+ACLX,"Arcellx, Inc.",Nasdaq,2836,DE,Stock
+ACM,AECOM,NYSE,8711,DE,Stock
+ACMR,"ACM Research, Inc.",Nasdaq,3559,CA,Stock
+ACN,Accenture plc,NYSE,7389,L2,Stock
+ACNB,ACNB CORP,Nasdaq,6022,PA,Stock
+ACNT,ASCENT INDUSTRIES CO.,Nasdaq,2800,DE,Stock
+ACOG,Alpha Cognition Inc.,Nasdaq,2836,A1,Stock
+ACON,"Aclarion, Inc.",Nasdaq,8071,DE,Stock
+ACRS,"Aclaris Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+ACRV,"Acrivon Therapeutics, Inc.",Nasdaq,2834,,Stock
+ACT,"Enact Holdings, Inc.",Nasdaq,6411,DE,Stock
+ACTU,"ACTUATE THERAPEUTICS, INC.",Nasdaq,2834,DE,Stock
+ACU,ACME UNITED CORP,NYSE,3420,CT,Stock
+ACVA,ACV Auctions Inc.,NYSE,7389,DE,Stock
+ACXP,"Acurx Pharmaceuticals, Inc.",Nasdaq,2834,DE,Stock
+AD,"ARRAY DIGITAL INFRASTRUCTURE, INC.",NYSE,4812,DE,Stock
+ADBE,ADOBE INC.,Nasdaq,7372,DE,Stock
+ADCT,ADC Therapeutics SA,NYSE,2834,V8,Stock
+ADEA,Adeia Inc.,Nasdaq,4841,DE,Stock
+ADGM,"Adagio Medical Holdings, Inc.",Nasdaq,3841,DE,Stock
+ADI,ANALOG DEVICES INC,Nasdaq,3674,MA,Stock
+ADIL,"ADIAL PHARMACEUTICALS, INC.",Nasdaq,2834,DE,Stock
+ADM,Archer-Daniels-Midland Co,NYSE,2070,DE,Stock
+ADMA,"ADMA BIOLOGICS, INC.",Nasdaq,2836,DE,Stock
+ADNT,Adient plc,NYSE,3714,L2,Stock
+ADP,AUTOMATIC DATA PROCESSING INC,Nasdaq,7374,DE,Stock
+ADPT,Adaptive Biotechnologies Corp,Nasdaq,2836,WA,Stock
+ADSK,"Autodesk, Inc.",Nasdaq,7372,DE,Stock
+ADT,ADT Inc.,NYSE,7381,DE,Stock
+ADTN,"ADTRAN Holdings, Inc.",Nasdaq,3661,,Stock
+ADTX,"Aditxt, Inc.",Nasdaq,2834,DE,Stock
+ADUS,Addus HomeCare Corp,Nasdaq,8082,DE,Stock
+ADV,Advantage Solutions Inc.,Nasdaq,7389,,Stock
+ADVB,Advanced Biomed Inc.,Nasdaq,8071,NV,Stock
+AEBI,Aebi Schmidt Holding AG,Nasdaq,3531,V8,Stock
+AEE,AMEREN CORP,NYSE,4931,MO,Stock
+AEHR,AEHR TEST SYSTEMS,Nasdaq,3825,CA,Stock
+AEI,Alset Inc.,Nasdaq,6500,TX,Stock
+AEIS,ADVANCED ENERGY INDUSTRIES INC,Nasdaq,3679,DE,Stock
+AEMD,AETHLON MEDICAL INC,Nasdaq,3841,NV,Stock
+AENT,ALLIANCE ENTERTAINMENT HOLDING CORP,Nasdaq,5099,DE,Stock
+AEO,AMERICAN EAGLE OUTFITTERS INC,NYSE,5651,DE,Stock
+AEON,"AEON Biopharma, Inc.",NYSE,2834,DE,Stock
+AEP,AMERICAN ELECTRIC POWER CO INC,Nasdaq,4911,NY,Stock
+AERT,"Aeries Technology, Inc.",Nasdaq,8742,,Stock
+AES,AES CORP,NYSE,4991,DE,Stock
+AESI,Atlas Energy Solutions Inc.,NYSE,1311,DE,Stock
+AEVA,"Aeva Technologies, Inc.",Nasdaq,3714,DE,Stock
+AEYE,AUDIOEYE INC,Nasdaq,7372,DE,Stock
+AFBI,"Affinity Bancshares, Inc.",Nasdaq,6036,MD,Stock
+AFCG,Advanced Flower Capital Inc.,Nasdaq,0,MD,Stock
+AFG,AMERICAN FINANCIAL GROUP INC,NYSE,6331,OH,Stock
+AFL,AFLAC INC,NYSE,6321,GA,Stock
+AFRM,"Affirm Holdings, Inc.",Nasdaq,6141,NV,Stock
+AGAE,"All In FutureTech Alliance, Inc.",Nasdaq,7900,DE,Stock
+AGCO,AGCO CORP /DE,NYSE,3523,DE,Stock
+AGEN,AGENUS INC,Nasdaq,2836,DE,Stock
+AGH,Aureus Greenway Holdings Inc,Nasdaq,7997,NV,Stock
+AGIG,"ABUNDIA GLOBAL IMPACT GROUP, INC.",NYSE,1311,DE,Stock
+AGIO,"AGIOS PHARMACEUTICALS, INC.",Nasdaq,2834,DE,Stock
+AGL,"agilon health, inc.",NYSE,8090,DE,Stock
+AGM,FEDERAL AGRICULTURAL MORTGAGE CORP,NYSE,6111,,Stock
+AGNT,"eXp World Holdings, Inc.",Nasdaq,6531,DE,Stock
+AGO,ASSURED GUARANTY LTD,NYSE,6351,D0,Stock
+AGQ,ProShares Trust II,NYSE,6221,DE,Stock
+AGX,ARGAN INC,NYSE,1700,DE,Stock
+AGYS,AGILYSYS INC,Nasdaq,7373,DE,Stock
+AHCO,AdaptHealth Corp.,Nasdaq,8082,DE,Stock
+AHL-PE,ASPEN INSURANCE HOLDINGS LTD,NYSE,6331,D0,Stock
+AHRT,"AH Realty Trust, Inc.",NYSE,6500,MD,Stock
+AI,"C3.ai, Inc.",NYSE,7372,DE,Stock
+AIB,"BlockchAIn Digital Infrastructure, Inc.",NYSE,6221,DE,Stock
+AIDX,"20/20 Biolabs, Inc.",Nasdaq,8734,DE,Stock
+AIFC,AI Financial Corp,Nasdaq,6221,NV,Stock
+AIFF,"FIREFLY NEUROSCIENCE, INC.",Nasdaq,7372,DE,Stock
+AIG,"AMERICAN INTERNATIONAL GROUP, INC.",NYSE,6331,DE,Stock
+AIHS,Senmiao Technology Ltd,Nasdaq,7510,NV,Stock
+AII,"American Integrity Insurance Group, Inc.",NYSE,6331,,Stock
+AIM,AIM ImmunoTech Inc.,NYSE,2836,DE,Stock
+AIMD,"Ainos, Inc.",Nasdaq,3577,TX,Stock
+AIN,ALBANY INTERNATIONAL CORP /DE/,NYSE,2221,DE,Stock
+AIOT,"Powerfleet, Inc.",Nasdaq,3669,DE,Stock
+AIP,"Arteris, Inc.",Nasdaq,3674,DE,Stock
+AIR,AAR CORP,NYSE,3720,DE,Stock
+AIRE,reAlpha Tech Corp.,Nasdaq,6500,DE,Stock
+AIRG,AIRGAIN INC,Nasdaq,3663,,Stock
+AIRI,AIR INDUSTRIES GROUP,NYSE,3728,NV,Stock
+AIRJ,AirJoule Technologies Corp.,Nasdaq,3585,DE,Stock
+AIRO,"AIRO Group Holdings, Inc.",Nasdaq,3721,DE,Stock
+AIRS,"Airsculpt Technologies, Inc.",Nasdaq,8011,,Stock
+AIRT,AIR T INC,Nasdaq,4513,DE,Stock
+AISP,"Airship AI Holdings, Inc.",Nasdaq,7372,DE,Stock
+AIT,APPLIED INDUSTRIAL TECHNOLOGIES INC,NYSE,5080,OH,Stock
+AIZ,"ASSURANT, INC.",NYSE,6399,DE,Stock
+AJG,Arthur J. Gallagher & Co.,NYSE,6411,DE,Stock
+AKA,A.K.A. BRANDS HOLDING CORP.,NYSE,5961,,Stock
+AKAM,AKAMAI TECHNOLOGIES INC,Nasdaq,7389,DE,Stock
+AKBA,"Akebia Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+AKTX,Akari Therapeutics Plc,Nasdaq,2834,X0,Stock
+ALAB,"Astera Labs, Inc.",Nasdaq,3674,DE,Stock
+ALB,ALBEMARLE CORP,NYSE,2821,VA,Stock
+ALBT,Avalon GloboCare Corp.,Nasdaq,7371,DE,Stock
+ALCO,"ALICO, INC.",Nasdaq,100,FL,Stock
+ALDX,"Aldeyra Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+ALEC,"Alector, Inc.",Nasdaq,2836,,Stock
+ALG,ALAMO GROUP INC,NYSE,3523,DE,Stock
+ALGM,"ALLEGRO MICROSYSTEMS, INC.",Nasdaq,3674,,Stock
+ALGN,ALIGN TECHNOLOGY INC,Nasdaq,3842,DE,Stock
+ALGS,"Aligos Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+ALGT,Allegiant Travel CO,Nasdaq,4512,NV,Stock
+ALH,Alliance Laundry Holdings Inc.,NYSE,3580,DE,Stock
+ALHC,"Alignment Healthcare, Inc.",Nasdaq,6324,DE,Stock
+ALIS,Calisa Acquisition Corp,Nasdaq,7374,E9,Stock
+ALIT,"Alight, Inc. / Delaware",NYSE,7389,DE,Stock
+ALK,"ALASKA AIR GROUP, INC.",NYSE,4512,DE,Stock
+ALKS,Alkermes plc.,Nasdaq,2834,,Stock
+ALKT,"ALKAMI TECHNOLOGY, INC.",Nasdaq,7372,DE,Stock
+ALL,ALLSTATE CORP,NYSE,6331,DE,Stock
+ALLE,Allegion plc,NYSE,7381,L2,Stock
+ALLO,"Allogene Therapeutics, Inc.",Nasdaq,2836,,Stock
+ALLR,"Allarity Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+ALLY,Ally Financial Inc.,NYSE,6022,DE,Stock
+ALMS,ALUMIS INC.,Nasdaq,2834,DE,Stock
+ALMU,"Aeluma, Inc.",Nasdaq,3674,DE,Stock
+ALNT,ALLIENT INC,Nasdaq,3825,CO,Stock
+ALNY,"ALNYLAM PHARMACEUTICALS, INC.",Nasdaq,2834,,Stock
+ALOT,"AstroNova, Inc.",Nasdaq,3577,RI,Stock
+ALOY,REALLOYS INC.,Nasdaq,1000,NV,Stock
+ALRM,"Alarm.com Holdings, Inc.",Nasdaq,7372,DE,Stock
+ALRS,ALERUS FINANCIAL CORP,Nasdaq,6021,DE,Stock
+ALSN,Allison Transmission Holdings Inc,NYSE,3714,DE,Stock
+ALT,"Altimmune, Inc.",Nasdaq,2834,DE,Stock
+ALTG,ALTA EQUIPMENT GROUP INC.,NYSE,5084,DE,Stock
+ALTI,"AlTi Global, Inc.",Nasdaq,6282,DE,Stock
+ALTO,"Alto Ingredients, Inc.",Nasdaq,2860,DE,Stock
+ALV,AUTOLIV INC,NYSE,3714,DE,Stock
+ALXO,ALX ONCOLOGY HOLDINGS INC,Nasdaq,2834,DE,Stock
+ALZN,"Alzamend Neuro, Inc.",Nasdaq,2834,DE,Stock
+AM,Antero Midstream Corp,NYSE,4922,,Stock
+AMAL,Amalgamated Financial Corp.,Nasdaq,6022,DE,Stock
+AMAT,APPLIED MATERIALS INC /DE,Nasdaq,3674,DC,Stock
+AMBA,AMBARELLA INC,Nasdaq,3674,,Stock
+AMBO,Ambow Education Holding Ltd.,NYSE,8200,E9,Stock
+AMBQ,"Ambiq Micro, Inc.",NYSE,3674,DE,Stock
+AMC,"AMC ENTERTAINMENT HOLDINGS, INC.",NYSE,7830,DE,Stock
+AMCI,AMC Robotics Corp,Nasdaq,5700,E9,Stock
+AMCR,Amcor plc,NYSE,3990,Y9,Stock
+AMCX,AMC Global Media Inc.,Nasdaq,4841,NV,Stock
+AMD,ADVANCED MICRO DEVICES INC,Nasdaq,3674,DE,Stock
+AME,AMETEK INC/,NYSE,3823,DE,Stock
+AMG,"AFFILIATED MANAGERS GROUP, INC.",NYSE,6282,DE,Stock
+AMGN,AMGEN INC,Nasdaq,2836,DE,Stock
+AMIX,"Autonomix Medical, Inc.",Nasdaq,3841,DE,Stock
+AMKR,"AMKOR TECHNOLOGY, INC.",Nasdaq,3674,DE,Stock
+AMLX,"Amylyx Pharmaceuticals, Inc.",Nasdaq,2834,DE,Stock
+AMN,AMN HEALTHCARE SERVICES INC,NYSE,7363,DE,Stock
+AMP,AMERIPRISE FINANCIAL INC,NYSE,6282,DE,Stock
+AMPG,"AmpliTech Group, Inc.",Nasdaq,3669,NV,Stock
+AMPH,"Amphastar Pharmaceuticals, Inc.",Nasdaq,2834,,Stock
+AMPL,"Amplitude, Inc.",Nasdaq,7372,DE,Stock
+AMPX,"Amprius Technologies, Inc.",NYSE,3690,DE,Stock
+AMPY,Amplify Energy Corp.,NYSE,1311,,Stock
+AMR,"Alpha Metallurgical Resources, Inc.",NYSE,1221,DE,Stock
+AMRC,"Ameresco, Inc.",NYSE,1700,DE,Stock
+AMRN,AMARIN CORP PLC\UK,Nasdaq,2834,X0,Stock
+AMRX,"Amneal Pharmaceuticals, Inc.",Nasdaq,2834,,Stock
+AMRZ,Amrize Ltd,NYSE,3241,V8,Stock
+AMS,AMERICAN SHARED HOSPITAL SERVICES,NYSE,8071,CA,Stock
+AMSC,AMERICAN SUPERCONDUCTOR CORP /DE/,Nasdaq,3621,DE,Stock
+AMSF,AMERISAFE INC,Nasdaq,6331,TX,Stock
+AMST,Amesite Inc.,Nasdaq,7372,DE,Stock
+AMTB,Amerant Bancorp Inc.,NYSE,6021,FL,Stock
+AMTM,"Amentum Holdings, Inc.",NYSE,7389,DE,Stock
+AMTX,"AEMETIS, INC",Nasdaq,2860,NV,Stock
+AMWD,AMERICAN WOODMARK CORP,Nasdaq,2430,VA,Stock
+AMWL,American Well Corp,NYSE,7389,DE,Stock
+AMZE,"AMAZE HOLDINGS, INC.",NYSE,5961,NV,Stock
+AMZN,AMAZON COM INC,Nasdaq,5961,DE,Stock
+AN,"AUTONATION, INC.",NYSE,5500,DE,Stock
+ANAB,"ANAPTYSBIO, INC",Nasdaq,2834,DE,Stock
+ANDE,"Andersons, Inc.",Nasdaq,5150,OH,Stock
+ANDG,Andersen Group Inc.,NYSE,7389,DE,Stock
+ANET,"Arista Networks, Inc.",NYSE,3576,DE,Stock
+ANF,ABERCROMBIE & FITCH CO /DE/,NYSE,5651,OH,Stock
+ANG-PD,American National Group Inc.,NYSE,6311,IA,Stock
+ANGI,Angi Inc.,Nasdaq,7310,DE,Stock
+ANGO,ANGIODYNAMICS INC,Nasdaq,3841,DE,Stock
+ANGX,"Angel Studios, Inc.",NYSE,7812,DE,Stock
+ANIK,"Anika Therapeutics, Inc.",Nasdaq,3841,DE,Stock
+ANIP,ANI PHARMACEUTICALS INC,Nasdaq,2834,DE,Stock
+ANIX,Anixa Biosciences Inc,Nasdaq,2834,DE,Stock
+ANNA,"AleAnna, Inc.",Nasdaq,1311,DE,Stock
+ANNX,"Annexon, Inc.",Nasdaq,2834,DE,Stock
+ANRO,"Alto Neuroscience, Inc.",NYSE,2834,DE,Stock
+ANTX,"AN2 Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+ANVS,"Annovis Bio, Inc.",NYSE,2834,DE,Stock
+AOMR,"Angel Oak Mortgage REIT, Inc.",NYSE,6500,MD,Stock
+AON,Aon plc,NYSE,6411,L2,Stock
+AORT,"ARTIVION, INC.",NYSE,3841,DE,Stock
+AOS,SMITH A O CORP,NYSE,3630,DE,Stock
+AOSL,ALPHA & OMEGA SEMICONDUCTOR Ltd,Nasdaq,3674,,Stock
+AOUT,"American Outdoor Brands, Inc.",Nasdaq,3949,DE,Stock
+AP,AMPCO PITTSBURGH CORP,NYSE,3561,PA,Stock
+APA,APA Corp,Nasdaq,1311,DE,Stock
+APAM,Artisan Partners Asset Management Inc.,NYSE,6282,DE,Stock
+APD,"Air Products & Chemicals, Inc.",NYSE,2810,DE,Stock
+APEI,AMERICAN PUBLIC EDUCATION INC,Nasdaq,8200,DE,Stock
+APG,APi Group Corp,NYSE,7340,DE,Stock
+APGE,"Apogee Therapeutics, Inc.",Nasdaq,2836,,Stock
+APH,AMPHENOL CORP /DE/,NYSE,3678,DE,Stock
+APLD,Applied Digital Corp.,Nasdaq,7374,NV,Stock
+APLS,"Apellis Pharmaceuticals, Inc.",Nasdaq,2834,DE,Stock
+APO,"Apollo Global Management, Inc.",NYSE,6282,DE,Stock
+APOG,"APOGEE ENTERPRISES, INC.",Nasdaq,3231,MN,Stock
+APP,AppLovin Corp,Nasdaq,7370,DE,Stock
+APPF,APPFOLIO INC,Nasdaq,7372,,Stock
+APPN,APPIAN CORP,Nasdaq,7372,,Stock
+APRE,"Aprea Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+APT,ALPHA PRO TECH LTD,NYSE,3842,DE,Stock
+APTV,Aptiv PLC,NYSE,3714,Y9,Stock
+APUS,"Apimeds Pharmaceuticals US, Inc.",NYSE,2834,DE,Stock
+APVO,Aptevo Therapeutics Inc.,Nasdaq,2834,DE,Stock
+APYX,Apyx Medical Corp,Nasdaq,3841,DE,Stock
+AQB,AQUABOUNTY TECHNOLOGIES INC,Nasdaq,900,DE,Stock
+AQMS,"Aqua Metals, Inc.",Nasdaq,3341,DE,Stock
+AQST,"Aquestive Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+AR,ANTERO RESOURCES Corp,NYSE,1311,,Stock
+ARAY,ACCURAY INC,Nasdaq,3841,DE,Stock
+ARCB,ARCBEST CORP /DE/,Nasdaq,4213,DE,Stock
+ARCC,ARES CAPITAL CORP,Nasdaq,0,MD,Stock
+ARCT,Arcturus Therapeutics Holdings Inc.,Nasdaq,2834,DE,Stock
+ARDT,"Ardent Health, Inc.",NYSE,8062,DE,Stock
+ARDX,"ARDELYX, INC.",Nasdaq,2834,DE,Stock
+AREC,American Resources Corp,Nasdaq,1220,FL,Stock
+AREN,"Arena Group Holdings, Inc.",NYSE,4841,DE,Stock
+ARES,Ares Management Corp,NYSE,6282,DE,Stock
+ARHS,"Arhaus, Inc.",Nasdaq,5712,DE,Stock
+ARKB,Ark 21Shares Bitcoin ETF,CBOE,6221,DE,Stock
+ARKO,ARKO Corp.,Nasdaq,5412,DE,Stock
+ARKR,ARK RESTAURANTS CORP,Nasdaq,5812,NY,Stock
+ARL,AMERICAN REALTY INVESTORS INC,NYSE,6510,NV,Stock
+ARLO,"Arlo Technologies, Inc.",NYSE,7381,DE,Stock
+ARLP,ALLIANCE RESOURCE PARTNERS LP,Nasdaq,1221,DE,Stock
+ARMK,Aramark,NYSE,5812,DE,Stock
+ARMP,"Armata Pharmaceuticals, Inc.",NYSE,2836,WA,Stock
+AROC,"Archrock, Inc.",NYSE,4922,,Stock
+AROW,ARROW FINANCIAL CORP,Nasdaq,6021,NY,Stock
+ARQ,"Arq, Inc.",Nasdaq,2890,,Stock
+ARQT,"Arcutis Biotherapeutics, Inc.",Nasdaq,2834,DE,Stock
+ARRY,"Array Technologies, Inc.",Nasdaq,3674,DE,Stock
+ARTL,"ARTELO BIOSCIENCES, INC.",Nasdaq,2834,NV,Stock
+ARTNA,ARTESIAN RESOURCES CORP,Nasdaq,4941,DE,Stock
+ARTV,"Artiva Biotherapeutics, Inc.",Nasdaq,2836,DE,Stock
+ARTW,ARTS WAY MANUFACTURING CO INC,Nasdaq,3523,NC,Stock
+ARVN,"ARVINAS, INC.",Nasdaq,2834,DE,Stock
+ARW,"ARROW ELECTRONICS, INC.",NYSE,5065,NY,Stock
+ARWR,"ARROWHEAD PHARMACEUTICALS, INC.",Nasdaq,2834,DE,Stock
+ARX,Accelerant Holdings,NYSE,6411,E9,Stock
+ASAN,"Asana, Inc.",NYSE,7372,DE,Stock
+ASB,ASSOCIATED BANC-CORP,NYSE,6022,WI,Stock
+ASBP,"Aspire Biopharma Holdings, Inc.",Nasdaq,2834,E9,Stock
+ASH,ASHLAND INC.,NYSE,5160,DE,Stock
+ASIC,Ategrity Specialty Insurance Co Holdings,NYSE,6331,DE,Stock
+ASIX,AdvanSix Inc.,NYSE,2821,DE,Stock
+ASLE,AerSale Corp,Nasdaq,5080,DE,Stock
+ASMB,"ASSEMBLY BIOSCIENCES, INC.",Nasdaq,2834,DE,Stock
+ASO,"Academy Sports & Outdoors, Inc.",Nasdaq,5940,DE,Stock
+ASPI,ASP Isotopes Inc.,Nasdaq,2890,DE,Stock
+ASPN,ASPEN AEROGELS INC,NYSE,5030,DE,Stock
+ASPS,ALTISOURCE PORTFOLIO SOLUTIONS S.A.,Nasdaq,7380,N4,Stock
+ASRT,"Assertio Holdings, Inc.",Nasdaq,2834,DE,Stock
+ASRV,AMERISERV FINANCIAL INC /PA/,Nasdaq,6021,PA,Stock
+ASTC,ASTROTECH Corp,Nasdaq,3826,DE,Stock
+ASTE,ASTEC INDUSTRIES INC,Nasdaq,3531,TN,Stock
+ASTH,"Astrana Health, Inc.",Nasdaq,8742,DE,Stock
+ASTI,"Ascent Solar Technologies, Inc.",Nasdaq,3674,DE,Stock
+ASTS,"AST SpaceMobile, Inc.",Nasdaq,4899,DE,Stock
+ASUR,ASURE SOFTWARE INC,Nasdaq,7373,DE,Stock
+ASYS,AMTECH SYSTEMS INC,Nasdaq,3559,AZ,Stock
+ATAI,Atai Beckley N.V.,Nasdaq,2834,P7,Stock
+ATEC,"Alphatec Holdings, Inc.",Nasdaq,3841,DE,Stock
+ATEN,"A10 Networks, Inc.",NYSE,3576,DE,Stock
+ATER,"Aterian, Inc.",Nasdaq,3634,DE,Stock
+ATEX,Anterix Inc.,Nasdaq,4813,DE,Stock
+ATH-PA,Athene Holding Ltd.,NYSE,6311,DE,Stock
+ATHR,"Aether Holdings, Inc.",Nasdaq,7372,DE,Stock
+ATI,ATI INC,NYSE,3317,DE,Stock
+ATKR,Atkore Inc.,NYSE,3690,DE,Stock
+ATLC,Atlanticus Holdings Corp,Nasdaq,6141,GA,Stock
+ATLN,ATLANTIC INTERNATIONAL CORP.,Nasdaq,7363,DE,Stock
+ATLO,AMES NATIONAL CORP,Nasdaq,6021,X1,Stock
+ATLX,Atlas Lithium Corp,Nasdaq,1400,NV,Stock
+ATMU,Atmus Filtration Technologies Inc.,NYSE,3714,,Stock
+ATNI,"ATN International, Inc.",Nasdaq,4813,DE,Stock
+ATNM,"Actinium Pharmaceuticals, Inc.",NYSE,2834,DE,Stock
+ATO,ATMOS ENERGY CORP,NYSE,4924,TX,Stock
+ATOM,Atomera Inc,Nasdaq,3674,DE,Stock
+ATOS,"ATOSSA THERAPEUTICS, INC.",Nasdaq,2834,DE,Stock
+ATPC,Agape ATP Corp,Nasdaq,8000,NV,Stock
+ATR,"APTARGROUP, INC.",NYSE,3089,DE,Stock
+ATRA,"Atara Biotherapeutics, Inc.",Nasdaq,2836,DE,Stock
+ATRC,"AtriCure, Inc.",Nasdaq,3841,DE,Stock
+ATRO,ASTRONICS CORP,Nasdaq,3728,NY,Stock
+ATXG,ADDENTAX GROUP CORP.,Nasdaq,7330,NV,Stock
+ATYR,aTYR PHARMA INC,Nasdaq,2836,DE,Stock
+AUB,Atlantic Union Bankshares Corp,NYSE,6022,VA,Stock
+AUBN,"AUBURN NATIONAL BANCORPORATION, INC",Nasdaq,6022,DE,Stock
+AUID,authID Inc.,Nasdaq,7372,DE,Stock
+AUPH,Aurinia Pharmaceuticals Inc.,Nasdaq,2834,,Stock
+AUR,"Aurora Innovation, Inc.",Nasdaq,7373,DE,Stock
+AURA,"Aura Biosciences, Inc.",Nasdaq,2836,DE,Stock
+AUTL,Autolus Therapeutics plc,Nasdaq,2836,X0,Stock
+AUUD,AUDDIA INC.,Nasdaq,7374,DE,Stock
+AVA,AVISTA CORP,NYSE,4931,WA,Stock
+AVAH,"Aveanna Healthcare Holdings, Inc.",Nasdaq,8082,DE,Stock
+AVAV,AeroVironment Inc,Nasdaq,3721,DE,Stock
+AVBC,"Avidia Bancorp, Inc.",NYSE,6036,,Stock
+AVBH,"Avidbank Holdings, Inc.",Nasdaq,6022,CA,Stock
+AVBP,"ArriVent BioPharma, Inc.",Nasdaq,2834,DE,Stock
+AVD,AMERICAN VANGUARD CORP,NYSE,2870,DE,Stock
+AVGO,Broadcom Inc.,Nasdaq,3674,,Stock
+AVIR,"Atea Pharmaceuticals, Inc.",Nasdaq,2834,MA,Stock
+AVNS,"AVANOS MEDICAL, INC.",NYSE,3842,DE,Stock
+AVNT,AVIENT CORP,NYSE,2821,,Stock
+AVNW,"AVIAT NETWORKS, INC.",Nasdaq,3663,DE,Stock
+AVO,"Mission Produce, Inc.",Nasdaq,700,DE,Stock
+AVPT,"AvePoint, Inc.",Nasdaq,7372,DE,Stock
+AVR,Anteris Technologies Global Corp.,Nasdaq,3842,DE,Stock
+AVT,AVNET INC,Nasdaq,5065,NY,Stock
+AVTR,"Avantor, Inc.",NYSE,3826,,Stock
+AVTX,"Avalo Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+AVXL,ANAVEX LIFE SCIENCES CORP.,Nasdaq,2836,,Stock
+AVY,Avery Dennison Corp,NYSE,2670,DE,Stock
+AWI,ARMSTRONG WORLD INDUSTRIES INC,NYSE,3089,PA,Stock
+AWK,"American Water Works Company, Inc.",NYSE,4941,DE,Stock
+AWR,AMERICAN STATES WATER CO,NYSE,4941,CA,Stock
+AWRE,AWARE INC /MA/,Nasdaq,7372,MA,Stock
+AWX,AVALON HOLDINGS CORP,NYSE,4953,OH,Stock
+AX,"Axos Financial, Inc.",NYSE,6035,DE,Stock
+AXGN,"Axogen, Inc.",Nasdaq,3845,MN,Stock
+AXIL,"Axil Brands, Inc.",NYSE,2844,DE,Stock
+AXON,"AXON ENTERPRISE, INC.",Nasdaq,3480,DE,Stock
+AXR,AMREP CORP.,NYSE,6552,OK,Stock
+AXS,AXIS CAPITAL HOLDINGS LTD,NYSE,6331,,Stock
+AXSM,"Axsome Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+AXTA,Axalta Coating Systems Ltd.,NYSE,2851,D0,Stock
+AXTI,AXT INC,Nasdaq,3674,DE,Stock
+AYI,ACUITY INC. (DE),NYSE,3640,DE,Stock
+AYTU,"AYTU BIOPHARMA, INC",Nasdaq,2834,DE,Stock
+AZO,AUTOZONE INC,NYSE,5531,NV,Stock
+AZTA,"Azenta, Inc.",Nasdaq,3559,DE,Stock
+AZTR,"Azitra, Inc.",NYSE,2834,DE,Stock
+AZZ,AZZ INC,NYSE,3470,TX,Stock
+BA,BOEING CO,NYSE,3721,DE,Stock
+BAC,BANK OF AMERICA CORP /DE/,NYSE,6021,DE,Stock
+BAER,"Bridger Aerospace Group Holdings, Inc.",Nasdaq,7389,DE,Stock
+BAFN,BayFirst Financial Corp.,Nasdaq,6022,FL,Stock
+BAH,Booz Allen Hamilton Holding Corp,NYSE,8742,DE,Stock
+BALL,BALL Corp,NYSE,3411,IN,Stock
+BALY,Bally's Corp,NYSE,7011,DE,Stock
+BAM,Brookfield Asset Management Ltd.,NYSE,6282,A1,Stock
+BANC,"BANC OF CALIFORNIA, INC.",NYSE,6021,MD,Stock
+BAND,Bandwidth Inc.,Nasdaq,7372,DE,Stock
+BANF,BANCFIRST CORP /OK/,Nasdaq,6021,OK,Stock
+BANR,BANNER CORP,Nasdaq,6022,WA,Stock
+BAR,GraniteShares Gold Trust,NYSE,6221,DE,Stock
+BARK,"Bark, Inc.",NYSE,5990,,Stock
+BATL,BATTALION OIL CORP,NYSE,1311,DE,Stock
+BATRA,"Atlanta Braves Holdings, Inc.",Nasdaq,7900,NV,Stock
+BAX,BAXTER INTERNATIONAL INC,NYSE,3841,DE,Stock
+BB,BLACKBERRY Ltd,NYSE,7372,,Stock
+BBAI,"BigBear.ai Holdings, Inc.",NYSE,7372,DE,Stock
+BBBY,"BED BATH & BEYOND, INC.",NYSE,5961,DE,Stock
+BBCP,"Concrete Pumping Holdings, Inc.",Nasdaq,1700,DE,Stock
+BBDC,"Barings BDC, Inc.",NYSE,0,NC,Stock
+BBGI,BEASLEY BROADCAST GROUP INC,Nasdaq,4832,DE,Stock
+BBIO,"BridgeBio Pharma, Inc.",Nasdaq,2834,DE,Stock
+BBLG,Bone Biologics Corp,Nasdaq,3842,DE,Stock
+BBNX,"Beta Bionics, Inc.",Nasdaq,3841,DE,Stock
+BBOT,"BridgeBio Oncology Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+BBSI,BARRETT BUSINESS SERVICES INC,Nasdaq,7363,MD,Stock
+BBT,Beacon Financial Corp,NYSE,6036,DE,Stock
+BBW,BUILD-A-BEAR WORKSHOP INC,NYSE,5945,DE,Stock
+BBWI,"Bath & Body Works, Inc.",NYSE,5990,DE,Stock
+BBY,BEST BUY CO INC,NYSE,5731,MN,Stock
+BC,BRUNSWICK CORP,NYSE,3510,DE,Stock
+BCAB,"BioAtla, Inc.",Nasdaq,2836,DE,Stock
+BCAL,California BanCorp \ CA,Nasdaq,6021,CA,Stock
+BCAR,D. Boral ARC Acquisition I Corp.,Nasdaq,7372,,Stock
+BCAX,Bicara Therapeutics Inc.,Nasdaq,2834,DE,Stock
+BCBP,BCB BANCORP INC,Nasdaq,6035,NJ,Stock
+BCC,BOISE CASCADE Co,NYSE,5030,ID,Stock
+BCDA,"BioCardia, Inc.",Nasdaq,2836,DE,Stock
+BCHT,Birchtech Corp.,NYSE,3829,DE,Stock
+BCIC,BCP Investment Corp,Nasdaq,0,DE,Stock
+BCML,BayCom Corp,Nasdaq,6022,,Stock
+BCO,BRINKS CO,NYSE,4731,VA,Stock
+BCPC,BALCHEM CORP,Nasdaq,2800,MD,Stock
+BCRX,BIOCRYST PHARMACEUTICALS INC,Nasdaq,2836,DE,Stock
+BCSF,"Bain Capital Specialty Finance, Inc.",NYSE,0,DE,Stock
+BCTX,BriaCell Therapeutics Corp.,Nasdaq,2834,A1,Stock
+BCYC,BICYCLE THERAPEUTICS PLC,Nasdaq,2834,X0,Stock
+BDC,BELDEN INC.,NYSE,3357,DE,Stock
+BDL,FLANIGANS ENTERPRISES INC,NYSE,5812,FL,Stock
+BDRY,Amplify Commodity Trust,NYSE,6221,DE,Stock
+BDSX,BIODESIX INC,Nasdaq,8071,DE,Stock
+BDTX,"Black Diamond Therapeutics, Inc.",Nasdaq,2836,,Stock
+BDX,BECTON DICKINSON & CO,NYSE,3841,NJ,Stock
+BE,Bloom Energy Corp,NYSE,3620,DE,Stock
+BEAM,Beam Therapeutics Inc.,Nasdaq,2836,DE,Stock
+BEAT,"HeartBeam, Inc.",Nasdaq,3841,DE,Stock
+BEEM,Beam Global,Nasdaq,3690,NV,Stock
+BEEP,Mobile Infrastructure Corp,Nasdaq,6500,,Stock
+BELFA,BEL FUSE INC /NJ,Nasdaq,3677,NJ,Stock
+BEN,FRANKLIN RESOURCES INC,NYSE,6282,DE,Stock
+BESS,Bimergen Energy Corp,NYSE,4911,DE,Stock
+BETA,"BETA Technologies, Inc.",NYSE,3721,DE,Stock
+BETR,Better Home & Finance Holding Co,Nasdaq,6163,,Stock
+BF-A,BROWN FORMAN CORP,NYSE,2080,DE,Stock
+BFAM,BRIGHT HORIZONS FAMILY SOLUTIONS INC.,NYSE,8351,,Stock
+BFC,Bank First Corp,Nasdaq,6021,WI,Stock
+BFH,"BREAD FINANCIAL HOLDINGS, INC.",NYSE,6141,DE,Stock
+BFLY,"Butterfly Network, Inc.",NYSE,3844,DE,Stock
+BFRG,"BullFrog AI Holdings, Inc.",Nasdaq,2834,NV,Stock
+BFRI,Biofrontera Inc.,Nasdaq,2834,DE,Stock
+BFST,"Business First Bancshares, Inc.",Nasdaq,6022,LA,Stock
+BG,Bunge Global SA,NYSE,2070,V8,Stock
+BGC,"BGC Group, Inc.",Nasdaq,6200,,Stock
+BGLC,BioNexus Gene Lab Corp,Nasdaq,8071,WY,Stock
+BGMS,"Bio Green Med Solution, Inc.",Nasdaq,2834,DE,Stock
+BGS,"B&G Foods, Inc.",NYSE,2000,DE,Stock
+BGSF,"BGSF, INC.",NYSE,7363,DE,Stock
+BH-A,Biglari Holdings Inc.,NYSE,5812,IN,Stock
+BHB,BAR HARBOR BANKSHARES,NYSE,6022,ME,Stock
+BHC,Bausch Health Companies Inc.,NYSE,2834,NJ,Stock
+BHE,BENCHMARK ELECTRONICS INC,NYSE,3672,TX,Stock
+BHF,"Brighthouse Financial, Inc.",Nasdaq,6311,DE,Stock
+BHRB,Burke & Herbert Financial Services Corp.,Nasdaq,6021,VA,Stock
+BHVN,Biohaven Ltd.,NYSE,2834,D8,Stock
+BIAF,"bioAffinity Technologies, Inc.",Nasdaq,8731,DE,Stock
+BIIB,BIOGEN INC.,Nasdaq,2836,DE,Stock
+BILL,"BILL Holdings, Inc.",NYSE,7372,,Stock
+BIO,"BIO-RAD LABORATORIES, INC.",NYSE,3826,DE,Stock
+BIOA,"BioAge Labs, Inc.",Nasdaq,2834,DE,Stock
+BIRD,"Allbirds, Inc.",Nasdaq,2300,DE,Stock
+BITB,Bitwise Bitcoin ETF,NYSE,6221,DE,Stock
+BITW,Bitwise 10 Crypto Index ETF,NYSE,6221,DE,Stock
+BIVI,BIOVIE INC.,Nasdaq,2834,NV,Stock
+BJ,"BJ's Wholesale Club Holdings, Inc.",NYSE,5331,DE,Stock
+BJDX,"Bluejay Diagnostics, Inc.",Nasdaq,3841,DE,Stock
+BJRI,BJs RESTAURANTS INC,Nasdaq,5812,CA,Stock
+BK,Bank of New York Mellon Corp,NYSE,6022,DE,Stock
+BKD,Brookdale Senior Living Inc.,NYSE,8050,DE,Stock
+BKE,BUCKLE INC,NYSE,5651,NE,Stock
+BKH,BLACK HILLS CORP /SD/,NYSE,4911,SD,Stock
+BKHA,Black Hawk Acquisition Corp,Nasdaq,2836,,Stock
+BKNG,Booking Holdings Inc.,Nasdaq,4700,DE,Stock
+BKR,Baker Hughes Co,Nasdaq,3533,DE,Stock
+BKSY,BlackSky Technology Inc.,NYSE,3663,DE,Stock
+BKTI,BK Technologies Corp,NYSE,3663,NV,Stock
+BKU,"BankUnited, Inc.",NYSE,6035,DE,Stock
+BKV,BKV Corp,NYSE,1311,DE,Stock
+BKYI,BIO KEY INTERNATIONAL INC,Nasdaq,7372,DE,Stock
+BL,"BLACKLINE, INC.",Nasdaq,7372,DE,Stock
+BLBD,Blue Bird Corp,Nasdaq,3713,,Stock
+BLCO,Bausch & Lomb Corp,NYSE,3851,,Stock
+BLD,TopBuild Corp,NYSE,1700,DE,Stock
+BLDR,"Builders FirstSource, Inc.",NYSE,5211,DE,Stock
+BLFS,BIOLIFE SOLUTIONS INC,Nasdaq,3845,DE,Stock
+BLIN,"Bridgeline Digital, Inc.",Nasdaq,7372,DE,Stock
+BLK,"BlackRock, Inc.",NYSE,6211,DE,Stock
+BLKB,BLACKBAUD INC,Nasdaq,7372,DE,Stock
+BLLN,"BillionToOne, Inc.",Nasdaq,8071,DE,Stock
+BLMN,"Bloomin' Brands, Inc.",Nasdaq,5812,DE,Stock
+BLND,"Blend Labs, Inc.",NYSE,7370,DE,Stock
+BLNE,"Beeline Holdings, Inc.",Nasdaq,6162,NV,Stock
+BLNK,Blink Charging Co.,Nasdaq,3690,NV,Stock
+BLZE,"Backblaze, Inc.",Nasdaq,7372,DE,Stock
+BMBL,Bumble Inc.,Nasdaq,7370,,Stock
+BMEA,"Biomea Fusion, Inc.",Nasdaq,2834,DE,Stock
+BMI,BADGER METER INC,NYSE,3824,WI,Stock
+BMO,BANK OF MONTREAL /CAN/,NYSE,6029,A6,Stock
+BMRA,BIOMERICA INC,Nasdaq,2835,DE,Stock
+BMRC,Bank of Marin Bancorp,Nasdaq,6022,CA,Stock
+BMRN,BIOMARIN PHARMACEUTICAL INC,Nasdaq,2834,DE,Stock
+BMY,BRISTOL MYERS SQUIBB CO,NYSE,2834,DE,Stock
+BNAI,Brand Engagement Network Inc.,Nasdaq,7373,DE,Stock
+BNBX,BNB PLUS CORP.,Nasdaq,8734,DE,Stock
+BNC,CEA Industries Inc.,Nasdaq,700,NV,Stock
+BNED,"Barnes & Noble Education, Inc.",NYSE,5940,DE,Stock
+BNGO,"Bionano Genomics, Inc.",Nasdaq,3826,DE,Stock
+BNKK,"BONK, INC.",Nasdaq,2844,DE,Stock
+BNO,"United States Brent Oil Fund, LP",NYSE,6221,DE,Stock
+BNS,BANK OF NOVA SCOTIA,NYSE,6022,Z4,Stock
+BNTC,Benitec Biopharma Inc.,Nasdaq,2834,DE,Stock
+BNZI,"Banzai International, Inc.",Nasdaq,7372,DE,Stock
+BOC,BOSTON OMAHA Corp,NYSE,6510,DE,Stock
+BODI,"Beachbody Company, Inc.",Nasdaq,5960,DE,Stock
+BOF,BranchOut Food Inc.,Nasdaq,2000,NV,Stock
+BOH,BANK OF HAWAII CORP,NYSE,6022,DE,Stock
+BOKF,BOK FINANCIAL CORP,Nasdaq,6021,OK,Stock
+BOLD,"Boundless Bio, Inc.",Nasdaq,2834,DE,Stock
+BOLT,"Bolt Biotherapeutics, Inc.",Nasdaq,2834,DE,Stock
+BOOM,DMC Global Inc.,Nasdaq,3390,CO,Stock
+BOOT,"Boot Barn Holdings, Inc.",NYSE,5661,DE,Stock
+BOTJ,BANK OF THE JAMES FINANCIAL GROUP INC,Nasdaq,6022,VA,Stock
+BOW,Bowhead Specialty Holdings Inc.,NYSE,6331,DE,Stock
+BOX,BOX INC,NYSE,7372,DE,Stock
+BOXL,Boxlight Corp,Nasdaq,8200,NV,Stock
+BPOP,"POPULAR, INC.",Nasdaq,6022,,Stock
+BPRN,"Princeton Bancorp, Inc.",Nasdaq,6022,PA,Stock
+BR,"BROADRIDGE FINANCIAL SOLUTIONS, INC.",NYSE,7389,DE,Stock
+BRBR,"BELLRING BRANDS, INC.",NYSE,2000,,Stock
+BRBS,"BLUE RIDGE BANKSHARES, INC.",NYSE,6022,VA,Stock
+BRC,BRADY CORP,NYSE,3990,WI,Stock
+BRCB,"Black Rock Coffee Bar, Inc.",Nasdaq,5810,DE,Stock
+BRCC,BRC Inc.,NYSE,2080,DE,Stock
+BRFH,BARFRESH FOOD GROUP INC.,Nasdaq,2030,DE,Stock
+BRID,BRIDGFORD FOODS CORP,Nasdaq,2013,CA,Stock
+BRK-B,BERKSHIRE HATHAWAY INC,NYSE,6331,DE,Stock
+BRKR,BRUKER CORP,Nasdaq,3826,DE,Stock
+BRLS,Borealis Foods Inc.,Nasdaq,2000,E9,Stock
+BRLT,"Brilliant Earth Group, Inc.",Nasdaq,3910,NV,Stock
+BRN,BARNWELL INDUSTRIES INC,NYSE,1311,DE,Stock
+BRNS,Barinthus Biotherapeutics plc.,Nasdaq,2834,X0,Stock
+BRO,"BROWN & BROWN, INC.",NYSE,6411,FL,Stock
+BROS,Dutch Bros Inc.,NYSE,5810,DE,Stock
+BRRR,CoinShares Bitcoin ETF,Nasdaq,6221,DE,Stock
+BRTX,"BioRestorative Therapies, Inc.",Nasdaq,8090,NV,Stock
+BRZE,"Braze, Inc.",Nasdaq,7372,DE,Stock
+BSAA,BEST SPAC I Acquisition Corp.,Nasdaq,8200,,Stock
+BSBK,Bogota Financial Corp.,Nasdaq,6036,,Stock
+BSET,BASSETT FURNITURE INDUSTRIES INC,Nasdaq,2511,VA,Stock
+BSM,"Black Stone Minerals, L.P.",NYSE,1311,DE,Stock
+BSOL,Bitwise Solana Staking ETF,NYSE,6221,DE,Stock
+BSRR,SIERRA BANCORP,Nasdaq,6022,CA,Stock
+BSVN,Bank7 Corp.,Nasdaq,6022,,Stock
+BSX,BOSTON SCIENTIFIC CORP,NYSE,3841,DE,Stock
+BSY,BENTLEY SYSTEMS INC,Nasdaq,7372,DE,Stock
+BTAI,"BioXcel Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+BTBD,"BT Brands, Inc.",Nasdaq,5812,,Stock
+BTC,Grayscale Bitcoin Mini Trust ETF,NYSE,6221,,Stock
+BTCO,Invesco Galaxy Bitcoin ETF,CBOE,6221,DE,Stock
+BTCW,WisdomTree Bitcoin Fund,CBOE,6221,,Stock
+BTMD,biote Corp.,Nasdaq,2833,,Stock
+BTOC,Armlogi Holding Corp.,Nasdaq,4220,NV,Stock
+BTSG,"BrightSpring Health Services, Inc.",Nasdaq,8082,DE,Stock
+BTU,PEABODY ENERGY CORP,NYSE,1221,DE,Stock
+BUDA,"BUDA JUICE, INC.",NYSE,2080,DE,Stock
+BURL,"Burlington Stores, Inc.",NYSE,5311,DE,Stock
+BURU,"Nuburu, Inc.",NYSE,3690,DE,Stock
+BUSE,FIRST BUSEY CORP /NV/,Nasdaq,6022,NV,Stock
+BV,"BrightView Holdings, Inc.",NYSE,700,DE,Stock
+BVFL,"BV Financial, Inc.",Nasdaq,6035,MD,Stock
+BVS,Bioventus Inc.,Nasdaq,3841,DE,Stock
+BW,"Babcock & Wilcox Enterprises, Inc.",NYSE,3433,DE,Stock
+BWA,BORGWARNER INC,NYSE,3714,DE,Stock
+BWB,Bridgewater Bancshares Inc,Nasdaq,6022,MN,Stock
+BWEN,"BROADWIND, INC.",Nasdaq,3360,DE,Stock
+BWFG,"Bankwell Financial Group, Inc.",Nasdaq,6022,CT,Stock
+BWIN,"Baldwin Insurance Group, Inc.",Nasdaq,6411,DE,Stock
+BWMN,Bowman Consulting Group Ltd.,Nasdaq,8742,,Stock
+BWOW,Bitwise Dogecoin ETF,NYSE,6221,DE,Stock
+BWXT,"BWX Technologies, Inc.",NYSE,3510,DE,Stock
+BX,Blackstone Inc.,NYSE,6282,DE,Stock
+BXC,BlueLinx Holdings Inc.,NYSE,5031,DE,Stock
+BXSL,Blackstone Secured Lending Fund,NYSE,0,DE,Stock
+BY,"BYLINE BANCORP, INC.",NYSE,6022,DE,Stock
+BYD,BOYD GAMING CORP,NYSE,7011,NV,Stock
+BYFC,BROADWAY FINANCIAL CORP \DE\,Nasdaq,6035,DE,Stock
+BYND,"BEYOND MEAT, INC.",Nasdaq,2000,DE,Stock
+BYRN,Byrna Technologies Inc.,Nasdaq,3690,DE,Stock
+BYSI,BeyondSpring Inc.,Nasdaq,2834,,Stock
+BZAI,"Blaize Holdings, Inc.",Nasdaq,3674,DE,Stock
+BZFD,"BuzzFeed, Inc.",Nasdaq,4899,DE,Stock
+BZH,BEAZER HOMES USA INC,NYSE,1531,DE,Stock
+C,CITIGROUP INC,NYSE,6021,DE,Stock
+CABA,"Cabaletta Bio, Inc.",Nasdaq,2836,DE,Stock
+CABO,"Cable One, Inc.",NYSE,4841,DE,Stock
+CABR,"Caring Brands, Inc.",Nasdaq,2844,NV,Stock
+CAC,CAMDEN NATIONAL CORP,Nasdaq,6021,ME,Stock
+CACC,CREDIT ACCEPTANCE CORP,Nasdaq,6141,MI,Stock
+CACI,CACI INTERNATIONAL INC /DE/,NYSE,7373,DE,Stock
+CADL,"Candel Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+CAG,CONAGRA BRANDS INC.,NYSE,2000,DE,Stock
+CAH,CARDINAL HEALTH INC,NYSE,5122,OH,Stock
+CAI,"Caris Life Sciences, Inc.",Nasdaq,8071,TX,Stock
+CAKE,CHEESECAKE FACTORY INC,Nasdaq,5812,DE,Stock
+CAL,CALERES INC,NYSE,3140,NY,Stock
+CALC,"CalciMedica, Inc.",Nasdaq,2834,DE,Stock
+CALM,CAL-MAINE FOODS INC,Nasdaq,200,DE,Stock
+CALX,"CALIX, INC",NYSE,4899,,Stock
+CALY,Callaway Golf Co,NYSE,3949,DE,Stock
+CAMP,Camp4 Therapeutics Corp,Nasdaq,2834,DE,Stock
+CANE,Teucrium Commodity Trust,NYSE,6221,,Stock
+CAPL,CrossAmerica Partners LP,NYSE,5172,,Stock
+CAPR,"CAPRICOR THERAPEUTICS, INC.",Nasdaq,2834,DE,Stock
+CAPS,Capstone Holding Corp.,Nasdaq,5030,DE,Stock
+CAR,"AVIS BUDGET GROUP, INC.",Nasdaq,7510,DE,Stock
+CARE,"Carter Bankshares, Inc.",Nasdaq,6021,VA,Stock
+CARG,"CarGurus, Inc.",Nasdaq,7374,DE,Stock
+CARL,"CARLSMED, INC.",Nasdaq,3841,DE,Stock
+CARR,CARRIER GLOBAL Corp,NYSE,3585,DE,Stock
+CARS,Cars.com Inc.,NYSE,7374,DE,Stock
+CART,Maplebear Inc.,Nasdaq,7389,DE,Stock
+CASH,"PATHWARD FINANCIAL, INC.",Nasdaq,6021,DE,Stock
+CASS,CASS INFORMATION SYSTEMS INC,Nasdaq,7389,MO,Stock
+CASY,CASEYS GENERAL STORES INC,Nasdaq,5500,IA,Stock
+CAT,CATERPILLAR INC,NYSE,3531,DE,Stock
+CATO,CATO CORP,NYSE,5621,DE,Stock
+CATX,"Perspective Therapeutics, Inc.",NYSE,2834,DE,Stock
+CATY,CATHAY GENERAL BANCORP,Nasdaq,6022,DE,Stock
+CAVA,"CAVA GROUP, INC.",NYSE,5812,DE,Stock
+CB,Chubb Ltd,NYSE,6331,V8,Stock
+CBAN,COLONY BANKCORP INC,NYSE,6022,GA,Stock
+CBAT,"CBAK Energy Technology, Inc.",Nasdaq,3690,NV,Stock
+CBC,"Central Bancompany, Inc.",Nasdaq,6022,MO,Stock
+CBFV,"CB Financial Services, Inc.",Nasdaq,6022,,Stock
+CBIO,"CRESCENT BIOPHARMA, INC.",Nasdaq,2834,E9,Stock
+CBK,"Commercial Bancgroup, Inc.",Nasdaq,6022,TN,Stock
+CBLL,"Ceribell, Inc.",Nasdaq,3845,DE,Stock
+CBNA,CHAIN BRIDGE BANCORP INC,NYSE,6021,DE,Stock
+CBNK,Capital Bancorp Inc,Nasdaq,6021,MD,Stock
+CBOE,"Cboe Global Markets, Inc.",CBOE,6200,DE,Stock
+CBRE,"CBRE GROUP, INC.",NYSE,6500,DE,Stock
+CBRL,"CRACKER BARREL OLD COUNTRY STORE, INC",Nasdaq,5812,TN,Stock
+CBSH,COMMERCE BANCSHARES INC /MO/,Nasdaq,6022,MO,Stock
+CBT,CABOT CORP,NYSE,2890,DE,Stock
+CBU,"COMMUNITY FINANCIAL SYSTEM, INC.",NYSE,6021,DE,Stock
+CBUS,"Cibus, Inc.",Nasdaq,2870,DE,Stock
+CBZ,"CBIZ, Inc.",NYSE,7389,DE,Stock
+CC,Chemours Co,NYSE,2800,DE,Stock
+CCAP,"Crescent Capital BDC, Inc.",Nasdaq,0,MD,Stock
+CCB,COASTAL FINANCIAL CORP,Nasdaq,6022,WA,Stock
+CCBG,CAPITAL CITY BANK GROUP INC,Nasdaq,6022,FL,Stock
+CCC,CCC Intelligent Solutions Holdings Inc.,Nasdaq,7372,DE,Stock
+CCCC,"C4 Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+CCEL,CRYO CELL INTERNATIONAL INC,NYSE,8090,DE,Stock
+CCIX,Churchill Capital Corp IX/Cayman,Nasdaq,7373,E9,Stock
+CCK,"CROWN HOLDINGS, INC.",NYSE,3411,PA,Stock
+CCL,Carnival Corp Ltd.,NYSE,4400,D0,Stock
+CCLD,"CareCloud, Inc.",Nasdaq,7372,DE,Stock
+CCNE,CNB FINANCIAL CORP/PA,Nasdaq,6022,PA,Stock
+CCO,"Clear Channel Outdoor Holdings, Inc.",NYSE,7310,,Stock
+CCOI,"COGENT COMMUNICATIONS HOLDINGS, INC.",Nasdaq,4899,DE,Stock
+CCRN,CROSS COUNTRY HEALTHCARE INC,Nasdaq,7363,DE,Stock
+CCS,"Century Communities, Inc.",NYSE,1531,DE,Stock
+CCSI,"Consensus Cloud Solutions, Inc.",Nasdaq,7372,DE,Stock
+CDE,"Coeur Mining, Inc.",NYSE,1040,DE,Stock
+CDIO,"Cardio Diagnostics Holdings, Inc.",Nasdaq,2835,DE,Stock
+CDLX,"Cardlytics, Inc.",Nasdaq,7370,DE,Stock
+CDNA,"CareDx, Inc.",Nasdaq,8071,DE,Stock
+CDNL,Cardinal Infrastructure Group Inc.,Nasdaq,1600,DE,Stock
+CDNS,CADENCE DESIGN SYSTEMS INC,Nasdaq,7372,DE,Stock
+CDRE,"Cadre Holdings, Inc.",NYSE,3842,DE,Stock
+CDT,CDT Equity Inc.,Nasdaq,2834,DE,Stock
+CDW,CDW Corp,Nasdaq,5961,DE,Stock
+CDXS,"CODEXIS, INC.",Nasdaq,2860,DE,Stock
+CDZI,CADIZ INC,Nasdaq,4941,DE,Stock
+CE,Celanese Corp,NYSE,2820,DE,Stock
+CECO,CECO ENVIRONMENTAL CORP,Nasdaq,3564,DE,Stock
+CEG,Constellation Energy Corp,Nasdaq,4911,PA,Stock
+CELC,Celcuity Inc.,Nasdaq,8071,DE,Stock
+CELH,"Celsius Holdings, Inc.",Nasdaq,2086,NV,Stock
+CELU,Celularity Inc,Nasdaq,2834,DE,Stock
+CELZ,"CREATIVE MEDICAL TECHNOLOGY HOLDINGS, INC.",Nasdaq,2836,NV,Stock
+CENN,Cenntro Inc.,Nasdaq,3711,NV,Stock
+CENT,CENTRAL GARDEN & PET CO,Nasdaq,5190,DE,Stock
+CENX,CENTURY ALUMINUM CO,Nasdaq,3334,DE,Stock
+CERS,CERUS CORP,Nasdaq,3841,DE,Stock
+CERT,"Certara, Inc.",Nasdaq,7372,DE,Stock
+CETX,CEMTREX INC,Nasdaq,1700,DE,Stock
+CETY,"Clean Energy Technologies, Inc.",Nasdaq,4924,NV,Stock
+CEVA,CEVA INC,Nasdaq,7370,DE,Stock
+CF,"CF Industries Holdings, Inc.",NYSE,2870,DE,Stock
+CFBK,CF BANKSHARES INC.,Nasdaq,6021,DE,Stock
+CFFI,C & F FINANCIAL CORP,Nasdaq,6022,VA,Stock
+CFFN,"Capitol Federal Financial, Inc.",Nasdaq,6035,MD,Stock
+CFG,CITIZENS FINANCIAL GROUP INC/RI,NYSE,6022,DE,Stock
+CFR,"CULLEN/FROST BANKERS, INC.",NYSE,6021,TX,Stock
+CG,Carlyle Group Inc.,Nasdaq,6282,DE,Stock
+CGBD,"Carlyle Secured Lending, Inc.",Nasdaq,0,MD,Stock
+CGC,Canopy Growth Corp,Nasdaq,2833,Z4,Stock
+CGCT,Cartesian Growth Corp III,Nasdaq,3690,E9,Stock
+CGEM,"Cullinan Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+CGNX,COGNEX CORP,Nasdaq,3823,MA,Stock
+CGON,"CG Oncology, Inc.",Nasdaq,2836,DE,Stock
+CGTX,COGNITION THERAPEUTICS INC,Nasdaq,2836,DE,Stock
+CHCI,"Comstock Holding Companies, Inc.",Nasdaq,6500,DE,Stock
+CHCO,CITY HOLDING CO,Nasdaq,6021,WV,Stock
+CHD,CHURCH & DWIGHT CO INC /DE/,NYSE,2840,DE,Stock
+CHDN,Churchill Downs Inc,Nasdaq,7948,KY,Stock
+CHE,CHEMED CORP,NYSE,8082,DE,Stock
+CHEF,"Chefs' Warehouse, Inc.",Nasdaq,5141,DE,Stock
+CHGG,"CHEGG, INC",NYSE,8200,DE,Stock
+CHH,CHOICE HOTELS INTERNATIONAL INC /DE,NYSE,7011,DE,Stock
+CHMG,CHEMUNG FINANCIAL CORP,Nasdaq,6022,NY,Stock
+CHNR,CHINA NATURAL RESOURCES INC,Nasdaq,1040,D8,Stock
+CHPT,"ChargePoint Holdings, Inc.",NYSE,3690,,Stock
+CHR,"Cheer Holding, Inc.",Nasdaq,7374,E9,Stock
+CHRD,Chord Energy Corp,Nasdaq,1311,DE,Stock
+CHRN,ChronoScale Corp,Nasdaq,3569,NV,Stock
+CHRS,"Coherus Oncology, Inc.",Nasdaq,2836,DE,Stock
+CHRW,"C. H. ROBINSON WORLDWIDE, INC.",Nasdaq,4731,DE,Stock
+CHSCP,CHS INC,Nasdaq,5150,MN,Stock
+CHTR,"CHARTER COMMUNICATIONS, INC. /MO/",Nasdaq,4841,,Stock
+CHWY,"Chewy, Inc.",NYSE,5961,DE,Stock
+CI,Cigna Group,NYSE,6324,DE,Stock
+CIA,"CITIZENS, INC.",NYSE,6311,CO,Stock
+CIEN,CIENA CORP,NYSE,3661,MD,Stock
+CIGI,Colliers International Group Inc.,Nasdaq,6500,A6,Stock
+CIIT,"Tianci International, Inc.",Nasdaq,3576,NV,Stock
+CINF,CINCINNATI FINANCIAL CORP,Nasdaq,6331,OH,Stock
+CING,Cingulate Inc.,Nasdaq,2834,DE,Stock
+CION,CION Investment Corp,NYSE,0,MD,Stock
+CISO,"CISO Global, Inc.",Nasdaq,8742,DE,Stock
+CITR,CitroTech Inc.,NYSE,2800,WY,Stock
+CIVB,"CIVISTA BANCSHARES, INC.",Nasdaq,6022,OH,Stock
+CIX,COMPX INTERNATIONAL INC,NYSE,3420,DE,Stock
+CJMB,CALLAN JMB INC.,Nasdaq,7389,NV,Stock
+CKX,"CKX LANDS, INC.",NYSE,1311,LA,Stock
+CL,COLGATE PALMOLIVE CO,NYSE,2844,DE,Stock
+CLAR,Clarus Corp,Nasdaq,3949,DE,Stock
+CLB,Core Laboratories Inc. /DE/,NYSE,1389,DE,Stock
+CLBK,"Columbia Financial, Inc.",Nasdaq,6035,DE,Stock
+CLDI,"Calidi Biotherapeutics, Inc.",NYSE,2836,DE,Stock
+CLDX,"Celldex Therapeutics, Inc.",Nasdaq,2835,DE,Stock
+CLF,CLEVELAND-CLIFFS INC.,NYSE,1000,OH,Stock
+CLFD,"Clearfield, Inc.",Nasdaq,3661,MN,Stock
+CLH,CLEAN HARBORS INC,NYSE,4955,MA,Stock
+CLIR,ClearSign Technologies Corp,Nasdaq,3823,DE,Stock
+CLMB,"Climb Global Solutions, Inc.",Nasdaq,5045,DE,Stock
+CLMT,"Calumet, Inc. /DE",Nasdaq,2911,,Stock
+CLNE,Clean Energy Fuels Corp.,Nasdaq,4932,DE,Stock
+CLNK,Bitwise Chainlink ETF,NYSE,6221,DE,Stock
+CLNN,Clene Inc.,Nasdaq,2834,DE,Stock
+CLOV,"CLOVER HEALTH INVESTMENTS, CORP. /DE",Nasdaq,6324,DE,Stock
+CLPT,"ClearPoint Neuro, Inc.",Nasdaq,3841,DE,Stock
+CLRB,"Cellectar Biosciences, Inc.",Nasdaq,2834,DE,Stock
+CLRO,CLEARONE INC,Nasdaq,3661,DE,Stock
+CLS,CELESTICA INC,NYSE,3672,A6,Stock
+CLST,"Catalyst Bancorp, Inc.",Nasdaq,6035,,Stock
+CLVT,CLARIVATE PLC,NYSE,7374,Y9,Stock
+CLW,Clearwater Paper Corp,NYSE,2631,DE,Stock
+CLX,CLOROX CO /DE/,NYSE,2842,DE,Stock
+CLYM,"Climb Bio, Inc.",Nasdaq,2834,DE,Stock
+CMC,COMMERCIAL METALS Co,NYSE,3312,DE,Stock
+CMCO,COLUMBUS MCKINNON CORP,Nasdaq,3531,NY,Stock
+CMCSA,COMCAST CORP,Nasdaq,4841,PA,Stock
+CME,CME GROUP INC.,Nasdaq,6200,DE,Stock
+CMG,CHIPOTLE MEXICAN GRILL INC,NYSE,5812,,Stock
+CMI,CUMMINS INC,NYSE,3510,IN,Stock
+CMMB,Chemomab Therapeutics Ltd.,Nasdaq,2834,L3,Stock
+CMP,COMPASS MINERALS INTERNATIONAL INC,NYSE,1400,DE,Stock
+CMPR,CIMPRESS plc,Nasdaq,2750,L2,Stock
+CMPS,COMPASS Pathways plc,Nasdaq,2834,X0,Stock
+CMPX,"Compass Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+CMRC,"Commerce.com, Inc.",Nasdaq,7372,DE,Stock
+CMS,CMS ENERGY CORP,NYSE,4931,MI,Stock
+CMT,CORE MOLDING TECHNOLOGIES INC,NYSE,3089,DE,Stock
+CMTG,"Claros Mortgage Trust, Inc.",NYSE,6500,MD,Stock
+CMTL,COMTECH TELECOMMUNICATIONS CORP /DE/,Nasdaq,3663,DE,Stock
+CMTV,COMMUNITY BANCORP /VT,Nasdaq,6021,VT,Stock
+CNA,CNA FINANCIAL CORP,NYSE,6331,DE,Stock
+CNC,CENTENE CORP,NYSE,6324,DE,Stock
+CNDT,CONDUENT Inc,Nasdaq,7389,NY,Stock
+CNET,ZW Data Action Technologies Inc.,Nasdaq,7370,NV,Stock
+CNH,CNH Industrial N.V.,NYSE,3531,P7,Stock
+CNK,"Cinemark Holdings, Inc.",NYSE,7830,DE,Stock
+CNM,"Core & Main, Inc.",NYSE,5099,DE,Stock
+CNMD,CONMED Corp,NYSE,3845,DE,Stock
+CNNE,"Cannae Holdings, Inc.",NYSE,5810,DE,Stock
+CNO,"CNO Financial Group, Inc.",NYSE,6321,DE,Stock
+CNOB,"ConnectOne Bancorp, Inc.",Nasdaq,6022,NJ,Stock
+CNP,CENTERPOINT ENERGY INC,NYSE,4911,TX,Stock
+CNR,"Core Natural Resources, Inc.",NYSE,1220,DC,Stock
+CNS,"COHEN & STEERS, INC.",NYSE,6282,DE,Stock
+CNSP,"CNS Pharmaceuticals, Inc.",Nasdaq,2834,NV,Stock
+CNTA,Centessa Pharmaceuticals plc,Nasdaq,2834,X0,Stock
+CNTB,Connect Biopharma Holdings Ltd,Nasdaq,2834,E9,Stock
+CNTN,"Canton Strategic Holdings, Inc.",Nasdaq,2834,DE,Stock
+CNTX,Context Therapeutics Inc.,Nasdaq,2834,DE,Stock
+CNTY,CENTURY CASINOS INC /CO/,Nasdaq,7011,DE,Stock
+CNVS,Cineverse Corp.,Nasdaq,7841,DE,Stock
+CNX,CNX Resources Corp,NYSE,1311,DE,Stock
+CNXC,Concentrix Corp,Nasdaq,7389,DE,Stock
+CNXN,PC CONNECTION INC,Nasdaq,5045,DE,Stock
+COCH,"Envoy Medical, Inc.",Nasdaq,3842,,Stock
+COCO,"Vita Coco Company, Inc.",Nasdaq,2080,DE,Stock
+COCP,"Cocrystal Pharma, Inc.",Nasdaq,2834,DE,Stock
+CODA,"Coda Octopus Group, Inc.",Nasdaq,3812,DE,Stock
+CODI,Compass Diversified Holdings,NYSE,2510,DE,Stock
+CODX,"Co-Diagnostics, Inc.",Nasdaq,3841,UT,Stock
+COF,CAPITAL ONE FINANCIAL CORP,NYSE,6021,DE,Stock
+COFS,CHOICEONE FINANCIAL SERVICES INC,Nasdaq,6022,MI,Stock
+COGT,"Cogent Biosciences, Inc.",Nasdaq,2834,DE,Stock
+COHN,Cohen & Co Inc.,NYSE,6211,MD,Stock
+COHR,COHERENT CORP.,NYSE,3827,PA,Stock
+COHU,COHU INC,Nasdaq,3825,DE,Stock
+COKE,"Coca-Cola Consolidated, Inc.",Nasdaq,2086,DE,Stock
+COLB,"COLUMBIA BANKING SYSTEM, INC.",Nasdaq,6022,WA,Stock
+COLL,"COLLEGIUM PHARMACEUTICAL, INC",Nasdaq,2834,VA,Stock
+COLM,COLUMBIA SPORTSWEAR CO,Nasdaq,2300,OR,Stock
+COMP,"Compass, Inc.",NYSE,6531,DE,Stock
+CON,"Concentra Group Holdings Parent, Inc.",NYSE,8093,DE,Stock
+COO,"COOPER COMPANIES, INC.",Nasdaq,3851,DE,Stock
+COOK,"Traeger, Inc.",NYSE,3630,DE,Stock
+COOT,Australian Oilseeds Holdings Ltd,Nasdaq,2070,E9,Stock
+COP,CONOCOPHILLIPS,NYSE,2911,DE,Stock
+COR,"Cencora, Inc.",NYSE,5122,DE,Stock
+CORT,CORCEPT THERAPEUTICS INC,Nasdaq,2834,DE,Stock
+COSM,Cosmos Health Inc.,Nasdaq,5122,NV,Stock
+COSO,"CoastalSouth Bancshares, Inc.",NYSE,6022,,Stock
+COST,COSTCO WHOLESALE CORP /NEW,Nasdaq,5331,WA,Stock
+COTY,COTY INC.,NYSE,2844,,Stock
+COUR,"Coursera, Inc.",NYSE,7372,DE,Stock
+COYA,"Coya Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+CP,CANADIAN PACIFIC KANSAS CITY LTD/CN,NYSE,4011,Z4,Stock
+CPAY,"CORPAY, INC.",NYSE,7389,DE,Stock
+CPB,CAMPBELL'S Co,Nasdaq,2000,NJ,Stock
+CPBI,"Central Plains Bancshares, Inc.",Nasdaq,6035,MD,Stock
+CPF,CENTRAL PACIFIC FINANCIAL CORP,NYSE,6022,HI,Stock
+CPHC,Canterbury Park Holding Corp,Nasdaq,7948,MN,Stock
+CPHI,"CHINA PHARMA HOLDINGS, INC.",NYSE,2834,DE,Stock
+CPIX,CUMBERLAND PHARMACEUTICALS INC,Nasdaq,2834,TN,Stock
+CPK,CHESAPEAKE UTILITIES CORP,NYSE,4923,DE,Stock
+CPNG,"Coupang, Inc.",NYSE,5961,DE,Stock
+CPRI,Capri Holdings Ltd,NYSE,3100,D8,Stock
+CPRT,COPART INC,Nasdaq,5500,DE,Stock
+CPRX,"CATALYST PHARMACEUTICALS, INC.",Nasdaq,2834,DE,Stock
+CPS,Cooper-Standard Holdings Inc.,NYSE,3714,DE,Stock
+CPSH,CPS TECHNOLOGIES CORP/DE/,Nasdaq,3260,MA,Stock
+CQP,"Cheniere Energy Partners, L.P.",NYSE,4924,DE,Stock
+CR,Crane Co,NYSE,3490,DE,Stock
+CRAI,"CRA INTERNATIONAL, INC.",Nasdaq,8111,MA,Stock
+CRBG,"Corebridge Financial, Inc.",NYSE,6311,DE,Stock
+CRBP,"Corbus Pharmaceuticals Holdings, Inc.",Nasdaq,2834,DE,Stock
+CRBU,"Caribou Biosciences, Inc.",Nasdaq,2836,DE,Stock
+CRC,California Resources Corp,NYSE,1311,DE,Stock
+CRCT,"Cricut, Inc.",Nasdaq,3559,DE,Stock
+CRD-A,CRAWFORD & CO,NYSE,6411,GA,Stock
+CRDF,"Cardiff Oncology, Inc.",Nasdaq,2836,DE,Stock
+CRDO,Credo Technology Group Holding Ltd,Nasdaq,3674,E9,Stock
+CREG,Smart Powerr Corp.,Nasdaq,7389,NV,Stock
+CREX,"CREATIVE REALITIES, INC.",Nasdaq,7373,MN,Stock
+CRGY,Crescent Energy Co,NYSE,1311,DE,Stock
+CRH,CRH PUBLIC LTD CO,NYSE,3241,L2,Stock
+CRI,CARTERS INC,NYSE,2300,DE,Stock
+CRIS,CURIS INC,Nasdaq,2836,DE,Stock
+CRK,COMSTOCK RESOURCES INC,NYSE,1311,NV,Stock
+CRL,"CHARLES RIVER LABORATORIES INTERNATIONAL, INC.",NYSE,8731,,Stock
+CRM,"Salesforce, Inc.",NYSE,7372,DE,Stock
+CRMD,CorMedix Inc.,Nasdaq,2834,DE,Stock
+CRMT,AMERICAS CARMART INC,Nasdaq,5500,TX,Stock
+CRNC,Cerence Inc.,Nasdaq,7372,DE,Stock
+CRNX,"Crinetics Pharmaceuticals, Inc.",Nasdaq,2834,DE,Stock
+CRON,Cronos Group Inc.,Nasdaq,2833,A1,Stock
+CROX,"Crocs, Inc.",Nasdaq,3021,,Stock
+CRS,CARPENTER TECHNOLOGY CORP,NYSE,3312,DE,Stock
+CRSP,CRISPR Therapeutics AG,Nasdaq,2836,V8,Stock
+CRSR,"Corsair Gaming, Inc.",Nasdaq,3577,DE,Stock
+CRTO,Criteo S.A.,Nasdaq,7311,I0,Stock
+CRUS,"CIRRUS LOGIC, INC.",Nasdaq,3674,DE,Stock
+CRVL,CORVEL CORP,Nasdaq,6411,DE,Stock
+CRVO,CervoMed Inc.,Nasdaq,2834,DE,Stock
+CRVS,"Corvus Pharmaceuticals, Inc.",Nasdaq,2834,DE,Stock
+CRWD,"CrowdStrike Holdings, Inc.",Nasdaq,7372,DE,Stock
+CRWS,CROWN CRAFTS INC,Nasdaq,2211,DE,Stock
+CRWV,"CoreWeave, Inc.",Nasdaq,7372,DE,Stock
+CSAI,"CLOUDASTRUCTURE, INC.",Nasdaq,7370,DE,Stock
+CSBR,"CHAMPIONS ONCOLOGY, INC.",Nasdaq,2836,DE,Stock
+CSCO,"CISCO SYSTEMS, INC.",Nasdaq,3576,DE,Stock
+CSGP,"COSTAR GROUP, INC.",Nasdaq,7389,DE,Stock
+CSGS,CSG SYSTEMS INTERNATIONAL INC,Nasdaq,7374,DE,Stock
+CSL,CARLISLE COMPANIES INC,NYSE,3060,DE,Stock
+CSPI,CSP INC /MA/,Nasdaq,7373,MA,Stock
+CSTL,CASTLE BIOSCIENCES INC,Nasdaq,8071,DE,Stock
+CSTM,CONSTELLIUM SE,NYSE,3341,,Stock
+CSV,CARRIAGE SERVICES INC,NYSE,7200,DE,Stock
+CSW,"CSW INDUSTRIALS, INC.",NYSE,2891,DE,Stock
+CSWC,CAPITAL SOUTHWEST CORP,Nasdaq,0,TX,Stock
+CSX,CSX CORP,Nasdaq,4011,VA,Stock
+CTA-PB,"EIDP, Inc.",NYSE,2820,DE,Stock
+CTAS,CINTAS CORP,Nasdaq,2320,WA,Stock
+CTBB,QWEST CORP,NYSE,4813,CO,Stock
+CTBI,COMMUNITY TRUST BANCORP INC /KY/,Nasdaq,6022,KY,Stock
+CTEV,Claritev Corp,NYSE,7389,DE,Stock
+CTGO,Contango Silver & Gold Inc.,NYSE,1040,DE,Stock
+CTKB,"Cytek Biosciences, Inc.",Nasdaq,3826,DE,Stock
+CTLP,"CANTALOUPE, INC.",Nasdaq,3578,PA,Stock
+CTM,"Castellum, Inc.",NYSE,8742,NV,Stock
+CTMX,"CytomX Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+CTNM,"Contineum Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+CTNT,CHEETAH NET SUPPLY CHAIN SERVICE INC.,Nasdaq,5010,DE,Stock
+CTOR,"CITIUS ONCOLOGY, INC.",Nasdaq,2834,DE,Stock
+CTOS,"Custom Truck One Source, Inc.",NYSE,7359,DE,Stock
+CTRA,Coterra Energy Inc.,NYSE,1311,DE,Stock
+CTRI,"Centuri Holdings, Inc.",NYSE,4923,DE,Stock
+CTRN,Citi Trends Inc,Nasdaq,5600,DE,Stock
+CTS,CTS CORP,NYSE,3672,IN,Stock
+CTSH,COGNIZANT TECHNOLOGY SOLUTIONS CORP,Nasdaq,7371,,Stock
+CTSO,Cytosorbents Corp,Nasdaq,3841,DE,Stock
+CTVA,"Corteva, Inc.",NYSE,100,DE,Stock
+CTXR,"Citius Pharmaceuticals, Inc.",Nasdaq,2834,NV,Stock
+CUBI,"Customers Bancorp, Inc.",NYSE,6022,PA,Stock
+CUE,"Cue Biopharma, Inc.",Nasdaq,2834,DE,Stock
+CULP,CULP INC,Nasdaq,2211,NC,Stock
+CURB,Curbline Properties Corp.,NYSE,6500,MD,Stock
+CURI,CuriosityStream Inc.,Nasdaq,7812,DE,Stock
+CURR,Currenc Group Inc.,Nasdaq,7389,E9,Stock
+CURV,Torrid Holdings Inc.,NYSE,5600,,Stock
+CURX,Curanex Pharmaceuticals Inc,Nasdaq,2834,NV,Stock
+CV,"CapsoVision, Inc",Nasdaq,3845,DE,Stock
+CVBF,CVB FINANCIAL CORP,Nasdaq,6022,CA,Stock
+CVCO,"CAVCO INDUSTRIES, INC.",Nasdaq,2451,DE,Stock
+CVEO,Civeo Corp,NYSE,7000,A1,Stock
+CVGI,"Commercial Vehicle Group, Inc.",Nasdaq,3714,DE,Stock
+CVGW,CALAVO GROWERS INC,Nasdaq,700,CA,Stock
+CVI,CVR ENERGY INC,NYSE,2911,DE,Stock
+CVKD,"Cadrenal Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+CVLG,"COVENANT LOGISTICS GROUP, INC.",NYSE,4213,NV,Stock
+CVLT,COMMVAULT SYSTEMS INC,Nasdaq,7372,DE,Stock
+CVM,CEL SCI CORP,NYSE,2836,CO,Stock
+CVNA,CARVANA CO.,NYSE,5500,DE,Stock
+CVR,CHICAGO RIVET & MACHINE CO,NYSE,3540,IL,Stock
+CVRX,"CVRx, Inc.",Nasdaq,3841,DE,Stock
+CVS,CVS HEALTH Corp,NYSE,5912,DE,Stock
+CVSA,Covista Inc.,NYSE,8200,DE,Stock
+CVU,CPI AEROSTRUCTURES INC,NYSE,3728,NY,Stock
+CVV,CVD EQUIPMENT CORP,Nasdaq,3559,NY,Stock
+CVX,CHEVRON CORP,NYSE,2911,DE,Stock
+CW,CURTISS WRIGHT CORP,NYSE,3590,DE,Stock
+CWAN,"Clearwater Analytics Holdings, Inc.",NYSE,7372,DE,Stock
+CWBC,Community West Bancshares,Nasdaq,6022,CA,Stock
+CWCO,Consolidated Water Co. Ltd.,Nasdaq,4941,E9,Stock
+CWD,CaliberCos Inc.,Nasdaq,6500,DE,Stock
+CWEN,"Clearway Energy, Inc.",NYSE,4911,DE,Stock
+CWH,"Camping World Holdings, Inc.",NYSE,5500,DE,Stock
+CWK,Cushman & Wakefield Ltd.,NYSE,6500,D0,Stock
+CWST,CASELLA WASTE SYSTEMS INC,Nasdaq,4953,DE,Stock
+CWT,CALIFORNIA WATER SERVICE GROUP,NYSE,4941,DE,Stock
+CXAI,CXApp Inc.,Nasdaq,7372,DE,Stock
+CXDO,"Crexendo, Inc.",Nasdaq,4813,DE,Stock
+CXM,"Sprinklr, Inc.",NYSE,7372,DE,Stock
+CXT,"Crane NXT, Co.",NYSE,3490,DE,Stock
+CYAB,"CYABRA, INC.",Nasdaq,7372,DE,Stock
+CYCN,"Cyclerion Therapeutics, Inc.",Nasdaq,2834,MA,Stock
+CYCU,"Cycurion, Inc.",Nasdaq,7371,DE,Stock
+CYH,COMMUNITY HEALTH SYSTEMS INC,NYSE,8062,DE,Stock
+CYN,Cyngn Inc.,Nasdaq,7371,DE,Stock
+CYPH,CYPHERPUNK TECHNOLOGIES INC.,Nasdaq,2834,DE,Stock
+CYRX,"Cryoport, Inc.",Nasdaq,2834,NV,Stock
+CYTK,CYTOKINETICS INC,Nasdaq,2834,,Stock
+CZFS,CITIZENS FINANCIAL SERVICES INC,Nasdaq,6022,PA,Stock
+CZNC,CITIZENS & NORTHERN CORP,Nasdaq,6022,PA,Stock
+CZR,"Caesars Entertainment, Inc.",Nasdaq,7011,DE,Stock
+CZWI,Citizens Community Bancorp Inc.,Nasdaq,6035,MD,Stock
+D,"DOMINION ENERGY, INC",NYSE,4911,VA,Stock
+DAAQ,Digital Asset Acquisition Corp.,Nasdaq,6022,E9,Stock
+DAIC,"CID Holdco, Inc.",Nasdaq,7373,DE,Stock
+DAIO,DATA I/O CORP,Nasdaq,3825,WA,Stock
+DAKT,DAKTRONICS INC /SD/,Nasdaq,3990,DE,Stock
+DAL,"DELTA AIR LINES, INC.",NYSE,4512,DE,Stock
+DAN,DANA Inc,NYSE,3714,DE,Stock
+DAR,DARLING INGREDIENTS INC.,NYSE,2070,DE,Stock
+DARE,"Dare Bioscience, Inc.",Nasdaq,2834,DE,Stock
+DASH,"DoorDash, Inc.",Nasdaq,7389,DE,Stock
+DBA,INVESCO DB AGRICULTURE FUND,NYSE,6221,DE,Stock
+DBB,INVESCO DB BASE METALS FUND,NYSE,6221,DE,Stock
+DBC,Invesco DB Commodity Index Tracking Fund,NYSE,6221,,Stock
+DBD,"DIEBOLD NIXDORF, Inc",NYSE,3578,DE,Stock
+DBE,Invesco DB Energy Fund,NYSE,6221,DE,Stock
+DBGI,"Digital Brands Group, Inc.",Nasdaq,5600,DE,Stock
+DBI,Designer Brands Inc.,NYSE,5661,OH,Stock
+DBO,Invesco DB Oil Fund,NYSE,6221,DE,Stock
+DBP,Invesco DB Precious Metals Fund,NYSE,6221,DE,Stock
+DBRG,"DigitalBridge Group, Inc.",NYSE,6282,MD,Stock
+DBVT,DBV Technologies S.A.,Nasdaq,2836,I0,Stock
+DBX,"DROPBOX, INC.",Nasdaq,7372,DE,Stock
+DC,Dakota Gold Corp.,NYSE,1000,DE,Stock
+DCGO,DocGo Inc.,Nasdaq,8000,DE,Stock
+DCH,Dauch Corp,NYSE,3714,DE,Stock
+DCI,DONALDSON Co INC,NYSE,3564,DE,Stock
+DCO,DUCOMMUN INC /DE/,NYSE,3728,DE,Stock
+DCOM,"Dime Community Bancshares, Inc. /NY/",NYSE,6021,NY,Stock
+DCOY,Decoy Therapeutics Inc.,Nasdaq,2834,DE,Stock
+DCTH,"DELCATH SYSTEMS, INC.",Nasdaq,3841,DE,Stock
+DD,"DuPont de Nemours, Inc.",NYSE,2821,DE,Stock
+DDD,3D SYSTEMS CORP,NYSE,7372,DE,Stock
+DDOG,"Datadog, Inc.",Nasdaq,7372,NV,Stock
+DDS,"DILLARD'S, INC.",NYSE,5311,TX,Stock
+DE,DEERE & CO,NYSE,3523,DE,Stock
+DEC,Diversified Energy Co,NYSE,1311,X0,Stock
+DECK,DECKERS OUTDOOR CORP,NYSE,3021,DE,Stock
+DEFI,Hashdex Commodities Trust,NYSE,6221,DE,Stock
+DELL,Dell Technologies Inc.,NYSE,3571,DE,Stock
+DERM,Journey Medical Corp,Nasdaq,2834,DE,Stock
+DFH,"Dream Finders Homes, Inc.",NYSE,1531,DE,Stock
+DFIN,"Donnelley Financial Solutions, Inc.",NYSE,7380,DE,Stock
+DFLI,Dragonfly Energy Holdings Corp.,Nasdaq,3690,NV,Stock
+DFNS,T3 Defense Inc.,Nasdaq,8742,DE,Stock
+DFTX,"Definium Therapeutics, Inc.",Nasdaq,2833,A1,Stock
+DG,DOLLAR GENERAL CORP,NYSE,5331,TN,Stock
+DGICA,DONEGAL GROUP INC,Nasdaq,6331,DE,Stock
+DGII,DIGI INTERNATIONAL INC,Nasdaq,3576,DE,Stock
+DGX,QUEST DIAGNOSTICS INC,NYSE,8071,DE,Stock
+DH,Definitive Healthcare Corp.,Nasdaq,7372,DE,Stock
+DHI,HORTON D R INC /DE/,NYSE,1531,DE,Stock
+DHIL,DIAMOND HILL INVESTMENT GROUP INC,Nasdaq,6282,OH,Stock
+DHR,DANAHER CORP /DE/,NYSE,3823,DE,Stock
+DHX,"DHI GROUP, INC.",NYSE,7389,DE,Stock
+DIBS,"1stdibs.com, Inc.",Nasdaq,5961,DE,Stock
+DIN,"Dine Brands Global, Inc.",NYSE,5812,DE,Stock
+DINO,HF Sinclair Corp,NYSE,4610,DE,Stock
+DIOD,DIODES INC /DEL/,Nasdaq,3674,DE,Stock
+DIS,Walt Disney Co,NYSE,7990,DE,Stock
+DIT,AMCON DISTRIBUTING CO,NYSE,5141,DE,Stock
+DJCO,DAILY JOURNAL CORP,Nasdaq,2711,SC,Stock
+DJT,Trump Media & Technology Group Corp.,Nasdaq,7370,FL,Stock
+DK,"Delek US Holdings, Inc.",NYSE,2911,DE,Stock
+DKL,"Delek Logistics Partners, LP",NYSE,4610,TN,Stock
+DKNG,DraftKings Inc.,Nasdaq,7990,NV,Stock
+DKS,"DICK'S SPORTING GOODS, INC.",NYSE,5940,DE,Stock
+DLHC,DLH Holdings Corp.,Nasdaq,7363,NJ,Stock
+DLPN,"Dolphin Entertainment, Inc.",Nasdaq,7200,FL,Stock
+DLTH,DULUTH HOLDINGS INC.,Nasdaq,5600,,Stock
+DLTR,"DOLLAR TREE, INC.",Nasdaq,5331,VA,Stock
+DLX,DELUXE CORP,NYSE,2780,MN,Stock
+DMAC,DiaMedica Therapeutics Inc.,Nasdaq,2834,Z4,Stock
+DMLP,"DORCHESTER MINERALS, L.P.",Nasdaq,1311,DE,Stock
+DMRA,"Damora Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+DMRC,Digimarc CORP,Nasdaq,7373,OR,Stock
+DNA,"Ginkgo Bioworks Holdings, Inc.",NYSE,2836,DE,Stock
+DNLI,Denali Therapeutics Inc.,Nasdaq,2836,DE,Stock
+DNOW,DNOW Inc.,NYSE,3533,DE,Stock
+DNTH,"Dianthus Therapeutics, Inc. /DE/",Nasdaq,2834,DE,Stock
+DNUT,"Krispy Kreme, Inc.",Nasdaq,5400,,Stock
+DOCN,"DigitalOcean Holdings, Inc.",NYSE,7370,DE,Stock
+DOCS,"Doximity, Inc.",NYSE,7371,DE,Stock
+DOCU,"DOCUSIGN, INC.",Nasdaq,7372,DE,Stock
+DOLE,Dole plc,NYSE,100,,Stock
+DOMH,Dominari Holdings Inc.,Nasdaq,6211,DE,Stock
+DOMO,"DOMO, INC.",Nasdaq,7372,DE,Stock
+DORM,"Dorman Products, Inc.",Nasdaq,3714,PA,Stock
+DOUG,Douglas Elliman Inc.,NYSE,6531,DE,Stock
+DOV,DOVER Corp,NYSE,3530,NY,Stock
+DOW,DOW INC.,NYSE,2821,DE,Stock
+DPZ,DOMINOS PIZZA INC,Nasdaq,5140,DE,Stock
+DRCT,"Direct Digital Holdings, Inc.",Nasdaq,7310,DE,Stock
+DRI,DARDEN RESTAURANTS INC,NYSE,5812,FL,Stock
+DRIO,DarioHealth Corp.,Nasdaq,3841,DE,Stock
+DRMA,"Dermata Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+DRS,"Leonardo DRS, Inc.",Nasdaq,3812,DE,Stock
+DRVN,Driven Brands Holdings Inc.,Nasdaq,7500,DE,Stock
+DSGN,"Design Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+DSGR,"Distribution Solutions Group, Inc.",Nasdaq,5080,DE,Stock
+DSP,Viant Technology Inc.,Nasdaq,7370,DE,Stock
+DSS,"DSS, INC.",NYSE,2650,NY,Stock
+DT,"Dynatrace, Inc.",NYSE,7372,DE,Stock
+DTCX,"Datacentrex, Inc.",Nasdaq,7374,NV,Stock
+DTE,DTE ENERGY CO,NYSE,4911,MI,Stock
+DTI,Drilling Tools International Corp,Nasdaq,3533,DE,Stock
+DTIL,PRECISION BIOSCIENCES INC,Nasdaq,2836,DE,Stock
+DTM,"DT Midstream, Inc.",NYSE,4922,DE,Stock
+DTSS,DATASEA INC.,Nasdaq,7372,NV,Stock
+DTST,Data Storage Corp,Nasdaq,7374,NV,Stock
+DUK,Duke Energy CORP,NYSE,4931,DE,Stock
+DUKR,DUKE Robotics Corp.,Nasdaq,3721,NV,Stock
+DUOL,"Duolingo, Inc.",Nasdaq,7372,DE,Stock
+DUOT,"DUOS TECHNOLOGIES GROUP, INC.",Nasdaq,7372,FL,Stock
+DV,"DoubleVerify Holdings, Inc.",NYSE,7370,DE,Stock
+DVA,DAVITA INC.,NYSE,8090,DE,Stock
+DVLT,Datavault AI Inc.,Nasdaq,7389,DE,Stock
+DVN,DEVON ENERGY CORP/DE,NYSE,1311,DE,Stock
+DWSN,DAWSON GEOPHYSICAL CO,Nasdaq,1382,TX,Stock
+DWTX,"Dogwood Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+DXC,DXC Technology Co,NYSE,7374,NV,Stock
+DXCM,DEXCOM INC,Nasdaq,3841,DE,Stock
+DXLG,"DESTINATION XL GROUP, INC.",Nasdaq,5651,DE,Stock
+DXPE,DXP ENTERPRISES INC,Nasdaq,5084,TX,Stock
+DXR,DAXOR CORP,Nasdaq,0,NY,Stock
+DY,DYCOM INDUSTRIES INC,NYSE,1623,FL,Stock
+DYAI,DYADIC INTERNATIONAL INC,Nasdaq,2836,DE,Stock
+DYN,"Dyne Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+EA,ELECTRONIC ARTS INC.,Nasdaq,7372,DE,Stock
+EAF,GRAFTECH INTERNATIONAL LTD,NYSE,3620,DE,Stock
+EAT,"BRINKER INTERNATIONAL, INC",NYSE,5812,DE,Stock
+EBAY,EBAY INC,Nasdaq,7389,DE,Stock
+EBC,"Eastern Bankshares, Inc.",Nasdaq,6035,MA,Stock
+EBF,"ENNIS, INC.",NYSE,2761,TX,Stock
+EBMT,"Eagle Bancorp Montana, Inc.",Nasdaq,6022,DE,Stock
+EBS,Emergent BioSolutions Inc.,NYSE,2834,DE,Stock
+ECBK,"ECB Bancorp, Inc. /MD/",Nasdaq,6036,MD,Stock
+ECG,"Everus Construction Group, Inc.",NYSE,1531,DE,Stock
+ECL,ECOLAB INC.,NYSE,2840,DE,Stock
+ECOR,"electroCore, Inc.",Nasdaq,3845,DE,Stock
+ECPG,ENCORE CAPITAL GROUP INC,Nasdaq,6153,DE,Stock
+ECVT,Ecovyst Inc.,NYSE,2800,DE,Stock
+ED,CONSOLIDATED EDISON INC,NYSE,4931,NY,Stock
+EDAP,EDAP TMS SA,Nasdaq,3845,,Stock
+EDBL,Edible Garden AG Inc,Nasdaq,100,DE,Stock
+EDIT,"Editas Medicine, Inc.",Nasdaq,2836,DE,Stock
+EDSA,"Edesa Biotech, Inc.",Nasdaq,2834,A1,Stock
+EDUC,EDUCATIONAL DEVELOPMENT CORP,Nasdaq,5190,DE,Stock
+EE,"Excelerate Energy, Inc.",NYSE,4924,DE,Stock
+EEFT,"EURONET WORLDWIDE, INC.",Nasdaq,6099,DE,Stock
+EEX,"Emerald Holding, Inc.",NYSE,7389,DE,Stock
+EFC,Ellington Financial Inc.,NYSE,6500,DE,Stock
+EFOI,"ENERGY FOCUS, INC/DE",Nasdaq,3640,OH,Stock
+EFOR,Everforth Inc,NYSE,7363,DE,Stock
+EFSC,ENTERPRISE FINANCIAL SERVICES CORP,Nasdaq,6022,DE,Stock
+EFSI,EAGLE FINANCIAL SERVICES INC,Nasdaq,6022,VA,Stock
+EFX,EQUIFAX INC,NYSE,7320,GA,Stock
+EG,"EVEREST GROUP, LTD.",NYSE,6331,D0,Stock
+EGAN,EGAIN Corp,Nasdaq,7372,DE,Stock
+EGBN,EAGLE BANCORP INC,Nasdaq,6022,MD,Stock
+EGHT,8X8 INC /DE/,Nasdaq,7374,DE,Stock
+EGY,VAALCO ENERGY INC /DE/,NYSE,1311,DE,Stock
+EHAB,"Enhabit, Inc.",NYSE,8082,DE,Stock
+EHC,Encompass Health Corp,NYSE,8060,DE,Stock
+EHTH,"eHealth, Inc.",Nasdaq,6411,DE,Stock
+EIG,"Employers Holdings, Inc.",NYSE,6331,NV,Stock
+EIX,EDISON INTERNATIONAL,NYSE,4911,CA,Stock
+EL,ESTEE LAUDER COMPANIES INC,NYSE,2844,DE,Stock
+ELA,Envela Corp,NYSE,5944,NV,Stock
+ELAB,PMGC Holdings Inc.,Nasdaq,2834,DE,Stock
+ELAN,Elanco Animal Health Inc,NYSE,2834,,Stock
+ELDN,"Eledon Pharmaceuticals, Inc.",Nasdaq,2834,DE,Stock
+ELF,"e.l.f. Beauty, Inc.",NYSE,2844,DE,Stock
+ELMD,"Electromed, Inc.",NYSE,3845,MN,Stock
+ELSE,ELECTRO SENSORS INC,Nasdaq,3823,MN,Stock
+ELTX,"Elicio Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+ELUT,ELUTIA INC.,Nasdaq,2836,DE,Stock
+ELV,"Elevance Health, Inc.",NYSE,6324,IN,Stock
+ELVN,"Enliven Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+ELWT,"Elauwit Connection, Inc.",Nasdaq,4899,,Stock
+EMAT,Evolution Metals & Technologies Corp.,Nasdaq,3690,DE,Stock
+EMBC,Embecta Corp.,Nasdaq,3841,DE,Stock
+EME,"EMCOR Group, Inc.",NYSE,1731,DE,Stock
+EML,EASTERN CO,Nasdaq,3420,CT,Stock
+EMN,EASTMAN CHEMICAL CO,NYSE,2821,DE,Stock
+EMPD,Empery Digital Inc.,Nasdaq,3711,DE,Stock
+EMR,EMERSON ELECTRIC CO,NYSE,3600,MO,Stock
+ENB,ENBRIDGE INC,NYSE,4610,A0,Stock
+ENGN,enGene Therapeutics Inc.,Nasdaq,2836,Z4,Stock
+ENHA,Enhanced Group Inc.,NYSE,7990,TX,Stock
+ENOV,Enovis CORP,NYSE,3842,DE,Stock
+ENPH,"Enphase Energy, Inc.",Nasdaq,3674,DE,Stock
+ENR,"ENERGIZER HOLDINGS, INC.",NYSE,3690,MO,Stock
+ENS,EnerSys,NYSE,3690,DE,Stock
+ENSC,"Ensysce Biosciences, Inc.",Nasdaq,2834,DE,Stock
+ENSG,"ENSIGN GROUP, INC",Nasdaq,8051,,Stock
+ENTA,ENANTA PHARMACEUTICALS INC,Nasdaq,2834,,Stock
+ENTG,ENTEGRIS INC,Nasdaq,3089,DE,Stock
+ENTX,Entera Bio Ltd.,Nasdaq,2836,L3,Stock
+ENVA,"Enova International, Inc.",NYSE,6141,DE,Stock
+ENVB,"Enveric Biosciences, Inc.",Nasdaq,2834,DE,Stock
+ENVX,Enovix Corp,Nasdaq,3690,,Stock
+EOG,EOG RESOURCES INC,NYSE,1311,DE,Stock
+EOLS,"Evolus, Inc.",Nasdaq,2834,DE,Stock
+EONR,EON Resources Inc.,NYSE,1311,DE,Stock
+EOSE,"Eos Energy Enterprises, Inc.",Nasdaq,3690,DE,Stock
+EP,EMPIRE PETROLEUM CORP,NYSE,1311,DE,Stock
+EPAC,ENERPAC TOOL GROUP CORP,NYSE,3590,WI,Stock
+EPAM,"EPAM Systems, Inc.",NYSE,7371,DE,Stock
+EPC,EDGEWELL PERSONAL CARE Co,NYSE,2844,MO,Stock
+EPD,ENTERPRISE PRODUCTS PARTNERS L.P.,NYSE,4922,DE,Stock
+EPM,EVOLUTION PETROLEUM CORP,NYSE,1311,NV,Stock
+EPSN,Epsilon Energy Ltd.,Nasdaq,1311,A0,Stock
+EQ,"Equillium, Inc.",Nasdaq,2834,DE,Stock
+EQBK,EQUITY BANCSHARES INC,NYSE,6022,KS,Stock
+EQH,"Equitable Holdings, Inc.",NYSE,6411,DE,Stock
+EQPT,EquipmentShare.com Inc,Nasdaq,7359,TX,Stock
+EQS,"EQUUS TOTAL RETURN, INC.",NYSE,0,DE,Stock
+EQT,EQT Corp,NYSE,1311,PA,Stock
+ERAS,"Erasca, Inc.",Nasdaq,2834,DE,Stock
+ERIE,ERIE INDEMNITY CO,Nasdaq,6411,PA,Stock
+ERII,"Energy Recovery, Inc.",Nasdaq,3559,DE,Stock
+ERNA,Ernexa Therapeutics Inc.,Nasdaq,2834,DE,Stock
+ES,EVERSOURCE ENERGY,NYSE,4911,MA,Stock
+ESAB,ESAB Corp,NYSE,3569,DE,Stock
+ESCA,ESCALADE INC,Nasdaq,3949,IN,Stock
+ESE,ESCO TECHNOLOGIES INC,NYSE,3669,MO,Stock
+ESI,Element Solutions Inc,NYSE,2890,,Stock
+ESLA,"Estrella Immunopharma, Inc.",Nasdaq,2836,,Stock
+ESNT,Essent Group Ltd.,NYSE,6351,D0,Stock
+ESOA,Energy Services of America CORP,Nasdaq,1623,DE,Stock
+ESP,ESPEY MFG & ELECTRONICS CORP,NYSE,3679,NY,Stock
+ESPR,"Esperion Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+ESQ,"Esquire Financial Holdings, Inc.",Nasdaq,6029,MD,Stock
+ESTA,ESTABLISHMENT LABS HOLDINGS INC.,Nasdaq,3842,D8,Stock
+ESTC,Elastic N.V.,NYSE,7372,P7,Stock
+ET,Energy Transfer LP,NYSE,4922,OK,Stock
+ETD,ETHAN ALLEN INTERIORS INC,NYSE,2511,DE,Stock
+ETH,Grayscale Ethereum Staking Mini ETF,NYSE,6221,,Stock
+ETHA,iShares Ethereum Trust ETF,Nasdaq,6221,DE,Stock
+ETHE,Grayscale Ethereum Staking ETF,NYSE,6221,DE,Stock
+ETHV,VanEck Ethereum ETF,CBOE,6221,DE,Stock
+ETN,Eaton Corp plc,NYSE,3590,,Stock
+ETON,"Eton Pharmaceuticals, Inc.",Nasdaq,2834,DE,Stock
+ETR,ENTERGY CORP /DE/,NYSE,4911,DE,Stock
+ETS,Elite Express Holding Inc.,Nasdaq,4210,DE,Stock
+ETSY,ETSY INC,NYSE,7389,DE,Stock
+EU,enCore Energy Corp.,Nasdaq,1090,A1,Stock
+EUDA,EUDA Health Holdings Ltd,Nasdaq,8000,D8,Stock
+EURK,Eureka Acquisition Corp,Nasdaq,4400,E9,Stock
+EVC,ENTRAVISION COMMUNICATIONS CORP,NYSE,4833,DE,Stock
+EVCM,EverCommerce Inc.,Nasdaq,7372,DE,Stock
+EVER,"EverQuote, Inc.",Nasdaq,7370,DE,Stock
+EVEX,"Eve Holding, Inc.",NYSE,3721,,Stock
+EVGO,EVgo Inc.,Nasdaq,7500,DE,Stock
+EVH,"Evolent Health, Inc.",NYSE,8741,DE,Stock
+EVI,"EVI INDUSTRIES, INC.",NYSE,7200,DE,Stock
+EVLV,"Evolv Technologies Holdings, Inc.",Nasdaq,3577,,Stock
+EVMN,"Evommune, Inc.",NYSE,2834,DE,Stock
+EVR,Evercore Inc.,NYSE,6282,DE,Stock
+EVRG,"Evergy, Inc.",Nasdaq,4931,,Stock
+EVTC,"EVERTEC, Inc.",NYSE,7374,PR,Stock
+EVTV,"Envirotech Vehicles, Inc.",Nasdaq,3714,DE,Stock
+EW,Edwards Lifesciences Corp,NYSE,3842,DE,Stock
+EWBC,EAST WEST BANCORP INC,Nasdaq,6022,DE,Stock
+EWCZ,"European Wax Center, Inc.",Nasdaq,7200,,Stock
+EWTX,"Edgewise Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+EXAS,EXACT SCIENCES CORP,Nasdaq,8071,,Stock
+EXC,EXELON CORP,Nasdaq,4931,PA,Stock
+EXE,EXPAND ENERGY Corp,Nasdaq,1311,OK,Stock
+EXEL,"EXELIXIS, INC.",Nasdaq,2836,DE,Stock
+EXFY,"Expensify, Inc.",Nasdaq,7372,DE,Stock
+EXLS,"ExlService Holdings, Inc.",Nasdaq,7389,DE,Stock
+EXOZ,EXOZYMES INC.,Nasdaq,2836,NV,Stock
+EXP,EAGLE MATERIALS INC,NYSE,3241,DE,Stock
+EXPD,EXPEDITORS INTERNATIONAL OF WASHINGTON INC,NYSE,4731,WA,Stock
+EXPE,"Expedia Group, Inc.",Nasdaq,4700,DE,Stock
+EXPO,EXPONENT INC,Nasdaq,8742,DE,Stock
+EXTR,EXTREME NETWORKS INC,Nasdaq,3576,DE,Stock
+EYE,"National Vision Holdings, Inc.",Nasdaq,3851,DE,Stock
+EYPT,"EyePoint, Inc.",Nasdaq,3826,DE,Stock
+EZBC,Franklin Templeton Digital Holdings Trust,CBOE,6221,DE,Stock
+EZET,Franklin Ethereum Trust,CBOE,6221,DE,Stock
+EZPW,EZCORP INC,Nasdaq,5900,DE,Stock
+EZPZ,Franklin Crypto Trust,CBOE,6221,DE,Stock
+EZRA,"Reliance Global Group, Inc.",Nasdaq,6411,FL,Stock
+F,FORD MOTOR CO,NYSE,3711,DE,Stock
+FA,FIRST ADVANTAGE CORP,Nasdaq,7374,,Stock
+FABC,"Fabric.AI, Inc.",Nasdaq,4899,DE,Stock
+FACT,FACT II Acquisition Corp.,Nasdaq,3728,E9,Stock
+FAF,First American Financial Corp,NYSE,6361,DE,Stock
+FANG,"Diamondback Energy, Inc.",Nasdaq,1311,DE,Stock
+FARM,FARMER BROTHERS CO,Nasdaq,2090,DE,Stock
+FAST,FASTENAL CO,Nasdaq,5200,MN,Stock
+FATE,FATE THERAPEUTICS INC,Nasdaq,2836,,Stock
+FATN,Fatpipe Inc/UT,Nasdaq,7372,UT,Stock
+FBIN,"Fortune Brands Innovations, Inc.",NYSE,2430,DE,Stock
+FBIO,"Fortress Biotech, Inc.",Nasdaq,2834,DE,Stock
+FBIZ,"FIRST BUSINESS FINANCIAL SERVICES, INC.",Nasdaq,6022,WI,Stock
+FBK,FB Financial Corp,NYSE,6022,TN,Stock
+FBLA,"FB Bancorp, Inc. /MD/",Nasdaq,6036,MD,Stock
+FBLG,"FibroBiologics, Inc.",Nasdaq,2834,DE,Stock
+FBNC,FIRST BANCORP /NC/,Nasdaq,6022,NC,Stock
+FBP,FIRST BANCORP /PR/,NYSE,6022,PR,Stock
+FBRX,"Forte Biosciences, Inc.",Nasdaq,2834,DE,Stock
+FBTC,Fidelity Wise Origin Bitcoin Fund,CBOE,6221,DE,Stock
+FBYD,"Falcon's Beyond Global, Inc.",Nasdaq,7990,DE,Stock
+FC,FRANKLIN COVEY CO,NYSE,8741,UT,Stock
+FCAP,FIRST CAPITAL INC,Nasdaq,6035,IN,Stock
+FCBC,FIRST COMMUNITY BANKSHARES INC /VA/,Nasdaq,6022,VA,Stock
+FCCO,FIRST COMMUNITY CORP /SC/,Nasdaq,6022,SC,Stock
+FCEL,FUELCELL ENERGY INC,Nasdaq,3620,DE,Stock
+FCF,FIRST COMMONWEALTH FINANCIAL CORP /PA/,NYSE,6021,PA,Stock
+FCFS,"FirstCash Holdings, Inc.",Nasdaq,5900,DE,Stock
+FCN,"FTI CONSULTING, INC",NYSE,8742,MD,Stock
+FCNCA,FIRST CITIZENS BANCSHARES INC /DE/,Nasdaq,6022,DE,Stock
+FCUV,FOCUS UNIVERSAL INC.,Nasdaq,3823,NV,Stock
+FCX,FREEPORT-MCMORAN INC,NYSE,1000,DE,Stock
+FDBC,FIDELITY D & D BANCORP INC,Nasdaq,6021,PA,Stock
+FDMT,"4D Molecular Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+FDP,FRESH DEL MONTE PRODUCE INC,NYSE,100,E9,Stock
+FDS,FACTSET RESEARCH SYSTEMS INC,NYSE,7370,DE,Stock
+FDSB,"Fifth District Bancorp, Inc.",Nasdaq,6035,MD,Stock
+FDUS,FIDUS INVESTMENT Corp,Nasdaq,0,MD,Stock
+FDX,FEDEX CORP,NYSE,4513,DE,Stock
+FE,FIRSTENERGY CORP,NYSE,4911,OH,Stock
+FEAM,"5E Advanced Materials, Inc.",Nasdaq,1400,,Stock
+FEED,"ENvue Medical, Inc.",Nasdaq,3842,DE,Stock
+FEIM,FREQUENCY ELECTRONICS INC,Nasdaq,3825,DE,Stock
+FELE,FRANKLIN ELECTRIC CO INC,Nasdaq,3621,IN,Stock
+FEMY,FEMASYS INC,Nasdaq,3841,DE,Stock
+FENC,FENNEC PHARMACEUTICALS INC.,Nasdaq,2836,A1,Stock
+FERG,Ferguson Enterprises Inc. /DE/,NYSE,5070,DE,Stock
+FET,"FORUM ENERGY TECHNOLOGIES, INC.",NYSE,3533,DE,Stock
+FF,FutureFuel Corp.,NYSE,2860,DE,Stock
+FFAI,FARADAY FUTURE INTELLIGENT ELECTRIC INC.,Nasdaq,3711,DE,Stock
+FFBC,FIRST FINANCIAL BANCORP /OH/,Nasdaq,6021,OH,Stock
+FFIC,FLUSHING FINANCIAL CORP,Nasdaq,6022,DE,Stock
+FFIN,FIRST FINANCIAL BANKSHARES INC,Nasdaq,6022,TX,Stock
+FFIV,"F5, INC.",Nasdaq,3576,WA,Stock
+FG,"F&G Annuities & Life, Inc.",NYSE,6311,DE,Stock
+FGBI,"First Guaranty Bancshares, Inc.",Nasdaq,6035,LA,Stock
+FGDL,Franklin Templeton Holdings Trust,NYSE,6221,DE,Stock
+FGI,FGI Industries Ltd.,Nasdaq,3430,E9,Stock
+FHB,"FIRST HAWAIIAN, INC.",Nasdaq,6022,DE,Stock
+FHI,"FEDERATED HERMES, INC.",NYSE,6282,PA,Stock
+FHN,FIRST HORIZON CORP,NYSE,6021,TN,Stock
+FHTX,Foghorn Therapeutics Inc.,Nasdaq,2834,DE,Stock
+FIBK,FIRST INTERSTATE BANCSYSTEM INC,Nasdaq,6022,DE,Stock
+FICO,FAIR ISAAC CORP,NYSE,7389,DE,Stock
+FIEE,"FiEE, Inc.",Nasdaq,3661,DE,Stock
+FIG,"Figma, Inc.",NYSE,7372,DE,Stock
+FIGR,"Figure Technology Solutions, Inc.",Nasdaq,6163,DE,Stock
+FIGS,"FIGS, Inc.",NYSE,2300,DE,Stock
+FINW,Finwise Bancorp,Nasdaq,6022,UT,Stock
+FIP,FTAI Infrastructure Inc.,Nasdaq,4011,DE,Stock
+FIS,"Fidelity National Information Services, Inc.",NYSE,7389,,Stock
+FISI,FINANCIAL INSTITUTIONS INC,Nasdaq,6021,NY,Stock
+FISV,FISERV INC,Nasdaq,7389,WI,Stock
+FITB,FIFTH THIRD BANCORP,Nasdaq,6022,OH,Stock
+FIVE,"FIVE BELOW, INC",Nasdaq,5331,PA,Stock
+FIVN,"Five9, Inc.",Nasdaq,7374,DE,Stock
+FIX,COMFORT SYSTEMS USA INC,NYSE,1731,,Stock
+FIZZ,NATIONAL BEVERAGE CORP,Nasdaq,2086,DE,Stock
+FKWL,FRANKLIN WIRELESS CORP,Nasdaq,3661,NV,Stock
+FLEX,FLEX LTD.,Nasdaq,3672,U0,Stock
+FLG,"FLAGSTAR BANK, NATIONAL ASSOCIATION",NYSE,6036,,Stock
+FLGT,"Fulgent Genetics, Inc.",Nasdaq,8071,DE,Stock
+FLL,FULL HOUSE RESORTS INC,Nasdaq,7011,DE,Stock
+FLNA,"FILANA THERAPEUTICS, INC.",Nasdaq,2834,DE,Stock
+FLNC,"Fluence Energy, Inc.",Nasdaq,3690,,Stock
+FLNT,"Fluent, Inc.",Nasdaq,7310,DE,Stock
+FLO,FLOWERS FOODS INC,NYSE,2000,GA,Stock
+FLOC,Flowco Holdings Inc.,NYSE,3533,,Stock
+FLR,FLUOR CORP,NYSE,1600,DE,Stock
+FLS,FLOWSERVE CORP,NYSE,3561,NY,Stock
+FLUT,Flutter Entertainment plc,NYSE,7370,L2,Stock
+FLUX,"Flux Power Holdings, Inc.",Nasdaq,3690,NV,Stock
+FLWS,1 800 FLOWERS COM INC,Nasdaq,5990,DE,Stock
+FLXS,FLEXSTEEL INDUSTRIES INC,Nasdaq,2510,MN,Stock
+FLY,Firefly Aerospace Inc.,Nasdaq,3760,DE,Stock
+FLYE,"Fly-E Group, Inc.",Nasdaq,3711,DE,Stock
+FLYW,Flywire Corp,Nasdaq,7389,DE,Stock
+FLYX,FLYEXCLUSIVE INC.,NYSE,4522,DE,Stock
+FMAO,FARMERS & MERCHANTS BANCORP INC,Nasdaq,6035,OH,Stock
+FMBH,"FIRST MID BANCSHARES, INC.",Nasdaq,6022,DE,Stock
+FMC,FMC CORP,NYSE,2800,DE,Stock
+FMNB,FARMERS NATIONAL BANC CORP /OH/,Nasdaq,6022,OH,Stock
+FN,Fabrinet,NYSE,3661,E9,Stock
+FNB,FNB CORP/PA/,NYSE,6021,PA,Stock
+FND,"Floor & Decor Holdings, Inc.",NYSE,5211,DE,Stock
+FNF,"Fidelity National Financial, Inc.",NYSE,6361,,Stock
+FNGR,"FingerMotion, Inc.",Nasdaq,7372,DE,Stock
+FNKO,"Funko, Inc.",Nasdaq,3944,DE,Stock
+FNLC,"First Bancorp, Inc /ME/",Nasdaq,6021,ME,Stock
+FNRN,FIRST NORTHERN COMMUNITY BANCORP,Nasdaq,6035,CA,Stock
+FNWB,First Northwest Bancorp,Nasdaq,6036,WA,Stock
+FNWD,Finward Bancorp,Nasdaq,6035,IN,Stock
+FOA,Finance of America Companies Inc.,NYSE,6162,DE,Stock
+FONR,FONAR CORP,Nasdaq,3845,DE,Stock
+FOR,Forestar Group Inc.,NYSE,6500,DE,Stock
+FORA,Forian Inc.,Nasdaq,7374,DE,Stock
+FORM,FORMFACTOR INC,Nasdaq,3674,DE,Stock
+FORR,"FORRESTER RESEARCH, INC.",Nasdaq,8700,DE,Stock
+FOSL,"Fossil Group, Inc.",Nasdaq,3873,DE,Stock
+FOUR,"Shift4 Payments, Inc.",NYSE,7389,,Stock
+FOXA,Fox Corp,Nasdaq,4833,DE,Stock
+FOXF,FOX FACTORY HOLDING CORP,Nasdaq,3751,DE,Stock
+FOXX,Foxx Development Holdings Inc.,Nasdaq,3576,DE,Stock
+FPH,"Five Point Holdings, LLC",NYSE,6500,DE,Stock
+FRAF,FRANKLIN FINANCIAL SERVICES CORP /PA/,Nasdaq,6022,PA,Stock
+FRD,FRIEDMAN INDUSTRIES INC,Nasdaq,3310,TX,Stock
+FRGT,"Freight Technologies, Inc.",Nasdaq,4731,D8,Stock
+FRHC,Freedom Holding Corp.,Nasdaq,6211,NV,Stock
+FRME,FIRST MERCHANTS CORP,Nasdaq,6021,IN,Stock
+FROG,JFrog Ltd,Nasdaq,7372,L3,Stock
+FRPH,"FRP HOLDINGS, INC.",Nasdaq,6500,FL,Stock
+FRPT,"Freshpet, Inc.",Nasdaq,2040,DE,Stock
+FRSH,Freshworks Inc.,Nasdaq,7372,DE,Stock
+FRST,Primis Financial Corp.,Nasdaq,6022,VA,Stock
+FSBC,FIVE STAR BANCORP,Nasdaq,6022,CA,Stock
+FSBW,"FS Bancorp, Inc.",Nasdaq,6036,WA,Stock
+FSEA,"First Seacoast Bancorp, Inc.",Nasdaq,6035,,Stock
+FSI,FLEXIBLE SOLUTIONS INTERNATIONAL INC,NYSE,2890,NV,Stock
+FSK,FS KKR Capital Corp,NYSE,0,MD,Stock
+FSLR,"FIRST SOLAR, INC.",Nasdaq,3674,DE,Stock
+FSLY,"Fastly, Inc.",Nasdaq,7372,DE,Stock
+FSOL,Fidelity Solana Fund,NYSE,6221,DE,Stock
+FSS,FEDERAL SIGNAL CORP /DE/,NYSE,3711,DE,Stock
+FSTR,FOSTER L B CO,Nasdaq,5051,PA,Stock
+FSUN,FIRSTSUN CAPITAL BANCORP,Nasdaq,6021,DE,Stock
+FTAI,FTAI Aviation Ltd.,Nasdaq,7350,,Stock
+FTCI,"FTC Solar, Inc.",Nasdaq,3674,DE,Stock
+FTDR,"Frontdoor, Inc.",Nasdaq,7340,DE,Stock
+FTEK,"FUEL TECH, INC.",Nasdaq,3564,DE,Stock
+FTFT,Future FinTech Group Inc.,Nasdaq,7389,FL,Stock
+FTHM,Fathom Holdings Inc.,Nasdaq,6531,NC,Stock
+FTI,TechnipFMC plc,NYSE,3533,X0,Stock
+FTK,FLOTEK INDUSTRIES INC/CN/,NYSE,2890,DE,Stock
+FTLF,"FITLIFE BRANDS, INC.",Nasdaq,2833,NV,Stock
+FTNT,"Fortinet, Inc.",Nasdaq,3577,DE,Stock
+FTRE,Fortrea Holdings Inc.,Nasdaq,8071,,Stock
+FTV,Fortive Corp,NYSE,3823,DE,Stock
+FUBO,FuboTV Inc.,NYSE,7812,DE,Stock
+FUL,FULLER H B CO,NYSE,2891,MN,Stock
+FULC,"Fulcrum Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+FULT,FULTON FINANCIAL CORP,Nasdaq,6021,PA,Stock
+FUN,Six Flags Entertainment Corporation/NEW,NYSE,7900,DE,Stock
+FUNC,FIRST UNITED CORP/MD/,Nasdaq,6021,MD,Stock
+FUSB,"FIRST US BANCSHARES, INC.",Nasdaq,6022,DE,Stock
+FUSE,Fusemachines Inc.,Nasdaq,7373,,Stock
+FVCB,"FVCBankcorp, Inc.",Nasdaq,6022,VA,Stock
+FVN,Future Vision II Acquisition Corp.,Nasdaq,7373,E9,Stock
+FWONA,Liberty Media Corp,Nasdaq,4833,DE,Stock
+FWRD,FORWARD AIR CORP,Nasdaq,4731,DE,Stock
+FWRG,"First Watch Restaurant Group, Inc.",Nasdaq,5812,DE,Stock
+FXA,Invesco CurrencyShares Australian Dollar Trust,NYSE,6221,NY,Stock
+FXB,Invesco CurrencyShares British Pound Sterling Trust,NYSE,6221,NY,Stock
+FXC,Invesco CurrencyShares Canadian Dollar Trust,NYSE,6221,NY,Stock
+FXE,Invesco CurrencyShares Euro Trust,NYSE,6221,NY,Stock
+FXF,Invesco CurrencyShares Swiss Franc Trust,NYSE,6221,NY,Stock
+FXNC,FIRST NATIONAL CORP /VA/,Nasdaq,6022,VA,Stock
+FXY,Invesco CurrencyShares Japanese Yen Trust,NYSE,6221,NY,Stock
+G,Genpact LTD,NYSE,8742,D0,Stock
+GABC,"GERMAN AMERICAN BANCORP, INC.",Nasdaq,6022,IN,Stock
+GAIA,"GAIA, INC",Nasdaq,7812,CO,Stock
+GAIN,GLADSTONE INVESTMENT CORPORATION\DE,Nasdaq,0,DE,Stock
+GALT,GALECTIN THERAPEUTICS INC,Nasdaq,2834,NV,Stock
+GAME,"GameSquare Holdings, Inc.",Nasdaq,7900,A6,Stock
+GANX,"Gain Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+GAP,GAP INC,NYSE,5651,DE,Stock
+GATX,GATX CORP,NYSE,4700,NY,Stock
+GBCI,"GLACIER BANCORP, INC.",NYSE,6022,MT,Stock
+GBDC,"GOLUB CAPITAL BDC, Inc.",Nasdaq,0,DE,Stock
+GBFH,GBank Financial Holdings Inc.,Nasdaq,6022,NV,Stock
+GBLI,"Global Indemnity Group, LLC",Nasdaq,6331,DE,Stock
+GBR,"New Concept Energy, Inc.",NYSE,1311,NV,Stock
+GBTC,Grayscale Bitcoin Trust ETF,NYSE,6221,DE,Stock
+GBTG,"Global Business Travel Group, Inc.",NYSE,4700,DE,Stock
+GBX,GREENBRIER COMPANIES INC,NYSE,3743,OR,Stock
+GCBC,GREENE COUNTY BANCORP INC,Nasdaq,6036,DE,Stock
+GCMG,GCM Grosvenor Inc.,Nasdaq,6282,DE,Stock
+GCO,GENESCO INC,NYSE,5661,TN,Stock
+GCT,GigaCloud Technology Inc,Nasdaq,5961,E9,Stock
+GCTK,"Glucotrack, Inc.",Nasdaq,3841,DE,Stock
+GCTS,"GCT Semiconductor Holding, Inc.",NYSE,3674,DE,Stock
+GD,GENERAL DYNAMICS CORP,NYSE,3730,DE,Stock
+GDC,GD Culture Group Ltd,Nasdaq,5050,NV,Stock
+GDDY,GoDaddy Inc.,NYSE,7373,DE,Stock
+GDEN,NEW ROYAL HOLDCO I INC.,Nasdaq,7990,,Stock
+GDLC,Grayscale CoinDesk Crypto 5 ETF,NYSE,6221,E9,Stock
+GDOG,Grayscale Dogecoin Trust ETF,NYSE,6221,DE,Stock
+GDRX,"GoodRx Holdings, Inc.",Nasdaq,7374,DE,Stock
+GDYN,"GRID DYNAMICS HOLDINGS, INC.",Nasdaq,7372,DE,Stock
+GE,GENERAL ELECTRIC CO,NYSE,3600,NY,Stock
+GECC,Great Elm Capital Corp.,Nasdaq,0,MD,Stock
+GEF,"GREIF, INC",NYSE,3412,DE,Stock
+GEG,"Great Elm Group, Inc.",Nasdaq,7372,DE,Stock
+GEHC,GE HealthCare Technologies Inc.,Nasdaq,3844,DE,Stock
+GEL,GENESIS ENERGY LP,NYSE,4610,DE,Stock
+GEN,Gen Digital Inc.,Nasdaq,7372,DE,Stock
+GENC,GENCOR INDUSTRIES INC,NYSE,3531,DE,Stock
+GENK,"GEN Restaurant Group, Inc.",Nasdaq,5812,DE,Stock
+GEO,GEO GROUP INC,NYSE,1520,FL,Stock
+GEOS,GEOSPACE TECHNOLOGIES CORP,Nasdaq,3829,TX,Stock
+GERN,GERON CORP,Nasdaq,2834,DE,Stock
+GETY,"Getty Images Holdings, Inc.",NYSE,7389,DE,Stock
+GEV,GE Vernova Inc.,NYSE,3600,DE,Stock
+GEVO,"Gevo, Inc.",Nasdaq,2860,DE,Stock
+GFF,GRIFFON CORP,NYSE,3442,DE,Stock
+GGG,GRACO INC,NYSE,3561,MN,Stock
+GGRP,"Glimpse Group, Inc.",Nasdaq,7371,NV,Stock
+GH,"Guardant Health, Inc.",Nasdaq,8071,DE,Stock
+GHC,Graham Holdings Co,NYSE,8200,DE,Stock
+GHM,GRAHAM CORP,NYSE,3560,DE,Stock
+GIC,GLOBAL INDUSTRIAL Co,NYSE,5084,DE,Stock
+GIFT,"GIFTIFY, INC.",Nasdaq,5961,DE,Stock
+GIG,GigCapital7 Corp.,Nasdaq,4911,E9,Stock
+GIII,G III APPAREL GROUP LTD /DE/,Nasdaq,2300,DE,Stock
+GILD,"GILEAD SCIENCES, INC.",Nasdaq,2836,DE,Stock
+GIS,GENERAL MILLS INC,NYSE,2040,DE,Stock
+GITS,"Global Interactive Technologies, Inc.",Nasdaq,7370,X1,Stock
+GKOS,GLAUKOS Corp,NYSE,3841,DE,Stock
+GL,GLOBE LIFE INC.,NYSE,6311,DE,Stock
+GLAD,GLADSTONE CAPITAL CORP,Nasdaq,0,MD,Stock
+GLD,SPDR GOLD TRUST,NYSE,6221,,Stock
+GLDM,World Gold Trust,NYSE,6221,DE,Stock
+GLIBA,"GCI Liberty, Inc.",Nasdaq,4841,NV,Stock
+GLNK,Grayscale Chainlink Trust ETF,NYSE,6221,DE,Stock
+GLP,GLOBAL PARTNERS LP,NYSE,5171,,Stock
+GLRE,"GREENLIGHT CAPITAL RE, LTD.",Nasdaq,6331,,Stock
+GLSI,"Greenwich LifeSciences, Inc.",Nasdaq,2834,DE,Stock
+GLTR,abrdn Precious Metals Basket ETF Trust,NYSE,6221,DE,Stock
+GLUE,"Monte Rosa Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+GLW,CORNING INC /NY,NYSE,3357,NY,Stock
+GLXY,Galaxy Digital Inc.,Nasdaq,6211,DE,Stock
+GM,General Motors Co,NYSE,3711,,Stock
+GME,GameStop Corp.,NYSE,5734,DE,Stock
+GMED,GLOBUS MEDICAL INC,NYSE,3841,DE,Stock
+GNE,Genie Energy Ltd.,NYSE,4931,DE,Stock
+GNK,GENCO SHIPPING & TRADING LTD,NYSE,4412,1T,Stock
+GNLN,"Greenlane Holdings, Inc.",Nasdaq,5099,DE,Stock
+GNLX,GENELUX Corp,Nasdaq,2834,DE,Stock
+GNPX,"Genprex, Inc.",Nasdaq,2834,TX,Stock
+GNRC,GENERAC HOLDINGS INC.,NYSE,3621,DE,Stock
+GNSS,Genasys Inc.,Nasdaq,3651,DE,Stock
+GNTX,GENTEX CORP,Nasdaq,3714,MI,Stock
+GNW,GENWORTH FINANCIAL INC,NYSE,6311,DE,Stock
+GO,Grocery Outlet Holding Corp.,Nasdaq,5411,DE,Stock
+GOAI,Eva Live Inc,Nasdaq,7370,NV,Stock
+GOCO,"GoHealth, Inc.",Nasdaq,6411,DE,Stock
+GOGO,Gogo Inc.,Nasdaq,4899,DE,Stock
+GOLD,"Gold.com, Inc.",NYSE,5094,DE,Stock
+GOLF,Acushnet Holdings Corp.,NYSE,3949,DE,Stock
+GOOD,GLADSTONE COMMERCIAL CORP,Nasdaq,6519,MD,Stock
+GOOGL,Alphabet Inc.,Nasdaq,7370,DE,Stock
+GORO,GOLD RESOURCE CORP,NYSE,1040,CO,Stock
+GOSS,"Gossamer Bio, Inc.",Nasdaq,2834,DE,Stock
+GOVX,"GeoVax Labs, Inc.",Nasdaq,2834,DE,Stock
+GPC,GENUINE PARTS CO,NYSE,5013,GA,Stock
+GPCR,Structure Therapeutics Inc.,Nasdaq,2834,E9,Stock
+GPI,GROUP 1 AUTOMOTIVE INC,NYSE,5500,DE,Stock
+GPK,GRAPHIC PACKAGING HOLDING CO,NYSE,2650,DE,Stock
+GPN,GLOBAL PAYMENTS INC,NYSE,7389,GA,Stock
+GPOR,GULFPORT ENERGY CORP,NYSE,1311,,Stock
+GPRE,Green Plains Inc.,Nasdaq,2860,IA,Stock
+GPRO,"GoPro, Inc.",Nasdaq,3861,DE,Stock
+GPUS,"Hyperscale Data, Inc.",NYSE,3533,DE,Stock
+GRAL,"GRAIL, Inc.",Nasdaq,8071,DE,Stock
+GRBK,"Green Brick Partners, Inc.",NYSE,1531,DE,Stock
+GRC,GORMAN RUPP CO,NYSE,3561,OH,Stock
+GRCE,"Grace Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+GRDN,"Guardian Pharmacy Services, Inc.",NYSE,5912,GA,Stock
+GRDX,GridAI Technologies Corp.,Nasdaq,2834,DE,Stock
+GRI,"GRI Bio, Inc.",Nasdaq,2834,DE,Stock
+GRML,Greenland Mines Ltd,Nasdaq,2836,,Stock
+GRMN,GARMIN LTD,NYSE,3812,V8,Stock
+GRND,Grindr Inc.,NYSE,7370,DE,Stock
+GRNQ,Greenpro Capital Corp.,Nasdaq,8742,NV,Stock
+GRNT,"Granite Ridge Resources, Inc.",NYSE,1311,,Stock
+GROV,"Grove Collaborative Holdings, Inc.",NYSE,5961,DE,Stock
+GROW,U S GLOBAL INVESTORS INC,Nasdaq,6282,TX,Stock
+GRPN,"Groupon, Inc.",Nasdaq,7311,DE,Stock
+GRWG,GrowGeneration Corp.,Nasdaq,5200,CO,Stock
+GS,GOLDMAN SACHS GROUP INC,NYSE,6211,DE,Stock
+GSAT,"Globalstar, Inc.",Nasdaq,4899,DE,Stock
+GSBC,"GREAT SOUTHERN BANCORP, INC.",Nasdaq,6022,MD,Stock
+GSBD,"Goldman Sachs BDC, Inc.",NYSE,0,DE,Stock
+GSG,iShares S&P GSCI Commodity-Indexed Trust,NYSE,6221,DE,Stock
+GSHD,"Goosehead Insurance, Inc.",Nasdaq,6411,DE,Stock
+GSIT,GSI TECHNOLOGY INC,Nasdaq,3674,DE,Stock
+GSOL,Grayscale Solana Staking ETF,NYSE,6221,DE,Stock
+GSUI,Grayscale Sui Staking ETF,NYSE,6221,DE,Stock
+GT,GOODYEAR TIRE & RUBBER CO /OH/,Nasdaq,3011,OH,Stock
+GTBP,"GT Biopharma, Inc.",Nasdaq,2834,DE,Stock
+GTE,GRAN TIERRA ENERGY INC.,NYSE,1311,DE,Stock
+GTEC,Greenland Technologies Holding Corp.,Nasdaq,3560,D8,Stock
+GTES,Gates Industrial Corp plc,NYSE,3560,X0,Stock
+GTIM,Good Times Restaurants Inc.,Nasdaq,5812,NV,Stock
+GTLB,Gitlab Inc.,Nasdaq,7372,DE,Stock
+GTLS,CHART INDUSTRIES INC,NYSE,3443,DE,Stock
+GTM,ZoomInfo Technologies Inc.,Nasdaq,7372,DE,Stock
+GTN,"GRAY MEDIA, INC",NYSE,4833,GA,Stock
+GTX,Garrett Motion Inc.,Nasdaq,3714,DE,Stock
+GTY,GETTY REALTY CORP /MD/,NYSE,6500,MD,Stock
+GURE,"GULF RESOURCES, INC.",Nasdaq,2800,NV,Stock
+GUTS,"FRACTYL HEALTH, INC.",Nasdaq,3841,DE,Stock
+GVA,GRANITE CONSTRUCTION INC,NYSE,1600,DE,Stock
+GWAV,"Greenwave Technology Solutions, Inc.",Nasdaq,5051,DE,Stock
+GWH,"ESS Tech, Inc.",NYSE,3690,DE,Stock
+GWRE,"Guidewire Software, Inc.",NYSE,7372,DE,Stock
+GWRS,"Global Water Resources, Inc.",Nasdaq,4941,DE,Stock
+GWW,"W.W. GRAINGER, INC.",NYSE,5000,IL,Stock
+GXAI,GAXOS.AI INC.,Nasdaq,7372,DE,Stock
+GXO,"GXO Logistics, Inc.",NYSE,4700,DE,Stock
+GXRP,Grayscale XRP Trust ETF,NYSE,6221,DE,Stock
+GYRE,"GYRE THERAPEUTICS, INC.",Nasdaq,2834,DE,Stock
+GYRO,"Gyrodyne, LLC",Nasdaq,6512,NY,Stock
+H,Hyatt Hotels Corp,NYSE,7011,IL,Stock
+HAE,HAEMONETICS CORP,NYSE,3841,MA,Stock
+HAFC,HANMI FINANCIAL CORP,Nasdaq,6021,DE,Stock
+HAIN,HAIN CELESTIAL GROUP INC,Nasdaq,2000,DE,Stock
+HAL,HALLIBURTON CO,NYSE,1389,DE,Stock
+HALO,"HALOZYME THERAPEUTICS, INC.",Nasdaq,2836,DE,Stock
+HAS,"HASBRO, INC.",Nasdaq,3944,RI,Stock
+HAYW,"Hayward Holdings, Inc.",NYSE,3580,,Stock
+HBAN,HUNTINGTON BANCSHARES INC /MD/,Nasdaq,6021,MD,Stock
+HBB,Hamilton Beach Brands Holding Co,NYSE,3634,DE,Stock
+HBCP,"HOME BANCORP, INC.",Nasdaq,6036,LA,Stock
+HBIO,HARVARD BIOSCIENCE INC,Nasdaq,3826,DE,Stock
+HBNC,HORIZON BANCORP INC /IN/,Nasdaq,6022,IN,Stock
+HBT,"HBT Financial, Inc.",Nasdaq,6022,DE,Stock
+HCA,"HCA Healthcare, Inc.",NYSE,8062,,Stock
+HCAT,"Health Catalyst, Inc.",Nasdaq,7370,DE,Stock
+HCC,"WARRIOR MET COAL, INC.",NYSE,1220,DE,Stock
+HCI,"HCI Group, Inc.",NYSE,6331,FL,Stock
+HCKT,"HACKETT GROUP, INC.",Nasdaq,8742,FL,Stock
+HCSG,HEALTHCARE SERVICES GROUP INC,Nasdaq,8050,PA,Stock
+HCTI,"Healthcare Triangle, Inc.",Nasdaq,7373,DE,Stock
+HCWB,HCW Biologics Inc.,Nasdaq,2834,DE,Stock
+HCWC,HEALTHY CHOICE WELLNESS CORP.,NYSE,5411,DE,Stock
+HD,"HOME DEPOT, INC.",NYSE,5211,DE,Stock
+HDSN,HUDSON TECHNOLOGIES INC /NY,Nasdaq,5080,NY,Stock
+HE,HAWAIIAN ELECTRIC INDUSTRIES INC,NYSE,4911,HI,Stock
+HEI,HEICO CORP,NYSE,3724,FL,Stock
+HELE,HELEN OF TROY LTD,Nasdaq,3634,D0,Stock
+HESM,Hess Midstream LP,NYSE,1311,DE,Stock
+HFBL,"Home Federal Bancorp, Inc. of Louisiana",Nasdaq,6035,LA,Stock
+HFFG,HF Foods Group Inc.,Nasdaq,5140,DE,Stock
+HFWA,HERITAGE FINANCIAL CORP /WA/,Nasdaq,6036,WA,Stock
+HG,"Hamilton Insurance Group, Ltd.",NYSE,6331,D0,Stock
+HGBL,Heritage Global Inc.,Nasdaq,7389,FL,Stock
+HGTY,"Hagerty, Inc.",NYSE,6411,DE,Stock
+HGV,Hilton Grand Vacations Inc.,NYSE,7000,DE,Stock
+HHS,HARTE HANKS INC,Nasdaq,7331,DE,Stock
+HIG,"HARTFORD INSURANCE GROUP, INC.",NYSE,6331,DE,Stock
+HII,"HUNTINGTON INGALLS INDUSTRIES, INC.",NYSE,3730,DE,Stock
+HIMS,"Hims & Hers Health, Inc.",NYSE,8011,DE,Stock
+HIND,"Vyome Holdings, Inc",Nasdaq,2834,DE,Stock
+HIPO,Hippo Holdings Inc.,NYSE,6331,DE,Stock
+HIT,"Health In Tech, Inc.",Nasdaq,6411,,Stock
+HL,HECLA MINING CO/DE/,NYSE,1400,DE,Stock
+HLF,HERBALIFE LTD.,NYSE,5122,E9,Stock
+HLI,"HOULIHAN LOKEY, INC.",NYSE,6282,,Stock
+HLIO,"HELIOS TECHNOLOGIES, INC.",NYSE,3490,FL,Stock
+HLIT,HARMONIC INC.,Nasdaq,3663,DE,Stock
+HLLY,Holley Inc.,NYSE,3714,DE,Stock
+HLMN,Hillman Solutions Corp.,Nasdaq,3420,DE,Stock
+HLNE,Hamilton Lane INC,Nasdaq,6282,DE,Stock
+HLT,Hilton Worldwide Holdings Inc.,NYSE,7011,DE,Stock
+HLX,HELIX ENERGY SOLUTIONS GROUP INC,NYSE,1389,MN,Stock
+HMN,HORACE MANN EDUCATORS CORP /DE/,NYSE,6331,DE,Stock
+HNGE,"Hinge Health, Inc.",NYSE,7374,DE,Stock
+HNI,HNI CORP,NYSE,2522,IA,Stock
+HNNA,HENNESSY ADVISORS INC,Nasdaq,6282,,Stock
+HNRG,HALLADOR ENERGY CO,Nasdaq,4911,CO,Stock
+HNST,"Honest Company, Inc.",Nasdaq,5961,DE,Stock
+HNVR,"Hanover Bancorp, Inc. /MD",Nasdaq,6022,MD,Stock
+HODL,VanEck Bitcoin ETF,CBOE,6221,DE,Stock
+HOFT,HOOKER FURNISHINGS Corp,Nasdaq,2510,VA,Stock
+HOG,"HARLEY-DAVIDSON, INC.",NYSE,3751,WI,Stock
+HOLO,MicroCloud Hologram Inc.,Nasdaq,7370,E9,Stock
+HOMB,HOME BANCSHARES INC,NYSE,6022,AR,Stock
+HON,HONEYWELL INTERNATIONAL INC,Nasdaq,3724,DE,Stock
+HOOD,"Robinhood Markets, Inc.",Nasdaq,6211,DE,Stock
+HOPE,HOPE BANCORP INC,Nasdaq,6021,DE,Stock
+HOTH,"Hoth Therapeutics, Inc.",Nasdaq,2834,NV,Stock
+HOUR,"Hour Loop, Inc",Nasdaq,5961,DE,Stock
+HOV,HOVNANIAN ENTERPRISES INC,NYSE,1531,DE,Stock
+HOVR,New Horizon Aircraft Ltd.,Nasdaq,3721,A1,Stock
+HOWL,"Werewolf Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+HP,"Helmerich & Payne, Inc.",NYSE,1381,DE,Stock
+HPE,Hewlett Packard Enterprise Co,NYSE,3570,DE,Stock
+HPK,"HighPeak Energy, Inc.",Nasdaq,1381,DE,Stock
+HPP,"Hudson Pacific Properties, Inc.",NYSE,6500,MD,Stock
+HPQ,HP INC,NYSE,3570,DE,Stock
+HQI,"HireQuest, Inc.",Nasdaq,7363,,Stock
+HQY,"HEALTHEQUITY, INC.",Nasdaq,7389,DE,Stock
+HRB,H&R BLOCK INC,NYSE,7200,MO,Stock
+HRI,HERC HOLDINGS INC,NYSE,7350,DE,Stock
+HRL,HORMEL FOODS CORP /DE/,NYSE,2011,DE,Stock
+HRMY,"Harmony Biosciences Holdings, Inc.",Nasdaq,2834,DE,Stock
+HROW,"HARROW, INC.",Nasdaq,2834,DE,Stock
+HRTG,"Heritage Insurance Holdings, Inc.",NYSE,6331,DE,Stock
+HRTX,"HERON THERAPEUTICS, INC. /DE/",Nasdaq,2834,DE,Stock
+HRZN,Horizon Technology Finance Corp,Nasdaq,0,DE,Stock
+HSCS,HeartSciences Inc.,Nasdaq,3842,TX,Stock
+HSIC,HENRY SCHEIN INC,Nasdaq,5047,DE,Stock
+HSTM,HEALTHSTREAM INC,Nasdaq,7370,TN,Stock
+HSY,HERSHEY CO,NYSE,2060,DE,Stock
+HTB,"HomeTrust Bancshares, Inc.",NYSE,6035,MD,Stock
+HTBK,HERITAGE COMMERCE CORP,Nasdaq,6022,CA,Stock
+HTCR,"HeartCore Enterprises, Inc.",Nasdaq,7374,DE,Stock
+HTFL,"Heartflow, Inc.",Nasdaq,3841,DE,Stock
+HTGC,"Hercules Capital, Inc.",NYSE,0,MD,Stock
+HTH,Hilltop Holdings Inc.,NYSE,6022,MD,Stock
+HTLD,HEARTLAND EXPRESS INC,Nasdaq,4213,NV,Stock
+HTO,H2O AMERICA,Nasdaq,4941,DE,Stock
+HTZ,"HERTZ GLOBAL HOLDINGS, INC",Nasdaq,7510,DE,Stock
+HUBB,HUBBELL INC,NYSE,3670,CT,Stock
+HUBG,"Hub Group, Inc.",Nasdaq,4731,IL,Stock
+HUBS,HUBSPOT INC,NYSE,7372,NY,Stock
+HUM,HUMANA INC,NYSE,6324,DE,Stock
+HUMA,"Humacyte, Inc.",Nasdaq,2836,DE,Stock
+HUN,Huntsman CORP,NYSE,2800,DE,Stock
+HURA,"TuHURA Biosciences, Inc./NV",Nasdaq,2834,NV,Stock
+HURC,HURCO COMPANIES INC,Nasdaq,3823,IN,Stock
+HURN,Huron Consulting Group Inc.,Nasdaq,8742,DE,Stock
+HVII,Hennessy Capital Investment Corp. VII,Nasdaq,4911,DE,Stock
+HVT,HAVERTY FURNITURE COMPANIES INC,NYSE,5712,MD,Stock
+HWBK,"HAWTHORN BANCSHARES, INC.",Nasdaq,6021,MO,Stock
+HWC,HANCOCK WHITNEY CORP,Nasdaq,6022,MS,Stock
+HWH,HWH International Inc.,Nasdaq,5122,NV,Stock
+HWKN,HAWKINS INC,Nasdaq,5160,MN,Stock
+HWM,Howmet Aerospace Inc.,NYSE,3350,DE,Stock
+HXL,HEXCEL CORP /DE/,NYSE,2821,DE,Stock
+HY,"HYSTER-YALE, INC.",NYSE,3537,DE,Stock
+HYFM,"HYDROFARM HOLDINGS GROUP, INC.",Nasdaq,5190,DE,Stock
+HYLN,Hyliion Holdings Corp.,NYSE,3713,DE,Stock
+HYMC,HYCROFT MINING HOLDING CORP,Nasdaq,1040,DE,Stock
+HYNE,"Hoyne Bancorp, Inc.",Nasdaq,6036,DE,Stock
+HYPD,"HYPERION DEFI, INC.",Nasdaq,2834,DE,Stock
+HYPR,"Hyperfine, Inc.",Nasdaq,3845,DE,Stock
+HZO,MARINEMAX INC,NYSE,5531,DE,Stock
+IAC,IAC Inc.,Nasdaq,7370,DE,Stock
+IART,INTEGRA LIFESCIENCES HOLDINGS CORP,Nasdaq,3841,DE,Stock
+IAU,ISHARES GOLD TRUST,NYSE,6221,NY,Stock
+IAUM,iShares Gold Trust Micro,NYSE,6221,NY,Stock
+IAUX,i-80 Gold Corp.,NYSE,1040,A1,Stock
+IBCP,INDEPENDENT BANK CORP /MI/,Nasdaq,6022,MI,Stock
+IBEX,IBEX Ltd,Nasdaq,7374,D0,Stock
+IBIO,"iBio, Inc.",Nasdaq,2834,DE,Stock
+IBIT,iShares Bitcoin Trust ETF,Nasdaq,6221,DE,Stock
+IBKR,"Interactive Brokers Group, Inc.",Nasdaq,6211,DE,Stock
+IBM,INTERNATIONAL BUSINESS MACHINES CORP,NYSE,3570,NY,Stock
+IBO,IMPACT BIOMEDICAL INC.,NYSE,2834,NV,Stock
+IBOC,INTERNATIONAL BANCSHARES CORP,Nasdaq,6022,TX,Stock
+IBP,"Installed Building Products, Inc.",NYSE,1520,DE,Stock
+IBRX,"ImmunityBio, Inc.",Nasdaq,2836,DE,Stock
+IBTA,"Ibotta, Inc.",NYSE,7310,DE,Stock
+ICCC,IMMUCELL CORP /DE/,Nasdaq,2835,DE,Stock
+ICE,"Intercontinental Exchange, Inc.",NYSE,6200,DE,Stock
+ICFI,"ICF International, Inc.",Nasdaq,8742,DE,Stock
+ICHR,"ICHOR HOLDINGS, LTD.",Nasdaq,3674,E9,Stock
+ICMB,"Investcorp Credit Management BDC, Inc.",Nasdaq,0,MD,Stock
+ICU,SeaStar Medical Holding Corp,Nasdaq,3841,CO,Stock
+ICUI,ICU MEDICAL INC/DE,Nasdaq,3841,DE,Stock
+IDA,IDACORP INC,NYSE,4911,ID,Stock
+IDAI,T Stamp Inc,Nasdaq,7372,DE,Stock
+IDN,"Intellicheck, Inc.",Nasdaq,7372,DE,Stock
+IDR,"Idaho Strategic Resources, Inc.",NYSE,1040,ID,Stock
+IDT,IDT CORP,NYSE,4813,DE,Stock
+IDXX,IDEXX LABORATORIES INC /DE,Nasdaq,2835,DE,Stock
+IDYA,"IDEAYA Biosciences, Inc.",Nasdaq,2834,DE,Stock
+IE,Ivanhoe Electric Inc.,NYSE,1000,DE,Stock
+IEP,ICAHN ENTERPRISES L.P.,Nasdaq,2911,DE,Stock
+IESC,"IES Holdings, Inc.",Nasdaq,1731,DE,Stock
+IEX,IDEX CORP /DE/,NYSE,3561,DE,Stock
+IFF,INTERNATIONAL FLAVORS & FRAGRANCES INC,NYSE,2860,NY,Stock
+IGC,"IGC Pharma, Inc.",NYSE,2834,MD,Stock
+IHRT,"iHeartMedia, Inc.",Nasdaq,4832,,Stock
+III,Information Services Group Inc.,Nasdaq,8742,DE,Stock
+IIIN,INSTEEL INDUSTRIES INC,NYSE,3310,NC,Stock
+IIIV,"i3 Verticals, Inc.",Nasdaq,7372,DE,Stock
+IIPR,INNOVATIVE INDUSTRIAL PROPERTIES INC,NYSE,6500,,Stock
+IKT,"Inhibikase Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+ILLR,Triller Group Inc.,Nasdaq,6282,DE,Stock
+ILMN,"ILLUMINA, INC.",Nasdaq,3826,DE,Stock
+IMA,"ImageneBio, Inc.",Nasdaq,2836,DE,Stock
+IMAX,IMAX CORP,NYSE,3861,A6,Stock
+IMCR,Immunocore Holdings plc,Nasdaq,2836,X0,Stock
+IMDX,Insight Molecular Diagnostics Inc.,Nasdaq,2835,CA,Stock
+IMKTA,INGLES MARKETS INC,Nasdaq,5411,NC,Stock
+IMMR,IMMERSION CORP,Nasdaq,3577,DE,Stock
+IMMX,"Immix Biopharma, Inc.",Nasdaq,2834,DE,Stock
+IMNM,Immunome Inc.,Nasdaq,2834,DE,Stock
+IMNN,"Imunon, Inc.",Nasdaq,2834,DE,Stock
+IMO,IMPERIAL OIL LTD,NYSE,2911,,Stock
+IMRX,Immuneering Corp,Nasdaq,2834,DE,Stock
+IMSR,Terrestrial Energy Inc. /DE/,Nasdaq,3443,DE,Stock
+IMUX,"IMMUNIC, INC.",Nasdaq,2834,DE,Stock
+IMVT,"Immunovant, Inc.",Nasdaq,2836,DE,Stock
+IMXI,"International Money Express, Inc.",Nasdaq,7389,DE,Stock
+INAB,"IN8BIO, INC.",Nasdaq,2836,DE,Stock
+INBK,First Internet Bancorp,Nasdaq,6022,IN,Stock
+INBS,INTELLIGENT BIO SOLUTIONS INC.,Nasdaq,3841,DE,Stock
+INBX,"Inhibrx Biosciences, Inc.",Nasdaq,2836,DE,Stock
+INCY,INCYTE CORP,Nasdaq,8731,DE,Stock
+INDB,INDEPENDENT BANK CORP,Nasdaq,6022,MA,Stock
+INDI,"indie Semiconductor, Inc.",Nasdaq,3674,DE,Stock
+INDP,"Indaptus Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+INDV,"Indivior Pharmaceuticals, Inc.",Nasdaq,2834,DE,Stock
+INFQ,"Infleqtion, Inc.",NYSE,7374,DE,Stock
+INFU,"InfuSystem Holdings, Inc",NYSE,3841,DE,Stock
+INGM,Ingram Micro Holding Corp,NYSE,5045,DE,Stock
+INGN,Inogen Inc,Nasdaq,3842,DE,Stock
+INGR,Ingredion Inc,NYSE,2040,DE,Stock
+INHD,INNO HOLDINGS INC.,Nasdaq,3317,TX,Stock
+INKT,"MiNK Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+INLX,"INTELLINETICS, INC.",NYSE,7372,NV,Stock
+INM,InMed Pharmaceuticals Inc.,Nasdaq,2834,A1,Stock
+INMB,"Inmune Bio, Inc.",Nasdaq,2836,NV,Stock
+INNV,InnovAge Holding Corp.,Nasdaq,8000,DE,Stock
+INO,"INOVIO PHARMACEUTICALS, INC.",Nasdaq,2834,DE,Stock
+INOD,INNODATA INC,Nasdaq,7374,DE,Stock
+INR,"INFINITY NATURAL RESOURCES, INC.",NYSE,1311,DE,Stock
+INSE,"Inspired Entertainment, Inc.",Nasdaq,7372,DE,Stock
+INSG,INSEEGO CORP.,Nasdaq,3669,,Stock
+INSM,INSMED Inc,Nasdaq,2834,VA,Stock
+INSP,"Inspire Medical Systems, Inc.",NYSE,3841,DE,Stock
+INSW,"International Seaways, Inc.",NYSE,4400,1T,Stock
+INTA,"Intapp, Inc.",Nasdaq,7372,DE,Stock
+INTC,INTEL CORP,Nasdaq,3674,DE,Stock
+INTG,INTERGROUP CORP,Nasdaq,6513,DE,Stock
+INTS,"INTENSITY THERAPEUTICS, INC.",Nasdaq,2836,DE,Stock
+INTT,INTEST CORP,NYSE,3825,DE,Stock
+INTU,INTUIT INC.,Nasdaq,7372,DE,Stock
+INTZ,INTRUSION INC,Nasdaq,3576,DE,Stock
+INUV,"Inuvo, Inc.",NYSE,7310,NV,Stock
+INVA,"Innoviva, Inc.",Nasdaq,2834,DE,Stock
+INVE,"Identiv, Inc.",Nasdaq,3577,DE,Stock
+INVH,Invitation Homes Inc.,NYSE,6510,,Stock
+INVX,"Innovex International, Inc.",NYSE,3533,DE,Stock
+IONQ,"IonQ, Inc.",NYSE,7373,DE,Stock
+IONS,IONIS PHARMACEUTICALS INC,Nasdaq,2834,CA,Stock
+IOSP,INNOSPEC INC.,Nasdaq,2800,DE,Stock
+IOT,Samsara Inc.,NYSE,7373,DE,Stock
+IOVA,"IOVANCE BIOTHERAPEUTICS, INC.",Nasdaq,2836,DE,Stock
+IP,INTERNATIONAL PAPER CO /NEW/,NYSE,2621,NY,Stock
+IPAR,INTERPARFUMS INC,Nasdaq,2844,DE,Stock
+IPDN,"Professional Diversity Network, Inc.",Nasdaq,7370,DE,Stock
+IPGP,IPG PHOTONICS CORP,Nasdaq,3674,DE,Stock
+IPI,"Intrepid Potash, Inc.",NYSE,1400,DE,Stock
+IPM,INTELLIGENT PROTECTION MANAGEMENT CORP.,Nasdaq,7370,DE,Stock
+IPSC,"Century Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+IPST,"IP STRATEGY HOLDINGS, INC.",Nasdaq,2080,DE,Stock
+IPW,iPower Inc.,Nasdaq,5200,NV,Stock
+IPWR,Ideal Power Inc.,Nasdaq,3674,DE,Stock
+IQST,iQSTEL Inc,Nasdaq,4813,NV,Stock
+IQV,IQVIA HOLDINGS INC.,NYSE,8731,DE,Stock
+IR,Ingersoll Rand Inc.,NYSE,3560,DE,Stock
+IRD,"Opus Genetics, Inc.",Nasdaq,2834,DE,Stock
+IRDM,Iridium Communications Inc.,Nasdaq,4899,NY,Stock
+IRIX,IRIDEX CORP,Nasdaq,3845,DE,Stock
+IRMD,IRADIMED CORP,Nasdaq,3841,DE,Stock
+IRON,"Disc Medicine, Inc.",Nasdaq,2834,,Stock
+IRTC,"iRhythm Holdings, Inc.",Nasdaq,3841,,Stock
+IRWD,IRONWOOD PHARMACEUTICALS INC,Nasdaq,2834,DE,Stock
+ISBA,ISABELLA BANK CORP,Nasdaq,6022,MI,Stock
+ISPC,iSpecimen Inc.,Nasdaq,8731,DE,Stock
+ISPR,Ispire Technology Inc.,Nasdaq,2111,,Stock
+ISRG,INTUITIVE SURGICAL INC,Nasdaq,3842,DE,Stock
+ISSC,INNOVATIVE SOLUTIONS & SUPPORT INC,Nasdaq,7371,PA,Stock
+ISTR,Investar Holding Corp,Nasdaq,6022,LA,Stock
+IT,GARTNER INC,NYSE,8741,DE,Stock
+ITGR,Integer Holdings Corp,NYSE,3845,DE,Stock
+ITIC,INVESTORS TITLE CO,Nasdaq,6361,NC,Stock
+ITP,"IT TECH PACKAGING, INC.",NYSE,2670,NV,Stock
+ITRI,"ITRON, INC.",Nasdaq,3825,WA,Stock
+ITRM,Iterum Therapeutics plc,Nasdaq,2834,L2,Stock
+ITT,ITT INC.,NYSE,3561,,Stock
+ITW,ILLINOIS TOOL WORKS INC,NYSE,3560,DE,Stock
+IVDA,"Iveda Solutions, Inc.",Nasdaq,7372,NV,Stock
+IVF,"INVO Fertility, Inc.",Nasdaq,3841,NV,Stock
+IVVD,"Invivyd, Inc.",Nasdaq,2836,DE,Stock
+IVZ,Invesco Ltd.,NYSE,6282,D0,Stock
+IXHL,Incannex Healthcare Inc.,Nasdaq,2834,DE,Stock
+IZEA,"IZEA Worldwide, Inc.",Nasdaq,7310,NV,Stock
+J,JACOBS SOLUTIONS INC.,NYSE,1600,DE,Stock
+JACK,JACK IN THE BOX INC,Nasdaq,5812,DE,Stock
+JAGU,Jaguar Uranium Corp.,NYSE,1000,A1,Stock
+JAGX,"Jaguar Health, Inc.",Nasdaq,2834,DE,Stock
+JAKK,JAKKS PACIFIC INC,Nasdaq,3944,DE,Stock
+JANX,"Janux Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+JAZZ,Jazz Pharmaceuticals plc,Nasdaq,2834,L2,Stock
+JBI,"Janus International Group, Inc.",NYSE,3442,DE,Stock
+JBIO,"Jade Biosciences, Inc.",Nasdaq,2834,DE,Stock
+JBL,JABIL INC,NYSE,3672,DE,Stock
+JBLU,JETBLUE AIRWAYS CORP,Nasdaq,4512,DE,Stock
+JBSS,SANFILIPPO JOHN B & SON INC,Nasdaq,2060,DE,Stock
+JBTM,JBT MAREL Corp,NYSE,3550,DE,Stock
+JCAP,"Jefferson Capital, Inc. / DE",Nasdaq,6153,DE,Stock
+JCI,Johnson Controls International plc,NYSE,3585,L2,Stock
+JCTC,JEWETT CAMERON TRADING CO LTD,Nasdaq,5211,OR,Stock
+JEF,Jefferies Financial Group Inc.,NYSE,6211,NY,Stock
+JELD,"JELD-WEN Holding, Inc.",NYSE,2430,DE,Stock
+JFB,JFB Construction Holdings,Nasdaq,1540,NV,Stock
+JHG,JANUS HENDERSON GROUP PLC,NYSE,6282,Y9,Stock
+JILL,"J.Jill, Inc.",NYSE,2330,DE,Stock
+JJSF,J&J SNACK FOODS CORP,Nasdaq,2052,NJ,Stock
+JKHY,JACK HENRY & ASSOCIATES INC,Nasdaq,7373,DE,Stock
+JLL,JONES LANG LASALLE INC,NYSE,6531,MD,Stock
+JMSB,"John Marshall Bancorp, Inc.",Nasdaq,6022,VA,Stock
+JNJ,JOHNSON & JOHNSON,NYSE,2834,NJ,Stock
+JOB,GEE Group Inc.,NYSE,7361,IL,Stock
+JOBY,"Joby Aviation, Inc.",NYSE,3721,DE,Stock
+JOE,ST JOE Co,NYSE,6552,FL,Stock
+JOUT,JOHNSON OUTDOORS INC,Nasdaq,3949,WI,Stock
+JPM,JPMORGAN CHASE & CO,NYSE,6021,DE,Stock
+JRSH,"Jerash Holdings (US), Inc.",Nasdaq,2300,DE,Stock
+JRVR,"James River Group Holdings, Inc.",Nasdaq,6331,DE,Stock
+JSPR,"Jasper Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+JTAI,Jet.AI Inc.,Nasdaq,4522,DE,Stock
+JUNS,"JUPITER NEUROSCIENCES, INC.",Nasdaq,2834,DE,Stock
+JVA,COFFEE HOLDING CO INC,Nasdaq,2090,NV,Stock
+JXN,Jackson Financial Inc.,NYSE,6311,DE,Stock
+KAI,KADANT INC,NYSE,3550,DE,Stock
+KALA,"KALA BIO, Inc.",Nasdaq,2834,DE,Stock
+KALU,KAISER ALUMINUM CORP,Nasdaq,3350,DE,Stock
+KALV,"KalVista Pharmaceuticals, Inc.",Nasdaq,2834,DE,Stock
+KAPA,"Kairos Pharma, LTD.",NYSE,2834,DE,Stock
+KBDC,"Kayne Anderson BDC, Inc.",NYSE,0,DE,Stock
+KBH,KB HOME,NYSE,1531,DE,Stock
+KBR,"KBR, INC.",NYSE,1600,DE,Stock
+KD,"Kyndryl Holdings, Inc.",NYSE,7373,DE,Stock
+KDK,"Kodiak AI, Inc.",Nasdaq,7373,DE,Stock
+KDP,Keurig Dr Pepper Inc.,Nasdaq,2080,DE,Stock
+KE,"Kimball Electronics, Inc.",Nasdaq,3672,IN,Stock
+KELYA,KELLY SERVICES INC,Nasdaq,7363,DE,Stock
+KEQU,KEWAUNEE SCIENTIFIC CORP /DE/,Nasdaq,3821,DE,Stock
+KEX,KIRBY CORP,NYSE,4400,NV,Stock
+KEY,KEYCORP /NEW/,NYSE,6021,OH,Stock
+KEYS,"Keysight Technologies, Inc.",NYSE,3823,DE,Stock
+KFFB,Kentucky First Federal Bancorp,Nasdaq,6035,,Stock
+KFRC,KFORCE INC,NYSE,7363,FL,Stock
+KFY,KORN FERRY,NYSE,7361,DE,Stock
+KG,Kestrel Group Ltd,Nasdaq,6331,D0,Stock
+KGS,"Kodiak Gas Services, Inc.",NYSE,4922,DE,Stock
+KHC,Kraft Heinz Co,Nasdaq,2030,DE,Stock
+KIDS,ORTHOPEDIATRICS CORP,Nasdaq,3841,,Stock
+KIDZ,"Classover Holdings, Inc.",Nasdaq,8200,DE,Stock
+KINS,"KINGSTONE COMPANIES, INC.",Nasdaq,6331,DE,Stock
+KITT,"Nauticus Robotics, Inc.",Nasdaq,3569,DE,Stock
+KKR,KKR & Co. Inc.,NYSE,6282,,Stock
+KLAC,KLA CORP,Nasdaq,3827,DE,Stock
+KLC,"KinderCare Learning Companies, Inc.",NYSE,8351,DE,Stock
+KLIC,KULICKE & SOFFA INDUSTRIES INC,Nasdaq,3674,PA,Stock
+KLRS,"Kalaris Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+KLTR,KALTURA INC,Nasdaq,7372,,Stock
+KLXE,"KLX Energy Services Holdings, Inc.",Nasdaq,1389,,Stock
+KMB,KIMBERLY CLARK CORP,Nasdaq,2670,DE,Stock
+KMI,"KINDER MORGAN, INC.",NYSE,4922,DE,Stock
+KMPR,KEMPER Corp,NYSE,6331,DE,Stock
+KMT,KENNAMETAL INC,NYSE,3541,PA,Stock
+KMTS,"KESTRA MEDICAL TECHNOLOGIES, LTD.",Nasdaq,3841,D0,Stock
+KMX,CARMAX INC,NYSE,5500,VA,Stock
+KN,Knowles Corp,NYSE,3651,DE,Stock
+KNF,Knife River Corp,NYSE,1400,DE,Stock
+KNSA,"Kiniksa Pharmaceuticals International, plc",Nasdaq,2834,,Stock
+KNSL,"Kinsale Capital Group, Inc.",NYSE,6331,,Stock
+KNTK,Kinetik Holdings Inc.,NYSE,4922,DE,Stock
+KNX,Knight-Swift Transportation Holdings Inc.,NYSE,4213,,Stock
+KO,COCA COLA CO,NYSE,2080,DE,Stock
+KOD,Kodiak Sciences Inc.,Nasdaq,2836,DE,Stock
+KODK,EASTMAN KODAK CO,NYSE,3861,NJ,Stock
+KOP,Koppers Holdings Inc.,NYSE,2400,PA,Stock
+KOPN,KOPIN CORP,Nasdaq,3674,DE,Stock
+KORE,"KORE Group Holdings, Inc.",NYSE,4899,DE,Stock
+KOS,Kosmos Energy Ltd.,NYSE,1311,DE,Stock
+KOSS,KOSS CORP,Nasdaq,3651,DE,Stock
+KPLT,"Katapult Holdings, Inc.",Nasdaq,7359,DE,Stock
+KPRX,KIORA PHARMACEUTICALS INC,Nasdaq,2834,DE,Stock
+KPTI,Karyopharm Therapeutics Inc.,Nasdaq,2834,DE,Stock
+KR,KROGER CO,NYSE,5411,OH,Stock
+KRMD,"KORU Medical Systems, Inc.",Nasdaq,3841,DE,Stock
+KRMN,Karman Holdings Inc.,NYSE,3728,DE,Stock
+KRNY,Kearny Financial Corp.,Nasdaq,6035,,Stock
+KRO,KRONOS WORLDWIDE INC,NYSE,2810,,Stock
+KROS,"Keros Therapeutics, Inc.",Nasdaq,2834,,Stock
+KRP,"Kimbell Royalty Partners, LP",NYSE,1311,DE,Stock
+KRRO,"Korro Bio, Inc.",Nasdaq,2834,DE,Stock
+KRT,Karat Packaging Inc.,Nasdaq,3089,DE,Stock
+KRUS,"KURA SUSHI USA, INC.",Nasdaq,5812,DE,Stock
+KRYS,"Krystal Biotech, Inc.",Nasdaq,2836,,Stock
+KSCP,"Knightscope, Inc.",Nasdaq,3669,DE,Stock
+KSS,KOHLS Corp,NYSE,5311,WI,Stock
+KTB,"Kontoor Brands, Inc.",NYSE,2320,NC,Stock
+KTCC,KEY TRONIC CORP,Nasdaq,3672,WA,Stock
+KTOS,"KRATOS DEFENSE & SECURITY SOLUTIONS, INC.",Nasdaq,3760,DE,Stock
+KTTA,Pasithea Therapeutics Corp.,Nasdaq,2834,DE,Stock
+KULR,"KULR Technology Group, Inc.",NYSE,3670,DE,Stock
+KURA,"Kura Oncology, Inc.",Nasdaq,2834,DE,Stock
+KUST,"KUSTOM ENTERTAINMENT, INC.",Nasdaq,3663,NV,Stock
+KVHI,KVH INDUSTRIES INC \DE\,Nasdaq,4899,DE,Stock
+KVUE,Kenvue Inc.,NYSE,2844,DE,Stock
+KVYO,"Klaviyo, Inc.",NYSE,7372,DE,Stock
+KW,"Kennedy-Wilson Holdings, Inc.",NYSE,6500,DE,Stock
+KWR,QUAKER CHEMICAL CORP,NYSE,2990,PA,Stock
+KWY,KINGSWAY Corp,NYSE,6331,DE,Stock
+KXIN,Kaixin Holdings,Nasdaq,5500,E9,Stock
+KYMR,"Kymera Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+KYNB,"KYNTRA BIO, INC.",Nasdaq,2834,,Stock
+KYTX,"Kyverna Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+KZR,"Kezar Life Sciences, Inc.",Nasdaq,2834,DE,Stock
+L,LOEWS CORP,NYSE,6331,DE,Stock
+LAB,STANDARD BIOTOOLS INC.,Nasdaq,3826,DE,Stock
+LAC,LITHIUM AMERICAS CORP.,NYSE,1000,A1,Stock
+LAD,LITHIA MOTORS INC,NYSE,5500,OR,Stock
+LAKE,LAKELAND INDUSTRIES INC,Nasdaq,3842,DE,Stock
+LARK,LANDMARK BANCORP INC,Nasdaq,6021,CA,Stock
+LASE,Laser Photonics Corp,Nasdaq,3690,WY,Stock
+LASR,"NLIGHT, INC.",Nasdaq,3674,DE,Stock
+LAUR,"LAUREATE EDUCATION, INC.",Nasdaq,8200,DE,Stock
+LAW,"CS Disco, Inc.",NYSE,7372,DE,Stock
+LAZ,"Lazard, Inc.",NYSE,6282,DE,Stock
+LBRDA,Liberty Broadband Corp,Nasdaq,4841,,Stock
+LBRT,Liberty Energy Inc.,NYSE,1389,,Stock
+LBRX,LB PHARMACEUTICALS INC,Nasdaq,2834,DE,Stock
+LBTYA,Liberty Global Ltd.,Nasdaq,4841,,Stock
+LC,LendingClub Corp,NYSE,6141,DE,Stock
+LCID,"Lucid Group, Inc.",Nasdaq,3711,DE,Stock
+LCII,LCI INDUSTRIES,NYSE,3714,DE,Stock
+LCNB,LCNB CORP,Nasdaq,6021,OH,Stock
+LCTX,"Lineage Cell Therapeutics, Inc.",NYSE,2836,CA,Stock
+LCUT,"LIFETIME BRANDS, INC",Nasdaq,3420,DE,Stock
+LDOS,"Leidos Holdings, Inc.",NYSE,7373,,Stock
+LE,"LANDS' END, INC.",Nasdaq,5651,DE,Stock
+LEA,LEAR CORP,NYSE,3714,DE,Stock
+LECO,LINCOLN ELECTRIC HOLDINGS INC,Nasdaq,3540,OH,Stock
+LEDS,SemiLEDs Corp,Nasdaq,3674,,Stock
+LEE,"LEE ENTERPRISES, Inc",Nasdaq,2711,DE,Stock
+LEG,LEGGETT & PLATT INC,NYSE,2510,MO,Stock
+LEGH,Legacy Housing Corp,Nasdaq,2451,TX,Stock
+LEN,LENNAR CORP /NEW/,NYSE,1520,DE,Stock
+LENZ,"LENZ Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+LESL,"Leslie's, Inc.",Nasdaq,5990,DE,Stock
+LEU,CENTRUS ENERGY CORP,NYSE,1400,DE,Stock
+LEVI,LEVI STRAUSS & CO,NYSE,2300,DE,Stock
+LEXX,Lexaria Bioscience Corp.,Nasdaq,2834,NV,Stock
+LFCR,"LIFECORE BIOMEDICAL, INC. \DE\",Nasdaq,2834,DE,Stock
+LFMD,"LifeMD, Inc.",Nasdaq,8011,DE,Stock
+LFST,"LifeStance Health Group, Inc.",Nasdaq,8000,DE,Stock
+LFUS,LITTELFUSE INC /DE,Nasdaq,3613,DE,Stock
+LFVN,Lifevantage Corp,Nasdaq,2834,,Stock
+LFWD,Lifeward Ltd.,Nasdaq,3842,L3,Stock
+LGCY,Legacy Education Inc.,NYSE,8200,NV,Stock
+LGIH,"LGI Homes, Inc.",Nasdaq,1531,DE,Stock
+LGL,LGL GROUP INC,NYSE,3679,DE,Stock
+LGN,Legence Corp.,Nasdaq,1700,DE,Stock
+LGND,LIGAND PHARMACEUTICALS INC,Nasdaq,2834,DE,Stock
+LGVN,Longeveron Inc.,Nasdaq,2834,DE,Stock
+LH,LABCORP HOLDINGS INC.,NYSE,8071,,Stock
+LHAI,Linkhome Holdings Inc.,Nasdaq,6531,NV,Stock
+LHX,"L3HARRIS TECHNOLOGIES, INC. /DE/",NYSE,3812,DE,Stock
+LIDR,"AEye, Inc.",Nasdaq,3714,DE,Stock
+LIEN,"Chicago Atlantic BDC, Inc.",Nasdaq,0,MD,Stock
+LIF,"Life360, Inc.",Nasdaq,7374,DE,Stock
+LIFE,Ethos Technologies Inc.,Nasdaq,6411,DE,Stock
+LII,LENNOX INTERNATIONAL INC,NYSE,3585,DE,Stock
+LILA,Liberty Latin America Ltd.,Nasdaq,4841,D0,Stock
+LIMN,"Liminatus Pharma, Inc.",Nasdaq,2836,DE,Stock
+LIN,LINDE PLC,Nasdaq,2810,L2,Stock
+LINC,LINCOLN EDUCATIONAL SERVICES CORP,Nasdaq,8200,NJ,Stock
+LIND,"LINDBLAD EXPEDITIONS HOLDINGS, INC.",Nasdaq,4700,DE,Stock
+LINK,INTERLINK ELECTRONICS INC,Nasdaq,3577,NV,Stock
+LION,Lionsgate Studios Corp.,NYSE,7812,,Stock
+LIQT,LIQTECH INTERNATIONAL INC,Nasdaq,3590,NV,Stock
+LITE,Lumentum Holdings Inc.,Nasdaq,3669,DE,Stock
+LITS,"Lite Strategy, Inc.",Nasdaq,2834,DE,Stock
+LIVE,LIVE VENTURES Inc,Nasdaq,5900,NV,Stock
+LIVN,LivaNova PLC,Nasdaq,3845,X0,Stock
+LIXT,"LIXTE BIOTECHNOLOGY HOLDINGS, INC.",Nasdaq,2834,DE,Stock
+LKFN,LAKELAND FINANCIAL CORP,Nasdaq,6022,IN,Stock
+LKQ,LKQ CORP,Nasdaq,5010,DE,Stock
+LLY,ELI LILLY & Co,NYSE,2834,IN,Stock
+LLYVA,"Liberty Live Holdings, Inc.",Nasdaq,7900,NV,Stock
+LMAT,LEMAITRE VASCULAR INC,Nasdaq,3841,,Stock
+LMB,"Limbach Holdings, Inc.",Nasdaq,1700,DE,Stock
+LMND,"Lemonade, Inc.",NYSE,6331,DE,Stock
+LMNR,Limoneira CO,Nasdaq,100,DE,Stock
+LMT,LOCKHEED MARTIN CORP,NYSE,3760,MD,Stock
+LNAI,Lunai Bioworks Inc.,Nasdaq,2834,DE,Stock
+LNC,LINCOLN NATIONAL CORP,NYSE,6311,IN,Stock
+LNG,"Cheniere Energy, Inc.",NYSE,4924,DE,Stock
+LNKB,"LINKBANCORP, Inc.",Nasdaq,6022,PA,Stock
+LNN,LINDSAY CORP,NYSE,3523,DE,Stock
+LNSR,"LENSAR, Inc.",Nasdaq,3841,DE,Stock
+LNT,ALLIANT ENERGY CORP,Nasdaq,4931,WI,Stock
+LNTH,"Lantheus Holdings, Inc.",Nasdaq,2835,DE,Stock
+LNZA,"LanzaTech Global, Inc.",Nasdaq,2860,DE,Stock
+LOAR,Loar Holdings Inc.,NYSE,3728,DE,Stock
+LOB,"Live Oak Bancshares, Inc.",NYSE,6022,NC,Stock
+LOCL,Local Bounti Corporation/DE,NYSE,100,DE,Stock
+LOCO,"El Pollo Loco Holdings, Inc.",Nasdaq,5812,DE,Stock
+LODE,Comstock Inc.,NYSE,2860,NV,Stock
+LOGI,LOGITECH INTERNATIONAL S.A.,Nasdaq,3577,,Stock
+LOKV,Live Oak Acquisition Corp. V,Nasdaq,5900,E9,Stock
+LONA,"LeonaBio, Inc.",Nasdaq,2836,,Stock
+LOOP,"Loop Industries, Inc.",Nasdaq,2800,NV,Stock
+LOPE,"Grand Canyon Education, Inc.",Nasdaq,8200,DE,Stock
+LOVE,Lovesac Co,Nasdaq,5712,DE,Stock
+LOW,LOWES COMPANIES INC,NYSE,5211,NC,Stock
+LPCN,Lipocine Inc.,Nasdaq,2834,DE,Stock
+LPG,DORIAN LPG LTD.,NYSE,4412,1T,Stock
+LPLA,LPL Financial Holdings Inc.,Nasdaq,6200,DE,Stock
+LPRO,Open Lending Corp,Nasdaq,6141,,Stock
+LPSN,LIVEPERSON INC,Nasdaq,7372,DE,Stock
+LPTH,LIGHTPATH TECHNOLOGIES INC,Nasdaq,3674,DE,Stock
+LPX,LOUISIANA-PACIFIC CORP,NYSE,2400,DE,Stock
+LQDA,Liquidia Corp,Nasdaq,2834,DE,Stock
+LQDT,LIQUIDITY SERVICES INC,Nasdaq,7389,DE,Stock
+LRCX,LAM RESEARCH CORP,Nasdaq,3559,DE,Stock
+LRHC,La Rosa Holdings Corp.,Nasdaq,6531,NV,Stock
+LRMR,"Larimar Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+LRN,"Stride, Inc.",NYSE,8200,DE,Stock
+LSAK,LESAKA TECHNOLOGIES INC,Nasdaq,6099,FL,Stock
+LSBK,"Lake Shore Bancorp, Inc. /MD/",Nasdaq,6035,MD,Stock
+LSCC,LATTICE SEMICONDUCTOR CORP,Nasdaq,3674,DE,Stock
+LSF,"Laird Superfood, Inc.",NYSE,2000,NV,Stock
+LSH,Lakeside Holding Ltd,Nasdaq,4731,NV,Stock
+LSTA,"LISATA THERAPEUTICS, INC.",Nasdaq,2834,DE,Stock
+LSTR,LANDSTAR SYSTEM INC,Nasdaq,4213,DE,Stock
+LTBR,LIGHTBRIDGE Corp,Nasdaq,2810,NV,Stock
+LTH,"Life Time Group Holdings, Inc.",NYSE,7997,DE,Stock
+LTRN,Lantern Pharma Inc.,Nasdaq,2834,TX,Stock
+LTRX,LANTRONIX INC,Nasdaq,3576,DE,Stock
+LUCD,Lucid Diagnostics Inc.,Nasdaq,3841,DE,Stock
+LUCK,Lucky Strike Entertainment Corp,NYSE,7900,VA,Stock
+LUCY,Innovative Eyewear Inc,Nasdaq,3851,FL,Stock
+LULU,lululemon athletica inc.,Nasdaq,2300,DE,Stock
+LUMN,"Lumen Technologies, Inc.",NYSE,4813,LA,Stock
+LUNG,Pulmonx Corp,Nasdaq,3841,DE,Stock
+LUNR,"Intuitive Machines, Inc.",Nasdaq,3812,DE,Stock
+LUV,SOUTHWEST AIRLINES CO,NYSE,4512,TX,Stock
+LVLU,"Lulu's Fashion Lounge Holdings, Inc.",Nasdaq,5961,DE,Stock
+LVO,"LiveOne, Inc.",Nasdaq,5812,DE,Stock
+LVS,LAS VEGAS SANDS CORP,NYSE,7011,NV,Stock
+LVWR,"LiveWire Group, Inc.",NYSE,3751,DE,Stock
+LW,"Lamb Weston Holdings, Inc.",NYSE,2030,DE,Stock
+LWAY,"Lifeway Foods, Inc.",Nasdaq,2020,IL,Stock
+LWLG,"Lightwave Logic, Inc.",Nasdaq,3080,NV,Stock
+LXEO,"Lexeo Therapeutics, Inc.",Nasdaq,2836,,Stock
+LXFR,LUXFER HOLDINGS PLC,NYSE,2810,X0,Stock
+LXRX,"LEXICON PHARMACEUTICALS, INC.",Nasdaq,2834,DE,Stock
+LXU,"LSB INDUSTRIES, INC.",NYSE,2810,DE,Stock
+LYB,LyondellBasell Industries N.V.,NYSE,2860,P7,Stock
+LYEL,"Lyell Immunopharma, Inc.",Nasdaq,2834,DE,Stock
+LYFT,"Lyft, Inc.",Nasdaq,7389,DE,Stock
+LYTS,LSI INDUSTRIES INC,Nasdaq,3640,OH,Stock
+LYV,"Live Nation Entertainment, Inc.",NYSE,7900,DE,Stock
+LZ,"LEGALZOOM.COM, INC.",Nasdaq,7374,DE,Stock
+LZB,LA-Z-BOY INC,NYSE,2510,MI,Stock
+M,"Macy's, Inc.",NYSE,5311,DE,Stock
+MA,Mastercard Inc,NYSE,7389,DE,Stock
+MACI,Melar Acquisition Corp. I/Cayman,Nasdaq,7389,E9,Stock
+MAGN,Magnera Corp,NYSE,2621,PA,Stock
+MAIA,"MAIA Biotechnology, Inc.",NYSE,2834,DE,Stock
+MAIN,Main Street Capital CORP,NYSE,0,MD,Stock
+MAMA,"Mama's Creations, Inc.",Nasdaq,2013,NV,Stock
+MAMO,Massimo Group,Nasdaq,3790,NV,Stock
+MAN,ManpowerGroup Inc.,NYSE,7363,WI,Stock
+MANE,"Veradermics, Inc",NYSE,2834,DE,Stock
+MANH,MANHATTAN ASSOCIATES INC,Nasdaq,7372,GA,Stock
+MAR,MARRIOTT INTERNATIONAL INC /MD/,Nasdaq,7011,DE,Stock
+MAS,MASCO CORP /DE/,NYSE,3430,DE,Stock
+MASI,MASIMO CORP,Nasdaq,3845,DE,Stock
+MASS,908 Devices Inc.,Nasdaq,3829,DE,Stock
+MAT,MATTEL INC /DE/,Nasdaq,3942,DE,Stock
+MATV,"Mativ Holdings, Inc.",NYSE,2621,DE,Stock
+MATW,MATTHEWS INTERNATIONAL CORP,Nasdaq,3360,PA,Stock
+MATX,"Matson, Inc.",NYSE,4400,HI,Stock
+MAX,"MediaAlpha, Inc.",NYSE,7389,DE,Stock
+MAYS,MAYS J W INC,Nasdaq,6512,NY,Stock
+MAZE,"Maze Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+MBBC,"Marathon Bancorp, Inc. /MD/",Nasdaq,6036,,Stock
+MBC,"MasterBrand, Inc.",NYSE,2511,DE,Stock
+MBI,MBIA INC,NYSE,6351,CT,Stock
+MBIN,Merchants Bancorp,Nasdaq,6022,IN,Stock
+MBIO,"MUSTANG BIO, INC.",Nasdaq,2834,DE,Stock
+MBLY,Mobileye Global Inc.,Nasdaq,7372,DE,Stock
+MBOT,Microbot Medical Inc.,Nasdaq,3841,DE,Stock
+MBRX,"Moleculin Biotech, Inc.",Nasdaq,2834,DE,Stock
+MBUU,"MALIBU BOATS, INC.",Nasdaq,3730,DE,Stock
+MBWM,MERCANTILE BANK CORP,Nasdaq,6022,MI,Stock
+MBX,"MBX Biosciences, Inc.",Nasdaq,2834,DE,Stock
+MC,Moelis & Co,NYSE,6282,DE,Stock
+MCB,Metropolitan Bank Holding Corp.,NYSE,6022,NY,Stock
+MCBS,"MetroCity Bankshares, Inc.",Nasdaq,6022,GA,Stock
+MCD,MCDONALDS CORP,NYSE,5812,DE,Stock
+MCFT,"MasterCraft Boat Holdings, Inc.",Nasdaq,3730,DE,Stock
+MCHB,Mechanics Bancorp,Nasdaq,6022,WA,Stock
+MCHP,MICROCHIP TECHNOLOGY INC,Nasdaq,3674,DE,Stock
+MCHX,MARCHEX INC,Nasdaq,7372,DE,Stock
+MCK,MCKESSON CORP,NYSE,5122,DE,Stock
+MCO,MOODYS CORP /DE/,NYSE,7320,DE,Stock
+MCRB,"Seres Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+MCRI,MONARCH CASINO & RESORT INC,Nasdaq,7011,NV,Stock
+MCS,MARCUS CORP,NYSE,7830,WI,Stock
+MCW,"Mister Car Wash, Inc.",Nasdaq,7500,DE,Stock
+MCY,MERCURY GENERAL CORP,NYSE,6331,CA,Stock
+MD,"Pediatrix Medical Group, Inc.",NYSE,8060,FL,Stock
+MDAI,"Spectral AI, Inc.",Nasdaq,3841,DE,Stock
+MDB,"MongoDB, Inc.",Nasdaq,7372,DE,Stock
+MDCX,Medicus Pharma Ltd.,Nasdaq,2834,A6,Stock
+MDGL,"MADRIGAL PHARMACEUTICALS, INC.",Nasdaq,2834,DE,Stock
+MDIA,Mediaco Holding Inc.,Nasdaq,4832,IN,Stock
+MDLN,Medline Inc.,Nasdaq,3841,DE,Stock
+MDLZ,"Mondelez International, Inc.",Nasdaq,2000,IL,Stock
+MDT,Medtronic plc,NYSE,3845,,Stock
+MDU,MDU RESOURCES GROUP INC,NYSE,1400,,Stock
+MDXG,"MIMEDX GROUP, INC.",Nasdaq,3841,,Stock
+MEC,"Mayville Engineering Company, Inc.",NYSE,3460,,Stock
+MED,MEDIFAST INC,NYSE,2090,DE,Stock
+MEDP,"Medpace Holdings, Inc.",Nasdaq,8731,DE,Stock
+MEHA,Functional Brands Inc.,Nasdaq,2833,DE,Stock
+MEI,METHODE ELECTRONICS INC,NYSE,3678,DE,Stock
+MELI,MERCADOLIBRE INC,Nasdaq,7389,,Stock
+MERC,MERCER INTERNATIONAL INC.,Nasdaq,2611,WA,Stock
+MET,METLIFE INC,NYSE,6311,DE,Stock
+META,"Meta Platforms, Inc.",Nasdaq,7370,DE,Stock
+METC,"Ramaco Resources, Inc.",Nasdaq,1220,DE,Stock
+MFIC,MidCap Financial Investment Corp,Nasdaq,0,MD,Stock
+MG,"Mistras Group, Inc.",NYSE,8711,DE,Stock
+MGEE,MGE ENERGY INC,Nasdaq,4900,WI,Stock
+MGM,MGM Resorts International,NYSE,7011,DE,Stock
+MGNI,"MAGNITE, INC.",Nasdaq,7370,DE,Stock
+MGNX,MACROGENICS INC,Nasdaq,2834,DE,Stock
+MGPI,MGP INGREDIENTS INC,Nasdaq,5180,KS,Stock
+MGRC,MCGRATH RENTCORP,Nasdaq,7359,CA,Stock
+MGRX,"MANGOCEUTICALS, INC.",Nasdaq,8090,TX,Stock
+MGTX,MeiraGTx Holdings plc,Nasdaq,2836,,Stock
+MGX,"Metagenomi Therapeutics, Inc.",Nasdaq,2836,,Stock
+MGY,Magnolia Oil & Gas Corp,NYSE,1311,DE,Stock
+MGYR,"Magyar Bancorp, Inc.",Nasdaq,6035,,Stock
+MHH,"Mastech Digital, Inc.",NYSE,8742,PA,Stock
+MHK,MOHAWK INDUSTRIES INC,NYSE,2273,DE,Stock
+MHLA,"Maiden Holdings, Ltd.",NYSE,6331,D0,Stock
+MHO,"M/I HOMES, INC.",NYSE,1531,OH,Stock
+MIAX,"MIAMI INTERNATIONAL HOLDINGS, INC.",NYSE,6211,DE,Stock
+MIDD,MIDDLEBY Corp,Nasdaq,3580,DE,Stock
+MIND,"MIND TECHNOLOGY, INC",Nasdaq,3812,DE,Stock
+MIR,"Mirion Technologies, Inc.",NYSE,3829,,Stock
+MIRA,"MIRA PHARMACEUTICALS, INC.",Nasdaq,2834,FL,Stock
+MIRM,"Mirum Pharmaceuticals, Inc.",Nasdaq,2834,DE,Stock
+MIST,Milestone Pharmaceuticals Inc.,Nasdaq,2834,A8,Stock
+MITK,MITEK SYSTEMS INC,Nasdaq,3577,DE,Stock
+MITQ,MOVING iMAGE TECHNOLOGIES INC.,NYSE,3861,DE,Stock
+MKC,MCCORMICK & CO INC,NYSE,2090,MD,Stock
+MKL,MARKEL GROUP INC.,NYSE,6331,VA,Stock
+MKSI,MKS INC,Nasdaq,3823,MA,Stock
+MKTW,"MARKETWISE, INC.",Nasdaq,7372,DE,Stock
+MKTX,MARKETAXESS HOLDINGS INC,Nasdaq,6211,,Stock
+MLAB,MESA LABORATORIES INC /CO/,Nasdaq,3823,CO,Stock
+MLCI,Mount Logan Capital Inc.,Nasdaq,6282,DE,Stock
+MLGO,MicroAlgo Inc.,Nasdaq,7371,E9,Stock
+MLI,MUELLER INDUSTRIES INC,NYSE,3350,DE,Stock
+MLKN,"MILLERKNOLL, INC.",Nasdaq,2520,MI,Stock
+MLM,MARTIN MARIETTA MATERIALS INC,NYSE,1400,NC,Stock
+MLP,MAUI LAND & PINEAPPLE CO INC,NYSE,6500,HI,Stock
+MLR,MILLER INDUSTRIES INC /TN/,NYSE,3713,TN,Stock
+MLSS,MILESTONE SCIENTIFIC INC.,NYSE,3842,DE,Stock
+MLTX,MoonLake Immunotherapeutics,Nasdaq,2834,E9,Stock
+MLYS,"Mineralys Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+MMI,"Marcus & Millichap, Inc.",NYSE,6531,,Stock
+MMLP,MARTIN MIDSTREAM PARTNERS L.P.,Nasdaq,5171,DE,Stock
+MMM,3M CO,NYSE,3841,DE,Stock
+MMS,"MAXIMUS, INC.",NYSE,7389,VA,Stock
+MMSI,MERIT MEDICAL SYSTEMS INC,Nasdaq,3841,UT,Stock
+MNKD,MANNKIND CORP,Nasdaq,2834,DE,Stock
+MNOV,MEDICINOVA INC,Nasdaq,2834,DE,Stock
+MNPR,Monopar Therapeutics,Nasdaq,2834,DE,Stock
+MNR,MACH NATURAL RESOURCES LP,NYSE,1311,DE,Stock
+MNRO,"MONRO, INC.",Nasdaq,7500,NY,Stock
+MNSB,"MainStreet Bancshares, Inc.",Nasdaq,6022,VA,Stock
+MNST,Monster Beverage Corp,Nasdaq,2086,,Stock
+MNTK,"Montauk Renewables, Inc.",Nasdaq,4932,DE,Stock
+MNTN,"MNTN, Inc.",NYSE,7310,DE,Stock
+MNTS,Momentus Inc.,Nasdaq,3760,DE,Stock
+MO,"ALTRIA GROUP, INC.",NYSE,2111,VA,Stock
+MOBX,"MOBIX LABS, INC",Nasdaq,3674,DE,Stock
+MOD,MODINE MANUFACTURING CO,NYSE,3714,WI,Stock
+MODD,"Modular Medical, Inc.",Nasdaq,3841,NV,Stock
+MOG-A,MOOG INC.,NYSE,3590,NY,Stock
+MOH,"MOLINA HEALTHCARE, INC.",NYSE,6324,DE,Stock
+MORN,"Morningstar, Inc.",Nasdaq,6282,IL,Stock
+MOS,MOSAIC CO,NYSE,2870,,Stock
+MOV,MOVADO GROUP INC,NYSE,3873,NY,Stock
+MOVE,"Corvex, Inc.",Nasdaq,7374,DE,Stock
+MP,MP Materials Corp. / DE,NYSE,1000,DE,Stock
+MPAA,MOTORCAR PARTS OF AMERICA INC,Nasdaq,3714,NY,Stock
+MPB,MID PENN BANCORP INC,Nasdaq,6022,PA,Stock
+MPC,Marathon Petroleum Corp,NYSE,2911,DE,Stock
+MPLT,"MapLight Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+MPLX,MPLX LP,NYSE,4610,,Stock
+MPTI,"M-tron Industries, Inc.",NYSE,3679,DE,Stock
+MPWR,MONOLITHIC POWER SYSTEMS INC,Nasdaq,3674,DE,Stock
+MPX,"MARINE PRODUCTS GROUP, LLC",NYSE,3730,DE,Stock
+MQ,"Marqeta, Inc.",Nasdaq,7372,,Stock
+MRAM,EVERSPIN TECHNOLOGIES INC.,Nasdaq,3674,X1,Stock
+MRBK,Meridian Corp,Nasdaq,6021,PA,Stock
+MRCY,MERCURY SYSTEMS INC,Nasdaq,3670,MA,Stock
+MRDN,Meridian Holdings Inc./NV,Nasdaq,7372,NV,Stock
+MREO,Mereo BioPharma Group plc,Nasdaq,2834,X0,Stock
+MRK,"Merck & Co., Inc.",NYSE,2834,NJ,Stock
+MRKR,"Marker Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+MRLN,"Merlin, Inc.",Nasdaq,7373,E9,Stock
+MRNA,"Moderna, Inc.",Nasdaq,2836,DE,Stock
+MRP,"Millrose Properties, Inc.",NYSE,6500,MD,Stock
+MRSH,"MARSH & MCLENNAN COMPANIES, INC.",NYSE,6411,DE,Stock
+MRT,"Marti Technologies, Inc.",NYSE,7510,E9,Stock
+MRTN,MARTEN TRANSPORT LTD,Nasdaq,4213,DE,Stock
+MRVI,"MARAVAI LIFESCIENCES HOLDINGS, INC.",Nasdaq,2834,DE,Stock
+MRVL,"Marvell Technology, Inc.",Nasdaq,3674,DE,Stock
+MS,MORGAN STANLEY,NYSE,6211,DE,Stock
+MSA,MSA Safety Inc,NYSE,3842,,Stock
+MSAI,"MultiSensor AI Holdings, Inc.",Nasdaq,3827,DE,Stock
+MSBI,"Midland States Bancorp, Inc.",Nasdaq,6022,IL,Stock
+MSCI,MSCI Inc.,NYSE,7389,DE,Stock
+MSDL,Morgan Stanley Direct Lending Fund,NYSE,0,DE,Stock
+MSEX,MIDDLESEX WATER CO,Nasdaq,4941,NJ,Stock
+MSFT,MICROSOFT CORP,Nasdaq,7372,WA,Stock
+MSGE,Madison Square Garden Entertainment Corp.,NYSE,7990,NV,Stock
+MSGM,Motorsport Games Inc.,Nasdaq,7372,FL,Stock
+MSGS,Madison Square Garden Sports Corp.,NYSE,7990,NV,Stock
+MSI,"Motorola Solutions, Inc.",NYSE,3663,DE,Stock
+MSIF,"MSC INCOME FUND, INC.",NYSE,0,,Stock
+MSM,MSC INDUSTRIAL DIRECT CO INC,NYSE,5084,NY,Stock
+MSN,EMERSON RADIO CORP,NYSE,3651,DE,Stock
+MSS,Maison Solutions Inc.,Nasdaq,5411,DE,Stock
+MTB,M&T BANK CORP,NYSE,6022,NY,Stock
+MTCH,"Match Group, Inc.",Nasdaq,7370,DE,Stock
+MTD,METTLER TOLEDO INTERNATIONAL INC/,NYSE,3826,DE,Stock
+MTDR,Matador Resources Co,NYSE,1311,TX,Stock
+MTEX,MANNATECH INC,Nasdaq,2833,TX,Stock
+MTG,MGIC INVESTMENT CORP,NYSE,6351,WI,Stock
+MTH,Meritage Homes CORP,NYSE,1531,MD,Stock
+MTN,VAIL RESORTS INC,NYSE,7990,DE,Stock
+MTNB,"Matinas BioPharma Holdings, Inc.",NYSE,2834,DE,Stock
+MTRN,MATERION Corp,NYSE,3460,OH,Stock
+MTRX,MATRIX SERVICE CO,Nasdaq,1700,DE,Stock
+MTSI,"MACOM Technology Solutions Holdings, Inc.",Nasdaq,3674,DE,Stock
+MTUS,Metallus Inc.,NYSE,3312,OH,Stock
+MTVA,MetaVia Inc.,Nasdaq,2834,DE,Stock
+MTW,MANITOWOC CO INC,NYSE,3531,WI,Stock
+MTX,MINERALS TECHNOLOGIES INC,NYSE,2810,DE,Stock
+MTZ,MASTEC INC,NYSE,1623,FL,Stock
+MU,MICRON TECHNOLOGY INC,Nasdaq,3674,DE,Stock
+MUR,MURPHY OIL CORP,NYSE,1311,DE,Stock
+MUSA,Murphy USA Inc.,NYSE,5500,DE,Stock
+MUX,McEwen Inc.,NYSE,1040,CO,Stock
+MVBF,MVB FINANCIAL CORP,Nasdaq,6022,WV,Stock
+MVIS,"MICROVISION, INC.",Nasdaq,3679,DE,Stock
+MVST,"Microvast Holdings, Inc.",Nasdaq,3690,DE,Stock
+MWA,"Mueller Water Products, Inc.",NYSE,3490,DE,Stock
+MWYN,"Marwynn Holdings, Inc.",Nasdaq,5141,NV,Stock
+MX,MAGNACHIP SEMICONDUCTOR Corp,NYSE,3674,DE,Stock
+MXC,MEXCO ENERGY CORP,NYSE,1311,CO,Stock
+MXCT,"MAXCYTE, INC.",Nasdaq,8731,DE,Stock
+MXL,"MAXLINEAR, INC",Nasdaq,3674,,Stock
+MYE,MYERS INDUSTRIES INC,NYSE,3089,OH,Stock
+MYFW,First Western Financial Inc,Nasdaq,6022,CO,Stock
+MYGN,MYRIAD GENETICS INC,Nasdaq,2835,DE,Stock
+MYO,"MYOMO, INC.",NYSE,3842,DE,Stock
+MYPS,"PLAYSTUDIOS, Inc.",Nasdaq,7372,,Stock
+MYRG,MYR GROUP INC.,Nasdaq,1623,DE,Stock
+MYSE,"Myseum.AI, Inc.",Nasdaq,4822,NV,Stock
+MYSZ,"My Size, Inc.",Nasdaq,7372,DE,Stock
+MZTI,MARZETTI CO,Nasdaq,2030,OH,Stock
+NABL,"N-able, Inc.",NYSE,7372,,Stock
+NAGE,"Niagen Bioscience, Inc.",Nasdaq,2833,DE,Stock
+NAII,NATURAL ALTERNATIVES INTERNATIONAL INC,Nasdaq,2833,DE,Stock
+NAMS,NewAmsterdam Pharma Co N.V.,Nasdaq,2834,P7,Stock
+NATH,"NATHANS FAMOUS, INC.",Nasdaq,5812,DE,Stock
+NATL,NCR Atleos Corp,NYSE,3578,MD,Stock
+NATR,NATURES SUNSHINE PRODUCTS INC,Nasdaq,2834,UT,Stock
+NAUT,"Nautilus Biotechnology, Inc.",Nasdaq,3826,,Stock
+NAVI,NAVIENT CORP,Nasdaq,6211,DE,Stock
+NB,NIOCORP DEVELOPMENTS LTD,Nasdaq,1000,A1,Stock
+NBBK,"NB Bancorp, Inc.",Nasdaq,6036,,Stock
+NBHC,National Bank Holdings Corp,NYSE,6021,DE,Stock
+NBIX,NEUROCRINE BIOSCIENCES INC,Nasdaq,2836,DE,Stock
+NBR,NABORS INDUSTRIES LTD,NYSE,1381,D0,Stock
+NBTB,NBT BANCORP INC,Nasdaq,6021,DE,Stock
+NC,NACCO INDUSTRIES INC,NYSE,1221,DE,Stock
+NCDL,Nuveen Churchill Direct Lending Corp.,NYSE,0,MD,Stock
+NCIQ,Hashdex Nasdaq CME Crypto Index ETF,Nasdaq,6221,DE,Stock
+NCL,Northann Corp.,NYSE,3089,NV,Stock
+NCLH,Norwegian Cruise Line Holdings Ltd.,NYSE,4400,D0,Stock
+NCMI,"National CineMedia, Inc.",Nasdaq,7310,DE,Stock
+NCNO,"nCino, Inc.",Nasdaq,7372,DE,Stock
+NCRA,"NOCERA, INC.",Nasdaq,200,NV,Stock
+NCSM,"NCS Multistage Holdings, Inc.",Nasdaq,1389,DE,Stock
+NDAQ,"NASDAQ, INC.",Nasdaq,6200,DE,Stock
+NDLS,NOODLES & Co,Nasdaq,5812,,Stock
+NDRA,ENDRA Life Sciences Inc.,Nasdaq,3845,DE,Stock
+NDSN,NORDSON CORP,Nasdaq,3569,OH,Stock
+NE,Noble Corp plc,NYSE,1381,X0,Stock
+NECB,"NorthEast Community Bancorp, Inc./MD/",Nasdaq,6036,MD,Stock
+NEE,NEXTERA ENERGY INC,NYSE,4911,FL,Stock
+NEGG,"Newegg Commerce, Inc.",Nasdaq,5990,D8,Stock
+NEM,NEWMONT Corp /DE/,NYSE,1040,DE,Stock
+NEN,NEW ENGLAND REALTY ASSOCIATES LIMITED PARTNERSHIP,NYSE,6513,MA,Stock
+NEO,NEOGENOMICS INC,Nasdaq,8734,NV,Stock
+NEOG,NEOGEN CORP,Nasdaq,2835,MI,Stock
+NEON,Neonode Inc.,Nasdaq,3679,DE,Stock
+NEOV,NeoVolta Inc.,Nasdaq,3690,NV,Stock
+NEPH,NEPHROS INC,Nasdaq,3841,DE,Stock
+NERV,"Minerva Neurosciences, Inc.",Nasdaq,2834,MA,Stock
+NESR,National Energy Services Reunited Corp.,Nasdaq,1389,D8,Stock
+NET,"Cloudflare, Inc.",NYSE,7372,DE,Stock
+NEU,NEWMARKET CORP,NYSE,2860,VA,Stock
+NEUP,Neuphoria Therapeutics Inc.,Nasdaq,2834,C3,Stock
+NEWT,"NewtekOne, Inc.",Nasdaq,6021,MD,Stock
+NEXM,NexMetals Mining Corp.,Nasdaq,1000,A1,Stock
+NEXT,NextDecade Corp,Nasdaq,4923,DE,Stock
+NFBK,"Northfield Bancorp, Inc.",Nasdaq,6035,DE,Stock
+NFE,New Fortress Energy Inc.,Nasdaq,4924,DE,Stock
+NFG,NATIONAL FUEL GAS CO,NYSE,4924,NJ,Stock
+NFLX,NETFLIX INC,Nasdaq,7841,DE,Stock
+NG,NOVAGOLD RESOURCES INC,NYSE,1040,A1,Stock
+NGL,NGL Energy Partners LP,NYSE,4922,DE,Stock
+NGNE,Neurogene Inc.,Nasdaq,2834,,Stock
+NGS,NATURAL GAS SERVICES GROUP INC,NYSE,1389,,Stock
+NGVC,"Natural Grocers by Vitamin Cottage, Inc.",NYSE,5411,DE,Stock
+NGVT,Ingevity Corp,NYSE,2800,DE,Stock
+NHC,NATIONAL HEALTHCARE CORP,NYSE,8051,DE,Stock
+NHTC,NATURAL HEALTH TRENDS CORP,Nasdaq,5190,DE,Stock
+NI,NISOURCE INC.,NYSE,4931,DE,Stock
+NIC,NICOLET BANKSHARES INC,NYSE,6021,WI,Stock
+NINE,"Nine Energy Service, Inc.",NYSE,1389,DE,Stock
+NIQ,NIQ Global Intelligence plc,NYSE,7370,L2,Stock
+NIXX,"Nixxy, Inc.",Nasdaq,7371,NV,Stock
+NJR,NEW JERSEY RESOURCES CORP,NYSE,4924,NJ,Stock
+NKE,"NIKE, Inc.",NYSE,3021,OR,Stock
+NKSH,NATIONAL BANKSHARES INC,Nasdaq,6021,VA,Stock
+NKTR,NEKTAR THERAPEUTICS,Nasdaq,2834,DE,Stock
+NKTX,"Nkarta, Inc.",Nasdaq,2834,DE,Stock
+NL,NL INDUSTRIES INC,NYSE,2810,NJ,Stock
+NMAX,Newsmax Inc.,NYSE,4833,FL,Stock
+NMFC,New Mountain Finance Corp,Nasdaq,0,X1,Stock
+NMIH,"NMI Holdings, Inc.",Nasdaq,6351,CA,Stock
+NMRA,"Neumora Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+NMRK,"NEWMARK GROUP, INC.",Nasdaq,6531,DE,Stock
+NMTC,NEUROONE MEDICAL TECHNOLOGIES Corp,Nasdaq,3841,DE,Stock
+NN,NEXTNAV INC.,Nasdaq,3812,DE,Stock
+NNBR,NN INC,Nasdaq,3540,DE,Stock
+NNDM,Nano Dimension Ltd.,Nasdaq,3672,L3,Stock
+NNE,Nano Nuclear Energy Inc.,Nasdaq,4911,NV,Stock
+NNI,NELNET INC,NYSE,6141,NE,Stock
+NNVC,"NANOVIRICIDES, INC.",NYSE,2834,DE,Stock
+NOC,NORTHROP GRUMMAN CORP /DE/,NYSE,3812,,Stock
+NODK,"NI Holdings, Inc.",Nasdaq,6331,,Stock
+NOG,"NORTHERN OIL & GAS, INC.",NYSE,1311,,Stock
+NOMA,Nomadar Corp.,Nasdaq,7900,DE,Stock
+NOTV,"Inotiv, Inc.",Nasdaq,8731,IN,Stock
+NOV,NOV Inc.,NYSE,3533,DE,Stock
+NOVT,NOVANTA INC,Nasdaq,3690,A3,Stock
+NOW,"ServiceNow, Inc.",NYSE,7372,DE,Stock
+NP,Neptune Insurance Holdings Inc.,NYSE,6411,DE,Stock
+NPB,NORTHPOINTE BANCSHARES INC,NYSE,6022,MI,Stock
+NPCE,NeuroPace Inc,Nasdaq,3841,DE,Stock
+NPK,NATIONAL PRESTO INDUSTRIES INC,NYSE,3480,WI,Stock
+NPKI,NPK International Inc.,NYSE,7350,DE,Stock
+NPO,Enpro Inc.,NYSE,3050,NC,Stock
+NPWR,NET Power Inc.,NYSE,3620,NC,Stock
+NRC,NRC HEALTH,Nasdaq,8731,DE,Stock
+NRDS,"NERDWALLET, INC.",Nasdaq,7374,DE,Stock
+NRDY,Nerdy Inc.,NYSE,8200,DE,Stock
+NRG,"NRG ENERGY, INC.",NYSE,4911,DE,Stock
+NRGV,"Energy Vault Holdings, Inc.",NYSE,3690,DE,Stock
+NRIM,NORTHRIM BANCORP INC,Nasdaq,6035,AK,Stock
+NRIX,"Nurix Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+NRP,NATURAL RESOURCE PARTNERS LP,NYSE,1221,DE,Stock
+NRUC,NATIONAL RURAL UTILITIES COOPERATIVE FINANCE CORP /DC/,NYSE,6159,DC,Stock
+NRXP,"NRX Pharmaceuticals, Inc.",Nasdaq,2834,DE,Stock
+NRXS,"Neuraxis, INC",NYSE,3845,DE,Stock
+NSC,NORFOLK SOUTHERN CORP,NYSE,4011,VA,Stock
+NSIT,INSIGHT ENTERPRISES INC,Nasdaq,5961,DE,Stock
+NSP,"INSPERITY, INC.",NYSE,7363,DE,Stock
+NSPR,"InspireMD, Inc.",Nasdaq,3841,DE,Stock
+NSSC,"NAPCO SECURITY TECHNOLOGIES, INC",Nasdaq,3669,DE,Stock
+NSTS,"NSTS Bancorp, Inc.",Nasdaq,6035,,Stock
+NSYS,NORTECH SYSTEMS INC,Nasdaq,3679,MN,Stock
+NTAP,"NetApp, Inc.",Nasdaq,3572,CA,Stock
+NTCT,NETSCOUT SYSTEMS INC,Nasdaq,7373,DE,Stock
+NTGR,"NETGEAR, INC.",Nasdaq,3661,DE,Stock
+NTHI,"NEONC TECHNOLOGIES HOLDINGS, INC.",Nasdaq,2834,DE,Stock
+NTIC,NORTHERN TECHNOLOGIES INTERNATIONAL CORP,Nasdaq,3470,DE,Stock
+NTLA,"Intellia Therapeutics, Inc.",Nasdaq,2835,DE,Stock
+NTNX,"Nutanix, Inc.",Nasdaq,7372,DE,Stock
+NTRA,"Natera, Inc.",Nasdaq,8071,DE,Stock
+NTRB,NutriBand Inc.,Nasdaq,3842,NV,Stock
+NTRP,"NextTrip, Inc.",Nasdaq,4700,NV,Stock
+NTRS,NORTHERN TRUST CORP,Nasdaq,6022,DE,Stock
+NTSK,Netskope Inc,Nasdaq,7372,DE,Stock
+NTWK,NETSOL TECHNOLOGIES INC,Nasdaq,7372,NV,Stock
+NUAI,"New ERA Energy & Digital, Inc.",Nasdaq,1311,NV,Stock
+NUE,NUCOR CORP,NYSE,3312,DE,Stock
+NUS,"NU SKIN ENTERPRISES, INC.",NYSE,5122,DE,Stock
+NUTX,Nutex Health Inc.,Nasdaq,7389,DE,Stock
+NUVB,Nuvation Bio Inc.,NYSE,2834,DE,Stock
+NUVL,"Nuvalent, Inc.",Nasdaq,2834,DE,Stock
+NUWE,"Nuwellis, Inc.",Nasdaq,3845,DE,Stock
+NVAX,NOVAVAX INC,Nasdaq,2836,DE,Stock
+NVCR,NovoCure Ltd,Nasdaq,3841,,Stock
+NVCT,"Nuvectis Pharma, Inc.",Nasdaq,2834,DE,Stock
+NVDA,NVIDIA CORP,Nasdaq,3674,DE,Stock
+NVEC,NVE CORP /NEW/,Nasdaq,3674,MN,Stock
+NVNO,enVVeno Medical Corp,Nasdaq,3841,DE,Stock
+NVR,NVR INC,NYSE,1531,VA,Stock
+NVRI,ENVIRI Corp,NYSE,8900,DE,Stock
+NVST,Envista Holdings Corp,NYSE,3843,DE,Stock
+NVT,nVent Electric plc,NYSE,3550,L2,Stock
+NVTS,Navitas Semiconductor Corp,Nasdaq,3674,DE,Stock
+NVVE,Nuvve Holding Corp.,Nasdaq,3690,DE,Stock
+NWBI,"Northwest Bancshares, Inc.",Nasdaq,6021,MD,Stock
+NWE,"NorthWestern Energy Group, Inc.",Nasdaq,4931,DE,Stock
+NWFL,NORWOOD FINANCIAL CORP,Nasdaq,6022,PA,Stock
+NWL,NEWELL BRANDS INC.,Nasdaq,3089,DE,Stock
+NWN,Northwest Natural Holding Co,NYSE,4924,OR,Stock
+NWPX,"NWPX Infrastructure, Inc.",Nasdaq,3317,OR,Stock
+NWSA,NEWS CORP,Nasdaq,2711,DE,Stock
+NWTG,"Newton Golf Company, Inc.",Nasdaq,3949,DE,Stock
+NX,Quanex Building Products CORP,NYSE,3350,DE,Stock
+NXDR,"Nextdoor Holdings, Inc.",NYSE,7370,DE,Stock
+NXGL,"NEXGEL, INC.",Nasdaq,3841,DE,Stock
+NXL,"Nexalin Technology, Inc.",Nasdaq,3845,DE,Stock
+NXPI,NXP Semiconductors N.V.,Nasdaq,3674,,Stock
+NXPL,NextPlat Corp,Nasdaq,4813,NV,Stock
+NXST,"NEXSTAR MEDIA GROUP, INC.",Nasdaq,4833,DE,Stock
+NXT,Nextpower Inc.,Nasdaq,3674,DE,Stock
+NXTC,"NextCure, Inc.",Nasdaq,2834,DE,Stock
+NXTS,Nexentis Technologies Inc.,Nasdaq,2834,NV,Stock
+NXTT,Next Technology Holding Inc.,Nasdaq,7374,WY,Stock
+NXXT,"NEXTNRG, INC.",Nasdaq,5500,DE,Stock
+NYT,NEW YORK TIMES CO,NYSE,2711,NY,Stock
+OABI,"OmniAb, Inc.",Nasdaq,8731,DE,Stock
+OAK-PA,"Brookfield Oaktree Holdings, LLC",NYSE,6282,DE,Stock
+OBAI,"Our Bond, Inc.",Nasdaq,4899,DE,Stock
+OBDC,Blue Owl Capital Corp,NYSE,0,MD,Stock
+OBIO,"Orchestra BioMed Holdings, Inc.",Nasdaq,3841,DE,Stock
+OBK,"Origin Bancorp, Inc.",NYSE,6022,LA,Stock
+OBT,"Orange County Bancorp, Inc. /DE/",Nasdaq,6022,DE,Stock
+OBTC,Osprey Bitcoin Trust,Nasdaq,6221,DE,Stock
+OC,Owens Corning,NYSE,3290,DE,Stock
+OCC,OPTICAL CABLE CORP,Nasdaq,3357,VA,Stock
+OCFC,OCEANFIRST FINANCIAL CORP,Nasdaq,6021,DE,Stock
+OCGN,"Ocugen, Inc.",Nasdaq,2836,DE,Stock
+OCSL,Oaktree Specialty Lending Corp,Nasdaq,0,DE,Stock
+OCUL,"OCULAR THERAPEUTIX, INC",Nasdaq,2834,DE,Stock
+ODC,Oil-Dri Corp of America,NYSE,3990,DE,Stock
+ODFL,"OLD DOMINION FREIGHT LINE, INC.",Nasdaq,4213,VA,Stock
+ODYS,Odysight.ai Inc.,Nasdaq,7373,,Stock
+OEC,Orion S.A.,NYSE,2890,,Stock
+OESX,"ORION ENERGY SYSTEMS, INC.",Nasdaq,3640,WI,Stock
+OFG,OFG BANCORP,NYSE,6022,PR,Stock
+OFIX,Orthofix Medical Inc.,Nasdaq,3841,,Stock
+OFLX,"Omega Flex, Inc.",Nasdaq,3430,PA,Stock
+OFS,OFS Capital Corp,Nasdaq,0,,Stock
+OGE,OGE ENERGY CORP.,NYSE,4911,OK,Stock
+OGEN,ORAGENICS INC,NYSE,2834,FL,Stock
+OGN,Organon & Co.,NYSE,2834,,Stock
+OGS,"ONE Gas, Inc.",NYSE,4924,OK,Stock
+OI,"O-I Glass, Inc. /DE/",NYSE,3221,DE,Stock
+OII,OCEANEERING INTERNATIONAL INC,NYSE,1389,DE,Stock
+OIS,"OIL STATES INTERNATIONAL, INC",NYSE,3533,DE,Stock
+OKE,ONEOK INC /NEW/,NYSE,4923,OK,Stock
+OKLO,Oklo Inc.,NYSE,4911,DE,Stock
+OKTA,"Okta, Inc.",Nasdaq,7372,DE,Stock
+OKUR,"OnKure Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+OLB,"OLB GROUP, INC.",Nasdaq,7389,DE,Stock
+OLED,UNIVERSAL DISPLAY CORP \PA\,Nasdaq,3670,PA,Stock
+OLLI,"Ollie's Bargain Outlet Holdings, Inc.",Nasdaq,5331,DE,Stock
+OLMA,"Olema Pharmaceuticals, Inc.",Nasdaq,2834,DE,Stock
+OLN,OLIN Corp,NYSE,2800,VA,Stock
+OLOX,OLENOX INDUSTRIES INC.,Nasdaq,5030,DE,Stock
+OLPX,"OLAPLEX HOLDINGS, INC.",Nasdaq,2844,DE,Stock
+OM,"Outset Medical, Inc.",Nasdaq,3845,DE,Stock
+OMC,OMNICOM GROUP INC.,NYSE,7311,NY,Stock
+OMCL,"OMNICELL, INC.",Nasdaq,3571,DE,Stock
+OMDA,"Omada Health, Inc.",Nasdaq,8000,DE,Stock
+OMER,OMEROS CORP,Nasdaq,2834,WA,Stock
+OMEX,ODYSSEY MARINE EXPLORATION INC,Nasdaq,4400,NV,Stock
+OMF,"OneMain Holdings, Inc.",NYSE,6141,DE,Stock
+ON,ON SEMICONDUCTOR CORP,Nasdaq,3674,DE,Stock
+ONB,OLD NATIONAL BANCORP /IN/,Nasdaq,6021,IN,Stock
+ONC,BeOne Medicines Ltd.,Nasdaq,2834,,Stock
+ONCO,"Onconetix, Inc.",Nasdaq,2834,DE,Stock
+ONCY,ONCOLYTICS BIOTECH INC,Nasdaq,2834,NV,Stock
+ONDS,Ondas Inc.,Nasdaq,3663,NV,Stock
+ONEW,OneWater Marine Inc.,Nasdaq,5531,DE,Stock
+ONFO,"Onfolio Holdings, Inc",Nasdaq,7374,DE,Stock
+ONIT,ONITY GROUP INC.,NYSE,6162,FL,Stock
+ONMD,OneMedNet Corp,Nasdaq,8731,DE,Stock
+ONT,"Onterris, Inc.",NYSE,8742,DE,Stock
+ONTF,ON24 INC.,NYSE,7372,DE,Stock
+ONTO,ONTO INNOVATION INC.,NYSE,3829,DE,Stock
+OOMA,OOMA INC,NYSE,7374,DE,Stock
+OPAD,Offerpad Solutions Inc.,NYSE,6531,,Stock
+OPAL,OPAL Fuels Inc.,Nasdaq,4932,E9,Stock
+OPBK,OP Bancorp,Nasdaq,6022,CA,Stock
+OPCH,"Option Care Health, Inc.",Nasdaq,8082,DE,Stock
+OPEN,Opendoor Technologies Inc.,Nasdaq,6531,,Stock
+OPHC,"OptimumBank Holdings, Inc.",NYSE,6021,FL,Stock
+OPK,"OPKO HEALTH, INC.",Nasdaq,2834,DE,Stock
+OPLN,"OPENLANE, Inc.",NYSE,5500,DE,Stock
+OPRX,OptimizeRx Corp,Nasdaq,7389,NV,Stock
+OPTT,"Ocean Power Technologies, Inc.",NYSE,4911,NJ,Stock
+OPTU,"Optimum Communications, Inc.",NYSE,4841,DE,Stock
+OPTX,"SYNTEC OPTICS HOLDINGS, INC.",Nasdaq,3827,DE,Stock
+OPXS,Optex Systems Holdings Inc,Nasdaq,3827,DE,Stock
+OPY,OPPENHEIMER HOLDINGS INC,NYSE,6211,DE,Stock
+ORA,"ORMAT TECHNOLOGIES, INC.",NYSE,4911,DE,Stock
+ORBS,Eightco Holdings Inc.,Nasdaq,6153,TX,Stock
+ORCL,ORACLE CORP,NYSE,7372,,Stock
+ORGN,"Origin Materials, Inc.",Nasdaq,2860,DE,Stock
+ORGO,Organogenesis Holdings Inc.,Nasdaq,2834,DE,Stock
+ORI,OLD REPUBLIC INTERNATIONAL CORP,NYSE,6351,DE,Stock
+ORIC,"Oric Pharmaceuticals, Inc.",Nasdaq,2834,DE,Stock
+ORKA,"Oruka Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+ORLY,O REILLY AUTOMOTIVE INC,Nasdaq,5531,,Stock
+ORMP,ORAMED PHARMACEUTICALS INC.,Nasdaq,2834,DE,Stock
+ORN,Orion Group Holdings Inc,NYSE,1600,,Stock
+ORRF,ORRSTOWN FINANCIAL SERVICES INC,Nasdaq,6022,PA,Stock
+OSBC,OLD SECOND BANCORP INC,Nasdaq,6022,DE,Stock
+OSCR,"Oscar Health, Inc.",NYSE,6324,DE,Stock
+OSG,OCTAVE SPECIALTY GROUP INC,NYSE,6351,DE,Stock
+OSIS,OSI SYSTEMS INC,Nasdaq,3674,DE,Stock
+OSK,OSHKOSH CORP,NYSE,3711,WI,Stock
+OSPN,OneSpan Inc.,Nasdaq,7373,DE,Stock
+OSRH,"OSR Holdings, Inc.",Nasdaq,3841,DE,Stock
+OSS,"ONE STOP SYSTEMS, INC.",Nasdaq,3571,,Stock
+OSTX,OS Therapies Inc,NYSE,2834,DE,Stock
+OSUR,ORASURE TECHNOLOGIES INC,Nasdaq,3841,DE,Stock
+OSW,ONESPAWORLD HOLDINGS Ltd,Nasdaq,7997,C5,Stock
+OTEX,OPEN TEXT CORP,Nasdaq,7373,A6,Stock
+OTF,Blue Owl Technology Finance Corp.,NYSE,0,MD,Stock
+OTH,OFF THE HOOK YS INC.,NYSE,3730,NV,Stock
+OTIS,Otis Worldwide Corp,NYSE,3600,DE,Stock
+OTLK,"Outlook Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+OTTR,Otter Tail Corp,Nasdaq,4911,MN,Stock
+OUNZ,VanEck Merk Gold ETF,NYSE,6221,NY,Stock
+OUST,"Ouster, Inc.",Nasdaq,3569,DE,Stock
+OVBC,OHIO VALLEY BANC CORP,Nasdaq,6022,OH,Stock
+OVID,Ovid Therapeutics Inc.,Nasdaq,2834,DE,Stock
+OVLY,Oak Valley Bancorp,Nasdaq,6022,CA,Stock
+OVV,Ovintiv Inc.,NYSE,1311,DE,Stock
+OWL,BLUE OWL CAPITAL INC.,NYSE,6282,NJ,Stock
+OWLT,"Owlet, Inc.",NYSE,3829,DE,Stock
+OXBR,OXBRIDGE RE HOLDINGS Ltd,Nasdaq,6331,E9,Stock
+OXM,OXFORD INDUSTRIES INC,NYSE,2320,GA,Stock
+OXSQ,Oxford Square Capital Corp.,Nasdaq,0,MD,Stock
+OXY,OCCIDENTAL PETROLEUM CORP /DE/,NYSE,1311,DE,Stock
+OZ,"Belpointe PREP, LLC",NYSE,6500,DE,Stock
+P,"Everpure, Inc.",NYSE,3572,DE,Stock
+PAA,PLAINS ALL AMERICAN PIPELINE LP,Nasdaq,4610,DE,Stock
+PACB,"PACIFIC BIOSCIENCES OF CALIFORNIA, INC.",Nasdaq,3826,DE,Stock
+PACK,Ranpak Holdings Corp.,NYSE,2670,E9,Stock
+PACS,"PACS Group, Inc.",NYSE,8051,DE,Stock
+PAG,"PENSKE AUTOMOTIVE GROUP, INC.",NYSE,5500,DE,Stock
+PAGP,PLAINS GP HOLDINGS LP,Nasdaq,4610,DE,Stock
+PAHC,PHIBRO ANIMAL HEALTH CORP,Nasdaq,2834,DE,Stock
+PAL,"Proficient Auto Logistics, Inc",Nasdaq,4700,DE,Stock
+PALI,"PALISADE BIO, INC.",Nasdaq,2836,DE,Stock
+PALL,abrdn Palladium ETF Trust,NYSE,6221,DE,Stock
+PAMT,PAMT CORP,Nasdaq,4213,NV,Stock
+PANL,Pangaea Logistics Solutions Ltd.,Nasdaq,4412,D0,Stock
+PANW,Palo Alto Networks Inc,Nasdaq,3577,DE,Stock
+PAR,PAR TECHNOLOGY CORP,NYSE,3578,DE,Stock
+PARR,"PAR PACIFIC HOLDINGS, INC.",NYSE,1311,DE,Stock
+PASG,"Passage BIO, Inc.",Nasdaq,2836,DE,Stock
+PATH,"UiPath, Inc.",NYSE,7372,DE,Stock
+PATK,PATRICK INDUSTRIES INC,Nasdaq,3714,IN,Stock
+PAVM,PAVmed Inc.,Nasdaq,3841,DE,Stock
+PAY,"Paymentus Holdings, Inc.",NYSE,7389,DE,Stock
+PAYC,"Paycom Software, Inc.",NYSE,7372,DE,Stock
+PAYO,Payoneer Global Inc.,Nasdaq,7389,DE,Stock
+PAYS,"Paysign, Inc.",Nasdaq,7389,NV,Stock
+PAYX,PAYCHEX INC,Nasdaq,8700,DE,Stock
+PB,PROSPERITY BANCSHARES INC,NYSE,6022,TX,Stock
+PBF,PBF Energy Inc.,NYSE,2911,DE,Stock
+PBFS,"Pioneer Bancorp, Inc./MD",Nasdaq,6036,MD,Stock
+PBH,Prestige Consumer Healthcare Inc.,NYSE,2834,,Stock
+PBHC,"Pathfinder Bancorp, Inc.",Nasdaq,6022,MD,Stock
+PBI,PITNEY BOWES INC /DE/,NYSE,3579,DE,Stock
+PBYI,"PUMA BIOTECHNOLOGY, INC.",Nasdaq,2834,DE,Stock
+PCAR,PACCAR INC,Nasdaq,3711,DE,Stock
+PCB,PCB BANCORP,Nasdaq,6022,,Stock
+PCG,PG&E Corp,NYSE,4931,CA,Stock
+PCOR,"PROCORE TECHNOLOGIES, INC.",NYSE,7372,DE,Stock
+PCRX,"Pacira BioSciences, Inc.",Nasdaq,2834,DE,Stock
+PCSA,"Processa Pharmaceuticals, Inc.",Nasdaq,2834,DE,Stock
+PCSC,Perceptive Capital Solutions Corp,Nasdaq,8071,E9,Stock
+PCT,"PureCycle Technologies, Inc.",Nasdaq,2821,X1,Stock
+PCTY,Paylocity Holding Corp,Nasdaq,7372,DE,Stock
+PCVX,"Vaxcyte, Inc.",Nasdaq,2836,DE,Stock
+PCYO,PURE CYCLE CORP,Nasdaq,4941,CO,Stock
+PD,"PagerDuty, Inc.",NYSE,7372,DE,Stock
+PDEX,PRO DEX INC,Nasdaq,3841,,Stock
+PDFS,PDF SOLUTIONS INC,Nasdaq,7372,DE,Stock
+PDLB,"Ponce Financial Group, Inc.",Nasdaq,6035,MD,Stock
+PDM,"Piedmont Realty Trust, Inc.",NYSE,6512,MD,Stock
+PDSB,PDS Biotechnology Corp,Nasdaq,2834,DE,Stock
+PDYN,Palladyne AI Corp.,Nasdaq,7372,DE,Stock
+PEBK,PEOPLES BANCORP OF NORTH CAROLINA INC,Nasdaq,6022,NC,Stock
+PEBO,PEOPLES BANCORP INC,Nasdaq,6022,OH,Stock
+PED,PEDEVCO CORP,NYSE,1311,TX,Stock
+PEG,PUBLIC SERVICE ENTERPRISE GROUP INC,NYSE,4931,NJ,Stock
+PEGA,PEGASYSTEMS INC,Nasdaq,7374,MA,Stock
+PEN,Penumbra Inc,NYSE,3841,DE,Stock
+PENG,"Penguin Solutions, Inc.",Nasdaq,3674,DE,Stock
+PENN,"PENN Entertainment, Inc.",Nasdaq,7011,PA,Stock
+PEP,PEPSICO INC,Nasdaq,2080,NC,Stock
+PEPG,PepGen Inc.,Nasdaq,2834,DE,Stock
+PESI,PERMA FIX ENVIRONMENTAL SERVICES INC,Nasdaq,4955,DE,Stock
+PETS,PETMED EXPRESS INC,Nasdaq,5912,FL,Stock
+PEW,GrabAGun Digital Holdings Inc.,NYSE,5940,TX,Stock
+PFE,PFIZER INC,NYSE,2834,DE,Stock
+PFG,PRINCIPAL FINANCIAL GROUP INC,Nasdaq,6321,DE,Stock
+PFGC,Performance Food Group Co,NYSE,5141,DE,Stock
+PFIS,PEOPLES FINANCIAL SERVICES CORP.,Nasdaq,6021,PA,Stock
+PFLT,PennantPark Floating Rate Capital Ltd.,NYSE,0,,Stock
+PFS,PROVIDENT FINANCIAL SERVICES INC,NYSE,6035,DE,Stock
+PFSA,"Profusa, Inc.",Nasdaq,3841,DE,Stock
+PFSI,"PennyMac Financial Services, Inc.",NYSE,6162,DE,Stock
+PFX,PhenixFIN Corp,Nasdaq,0,DE,Stock
+PG,PROCTER & GAMBLE Co,NYSE,2840,OH,Stock
+PGC,PEAPACK GLADSTONE FINANCIAL CORP,Nasdaq,6029,NJ,Stock
+PGEN,"PRECIGEN, INC.",Nasdaq,2834,VA,Stock
+PGNY,"Progyny, Inc.",Nasdaq,8090,DE,Stock
+PGR,PROGRESSIVE CORP/OH/,NYSE,6331,OH,Stock
+PH,Parker-Hannifin Corp,NYSE,3490,OH,Stock
+PHAT,"Phathom Pharmaceuticals, Inc.",Nasdaq,2834,DE,Stock
+PHGE,BiomX Inc.,NYSE,2836,DE,Stock
+PHIN,PHINIA INC.,NYSE,3714,DE,Stock
+PHIO,Phio Pharmaceuticals Corp.,Nasdaq,2834,DE,Stock
+PHM,PULTEGROUP INC/MI/,NYSE,1531,MI,Stock
+PHR,"Phreesia, Inc.",NYSE,7389,DE,Stock
+PHUN,"Phunware, Inc.",Nasdaq,7374,,Stock
+PHXE-P,"Phoenix Energy One, LLC",NYSE,1311,DE,Stock
+PI,IMPINJ INC,Nasdaq,3679,DE,Stock
+PII,Polaris Inc.,NYSE,3790,DE,Stock
+PIII,P3 Health Partners Inc.,Nasdaq,8000,DE,Stock
+PINS,"PINTEREST, INC.",NYSE,7370,DE,Stock
+PIPR,PIPER SANDLER COMPANIES,NYSE,6211,DE,Stock
+PJT,PJT Partners Inc.,NYSE,6282,DE,Stock
+PK,Park Hotels & Resorts Inc.,NYSE,7011,DE,Stock
+PKBK,"PARKE BANCORP, INC.",Nasdaq,6022,NJ,Stock
+PKE,PARK AEROSPACE CORP,NYSE,3728,NY,Stock
+PKG,PACKAGING CORP OF AMERICA,NYSE,2650,,Stock
+PKOH,PARK OHIO HOLDINGS CORP,Nasdaq,3460,OH,Stock
+PL,Planet Labs PBC,NYSE,3663,DE,Stock
+PLAB,PHOTRONICS INC,Nasdaq,3674,CT,Stock
+PLAG,Planet Green Holdings Corp.,NYSE,2030,NV,Stock
+PLAY,"Dave & Buster's Entertainment, Inc.",Nasdaq,5812,DE,Stock
+PLBC,PLUMAS BANCORP,Nasdaq,6153,CA,Stock
+PLBY,"Playboy, Inc.",Nasdaq,5900,DE,Stock
+PLCE,"Childrens Place, Inc.",Nasdaq,5651,,Stock
+PLMR,"Palomar Holdings, Inc.",Nasdaq,6331,DE,Stock
+PLNT,"Planet Fitness, Inc.",NYSE,7997,DE,Stock
+PLOW,"DOUGLAS DYNAMICS, INC",NYSE,3531,DE,Stock
+PLPC,PREFORMED LINE PRODUCTS CO,Nasdaq,1623,OH,Stock
+PLRX,"PLIANT THERAPEUTICS, INC.",Nasdaq,2834,DE,Stock
+PLSE,"PULSE BIOSCIENCES, INC.",Nasdaq,3841,DE,Stock
+PLTK,Playtika Holding Corp.,Nasdaq,7374,,Stock
+PLTM,GraniteShares Platinum Trust,NYSE,6221,NY,Stock
+PLTR,Palantir Technologies Inc.,Nasdaq,7372,,Stock
+PLUG,PLUG POWER INC,Nasdaq,3620,DE,Stock
+PLUR,Pluri Inc.,Nasdaq,2836,NV,Stock
+PLUS,EPLUS INC,Nasdaq,5045,DE,Stock
+PLX,"Protalix BioTherapeutics, Inc.",NYSE,2836,DE,Stock
+PLXS,PLEXUS CORP,Nasdaq,3672,WI,Stock
+PLYX,"Polaryx Therapeutics, Inc.",Nasdaq,2834,WY,Stock
+PM,Philip Morris International Inc.,NYSE,2111,VA,Stock
+PMCB,"PharmaCyte Biotech, Inc.",Nasdaq,2836,NV,Stock
+PMI,"Picard Medical, Inc.",NYSE,3841,DE,Stock
+PMN,ProMIS Neurosciences Inc.,Nasdaq,2834,Z4,Stock
+PMNT,Perfect Moment Ltd.,NYSE,2300,DE,Stock
+PMTS,CPI Card Group Inc.,Nasdaq,2750,DE,Stock
+PMVP,"PMV Pharmaceuticals, Inc.",Nasdaq,2834,DE,Stock
+PNBK,PATRIOT NATIONAL BANCORP INC,Nasdaq,6021,CT,Stock
+PNC,"PNC FINANCIAL SERVICES GROUP, INC.",NYSE,6021,PA,Stock
+PNFP,"Pinnacle Financial Partners, Inc.",NYSE,6021,GA,Stock
+PNNT,PENNANTPARK INVESTMENT CORP,NYSE,0,,Stock
+PNR,PENTAIR plc,NYSE,3550,L2,Stock
+PNRG,PRIMEENERGY RESOURCES CORP,Nasdaq,1311,DE,Stock
+PNTG,"Pennant Group, Inc.",Nasdaq,8000,DE,Stock
+PNW,PINNACLE WEST CAPITAL CORP,NYSE,4911,AZ,Stock
+POCI,"PRECISION OPTICS CORPORATION, INC.",Nasdaq,3845,MA,Stock
+PODC,"PodcastOne, Inc.",Nasdaq,7370,DE,Stock
+PODD,INSULET CORP,Nasdaq,3841,DE,Stock
+POLA,"Polar Power, Inc.",Nasdaq,3690,DE,Stock
+POOL,POOL CORP,Nasdaq,5090,DE,Stock
+POR,PORTLAND GENERAL ELECTRIC CO /OR/,NYSE,4911,OR,Stock
+POST,"Post Holdings, Inc.",NYSE,2040,MO,Stock
+POWI,POWER INTEGRATIONS INC,Nasdaq,3674,CA,Stock
+POWL,POWELL INDUSTRIES INC,Nasdaq,3613,NV,Stock
+POWW,Outdoor Holding Co,Nasdaq,7389,DE,Stock
+PPC,PILGRIMS PRIDE CORP,Nasdaq,2015,DE,Stock
+PPCB,"Propanc Biopharma, Inc.",Nasdaq,2834,DE,Stock
+PPG,PPG INDUSTRIES INC,NYSE,2851,PA,Stock
+PPHC,"Public Policy Holding Company, Inc.",Nasdaq,8742,DE,Stock
+PPIH,"Perma-Pipe International Holdings, Inc.",Nasdaq,3564,DE,Stock
+PPL,PPL Corp,NYSE,4911,,Stock
+PPLT,abrdn Platinum ETF Trust,NYSE,6221,DE,Stock
+PPSI,"PIONEER POWER SOLUTIONS, INC.",Nasdaq,3690,DE,Stock
+PPTA,PERPETUA RESOURCES CORP.,Nasdaq,1040,A1,Stock
+PR,Permian Resources Corp,NYSE,1311,DE,Stock
+PRA,PROASSURANCE CORP,NYSE,6331,DE,Stock
+PRAA,PRA GROUP INC,Nasdaq,6153,DE,Stock
+PRAX,"Praxis Precision Medicines, Inc.",Nasdaq,2834,DE,Stock
+PRCH,"Porch Group, Inc.",Nasdaq,7372,,Stock
+PRCT,PROCEPT BioRobotics Corp,Nasdaq,3841,DE,Stock
+PRDO,PERDOCEO EDUCATION Corp,Nasdaq,8200,DE,Stock
+PRG,"PROG Holdings, Inc.",NYSE,7359,GA,Stock
+PRGO,PERRIGO Co plc,NYSE,2834,L2,Stock
+PRGS,PROGRESS SOFTWARE CORP /MA,Nasdaq,7372,DE,Stock
+PRHI,"Presurance Holdings, Inc.",Nasdaq,6331,MI,Stock
+PRI,"Primerica, Inc.",NYSE,6311,DE,Stock
+PRIM,Primoris Services Corp,NYSE,1623,DE,Stock
+PRK,PARK NATIONAL CORP /OH/,NYSE,6021,OH,Stock
+PRKS,United Parks & Resorts Inc.,NYSE,7990,DE,Stock
+PRLB,Proto Labs Inc,NYSE,3440,MN,Stock
+PRLD,Prelude Therapeutics Inc,Nasdaq,2834,DE,Stock
+PRM,"Perimeter Solutions, Inc.",NYSE,2800,,Stock
+PRMB,Primo Brands Corp,NYSE,2080,DE,Stock
+PRME,"Prime Medicine, Inc.",Nasdaq,2836,DE,Stock
+PROF,Profound Medical Corp.,Nasdaq,3841,A6,Stock
+PROK,PROKIDNEY CORP.,Nasdaq,2836,E9,Stock
+PROP,Prairie Operating Co.,Nasdaq,1311,DE,Stock
+PROV,PROVIDENT FINANCIAL HOLDINGS INC,Nasdaq,6035,DE,Stock
+PRPL,"Purple Innovation, Inc.",Nasdaq,2510,DE,Stock
+PRPO,"Precipio, Inc.",Nasdaq,3826,DE,Stock
+PRSO,Peraso Inc.,Nasdaq,3674,DE,Stock
+PRSU,"Pursuit Attractions & Hospitality, Inc.",NYSE,7990,DE,Stock
+PRTA,PROTHENA CORP PUBLIC LTD CO,Nasdaq,2834,L2,Stock
+PRTH,"Priority Technology Holdings, Inc.",Nasdaq,7389,DE,Stock
+PRTS,"CarParts.com, Inc.",Nasdaq,5531,DE,Stock
+PRU,PRUDENTIAL FINANCIAL INC,NYSE,6311,NJ,Stock
+PRVA,"Privia Health Group, Inc.",Nasdaq,8000,DE,Stock
+PSBD,Palmer Square Capital BDC Inc.,NYSE,0,MD,Stock
+PSEC,PROSPECT CAPITAL CORP,Nasdaq,0,MD,Stock
+PSIX,"POWER SOLUTIONS INTERNATIONAL, INC.",Nasdaq,3510,IL,Stock
+PSKY,Paramount Skydance Corp,Nasdaq,4833,DE,Stock
+PSMT,PRICESMART INC,Nasdaq,5331,DE,Stock
+PSN,PARSONS CORP,NYSE,7373,DE,Stock
+PSNL,"Personalis, Inc.",Nasdaq,8071,DE,Stock
+PSQH,"PSQ Holdings, Inc.",NYSE,7310,DE,Stock
+PSTV,"PLUS THERAPEUTICS, INC.",Nasdaq,3841,DE,Stock
+PSX,Phillips 66,NYSE,2911,DE,Stock
+PTC,PTC INC.,Nasdaq,7372,MA,Stock
+PTCT,"PTC THERAPEUTICS, INC.",Nasdaq,2834,DE,Stock
+PTEN,PATTERSON UTI ENERGY INC,Nasdaq,1381,DE,Stock
+PTGX,"Protagonist Therapeutics, Inc",Nasdaq,2834,DE,Stock
+PTHS,Pelthos Therapeutics Inc.,NYSE,2836,NV,Stock
+PTLO,Portillo's Inc.,Nasdaq,5812,DE,Stock
+PTN,PALATIN TECHNOLOGIES INC,NYSE,2834,NJ,Stock
+PTON,"PELOTON INTERACTIVE, INC.",Nasdaq,3949,,Stock
+PTRN,Pattern Group Inc.,Nasdaq,5961,DE,Stock
+PUBM,"PubMatic, Inc.",Nasdaq,7370,DE,Stock
+PULM,"Pulmatrix, Inc.",Nasdaq,2834,DE,Stock
+PUMP,ProPetro Holding Corp.,NYSE,1389,TX,Stock
+PVH,PVH CORP. /DE/,NYSE,2320,DE,Stock
+PVLA,"PALVELLA THERAPEUTICS, INC.",Nasdaq,2834,NV,Stock
+PWR,"QUANTA SERVICES, INC.",NYSE,1731,DE,Stock
+PXLW,"PIXELWORKS, INC",Nasdaq,7372,OR,Stock
+PYPL,"PayPal Holdings, Inc.",Nasdaq,7389,,Stock
+PYXS,"Pyxis Oncology, Inc.",Nasdaq,2834,DE,Stock
+PZG,Paramount Gold Nevada Corp.,NYSE,1000,NV,Stock
+PZZA,PAPA JOHNS INTERNATIONAL INC,Nasdaq,5812,DE,Stock
+Q,"Qnity Electronics, Inc.",NYSE,3674,DE,Stock
+QBTS,D-Wave Quantum Inc.,NYSE,7374,DE,Stock
+QCLS,"Q/C TECHNOLOGIES, INC.",Nasdaq,2835,DE,Stock
+QCOM,QUALCOMM INC/DE,Nasdaq,3663,DE,Stock
+QCRH,QCR HOLDINGS INC,Nasdaq,6022,DE,Stock
+QDEL,QuidelOrtho Corp,Nasdaq,2835,,Stock
+QETH,Invesco Galaxy Ethereum ETF,CBOE,6221,DE,Stock
+QLYS,"QUALYS, INC.",Nasdaq,7372,DE,Stock
+QMCO,QUANTUM CORP /DE/,Nasdaq,3572,DE,Stock
+QNCX,"Quince Therapeutics, Inc.",Nasdaq,2836,CA,Stock
+QNRX,"Quoin Pharmaceuticals, Ltd.",Nasdaq,2834,L3,Stock
+QNST,"QUINSTREET, INC",Nasdaq,7389,,Stock
+QRHC,Quest Resource Holding Corp,Nasdaq,4953,NV,Stock
+QRVO,"Qorvo, Inc.",Nasdaq,3674,DE,Stock
+QS,QuantumScape Corp,Nasdaq,3690,DE,Stock
+QSI,Quantum-Si Inc,Nasdaq,3829,DE,Stock
+QSOL,Invesco Galaxy Solana ETF,CBOE,6221,DE,Stock
+QSR,Restaurant Brands International Inc.,NYSE,5812,A6,Stock
+QTI,"QT IMAGING HOLDINGS, INC.",Nasdaq,3845,DE,Stock
+QTRX,Quanterix Corp,Nasdaq,3826,DE,Stock
+QTTB,Q32 Bio Inc.,Nasdaq,2834,DE,Stock
+QTWO,"Q2 Holdings, Inc.",NYSE,7372,,Stock
+QUAD,"Quad/Graphics, Inc.",NYSE,2750,WI,Stock
+QUBT,Quantum Computing Inc.,Nasdaq,7372,DE,Stock
+QUCY,Quantum Cyber N.V.,Nasdaq,2834,P7,Stock
+QUIK,QUICKLOGIC Corp,Nasdaq,3674,CA,Stock
+QURE,uniQure N.V.,Nasdaq,2834,,Stock
+QXL,QUANTUM X LABS INC.,Nasdaq,7372,DE,Stock
+QXO,"QXO, Inc.",NYSE,5030,DE,Stock
+R,RYDER SYSTEM INC,NYSE,7510,FL,Stock
+RAIL,"FreightCar America, Inc.",Nasdaq,3743,DE,Stock
+RAIN,"Rain Enhancement Technologies Holdco, Inc.",Nasdaq,3590,MA,Stock
+RAL,Ralliant Corp,NYSE,3823,DE,Stock
+RAMP,"LiveRamp Holdings, Inc.",NYSE,7374,DE,Stock
+RAND,RAND CAPITAL CORP,Nasdaq,0,NY,Stock
+RANI,"Rani Therapeutics Holdings, Inc.",Nasdaq,2834,CA,Stock
+RAPP,"Rapport Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+RARE,Ultragenyx Pharmaceutical Inc.,Nasdaq,2834,DE,Stock
+RAVE,"RAVE RESTAURANT GROUP, INC.",Nasdaq,5140,MO,Stock
+RBA,RB GLOBAL INC.,NYSE,7389,A6,Stock
+RBB,RBB Bancorp,Nasdaq,6022,CA,Stock
+RBBN,Ribbon Communications Inc.,Nasdaq,7373,DE,Stock
+RBC,RBC Bearings INC,NYSE,3562,,Stock
+RBCAA,REPUBLIC BANCORP INC /KY/,Nasdaq,6022,KY,Stock
+RBKB,"Rhinebeck Bancorp, Inc.",Nasdaq,6036,MD,Stock
+RBLX,Roblox Corp,NYSE,7372,NV,Stock
+RBRK,"Rubrik, Inc.",NYSE,7372,DE,Stock
+RCAT,"Red Cat Holdings, Inc.",Nasdaq,7372,,Stock
+RCEL,"AVITA Medical, Inc.",Nasdaq,3841,DE,Stock
+RCKT,"ROCKET PHARMACEUTICALS, INC.",Nasdaq,2834,DE,Stock
+RCKY,"ROCKY BRANDS, INC.",Nasdaq,3140,OH,Stock
+RCL,ROYAL CARIBBEAN CRUISES LTD,NYSE,4400,,Stock
+RCMT,"RCM TECHNOLOGIES, INC.",Nasdaq,7363,NV,Stock
+RCON,"Recon Technology, Ltd",Nasdaq,1389,E9,Stock
+RCUS,"Arcus Biosciences, Inc.",NYSE,2834,DE,Stock
+RDDT,"Reddit, Inc.",NYSE,7374,DE,Stock
+RDI,READING INTERNATIONAL INC,Nasdaq,7830,NV,Stock
+RDN,RADIAN GROUP INC,NYSE,6351,DE,Stock
+RDNT,"RadNet, Inc.",Nasdaq,8071,DE,Stock
+RDNW,"RideNow Group, Inc.",Nasdaq,7371,NV,Stock
+RDVT,"Red Violet, Inc.",Nasdaq,7372,DE,Stock
+RDW,Redwire Corp,NYSE,3760,,Stock
+RDZN,Roadzen Inc.,Nasdaq,6411,D8,Stock
+REAL,"TheRealReal, Inc.",Nasdaq,5900,DE,Stock
+REBN,"Reborn Coffee, Inc.",Nasdaq,5812,DE,Stock
+REED,"REED'S, INC.",NYSE,2086,DE,Stock
+REGN,"REGENERON PHARMACEUTICALS, INC.",Nasdaq,2834,NY,Stock
+REI,"RING ENERGY, INC.",NYSE,1311,NV,Stock
+REKR,"Rekor Systems, Inc.",Nasdaq,3669,DE,Stock
+RELL,"RICHARDSON ELECTRONICS, LTD.",Nasdaq,5065,DE,Stock
+RELY,"Remitly Global, Inc.",Nasdaq,7389,DE,Stock
+RENT,"Rent the Runway, Inc.",Nasdaq,5990,DE,Stock
+RENX,RenX Enterprises Corp.,Nasdaq,4953,DE,Stock
+REPL,"Replimune Group, Inc.",Nasdaq,2836,DE,Stock
+REPX,"Riley Exploration Permian, Inc.",NYSE,1311,DE,Stock
+RES,RPC INC,NYSE,1389,,Stock
+REVB,"REVELATION BIOSCIENCES, INC.",Nasdaq,2834,DE,Stock
+REX,REX AMERICAN RESOURCES Corp,NYSE,2860,DE,Stock
+REYN,Reynolds Consumer Products Inc.,Nasdaq,2673,DE,Stock
+REZI,"RESIDEO TECHNOLOGIES, INC.",NYSE,5072,DE,Stock
+RF,REGIONS FINANCIAL CORP,NYSE,6021,DE,Stock
+RFIL,R F INDUSTRIES LTD,Nasdaq,3678,NV,Stock
+RFL,"Rafael Holdings, Inc.",NYSE,2834,DE,Stock
+RGA,REINSURANCE GROUP OF AMERICA INC,NYSE,6311,MO,Stock
+RGCO,RGC RESOURCES INC,Nasdaq,4923,VA,Stock
+RGEN,REPLIGEN CORP,Nasdaq,2836,DE,Stock
+RGNX,REGENXBIO Inc.,Nasdaq,2836,,Stock
+RGP,"RESOURCES CONNECTION, INC.",Nasdaq,7389,DE,Stock
+RGR,STURM RUGER & CO INC,NYSE,3480,DE,Stock
+RGS,REGIS CORP,Nasdaq,7200,MN,Stock
+RGTI,"Rigetti Computing, Inc.",Nasdaq,7371,DE,Stock
+RH,RH,NYSE,5712,DE,Stock
+RHI,ROBERT HALF INC.,NYSE,7363,DE,Stock
+RICK,"RCI HOSPITALITY HOLDINGS, INC.",Nasdaq,5812,TX,Stock
+RIG,Transocean Ltd.,NYSE,1381,V8,Stock
+RIGL,RIGEL PHARMACEUTICALS INC,Nasdaq,2834,DE,Stock
+RILY,"BRC Group Holdings, Inc.",Nasdaq,6282,DE,Stock
+RIME,"Algorhythm Holdings, Inc.",Nasdaq,7373,DE,Stock
+RIVN,"Rivian Automotive, Inc. / DE",Nasdaq,3711,DE,Stock
+RJET,REPUBLIC AIRWAYS HOLDINGS INC.,Nasdaq,4512,DE,Stock
+RJF,RAYMOND JAMES FINANCIAL INC,NYSE,6211,FL,Stock
+RKDA,"Arcadia Biosciences, Inc.",Nasdaq,1311,DE,Stock
+RKLB,Rocket Lab Corp,Nasdaq,3760,,Stock
+RKT,"Rocket Companies, Inc.",NYSE,6162,MI,Stock
+RL,RALPH LAUREN CORP,NYSE,2320,DE,Stock
+RLAY,"Relay Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+RLGT,"RADIANT LOGISTICS, INC",NYSE,4731,DE,Stock
+RLI,RLI CORP,NYSE,6331,DE,Stock
+RLMD,"RELMADA THERAPEUTICS, INC.",Nasdaq,2834,NV,Stock
+RLYB,Rallybio Corp,Nasdaq,2834,DE,Stock
+RM,Regional Management Corp.,NYSE,6141,DE,Stock
+RMAX,"RE/MAX Holdings, Inc.",NYSE,6531,CO,Stock
+RMBI,"Richmond Mutual Bancorporation, Inc.",Nasdaq,6022,,Stock
+RMBS,RAMBUS INC,Nasdaq,3674,DE,Stock
+RMCF,"Rocky Mountain Chocolate Factory, Inc.",Nasdaq,2060,DE,Stock
+RMD,RESMED INC,NYSE,3841,DE,Stock
+RMNI,"Rimini Street, Inc.",Nasdaq,7389,DE,Stock
+RMR,RMR GROUP INC.,Nasdaq,8742,MD,Stock
+RMTI,"ROCKWELL MEDICAL, INC.",Nasdaq,2834,DE,Stock
+RNAC,"Cartesian Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+RNAZ,"Transcode Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+RNG,"RingCentral, Inc.",NYSE,7374,,Stock
+RNGR,"Ranger Energy Services, Inc.",NYSE,1389,TX,Stock
+RNR,RENAISSANCERE HOLDINGS LTD,NYSE,6331,D0,Stock
+RNST,RENASANT CORP,NYSE,6022,MS,Stock
+RNTX,"Rein Therapeutics, Inc.",Nasdaq,2834,,Stock
+RNXT,"RenovoRx, Inc.",Nasdaq,2834,DE,Stock
+ROAD,"Construction Partners, Inc.",Nasdaq,1600,DE,Stock
+ROC,Rank One Computing Corp,Nasdaq,7372,CO,Stock
+ROCK,"GIBRALTAR INDUSTRIES, INC.",Nasdaq,3310,DE,Stock
+ROG,ROGERS CORP,NYSE,2821,MA,Stock
+ROIV,Roivant Sciences Ltd.,Nasdaq,2834,D0,Stock
+ROK,"ROCKWELL AUTOMATION, INC",NYSE,3829,DE,Stock
+ROKU,"ROKU, INC",Nasdaq,4841,DE,Stock
+ROL,ROLLINS INC,NYSE,7340,DE,Stock
+ROLR,"High Roller Technologies, Inc.",NYSE,7900,DE,Stock
+ROOT,"Root, Inc.",Nasdaq,6331,DE,Stock
+ROP,ROPER TECHNOLOGIES INC,Nasdaq,3823,DE,Stock
+ROST,"ROSS STORES, INC.",Nasdaq,5651,DE,Stock
+RPAY,Repay Holdings Corp,Nasdaq,7389,DE,Stock
+RPC,"Ridgepost Capital, Inc.",NYSE,6282,DE,Stock
+RPD,"Rapid7, Inc.",Nasdaq,7372,DE,Stock
+RPID,"RAPID MICRO BIOSYSTEMS, INC.",Nasdaq,3826,DE,Stock
+RPM,RPM INTERNATIONAL INC/DE/,NYSE,2851,DE,Stock
+RPRX,Royalty Pharma plc,Nasdaq,2834,X0,Stock
+RR,RICHTECH ROBOTICS INC.,Nasdaq,3569,NV,Stock
+RRBI,RED RIVER BANCSHARES INC,Nasdaq,6022,LA,Stock
+RRC,RANGE RESOURCES CORP,NYSE,1311,DE,Stock
+RRGB,RED ROBIN GOURMET BURGERS INC,Nasdaq,5812,DE,Stock
+RRR,"Red Rock Resorts, Inc.",Nasdaq,7011,DE,Stock
+RRX,REGAL REXNORD CORP,NYSE,3569,WI,Stock
+RS,"RELIANCE, INC.",NYSE,5051,DE,Stock
+RSG,"REPUBLIC SERVICES, INC.",NYSE,4953,DE,Stock
+RSI,"Rush Street Interactive, Inc.",NYSE,7990,DE,Stock
+RSSS,"Research Solutions, Inc.",Nasdaq,7389,NV,Stock
+RSVR,"Reservoir Media, Inc.",Nasdaq,7900,,Stock
+RTB,"RTB Digital, Inc.",Nasdaq,8742,NV,Stock
+RTX,RTX Corp,NYSE,3724,DE,Stock
+RUM,Rumble Inc.,Nasdaq,7370,DE,Stock
+RUN,Sunrun Inc.,Nasdaq,3690,DE,Stock
+RUSHA,RUSH ENTERPRISES INC \TX\,Nasdaq,5500,TX,Stock
+RVLV,"Revolve Group, Inc.",NYSE,5961,DE,Stock
+RVMD,"Revolution Medicines, Inc.",Nasdaq,2836,DE,Stock
+RVP,RETRACTABLE TECHNOLOGIES INC,NYSE,3841,TX,Stock
+RVPH,"REVIVA PHARMACEUTICALS HOLDINGS, INC.",Nasdaq,2834,DE,Stock
+RVSB,RIVERVIEW BANCORP INC,Nasdaq,6035,WA,Stock
+RVTY,"REVVITY, INC.",NYSE,3826,MA,Stock
+RWAY,Runway Growth Finance Corp.,Nasdaq,0,MD,Stock
+RXO,"RXO, Inc.",NYSE,4700,DE,Stock
+RXRX,"RECURSION PHARMACEUTICALS, INC.",Nasdaq,2836,DE,Stock
+RXST,"RxSight, Inc.",Nasdaq,3851,DE,Stock
+RXT,"Rackspace Technology, Inc.",Nasdaq,7370,DE,Stock
+RYAM,RAYONIER ADVANCED MATERIALS INC.,NYSE,2611,DE,Stock
+RYAN,"RYAN SPECIALTY HOLDINGS, INC.",NYSE,6411,DE,Stock
+RYM,"RYTHM, Inc.",Nasdaq,700,NV,Stock
+RYTM,"RHYTHM PHARMACEUTICALS, INC.",Nasdaq,2834,DE,Stock
+RYZ,Ryerson Holding Corp,NYSE,5051,DE,Stock
+RZLT,"Rezolute, Inc.",Nasdaq,2834,NV,Stock
+S,"SentinelOne, Inc.",NYSE,7372,DE,Stock
+SABR,Sabre Corp,Nasdaq,7370,DE,Stock
+SABS,"SAB Biotherapeutics, Inc.",Nasdaq,2836,DE,Stock
+SAFT,SAFETY INSURANCE GROUP INC,Nasdaq,6331,DE,Stock
+SAFX,"XCF Global, Inc.",Nasdaq,2860,DE,Stock
+SAH,SONIC AUTOMOTIVE INC,NYSE,5500,DE,Stock
+SAIA,SAIA INC,Nasdaq,4213,DE,Stock
+SAIC,Science Applications International Corp,Nasdaq,7373,DE,Stock
+SAIL,"SailPoint, Inc.",Nasdaq,7372,DE,Stock
+SAM,BOSTON BEER CO INC,NYSE,2082,MA,Stock
+SAMG,Silvercrest Asset Management Group Inc.,Nasdaq,6282,DE,Stock
+SANA,"Sana Biotechnology, Inc.",Nasdaq,2836,DE,Stock
+SANM,SANMINA CORP,Nasdaq,3672,DE,Stock
+SAR,SARATOGA INVESTMENT CORP.,NYSE,0,MD,Stock
+SARO,"StandardAero, Inc.",NYSE,3724,DE,Stock
+SATL,Satellogic Inc.,Nasdaq,3663,D8,Stock
+SATS,EchoStar CORP,Nasdaq,4899,NV,Stock
+SBC,SBC Medical Group Holdings Inc,Nasdaq,8011,DE,Stock
+SBCF,SEACOAST BANKING CORP OF FLORIDA,Nasdaq,6022,FL,Stock
+SBEV,"SPLASH BEVERAGE GROUP, INC.",NYSE,2080,NV,Stock
+SBFG,"SB FINANCIAL GROUP, INC.",Nasdaq,6022,OH,Stock
+SBFM,Sunshine Biopharma Inc.,Nasdaq,2834,CO,Stock
+SBGI,"Sinclair, Inc.",Nasdaq,4833,MD,Stock
+SBH,"Sally Beauty Holdings, Inc.",NYSE,5990,,Stock
+SBSI,SOUTHSIDE BANCSHARES INC,NYSE,6022,TX,Stock
+SBUX,STARBUCKS CORP,Nasdaq,5810,WA,Stock
+SCCO,SOUTHERN COPPER CORP/,NYSE,1000,DE,Stock
+SCE-PG,SOUTHERN CALIFORNIA EDISON Co,NYSE,4911,CA,Stock
+SCHL,SCHOLASTIC CORP,Nasdaq,2731,DE,Stock
+SCHW,SCHWAB CHARLES CORP,NYSE,6211,DE,Stock
+SCI,SERVICE CORP INTERNATIONAL,NYSE,7200,TX,Stock
+SCKT,"SOCKET MOBILE, INC.",Nasdaq,3571,DE,Stock
+SCL,STEPAN CO,NYSE,2840,DE,Stock
+SCLX,Scilex Holding Co,Nasdaq,2836,DE,Stock
+SCM,Stellus Capital Investment Corp,NYSE,0,MD,Stock
+SCNI,Scinai Immunotherapeutics Ltd.,Nasdaq,2836,L3,Stock
+SCNX,"Scienture Holdings, Inc.",Nasdaq,2834,DE,Stock
+SCOR,"COMSCORE, INC.",Nasdaq,7389,DE,Stock
+SCSC,"SCANSOURCE, INC.",Nasdaq,5045,,Stock
+SCVL,SHOE CARNIVAL INC,Nasdaq,5661,IN,Stock
+SCWO,374Water Inc.,Nasdaq,3621,DE,Stock
+SCYX,SCYNEXIS INC,Nasdaq,2834,,Stock
+SD,SANDRIDGE ENERGY INC,NYSE,1311,DE,Stock
+SDEV,Stablecoin Development Corp,NYSE,2834,DE,Stock
+SDGR,"Schrodinger, Inc.",Nasdaq,2834,DE,Stock
+SDHC,Smith Douglas Homes Corp.,NYSE,1531,DE,Stock
+SDOT,Sadot Group Inc.,Nasdaq,5810,NV,Stock
+SDRL,Seadrill Ltd,NYSE,1381,,Stock
+SDST,Stardust Power Inc.,Nasdaq,3330,DE,Stock
+SEAT,Vivid Seats Inc.,Nasdaq,7990,DE,Stock
+SEB,SEABOARD CORP /DE/,NYSE,5150,DE,Stock
+SEDG,"SOLAREDGE TECHNOLOGIES, INC.",Nasdaq,3674,DE,Stock
+SEER,"Seer, Inc.",Nasdaq,3826,DE,Stock
+SEG,Seaport Entertainment Group Inc.,NYSE,7990,DE,Stock
+SEGG,Sports Entertainment Gaming Global Corp,Nasdaq,7372,DE,Stock
+SEI,"Solaris Energy Infrastructure, Inc.",NYSE,3533,DE,Stock
+SEIC,SEI INVESTMENTS CO,Nasdaq,6211,PA,Stock
+SEM,SELECT MEDICAL HOLDINGS CORP,NYSE,8060,,Stock
+SEMR,"SEMrush Holdings, Inc.",NYSE,7372,DE,Stock
+SENS,"Senseonics Holdings, Inc.",Nasdaq,3823,DE,Stock
+SEPN,"Septerna, Inc.",Nasdaq,2834,DE,Stock
+SER,"Serina Therapeutics, Inc.",NYSE,2834,AL,Stock
+SERA,"SERA PROGNOSTICS, INC.",Nasdaq,8071,DE,Stock
+SERV,Serve Robotics Inc. /DE/,Nasdaq,3569,DE,Stock
+SES,SES AI Corp,NYSE,3690,,Stock
+SEV,Aptera Motors Corp,Nasdaq,3711,DE,Stock
+SEZL,Sezzle Inc.,Nasdaq,7389,DE,Stock
+SF,STIFEL FINANCIAL CORP,NYSE,6211,DE,Stock
+SFBC,"Sound Financial Bancorp, Inc.",Nasdaq,6035,MD,Stock
+SFBS,"ServisFirst Bancshares, Inc.",NYSE,6022,DE,Stock
+SFD,SMITHFIELD FOODS INC,Nasdaq,2011,VA,Stock
+SFIX,"Stitch Fix, Inc.",Nasdaq,5961,DE,Stock
+SFM,"Sprouts Farmers Market, Inc.",Nasdaq,5411,DE,Stock
+SFNC,SIMMONS FIRST NATIONAL CORP,Nasdaq,6021,AR,Stock
+SFST,SOUTHERN FIRST BANCSHARES INC,Nasdaq,6021,SC,Stock
+SG,"Sweetgreen, Inc.",NYSE,5812,DE,Stock
+SGA,SAGA COMMUNICATIONS INC,Nasdaq,4832,FL,Stock
+SGC,"SUPERIOR GROUP OF COMPANIES, INC.",Nasdaq,2300,FL,Stock
+SGHT,"Sight Sciences, Inc.",Nasdaq,3841,DE,Stock
+SGI,SOMNIGROUP INTERNATIONAL INC.,NYSE,2510,DE,Stock
+SGLY,Singularity Future Technology Ltd.,Nasdaq,4731,,Stock
+SGMT,Sagimet Biosciences Inc.,Nasdaq,2834,DE,Stock
+SGOL,abrdn Gold ETF Trust,NYSE,6221,DE,Stock
+SGP,"SpyGlass Pharma, Inc.",Nasdaq,3841,DE,Stock
+SGRP,"SPAR Group, Inc.",Nasdaq,7389,DE,Stock
+SGRY,"Surgery Partners, Inc.",Nasdaq,8062,DE,Stock
+SGU,"STAR GROUP, L.P.",NYSE,5990,DE,Stock
+SHAK,Shake Shack Inc.,NYSE,5810,,Stock
+SHAZ,SharonAI Holdings Inc.,Nasdaq,7374,DE,Stock
+SHBI,SHORE BANCSHARES INC,Nasdaq,6021,MD,Stock
+SHC,Sotera Health Co,Nasdaq,8090,DE,Stock
+SHEN,SHENANDOAH TELECOMMUNICATIONS CO/VA/,Nasdaq,4813,VA,Stock
+SHIM,Shimmick Corp,Nasdaq,1600,DE,Stock
+SHLS,"Shoals Technologies Group, Inc.",Nasdaq,3674,DE,Stock
+SHO,"Sunstone Hotel Investors, Inc.",NYSE,7011,MD,Stock
+SHOO,"STEVEN MADDEN, LTD.",Nasdaq,3140,DE,Stock
+SHOP,SHOPIFY INC.,Nasdaq,7372,Z4,Stock
+SHPH,"Shuttle Pharmaceuticals Holdings, Inc.",Nasdaq,2834,DE,Stock
+SHW,SHERWIN WILLIAMS CO,NYSE,5200,OH,Stock
+SI,"SHOULDER INNOVATIONS, INC.",NYSE,3841,DE,Stock
+SIBN,"SI-BONE, Inc.",Nasdaq,3841,DE,Stock
+SIDU,Sidus Space Inc.,Nasdaq,4812,DE,Stock
+SIEB,SIEBERT FINANCIAL CORP,Nasdaq,6211,NY,Stock
+SIF,SIFCO INDUSTRIES INC,NYSE,3724,OH,Stock
+SIG,SIGNET JEWELERS LTD,NYSE,5944,,Stock
+SIGA,SIGA TECHNOLOGIES INC,Nasdaq,2834,DE,Stock
+SIGI,SELECTIVE INSURANCE GROUP INC,Nasdaq,6331,NJ,Stock
+SILO,"Silo Pharma, Inc.",Nasdaq,2834,NV,Stock
+SINT,"Sintx Technologies, Inc.",Nasdaq,3841,DE,Stock
+SION,"Sionna Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+SIRI,SIRIUS XM HOLDINGS INC.,Nasdaq,4832,,Stock
+SITE,"SiteOne Landscape Supply, Inc.",NYSE,5040,DE,Stock
+SITM,SITIME Corp,Nasdaq,3674,,Stock
+SIVR,abrdn Silver ETF Trust,NYSE,6221,DE,Stock
+SJ,Scienjoy Holding Corp,Nasdaq,7374,D8,Stock
+SJM,J M SMUCKER Co,NYSE,2033,OH,Stock
+SKIL,Skillsoft Corp.,NYSE,7372,DE,Stock
+SKIN,SkinHealth Systems Inc.,Nasdaq,3841,DE,Stock
+SKLZ,Skillz Inc.,NYSE,7374,DE,Stock
+SKWD,"Skyward Specialty Insurance Group, Inc.",Nasdaq,6331,DE,Stock
+SKY,"Champion Homes, Inc.",NYSE,2451,IN,Stock
+SKYE,"Skye Bioscience, Inc.",Nasdaq,2834,NV,Stock
+SKYH,Sky Harbour Group Corp,NYSE,6500,DE,Stock
+SKYQ,Sky Quarry Inc.,Nasdaq,4955,DE,Stock
+SKYT,"SkyWater Technology, Inc",Nasdaq,3674,DE,Stock
+SKYW,SKYWEST INC,Nasdaq,4512,UT,Stock
+SKYX,SKYX Platforms Corp.,Nasdaq,3640,FL,Stock
+SLAB,SILICON LABORATORIES INC.,Nasdaq,3674,DE,Stock
+SLB,SLB LIMITED/NV,NYSE,1389,P8,Stock
+SLDB,Solid Biosciences Inc.,Nasdaq,2836,DE,Stock
+SLDE,"Slide Insurance Holdings, Inc.",Nasdaq,6331,DE,Stock
+SLDP,"Solid Power, Inc.",Nasdaq,3690,DE,Stock
+SLE,"Super League Enterprise, Inc.",Nasdaq,7373,DE,Stock
+SLGN,SILGAN HOLDINGS INC,NYSE,3411,DE,Stock
+SLM,SLM Corp,Nasdaq,6141,DE,Stock
+SLN,Silence Therapeutics plc,Nasdaq,2834,X0,Stock
+SLND,"Southland Holdings, Inc.",NYSE,1600,DE,Stock
+SLNG,"Stabilis Solutions, Inc.",Nasdaq,4924,FL,Stock
+SLNO,SOLENO THERAPEUTICS INC,Nasdaq,2834,DE,Stock
+SLP,"Simulations Plus, Inc.",Nasdaq,7373,,Stock
+SLQT,"SelectQuote, Inc.",NYSE,6411,DE,Stock
+SLRC,SLR Investment Corp.,Nasdaq,0,MD,Stock
+SLS,"SELLAS Life Sciences Group, Inc.",Nasdaq,2834,DE,Stock
+SLSN,"SOLESENCE, INC.",Nasdaq,2844,DE,Stock
+SLV,iShares Silver Trust,NYSE,6221,NY,Stock
+SLVM,Sylvamo Corp,NYSE,2621,DE,Stock
+SLXN,Silexion Therapeutics Corp,Nasdaq,2836,E9,Stock
+SM,SM Energy Co,NYSE,1311,DE,Stock
+SMBC,"SOUTHERN MISSOURI BANCORP, INC.",Nasdaq,6036,MO,Stock
+SMBK,SMARTFINANCIAL INC.,NYSE,6021,TN,Stock
+SMC,Summit Midstream Corp,NYSE,4922,DE,Stock
+SMCI,"Super Micro Computer, Inc.",Nasdaq,3571,CA,Stock
+SMG,SCOTTS MIRACLE-GRO CO,NYSE,2870,OH,Stock
+SMHI,SEACOR Marine Holdings Inc.,NYSE,4412,DE,Stock
+SMID,SMITH MIDLAND CORP,Nasdaq,3272,DE,Stock
+SMMT,Summit Therapeutics Inc.,Nasdaq,2834,,Stock
+SMP,"STANDARD MOTOR PRODUCTS, INC.",NYSE,3714,NY,Stock
+SMPL,Simply Good Foods Co,Nasdaq,2000,,Stock
+SMR,NUSCALE POWER Corp,NYSE,3443,,Stock
+SMRT,"SmartRent, Inc.",NYSE,7373,DE,Stock
+SMSI,"SMITH MICRO SOFTWARE, INC.",Nasdaq,7372,DE,Stock
+SMTC,SEMTECH CORP,Nasdaq,3674,DE,Stock
+SMTI,Sanara MedTech Inc.,Nasdaq,3842,TX,Stock
+SMTK,"SmartKem, Inc.",Nasdaq,3674,DE,Stock
+SMXT,"SolarMax Technology, Inc.",Nasdaq,1700,NV,Stock
+SN,"SharkNinja, Inc.",NYSE,3630,E9,Stock
+SNA,Snap-on Inc,NYSE,3420,DE,Stock
+SNAL,"Snail, Inc.",Nasdaq,7372,DE,Stock
+SNAP,Snap Inc,NYSE,7370,DE,Stock
+SNBR,Sleep Number Corp,Nasdaq,2510,MN,Stock
+SNCY,"Sun Country Airlines Holdings, LLC",Nasdaq,4512,NV,Stock
+SND,"Smart Sand, Inc.",Nasdaq,1400,DE,Stock
+SNDA,"SONIDA SENIOR LIVING, INC.",NYSE,8050,DE,Stock
+SNDK,Sandisk Corp,Nasdaq,3572,DE,Stock
+SNDR,"Schneider National, Inc.",NYSE,4213,WI,Stock
+SNDX,Syndax Pharmaceuticals Inc,Nasdaq,2834,DE,Stock
+SNES,"SenesTech, Inc.",Nasdaq,2870,DE,Stock
+SNEX,StoneX Group Inc.,Nasdaq,6200,DE,Stock
+SNGX,"SOLIGENIX, INC.",Nasdaq,2834,DE,Stock
+SNOA,"Sonoma Pharmaceuticals, Inc.",Nasdaq,3841,DE,Stock
+SNOW,Snowflake Inc.,NYSE,7372,DE,Stock
+SNPS,SYNOPSYS INC,Nasdaq,7372,DE,Stock
+SNSE,"Sensei Biotherapeutics, Inc.",Nasdaq,2834,DE,Stock
+SNTI,"Senti Biosciences Holdings, Inc.",Nasdaq,2836,DE,Stock
+SNWV,"SANUWAVE Health, Inc.",Nasdaq,3841,NV,Stock
+SNX,TD SYNNEX CORP,NYSE,5045,DE,Stock
+SNYR,Synergy CHC Corp.,Nasdaq,2833,NV,Stock
+SO,SOUTHERN CO,NYSE,4911,DE,Stock
+SOAR,"Volato Group, Inc.",NYSE,4522,DE,Stock
+SOBR,"SOBR Safe, Inc.",Nasdaq,2721,DE,Stock
+SOC,Sable Offshore Corp.,NYSE,1311,DE,Stock
+SOHOB,SOTHERLY HOTELS LP,Nasdaq,7011,DE,Stock
+SOLC,Canary Marinade Solana ETF,Nasdaq,6221,DE,Stock
+SOLS,Solstice Advanced Materials Inc.,Nasdaq,2800,DE,Stock
+SOLV,Solventum Corp,NYSE,3841,DE,Stock
+SON,SONOCO PRODUCTS CO,NYSE,2650,SC,Stock
+SONM,"DNA X, Inc.",Nasdaq,3661,DE,Stock
+SONO,Sonos Inc,Nasdaq,3651,DE,Stock
+SOPA,SOCIETY PASS INCORPORATED.,Nasdaq,7389,NV,Stock
+SOTK,SONO TEK CORP,Nasdaq,3559,NY,Stock
+SOUN,"SOUNDHOUND AI, INC.",Nasdaq,7372,DE,Stock
+SOWG,Sow Good Inc.,Nasdaq,2000,DE,Stock
+SPAI,Safe Pro Group Inc.,Nasdaq,3842,DE,Stock
+SPB,"Spectrum Brands Holdings, Inc.",NYSE,3690,DE,Stock
+SPCE,"Virgin Galactic Holdings, Inc",NYSE,4700,,Stock
+SPFI,"SOUTH PLAINS FINANCIAL, INC.",Nasdaq,6022,TX,Stock
+SPGI,S&P Global Inc.,NYSE,7320,NY,Stock
+SPH,SUBURBAN PROPANE PARTNERS LP,NYSE,5900,DE,Stock
+SPHR,Sphere Entertainment Co.,NYSE,7900,NV,Stock
+SPIR,"Spire Global, Inc.",NYSE,4899,DE,Stock
+SPNT,SiriusPoint Ltd,NYSE,6331,D0,Stock
+SPOK,"Spok Holdings, Inc",Nasdaq,4812,DE,Stock
+SPRB,"SPRUCE BIOSCIENCES, INC.",Nasdaq,2834,DE,Stock
+SPRO,"Spero Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+SPRU,SPRUCE POWER HOLDING CORP,NYSE,4911,DE,Stock
+SPRY,"ARS Pharmaceuticals, Inc.",Nasdaq,2834,DE,Stock
+SPSC,SPS COMMERCE INC,Nasdaq,7372,,Stock
+SPT,"Sprout Social, Inc.",Nasdaq,7372,DE,Stock
+SPWH,"SPORTSMAN'S WAREHOUSE HOLDINGS, INC.",Nasdaq,5940,DE,Stock
+SPWR,SunPower Inc.,Nasdaq,1700,DE,Stock
+SPXC,"SPX Technologies, Inc.",NYSE,3540,DE,Stock
+SR,SPIRE INC,NYSE,4924,MO,Stock
+SRBK,"SR Bancorp, Inc.",Nasdaq,6036,MD,Stock
+SRCE,1ST SOURCE CORP,Nasdaq,6022,IN,Stock
+SRE,SEMPRA,NYSE,4932,CA,Stock
+SRFM,SURF AIR MOBILITY INC.,NYSE,4522,DE,Stock
+SRG,Seritage Growth Properties,NYSE,6500,MD,Stock
+SRI,STONERIDGE INC,NYSE,3714,OH,Stock
+SRPT,"Sarepta Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+SRRK,Scholar Rock Holding Corp,Nasdaq,2836,DE,Stock
+SRTA,"Strata Critical Medical, Inc.",Nasdaq,8000,DE,Stock
+SRTS,"Sensus Healthcare, Inc.",Nasdaq,3841,DE,Stock
+SRXH,"SRx Health Solutions, Inc.",NYSE,2080,DE,Stock
+SRZN,"Surrozen, Inc./DE",Nasdaq,2836,DE,Stock
+SSB,SouthState Bank Corp,NYSE,6022,FL,Stock
+SSD,"Simpson Manufacturing Co., Inc.",NYSE,3420,DE,Stock
+SSII,"SS Innovations International, Inc.",Nasdaq,3841,FL,Stock
+SSM,Sono Group N.V.,Nasdaq,3674,P7,Stock
+SSNC,SS&C Technologies Holdings Inc,Nasdaq,7372,DE,Stock
+SSP,E.W. SCRIPPS Co,Nasdaq,4833,OH,Stock
+SSSS,SURO CAPITAL CORP.,Nasdaq,0,MD,Stock
+SST,"System1, Inc.",NYSE,7370,,Stock
+SSTI,"SOUNDTHINKING, INC.",Nasdaq,7372,DE,Stock
+SSTK,"Shutterstock, Inc.",NYSE,7374,DE,Stock
+ST,Sensata Technologies Holding plc,NYSE,3823,,Stock
+STAA,STAAR SURGICAL CO,Nasdaq,3851,DE,Stock
+STBA,S&T BANCORP INC,Nasdaq,6022,PA,Stock
+STC,STEWART INFORMATION SERVICES CORP,NYSE,6361,DE,Stock
+STE,STERIS plc,NYSE,3842,L2,Stock
+STEL,"Stellar Bancorp, Inc.",NYSE,6021,TX,Stock
+STEM,"STEM, INC.",NYSE,7373,,Stock
+STEP,StepStone Group Inc.,Nasdaq,6282,,Stock
+STEX,Streamex Corp.,Nasdaq,3845,DE,Stock
+STGW,Stagwell Inc,Nasdaq,7311,DE,Stock
+STHO,Star Holdings,Nasdaq,6519,MD,Stock
+STI,Solidion Technology Inc.,Nasdaq,3690,DE,Stock
+STIM,"Neuronetics, Inc.",Nasdaq,3841,DE,Stock
+STKL,SunOpta Inc.,Nasdaq,2080,Z4,Stock
+STKS,"ONE Group Hospitality, Inc.",Nasdaq,5812,DE,Stock
+STLD,STEEL DYNAMICS INC,Nasdaq,3312,IN,Stock
+STOK,"Stoke Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+STRA,"Strategic Education, Inc.",Nasdaq,8200,MD,Stock
+STRL,"STERLING INFRASTRUCTURE, INC.",Nasdaq,1600,DE,Stock
+STRO,"SUTRO BIOPHARMA, INC.",Nasdaq,2836,,Stock
+STRR,"Star Equity Holdings, Inc.",Nasdaq,7363,DE,Stock
+STRS,STRATUS PROPERTIES INC,Nasdaq,6552,DE,Stock
+STRT,STRATTEC SECURITY CORP,Nasdaq,3714,WI,Stock
+STRZ,STARZ ENTERTAINMENT CORP /CN/,Nasdaq,7812,A1,Stock
+STSS,Sharps Technology Inc.,Nasdaq,3841,NV,Stock
+STT,STATE STREET CORP,NYSE,6022,MA,Stock
+STTK,"Shattuck Labs, Inc.",Nasdaq,2834,DE,Stock
+STUB,"StubHub Holdings, Inc.",NYSE,7990,DE,Stock
+STX,Seagate Technology Holdings plc,Nasdaq,3572,,Stock
+STXS,"Stereotaxis, Inc.",NYSE,3845,DE,Stock
+STZ,"CONSTELLATION BRANDS, INC.",NYSE,2080,DE,Stock
+SUN,Sunoco LP,NYSE,2911,OK,Stock
+SUNC,SunocoCorp LLC,NYSE,2911,DE,Stock
+SUNE,"SUNation Energy, Inc.",Nasdaq,1700,DE,Stock
+SUPN,"SUPERNUS PHARMACEUTICALS, INC.",Nasdaq,2834,DE,Stock
+SURG,"SurgePays, Inc.",Nasdaq,4813,NV,Stock
+SVAC,Spring Valley Acquisition Corp. III,Nasdaq,4911,E9,Stock
+SVCO,"Silvaco Group, Inc.",Nasdaq,7372,DE,Stock
+SVIX,VS Trust,CBOE,6221,DE,Stock
+SVRA,Savara Inc,Nasdaq,2834,DE,Stock
+SVV,"Savers Value Village, Inc.",NYSE,5900,WA,Stock
+SW,Smurfit Westrock plc,NYSE,2650,L2,Stock
+SWAG,"Stran & Company, Inc.",Nasdaq,7311,NV,Stock
+SWBI,"SMITH & WESSON BRANDS, INC.",Nasdaq,3480,NV,Stock
+SWIM,"Latham Group, Inc.",Nasdaq,3089,NY,Stock
+SWK,"STANLEY BLACK & DECKER, INC.",NYSE,3420,CT,Stock
+SWKS,"SKYWORKS SOLUTIONS, INC.",Nasdaq,3674,DE,Stock
+SWX,"Southwest Gas Holdings, Inc.",NYSE,4923,DE,Stock
+SXC,"SunCoke Energy, Inc.",NYSE,3312,,Stock
+SXI,STANDEX INTERNATIONAL CORP/DE/,NYSE,3580,DE,Stock
+SXT,SENSIENT TECHNOLOGIES CORP,NYSE,2860,WI,Stock
+SXTP,"60 DEGREES PHARMACEUTICALS, INC.",Nasdaq,2834,DE,Stock
+SYBT,"Stock Yards Bancorp, Inc.",Nasdaq,6022,KY,Stock
+SYK,STRYKER CORP,NYSE,3841,MI,Stock
+SYM,Symbotic Inc.,Nasdaq,3569,DE,Stock
+SYNA,SYNAPTICS Inc,Nasdaq,3674,DE,Stock
+SYPR,SYPRIS SOLUTIONS INC,Nasdaq,3823,DE,Stock
+SYRE,"Spyre Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+SYY,SYSCO CORP,NYSE,5140,DE,Stock
+T,AT&T INC.,NYSE,4813,DE,Stock
+TACT,TRANSACT TECHNOLOGIES INC,Nasdaq,3577,DE,Stock
+TALK,"Talkspace, Inc.",Nasdaq,8000,DE,Stock
+TALO,TALOS ENERGY INC.,NYSE,1311,DE,Stock
+TAP,MOLSON COORS BEVERAGE CO,NYSE,2082,DE,Stock
+TARA,"Protara Therapeutics, Inc.",Nasdaq,2836,,Stock
+TARS,"Tarsus Pharmaceuticals, Inc.",Nasdaq,2836,DE,Stock
+TASK,"TaskUs, Inc.",Nasdaq,7374,DE,Stock
+TAYD,"TAYLOR DEVICES, INC.",Nasdaq,3569,NY,Stock
+TBBK,"Bancorp, Inc.",Nasdaq,6021,DE,Stock
+TBCH,Turtle Beach Corp,Nasdaq,3669,NV,Stock
+TBHC,"BRAND HOUSE COLLECTIVE, INC.",Nasdaq,5990,,Stock
+TBI,"TrueBlue, Inc.",NYSE,7363,WA,Stock
+TBLA,Taboola.com Ltd.,Nasdaq,7370,L3,Stock
+TBN,Tamboran Resources Corp,NYSE,1311,DE,Stock
+TBPH,"Theravance Biopharma, Inc.",Nasdaq,2834,CA,Stock
+TBRG,"TruBridge, Inc.",Nasdaq,7371,DE,Stock
+TCBI,TEXAS CAPITAL BANCSHARES INC/TX,Nasdaq,6022,,Stock
+TCBK,TRICO BANCSHARES /,Nasdaq,6022,CA,Stock
+TCBS,"Texas Community Bancshares, Inc.",Nasdaq,6036,,Stock
+TCBX,"Third Coast Bancshares, Inc.",NYSE,6036,TX,Stock
+TCMD,TACTILE SYSTEMS TECHNOLOGY INC,Nasdaq,3841,MN,Stock
+TCPC,BlackRock TCP Capital Corp.,Nasdaq,0,DE,Stock
+TCRT,"Alaunos Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+TCRX,"TScan Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+TCX,TUCOWS INC /PA/,Nasdaq,7374,PA,Stock
+TDAY,"USA TODAY Co., Inc.",NYSE,2711,DE,Stock
+TDC,TERADATA CORP /DE/,NYSE,7372,,Stock
+TDG,TransDigm Group INC,NYSE,3728,DE,Stock
+TDOC,"Teladoc Health, Inc.",NYSE,8011,DE,Stock
+TDOG,21Shares Dogecoin ETF,Nasdaq,6221,MD,Stock
+TDS,TELEPHONE & DATA SYSTEMS INC /DE/,NYSE,4813,DE,Stock
+TDUP,ThredUp Inc.,Nasdaq,5961,DE,Stock
+TDW,TIDEWATER INC,NYSE,4400,DE,Stock
+TDY,TELEDYNE TECHNOLOGIES INC,NYSE,3812,DE,Stock
+TE,T1 Energy Inc.,NYSE,3674,DE,Stock
+TEAD,Teads Holding Co.,Nasdaq,7370,DE,Stock
+TEAM,Atlassian Corp,Nasdaq,7372,,Stock
+TECH,BIO-TECHNE Corp,Nasdaq,2836,MN,Stock
+TECX,"Tectonic Therapeutic, Inc.",Nasdaq,2836,NY,Stock
+TEL,TE Connectivity plc,NYSE,5065,,Stock
+TELA,"TELA Bio, Inc.",Nasdaq,3841,DE,Stock
+TELO,"Telomir Pharmaceuticals, Inc.",Nasdaq,2834,FL,Stock
+TEM,"Tempus AI, Inc.",Nasdaq,7370,NV,Stock
+TENB,"Tenable Holdings, Inc.",Nasdaq,7372,DE,Stock
+TENX,"TENAX THERAPEUTICS, INC.",Nasdaq,2834,DE,Stock
+TER,"TERADYNE, INC",Nasdaq,3825,MA,Stock
+TERN,"Terns Pharmaceuticals, Inc.",Nasdaq,2834,DE,Stock
+TETH,21Shares Ethereum ETF,CBOE,6221,DE,Stock
+TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD,NYSE,2834,L3,Stock
+TEX,TEREX CORP,NYSE,3537,DE,Stock
+TFC,TRUIST FINANCIAL CORP,NYSE,6021,NC,Stock
+TFIN,"Triumph Financial, Inc.",NYSE,6022,TX,Stock
+TFSL,TFS Financial CORP,Nasdaq,6035,DE,Stock
+TFX,TELEFLEX INC,NYSE,3841,DE,Stock
+TG,TREDEGAR CORP,NYSE,3350,VA,Stock
+TGEN,TECOGEN INC.,NYSE,3585,DE,Stock
+TGL,TREASURE GLOBAL INC,Nasdaq,7389,DE,Stock
+TGLS,Tecnoglass Inc.,NYSE,3211,E9,Stock
+TGT,TARGET CORP,NYSE,5331,MN,Stock
+TGTX,"TG THERAPEUTICS, INC.",Nasdaq,2834,DE,Stock
+TH,Target Hospitality Corp.,Nasdaq,7000,DE,Stock
+THC,TENET HEALTHCARE CORP,NYSE,8062,NV,Stock
+THFF,FIRST FINANCIAL CORP /IN/,Nasdaq,6022,IN,Stock
+THG,"HANOVER INSURANCE GROUP, INC.",NYSE,6331,DE,Stock
+THM,INTERNATIONAL TOWER HILL MINES LTD,NYSE,1000,A1,Stock
+THO,THOR INDUSTRIES INC,NYSE,3716,DE,Stock
+THR,"Thermon Group Holdings, Inc.",NYSE,3620,DE,Stock
+THRM,Gentherm Inc,Nasdaq,3714,MI,Stock
+THRY,"Thryv Holdings, Inc.",Nasdaq,7310,DE,Stock
+TIC,"TIC Solutions, Inc.",NYSE,7389,DE,Stock
+TIL,"Instil Bio, Inc.",Nasdaq,2836,NY,Stock
+TILE,INTERFACE INC,Nasdaq,2273,GA,Stock
+TIPT,TIPTREE INC.,Nasdaq,6331,MD,Stock
+TISI,TEAM INC,NYSE,7600,DE,Stock
+TITN,Titan Machinery Inc.,Nasdaq,5990,DE,Stock
+TJX,TJX COMPANIES INC /DE/,NYSE,5651,DE,Stock
+TKNO,"Alpha Teknova, Inc.",Nasdaq,2835,DE,Stock
+TKO,"TKO Group Holdings, Inc.",NYSE,7900,DE,Stock
+TKR,TIMKEN CO,NYSE,3562,OH,Stock
+TLF,TANDY LEATHER FACTORY INC,Nasdaq,3100,DE,Stock
+TLN,Talen Energy Corp,Nasdaq,4911,DE,Stock
+TLPH,"TALPHERA, INC.",Nasdaq,2834,DE,Stock
+TLRY,"Tilray Brands, Inc.",Nasdaq,2833,,Stock
+TLS,TELOS CORP,Nasdaq,7373,MD,Stock
+TLSI,"TriSalus Life Sciences, Inc.",Nasdaq,3841,DE,Stock
+TLYS,"TILLY'S, INC.",NYSE,5600,DE,Stock
+TMC,TMC the metals Co Inc.,Nasdaq,1000,A1,Stock
+TMCI,"TREACE MEDICAL CONCEPTS, INC.",Nasdaq,3841,FL,Stock
+TMDX,"TransMedics Group, Inc.",Nasdaq,3845,MA,Stock
+TMHC,Taylor Morrison Home Corp,NYSE,1531,DE,Stock
+TMO,THERMO FISHER SCIENTIFIC INC.,NYSE,3829,DE,Stock
+TMP,TOMPKINS FINANCIAL CORP,NYSE,6022,NY,Stock
+TMQ,Trilogy Metals Inc.,NYSE,1040,A1,Stock
+TMUS,"T-Mobile US, Inc.",Nasdaq,4812,DE,Stock
+TNC,TENNANT CO,NYSE,3580,MN,Stock
+TNDM,TANDEM DIABETES CARE INC,Nasdaq,3841,DE,Stock
+TNET,"TRINET GROUP, INC.",NYSE,7389,DE,Stock
+TNGX,"Tango Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+TNL,Travel & Leisure Co.,NYSE,7011,DE,Stock
+TNON,"Tenon Medical, Inc.",Nasdaq,3841,DE,Stock
+TNXP,Tonix Pharmaceuticals Holding Corp.,Nasdaq,2834,NV,Stock
+TNYA,"Tenaya Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+TOI,"Oncology Institute, Inc.",Nasdaq,8011,DE,Stock
+TOL,"Toll Brothers, Inc.",NYSE,1531,DE,Stock
+TOMZ,"TOMI Environmental Solutions, Inc.",Nasdaq,2860,FL,Stock
+TOON,"Kartoon Studios, Inc.",NYSE,7812,NV,Stock
+TOPP,Toppoint Holdings Inc.,NYSE,4210,NV,Stock
+TOST,"Toast, Inc.",NYSE,7374,,Stock
+TOVX,"Theriva Biologics, Inc.",NYSE,2834,NV,Stock
+TOXR,21Shares XRP ETF,CBOE,6221,DE,Stock
+TPB,"Turning Point Brands, Inc.",NYSE,2100,DE,Stock
+TPC,TUTOR PERINI CORP,NYSE,1540,MA,Stock
+TPCS,TECHPRECISION CORP,Nasdaq,3440,DE,Stock
+TPET,Trio Petroleum Corp,NYSE,1311,DE,Stock
+TPG,TPG Inc.,Nasdaq,6282,DE,Stock
+TPH,"Tri Pointe Homes, Inc.",NYSE,1531,DE,Stock
+TPR,"TAPESTRY, INC.",NYSE,3100,MD,Stock
+TPST,"Tempest Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+TPVG,TriplePoint Venture Growth BDC Corp.,NYSE,0,MD,Stock
+TR,TOOTSIE ROLL INDUSTRIES INC,NYSE,2060,VA,Stock
+TRAK,"ReposiTrak, Inc.",NYSE,7374,NV,Stock
+TRAW,"Traws Pharma, Inc.",Nasdaq,2834,DE,Stock
+TRC,TEJON RANCH CO,NYSE,6500,DE,Stock
+TRDA,"Entrada Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+TREE,"LendingTree, Inc.",Nasdaq,6163,DE,Stock
+TREX,TREX CO INC,NYSE,2400,DE,Stock
+TRGP,Targa Resources Corp.,NYSE,4922,,Stock
+TRIN,Trinity Capital Inc.,Nasdaq,0,MD,Stock
+TRIP,"TripAdvisor, Inc.",Nasdaq,7370,DE,Stock
+TRMB,TRIMBLE INC.,Nasdaq,3829,DE,Stock
+TRMK,TRUSTMARK CORP,Nasdaq,6021,MS,Stock
+TRN,TRINITY INDUSTRIES INC,NYSE,3743,DE,Stock
+TRNO,Terreno Realty Corp,NYSE,6500,,Stock
+TRNR,"Interactive Strength, Inc.",Nasdaq,3600,DE,Stock
+TRNS,TRANSCAT INC,Nasdaq,3825,OH,Stock
+TROO,"Troops, Inc. /Cayman Islands/",Nasdaq,6159,E9,Stock
+TROW,PRICE T ROWE GROUP INC,Nasdaq,6282,MD,Stock
+TROX,Tronox Holdings plc,NYSE,2810,X0,Stock
+TRS,TRIMAS CORP,Nasdaq,3460,DE,Stock
+TRST,TRUSTCO BANK CORP N Y,Nasdaq,6022,NY,Stock
+TRT,TRIO-TECH INTERNATIONAL,NYSE,3559,CA,Stock
+TRTN-PA,Triton International Ltd,NYSE,7359,D0,Stock
+TRU,TransUnion,NYSE,7320,DE,Stock
+TRUG,"TruGolf Holdings, Inc.",Nasdaq,3949,DE,Stock
+TRUP,"TRUPANION, INC.",Nasdaq,6324,DE,Stock
+TRV,"TRAVELERS COMPANIES, INC.",NYSE,6331,MN,Stock
+TRVI,"Trevi Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+TSBK,TIMBERLAND BANCORP INC,Nasdaq,6036,WA,Stock
+TSCO,TRACTOR SUPPLY CO /DE/,Nasdaq,5200,DE,Stock
+TSHA,"Taysha Gene Therapies, Inc.",Nasdaq,2836,DE,Stock
+TSLA,"Tesla, Inc.",Nasdaq,3711,TX,Stock
+TSLX,"Sixth Street Specialty Lending, Inc.",NYSE,0,DE,Stock
+TSN,"TYSON FOODS, INC.",NYSE,2015,DE,Stock
+TSOL,21Shares Solana ETF,CBOE,6221,DE,Stock
+TSQ,"Townsquare Media, Inc.",NYSE,4832,DE,Stock
+TSSI,"TSS, Inc.",Nasdaq,8742,DE,Stock
+TT,Trane Technologies plc,NYSE,3822,L2,Stock
+TTAN,"ServiceTitan, Inc.",Nasdaq,7372,DE,Stock
+TTC,TORO CO,NYSE,3524,MN,Stock
+TTD,"Trade Desk, Inc.",Nasdaq,7370,NV,Stock
+TTEC,"TTEC Holdings, Inc.",Nasdaq,7363,DE,Stock
+TTEK,TETRA TECH INC,Nasdaq,8711,DE,Stock
+TTGT,"TechTarget, Inc.",Nasdaq,4822,DE,Stock
+TTI,TETRA TECHNOLOGIES INC,NYSE,1311,DE,Stock
+TTMI,TTM TECHNOLOGIES INC,Nasdaq,3672,DE,Stock
+TTRX,Turn Therapeutics Inc.,Nasdaq,2834,DE,Stock
+TTWO,TAKE TWO INTERACTIVE SOFTWARE INC,Nasdaq,7372,DE,Stock
+TULP,"BLOOMIA HOLDINGS, INC.",Nasdaq,100,DE,Stock
+TUSK,"MAMMOTH ENERGY SERVICES, INC.",Nasdaq,1389,DE,Stock
+TVE,Tennessee Valley Authority,NYSE,4911,,Stock
+TVGN,Tevogen Bio Holdings Inc.,Nasdaq,2836,DE,Stock
+TVRD,"Tvardi Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+TVTX,"Travere Therapeutics, Inc.",Nasdaq,2834,CA,Stock
+TW,Tradeweb Markets Inc.,Nasdaq,6200,DE,Stock
+TWAV,"TaoWeave, Inc.",Nasdaq,7370,DE,Stock
+TWFG,"TWFG, Inc.",Nasdaq,6411,DE,Stock
+TWI,TITAN INTERNATIONAL INC,NYSE,3312,IL,Stock
+TWIN,TWIN DISC INC,Nasdaq,3560,WI,Stock
+TWLO,TWILIO INC,NYSE,7372,DE,Stock
+TWST,Twist Bioscience Corp,Nasdaq,2836,DE,Stock
+TXG,"10x Genomics, Inc.",Nasdaq,3826,DE,Stock
+TXMD,"TherapeuticsMD, Inc.",Nasdaq,2834,NV,Stock
+TXN,TEXAS INSTRUMENTS INC,Nasdaq,3674,DE,Stock
+TXNM,TXNM ENERGY INC,NYSE,4911,NM,Stock
+TXO,"TXO Partners, L.P.",NYSE,1311,X1,Stock
+TXRH,"Texas Roadhouse, Inc.",Nasdaq,5812,DE,Stock
+TXT,TEXTRON INC,NYSE,3720,DE,Stock
+TYGO,"TIGO ENERGY, INC.",Nasdaq,3674,DE,Stock
+TYL,TYLER TECHNOLOGIES INC,NYSE,7372,DE,Stock
+TYRA,"Tyra Biosciences, Inc.",Nasdaq,2834,DE,Stock
+TZOO,TRAVELZOO,Nasdaq,7310,DE,Stock
+U,Unity Software Inc.,NYSE,7372,DE,Stock
+UAA,"Under Armour, Inc.",NYSE,2300,MD,Stock
+UAL,"United Airlines Holdings, Inc.",Nasdaq,4512,DE,Stock
+UAMY,UNITED STATES ANTIMONY CORP,NYSE,3330,MT,Stock
+UAN,"CVR PARTNERS, LP",NYSE,2870,DE,Stock
+UAVS,AgEagle Aerial Systems Inc.,NYSE,3721,NV,Stock
+UBCP,UNITED BANCORP INC /OH/,Nasdaq,6022,OH,Stock
+UBER,"Uber Technologies, Inc",NYSE,7389,DE,Stock
+UBFO,UNITED SECURITY BANCSHARES,Nasdaq,6021,CA,Stock
+UBSI,UNITED BANKSHARES INC/WV,Nasdaq,6022,WV,Stock
+UCB,UNITED COMMUNITY BANKS INC,NYSE,6022,GA,Stock
+UCFI,CN Healthy Food Tech Group Corp.,Nasdaq,2000,DE,Stock
+UCTT,"Ultra Clean Holdings, Inc.",Nasdaq,3674,DE,Stock
+UDMY,"Udemy, Inc.",Nasdaq,8200,DE,Stock
+UDN,INVESCO DB US DOLLAR INDEX BEARISH FUND,NYSE,6221,DE,Stock
+UE,Urban Edge Properties,NYSE,6500,MD,Stock
+UEC,URANIUM ENERGY CORP,NYSE,1090,NV,Stock
+UEIC,UNIVERSAL ELECTRONICS INC,Nasdaq,3651,DE,Stock
+UFCS,UNITED FIRE GROUP INC,Nasdaq,6331,,Stock
+UFI,UNIFI INC,NYSE,2200,NY,Stock
+UFPI,UFP INDUSTRIES INC,Nasdaq,2421,MI,Stock
+UFPT,UFP TECHNOLOGIES INC,Nasdaq,3841,DE,Stock
+UG,UNITED GUARDIAN INC,Nasdaq,2844,DE,Stock
+UGA,"United States Gasoline Fund, LP",NYSE,6221,DE,Stock
+UGI,UGI CORP /PA/,NYSE,4932,PA,Stock
+UGRO,"urban-gro, Inc.",Nasdaq,5080,DE,Stock
+UHAL,U-Haul Holding Co /NV/,NYSE,7510,NV,Stock
+UHG,"United Homes Group, Inc.",Nasdaq,1531,DE,Stock
+UHS,UNIVERSAL HEALTH SERVICES INC,NYSE,8062,DE,Stock
+UI,Ubiquiti Inc.,NYSE,3663,DE,Stock
+UIS,UNISYS CORP,NYSE,7373,DE,Stock
+ULBI,ULTRALIFE CORP,Nasdaq,3690,DE,Stock
+ULCC,"Frontier Group Holdings, Inc.",Nasdaq,4512,DE,Stock
+ULH,"UNIVERSAL LOGISTICS HOLDINGS, INC.",Nasdaq,4213,NV,Stock
+ULS,UL Solutions Inc.,NYSE,8734,DE,Stock
+ULTA,"Ulta Beauty, Inc.",Nasdaq,5990,,Stock
+UMAC,"Unusual Machines, Inc.",NYSE,3663,NV,Stock
+UMBF,UMB FINANCIAL CORP,Nasdaq,6021,MO,Stock
+UNB,UNION BANKSHARES INC,Nasdaq,6022,VT,Stock
+UNCY,"Unicycive Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+UNF,UNIFIRST CORP,NYSE,7200,MA,Stock
+UNFI,UNITED NATURAL FOODS INC,NYSE,5141,DE,Stock
+UNG,"United States Natural Gas Fund, LP",NYSE,6221,,Stock
+UNH,UNITEDHEALTH GROUP INC,NYSE,6324,DE,Stock
+UNIT,Uniti Group Inc.,Nasdaq,4813,DE,Stock
+UNL,"United States 12 Month Natural Gas Fund, LP",NYSE,6221,,Stock
+UNM,Unum Group,NYSE,6321,DE,Stock
+UNP,UNION PACIFIC CORP,NYSE,4011,UT,Stock
+UNTY,UNITY BANCORP INC /NJ/,Nasdaq,6022,NJ,Stock
+UONE,"URBAN ONE, INC.",Nasdaq,4832,DE,Stock
+UP,Wheels Up Experience Inc.,NYSE,4522,,Stock
+UPB,"Upstream Bio, Inc.",Nasdaq,2834,DE,Stock
+UPBD,"UPBOUND GROUP, INC.",Nasdaq,7359,DE,Stock
+UPLD,"Upland Software, Inc.",Nasdaq,7372,TX,Stock
+UPS,UNITED PARCEL SERVICE INC,NYSE,4210,DE,Stock
+UPWK,"UPWORK, INC",Nasdaq,7374,DE,Stock
+URBN,URBAN OUTFITTERS INC,Nasdaq,5651,PA,Stock
+URG,UR-ENERGY INC,NYSE,1040,Z4,Stock
+URGN,UroGen Pharma Ltd.,Nasdaq,2834,L3,Stock
+URI,"UNITED RENTALS, INC.",NYSE,7359,DE,Stock
+USAC,"USA Compression Partners, LP",NYSE,4922,,Stock
+USAR,"USA Rare Earth, Inc.",Nasdaq,1000,E9,Stock
+USAU,U.S. GOLD CORP.,Nasdaq,1000,NV,Stock
+USB,US BANCORP \DE\,NYSE,6021,DE,Stock
+USCB,"USCB FINANCIAL HOLDINGS, INC.",Nasdaq,6022,FL,Stock
+USCI,United States Commodity Index Funds Trust,NYSE,6221,,Stock
+USEG,US ENERGY CORP,Nasdaq,1311,DE,Stock
+USFD,US Foods Holding Corp.,NYSE,5140,IL,Stock
+USGO,U.S. GoldMining Inc.,Nasdaq,1040,NV,Stock
+USIO,"Usio, Inc.",Nasdaq,6099,NV,Stock
+USL,"United States 12 Month Oil Fund, LP",NYSE,6221,,Stock
+USLM,UNITED STATES LIME & MINERALS INC,Nasdaq,1400,TX,Stock
+USNA,USANA HEALTH SCIENCES INC,NYSE,2833,UT,Stock
+USO,"United States Oil Fund, LP",NYSE,6221,DE,Stock
+USPH,U S PHYSICAL THERAPY INC /NV,NYSE,8000,NV,Stock
+UTHR,UNITED THERAPEUTICS Corp,Nasdaq,2834,DE,Stock
+UTI,UNIVERSAL TECHNICAL INSTITUTE INC,NYSE,8200,DE,Stock
+UTL,UNITIL CORP,NYSE,4931,NH,Stock
+UTMD,UTAH MEDICAL PRODUCTS INC,Nasdaq,3841,UT,Stock
+UTSI,UTSTARCOM HOLDINGS CORP.,Nasdaq,3669,E9,Stock
+UTZ,"Utz Brands, Inc.",NYSE,2090,DE,Stock
+UUP,Invesco DB US Dollar Index Bullish Fund,NYSE,6221,DE,Stock
+UUU,"UNIVERSAL SAFETY PRODUCTS, INC.",NYSE,5065,MD,Stock
+UUUU,ENERGY FUELS INC,NYSE,1400,A6,Stock
+UVE,"UNIVERSAL INSURANCE HOLDINGS, INC.",NYSE,6331,DE,Stock
+UVSP,UNIVEST FINANCIAL Corp,Nasdaq,6022,PA,Stock
+UVV,UNIVERSAL CORP /VA/,NYSE,5150,VA,Stock
+UWMC,UWM Holdings Corp,NYSE,6162,DE,Stock
+V,VISA INC.,NYSE,7389,DE,Stock
+VABK,Virginia National Bankshares Corp,Nasdaq,6021,VA,Stock
+VAC,MARRIOTT VACATIONS WORLDWIDE Corp,NYSE,6531,X1,Stock
+VACH,Voyager Acquisition Corp./Cayman Islands,Nasdaq,2836,E9,Stock
+VAL,Valaris Ltd,NYSE,1381,,Stock
+VALU,VALUE LINE INC,Nasdaq,6282,NY,Stock
+VANI,"Vivani Medical, Inc.",Nasdaq,3845,DE,Stock
+VATE,INNOVATE Corp.,NYSE,3440,DE,Stock
+VAVX,VanEck Avalanche ETF,Nasdaq,6221,DE,Stock
+VBIO,"Valion Bio, Inc.",Nasdaq,3845,DE,Stock
+VC,VISTEON CORP,Nasdaq,3714,DE,Stock
+VCEL,Vericel Corp,Nasdaq,2836,MI,Stock
+VCTR,"Victory Capital Holdings, Inc.",Nasdaq,6282,DE,Stock
+VCYT,"VERACYTE, INC.",Nasdaq,8071,DE,Stock
+VECO,VEECO INSTRUMENTS INC,Nasdaq,3559,DE,Stock
+VEEA,VEEA INC.,Nasdaq,7373,DE,Stock
+VEEE,"Twin Vee PowerCats, Co.",Nasdaq,3730,,Stock
+VEEV,VEEVA SYSTEMS INC,NYSE,7372,DE,Stock
+VELO,"Velo3D, Inc.",Nasdaq,3559,DE,Stock
+VENU,Venu Holding Corp,NYSE,7900,CO,Stock
+VERA,"Vera Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+VERI,"Veritone, Inc.",Nasdaq,7374,DE,Stock
+VERU,VERU INC.,Nasdaq,2834,WI,Stock
+VERX,"Vertex, Inc.",Nasdaq,7372,DE,Stock
+VFC,V F CORP,NYSE,2320,PA,Stock
+VFF,"Village Farms International, Inc.",Nasdaq,100,A6,Stock
+VG,"Venture Global, Inc.",NYSE,4924,DE,Stock
+VGAS,"Verde Clean Fuels, Inc.",Nasdaq,2860,DE,Stock
+VGZ,VISTA GOLD CORP,NYSE,1040,,Stock
+VHI,VALHI INC /DE/,NYSE,2810,DE,Stock
+VHUB,"VenHub Global, Inc.",Nasdaq,3590,DE,Stock
+VIA,"Via Transportation, Inc.",NYSE,7372,DE,Stock
+VIASP,"Via Renewables, Inc.",Nasdaq,4931,DE,Stock
+VIAV,VIAVI SOLUTIONS INC.,Nasdaq,3674,DE,Stock
+VICR,VICOR CORP,Nasdaq,3679,DE,Stock
+VIR,"Vir Biotechnology, Inc.",Nasdaq,2836,DE,Stock
+VIRC,VIRCO MFG CORPORATION,Nasdaq,2531,DE,Stock
+VIRT,"Virtu Financial, Inc.",NYSE,6211,DE,Stock
+VISN,"Vistance Networks, Inc.",Nasdaq,3663,DE,Stock
+VITL,"Vital Farms, Inc.",Nasdaq,2000,DE,Stock
+VIVK,"Vivakor, Inc.",Nasdaq,4953,NV,Stock
+VIVS,"VivoSim Labs, INC.",Nasdaq,2836,DE,Stock
+VKTX,"Viking Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+VLGEA,VILLAGE SUPER MARKET INC,Nasdaq,5411,NJ,Stock
+VLO,VALERO ENERGY CORP/TX,NYSE,2911,DE,Stock
+VLTO,Veralto Corp,NYSE,3825,X1,Stock
+VLY,VALLEY NATIONAL BANCORP,Nasdaq,6021,NJ,Stock
+VMC,Vulcan Materials CO,NYSE,1400,NJ,Stock
+VMD,"VIEMED HEALTHCARE, INC.",Nasdaq,8090,A1,Stock
+VMI,VALMONT INDUSTRIES INC,NYSE,3440,DE,Stock
+VNCE,VINCE HOLDING CORP.,Nasdaq,5600,DE,Stock
+VNDA,Vanda Pharmaceuticals Inc.,Nasdaq,2834,DE,Stock
+VNOM,"Viper Energy, Inc.",Nasdaq,1311,DE,Stock
+VNRX,VOLITIONRX LTD,NYSE,2835,DE,Stock
+VNT,Vontier Corp,NYSE,3824,DE,Stock
+VOR,Vor Biopharma Inc.,Nasdaq,2836,,Stock
+VOYA,"Voya Financial, Inc.",NYSE,6311,DE,Stock
+VOYG,"Voyager Technologies, Inc./DE",NYSE,3760,DE,Stock
+VPG,"Vishay Precision Group, Inc.",NYSE,3670,DE,Stock
+VRA,"Vera Bradley, Inc.",Nasdaq,3100,,Stock
+VRCA,Verrica Pharmaceuticals Inc.,Nasdaq,2834,DE,Stock
+VRDN,"Viridian Therapeutics, Inc.\DE",Nasdaq,2834,DE,Stock
+VREX,Varex Imaging Corp,Nasdaq,3679,DE,Stock
+VRM,"Vroom, Inc.",Nasdaq,5500,DE,Stock
+VRNS,VARONIS SYSTEMS INC,Nasdaq,7372,DE,Stock
+VRRM,VERRA MOBILITY Corp,Nasdaq,4700,,Stock
+VRSK,"Verisk Analytics, Inc.",Nasdaq,7374,DE,Stock
+VRSN,VERISIGN INC/CA,Nasdaq,7371,DE,Stock
+VRT,Vertiv Holdings Co,NYSE,3679,DE,Stock
+VRTS,"VIRTUS INVESTMENT PARTNERS, INC.",NYSE,6282,DE,Stock
+VRTX,VERTEX PHARMACEUTICALS INC / MA,Nasdaq,2834,MA,Stock
+VS,Versus Systems Inc.,Nasdaq,7374,A1,Stock
+VSAT,VIASAT INC,Nasdaq,4899,DE,Stock
+VSCO,Victoria's Secret & Co.,NYSE,5621,,Stock
+VSEC,VSE CORP,Nasdaq,8711,DE,Stock
+VSEE,"VSEE HEALTH, INC.",Nasdaq,8000,DE,Stock
+VSH,VISHAY INTERTECHNOLOGY INC,NYSE,3670,DE,Stock
+VSNT,"Versant Media Group, Inc.",Nasdaq,4833,PA,Stock
+VST,Vistra Corp.,NYSE,4911,DE,Stock
+VSTD,Vestand Inc.,Nasdaq,5812,DE,Stock
+VSTM,"Verastem, Inc.",Nasdaq,2834,MA,Stock
+VSTS,Vestis Corp,NYSE,5190,DE,Stock
+VTAK,"Catheter Precision, Inc.",NYSE,3841,DE,Stock
+VTGN,"Vistagen Therapeutics, Inc.",Nasdaq,2834,NV,Stock
+VTOL,Bristow Group Inc.,NYSE,4522,,Stock
+VTRS,Viatris Inc,Nasdaq,2834,DE,Stock
+VTS,"Vitesse Energy, Inc.",NYSE,1311,DE,Stock
+VTSI,"VirTra, Inc",Nasdaq,3990,NV,Stock
+VTVT,vTv Therapeutics Inc.,Nasdaq,2834,DE,Stock
+VUZI,Vuzix Corp,Nasdaq,3663,DE,Stock
+VVOS,"Vivos Therapeutics, Inc.",Nasdaq,3841,DE,Stock
+VVV,VALVOLINE INC,NYSE,2990,,Stock
+VVX,"V2X, Inc.",NYSE,8744,IN,Stock
+VWAV,"VisionWave Holdings, Inc.",Nasdaq,7372,DE,Stock
+VYGR,"Voyager Therapeutics, Inc.",Nasdaq,2836,DE,Stock
+VYNE,VYNE Therapeutics Inc.,Nasdaq,2834,DE,Stock
+VYX,NCR Voyix Corp,NYSE,3578,MD,Stock
+VZ,VERIZON COMMUNICATIONS INC,NYSE,4813,DE,Stock
+W,Wayfair Inc.,NYSE,5961,,Stock
+WAB,WESTINGHOUSE AIR BRAKE TECHNOLOGIES CORP,NYSE,3743,DE,Stock
+WABC,WESTAMERICA BANCORPORATION,Nasdaq,6021,CA,Stock
+WAFD,WAFD INC,Nasdaq,6021,WA,Stock
+WAL,WESTERN ALLIANCE BANCORPORATION,NYSE,6022,DE,Stock
+WALD,Waldencast plc,Nasdaq,2844,,Stock
+WASH,WASHINGTON TRUST BANCORP INC,Nasdaq,6022,RI,Stock
+WAT,WATERS CORP /DE/,NYSE,3826,DE,Stock
+WATT,Energous Corp,Nasdaq,3663,DE,Stock
+WAY,Waystar Holding Corp.,Nasdaq,7373,DE,Stock
+WBD,"Warner Bros. Discovery, Inc.",Nasdaq,4841,DE,Stock
+WBI,WaterBridge Infrastructure LLC,NYSE,1389,DE,Stock
+WBS,WEBSTER FINANCIAL CORP,NYSE,6021,DE,Stock
+WBTN,WEBTOON Entertainment Inc.,Nasdaq,2741,DE,Stock
+WCC,WESCO INTERNATIONAL INC,NYSE,5063,,Stock
+WCN,"Waste Connections, Inc.",NYSE,4953,A6,Stock
+WDAY,"Workday, Inc.",Nasdaq,7374,DE,Stock
+WDC,WESTERN DIGITAL CORP,Nasdaq,3572,DE,Stock
+WDFC,WD 40 CO,Nasdaq,2890,DE,Stock
+WEAV,"Weave Communications, Inc.",NYSE,7372,DE,Stock
+WEC,"WEC ENERGY GROUP, INC.",NYSE,4931,WI,Stock
+WEN,Wendy's Co,Nasdaq,5810,DE,Stock
+WERN,WERNER ENTERPRISES INC,Nasdaq,4213,NE,Stock
+WES,"Western Midstream Partners, LP",NYSE,4922,DE,Stock
+WEST,Westrock Coffee Co,Nasdaq,2080,DE,Stock
+WETH,Wetouch Technology Inc.,Nasdaq,3577,NV,Stock
+WEX,WEX Inc.,NYSE,7389,DE,Stock
+WEYS,WEYCO GROUP INC,Nasdaq,5130,WI,Stock
+WFC,WELLS FARGO & COMPANY/MN,NYSE,6021,DE,Stock
+WFCF,"Where Food Comes From, Inc.",Nasdaq,7372,,Stock
+WFRD,Weatherford International plc,Nasdaq,3533,,Stock
+WGO,WINNEBAGO INDUSTRIES INC,NYSE,3716,MN,Stock
+WGRX,"Wellgistics Health, Inc.",Nasdaq,5122,DE,Stock
+WGS,GeneDx Holdings Corp.,Nasdaq,8000,DE,Stock
+WH,"WYNDHAM HOTELS & RESORTS, INC.",NYSE,7011,DE,Stock
+WHD,"Cactus, Inc.",NYSE,3533,,Stock
+WHF,"WhiteHorse Finance, Inc.",Nasdaq,0,DE,Stock
+WHG,WESTWOOD HOLDINGS GROUP INC,NYSE,6282,DE,Stock
+WHR,WHIRLPOOL CORP /DE/,NYSE,3630,DE,Stock
+WHWK,"Whitehawk Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+WINA,WINMARK CORP,Nasdaq,5900,MN,Stock
+WING,Wingstop Inc.,Nasdaq,5812,DE,Stock
+WK,WORKIVA INC,NYSE,7372,DE,Stock
+WKC,WORLD KINECT CORP,NYSE,5172,FL,Stock
+WKHS,Workhorse Group Inc.,Nasdaq,3711,NV,Stock
+WKSP,Worksport Ltd,Nasdaq,3714,NV,Stock
+WLDN,"Willdan Group, Inc.",Nasdaq,8711,DE,Stock
+WLFC,WILLIS LEASE FINANCE CORP,Nasdaq,5080,DE,Stock
+WLK,WESTLAKE CORP,NYSE,2860,DE,Stock
+WLKP,Westlake Chemical Partners LP,NYSE,2860,DE,Stock
+WLY,"JOHN WILEY & SONS, INC.",NYSE,2731,NY,Stock
+WM,WASTE MANAGEMENT INC,NYSE,4953,DE,Stock
+WMB,"WILLIAMS COMPANIES, INC.",NYSE,4922,DE,Stock
+WMG,Warner Music Group Corp.,Nasdaq,7900,DE,Stock
+WMK,WEIS MARKETS INC,NYSE,5411,PA,Stock
+WMS,"ADVANCED DRAINAGE SYSTEMS, INC.",NYSE,3086,DE,Stock
+WMT,Walmart Inc.,Nasdaq,5331,DE,Stock
+WNC,WABASH NATIONAL Corp,NYSE,3715,DE,Stock
+WNEB,"Western New England Bancorp, Inc.",Nasdaq,6035,MA,Stock
+WOLF,"WOLFSPEED, INC.",NYSE,3674,DE,Stock
+WOOF,"Petco Health & Wellness Company, Inc.",Nasdaq,5990,DE,Stock
+WOR,"WORTHINGTON ENTERPRISES, INC.",NYSE,3310,OH,Stock
+WRAP,"WRAP TECHNOLOGIES, INC.",Nasdaq,3480,DE,Stock
+WRB,BERKLEY W R CORP,NYSE,6331,DE,Stock
+WRBY,Warby Parker Inc.,NYSE,3851,DE,Stock
+WRLD,WORLD ACCEPTANCE CORP,Nasdaq,6141,SC,Stock
+WS,"Worthington Steel, Inc.",NYSE,3310,OH,Stock
+WSBC,WESBANCO INC,Nasdaq,6021,WV,Stock
+WSBF,"Waterstone Financial, Inc.",Nasdaq,6035,MD,Stock
+WSBK,"Winchester Bancorp, Inc./MD/",Nasdaq,6036,MD,Stock
+WSC,WillScot Holdings Corp,Nasdaq,7350,DE,Stock
+WSFS,WSFS FINANCIAL CORP,Nasdaq,6021,DE,Stock
+WSM,WILLIAMS SONOMA INC,NYSE,5700,DE,Stock
+WSO,WATSCO INC,NYSE,5070,FL,Stock
+WST,WEST PHARMACEUTICAL SERVICES INC,NYSE,3841,PA,Stock
+WT,"WisdomTree, Inc.",NYSE,6211,DE,Stock
+WTBA,WEST BANCORPORATION INC,Nasdaq,6022,IA,Stock
+WTFC,WINTRUST FINANCIAL CORP,Nasdaq,6022,IL,Stock
+WTG,Wintergreen Acquisition Corp.,Nasdaq,7370,E9,Stock
+WTI,W&T OFFSHORE INC,NYSE,1311,TX,Stock
+WTM,WHITE MOUNTAINS INSURANCE GROUP LTD,NYSE,6331,D0,Stock
+WTRG,"Essential Utilities, Inc.",NYSE,4941,PA,Stock
+WTS,WATTS WATER TECHNOLOGIES INC,NYSE,3490,DE,Stock
+WTTR,"Select Water Solutions, Inc.",NYSE,1389,DE,Stock
+WTW,WILLIS TOWERS WATSON PLC,Nasdaq,6411,L2,Stock
+WU,Western Union CO,NYSE,7389,DE,Stock
+WVE,Wave Life Sciences Ltd.,Nasdaq,2834,U0,Stock
+WVVI,WILLAMETTE VALLEY VINEYARDS INC,Nasdaq,2080,OR,Stock
+WW,"WW INTERNATIONAL, INC.",Nasdaq,7200,VA,Stock
+WWD,"Woodward, Inc.",Nasdaq,3620,DE,Stock
+WWR,"WESTWATER RESOURCES, INC.",NYSE,1000,DE,Stock
+WWW,WOLVERINE WORLD WIDE INC /DE/,NYSE,3140,MI,Stock
+WYNN,WYNN RESORTS LTD,Nasdaq,7011,,Stock
+WYY,WIDEPOINT CORP,NYSE,7373,DE,Stock
+XAIR,"Beyond Air, Inc.",Nasdaq,3841,DE,Stock
+XBIO,"Xenetic Biosciences, Inc.",Nasdaq,2834,NV,Stock
+XBIT,XBiotech Inc.,Nasdaq,2834,A1,Stock
+XBP,"XBP Global Holdings, Inc.",Nasdaq,7389,DE,Stock
+XCUR,"EXICURE, INC.",Nasdaq,2834,DE,Stock
+XEL,XCEL ENERGY INC,Nasdaq,4931,MN,Stock
+XENE,Xenon Pharmaceuticals Inc.,Nasdaq,2834,A1,Stock
+XERS,"Xeris Biopharma Holdings, Inc.",Nasdaq,2834,,Stock
+XFOR,"X4 Pharmaceuticals, Inc",Nasdaq,2836,DE,Stock
+XGN,EXAGEN INC.,Nasdaq,8071,DE,Stock
+XHLD,"TEN Holdings, Inc.",Nasdaq,7389,NV,Stock
+XHR,"Xenia Hotels & Resorts, Inc.",NYSE,7011,FL,Stock
+XIFR,"XPLR Infrastructure, LP",NYSE,4911,,Stock
+XLO,"Xilio Therapeutics, Inc.",Nasdaq,2834,DE,Stock
+XMTR,"Xometry, Inc.",Nasdaq,7389,MD,Stock
+XNCR,Xencor Inc,Nasdaq,2834,DE,Stock
+XOM,EXXON MOBIL CORP,NYSE,2911,NJ,Stock
+XOMA,XOMA Royalty Corp,Nasdaq,2834,NV,Stock
+XOS,"Xos, Inc.",Nasdaq,3714,DE,Stock
+XPEL,"XPEL, Inc.",Nasdaq,3470,NV,Stock
+XPER,Xperi Inc.,NYSE,7372,DE,Stock
+XPL,SOLITARIO RESOURCES CORP.,NYSE,1040,CO,Stock
+XPO,"XPO, Inc.",NYSE,4700,,Stock
+XPOF,"Xponential Fitness, Inc.",NYSE,7990,DE,Stock
+XPON,Expion360 Inc.,Nasdaq,3690,NV,Stock
+XPRO,EXPRO GROUP HOLDINGS N.V.,NYSE,1389,P7,Stock
+XRAY,DENTSPLY SIRONA Inc.,Nasdaq,3843,DE,Stock
+XRP,Bitwise XRP ETF,NYSE,6221,DE,Stock
+XRX,Xerox Holdings Corp,Nasdaq,3577,CT,Stock
+XTIA,"XTI Aerospace, Inc.",Nasdaq,7371,NV,Stock
+XTNT,"Xtant Medical Holdings, Inc.",NYSE,3841,DE,Stock
+XWEL,"XWELL, Inc.",Nasdaq,7200,DE,Stock
+XWIN,XMax Inc.,Nasdaq,2510,NV,Stock
+XXII,"22nd Century Group, Inc.",Nasdaq,2111,FL,Stock
+XYL,Xylem Inc.,NYSE,3561,IN,Stock
+XYZ,"Block, Inc.",NYSE,7372,DE,Stock
+XZO,"Exzeo Group, Inc.",NYSE,7372,FL,Stock
+YCBD,"cbdMD, Inc.",NYSE,2844,NC,Stock
+YELP,YELP INC,NYSE,7200,DE,Stock
+YETI,"YETI Holdings, Inc.",NYSE,3949,DE,Stock
+YEXT,"Yext, Inc.",NYSE,7374,DE,Stock
+YHC,LQR House Inc.,Nasdaq,2080,DE,Stock
+YHGJ,YUNHONG GREEN CTI LTD.,Nasdaq,3060,IL,Stock
+YORW,YORK WATER CO,Nasdaq,4941,PA,Stock
+YOU,"Clear Secure, Inc.",NYSE,7372,DE,Stock
+YUM,YUM BRANDS INC,NYSE,5812,NC,Stock
+YUMC,"Yum China Holdings, Inc.",NYSE,5812,DE,Stock
+YYAI,AIRWA INC.,Nasdaq,7370,DE,Stock
+ZBAI,ATIF Holdings Ltd,Nasdaq,8742,D8,Stock
+ZBH,"ZIMMER BIOMET HOLDINGS, INC.",NYSE,3842,DE,Stock
+ZBIO,"Zenas BioPharma, Inc.",Nasdaq,2834,DE,Stock
+ZBRA,ZEBRA TECHNOLOGIES CORP,Nasdaq,3560,,Stock
+ZD,"ZIFF DAVIS, INC.",Nasdaq,4822,,Stock
+ZDGE,"Zedge, Inc.",NYSE,7372,DE,Stock
+ZEO,Zeo Energy Corp.,Nasdaq,1700,,Stock
+ZETA,Zeta Global Holdings Corp.,NYSE,7372,DE,Stock
+ZG,"ZILLOW GROUP, INC.",Nasdaq,7389,WA,Stock
+ZION,"ZIONS BANCORPORATION, NATIONAL ASSOCIATION /UT/",Nasdaq,6021,UT,Stock
+ZIP,"ZIPRECRUITER, INC.",NYSE,7370,DE,Stock
+ZLAB,Zai Lab Ltd,Nasdaq,2834,E9,Stock
+ZM,"Zoom Communications, Inc.",Nasdaq,7370,DE,Stock
+ZNTL,"Zentalis Pharmaceuticals, Inc.",Nasdaq,2834,,Stock
+ZONE,"CleanCore Solutions, Inc.",NYSE,2842,NV,Stock
+ZS,"Zscaler, Inc.",Nasdaq,7371,DE,Stock
+ZSTK,ZeroStack Corp.,Nasdaq,5122,A6,Stock
+ZTS,Zoetis Inc.,NYSE,2834,,Stock
+ZUMZ,Zumiez Inc,Nasdaq,5600,WA,Stock
+ZURA,Zura Bio Ltd,Nasdaq,2836,E9,Stock
+ZVIA,Zevia PBC,NYSE,2086,DE,Stock
+ZVRA,"ZEVRA THERAPEUTICS, INC.",Nasdaq,2834,DE,Stock
+ZWS,Zurn Elkay Water Solutions Corp,NYSE,3560,DE,Stock
+ZYME,Zymeworks Inc.,Nasdaq,2834,DE,Stock

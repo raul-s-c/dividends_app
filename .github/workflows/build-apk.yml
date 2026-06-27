@@ -1,0 +1,108 @@
+name: Build Android APK
+
+on:
+  workflow_dispatch:
+    inputs:
+      versionName:
+        description: "Version name, for example 0.1.1"
+        required: true
+        default: "0.1.0"
+      versionCode:
+        description: "Integer version code"
+        required: true
+        default: "1"
+      notes:
+        description: "Release notes shown inside the app"
+        required: true
+        default: "Primera version Android del calendario de dividendos."
+
+permissions:
+  contents: write
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.10.2"
+
+      - name: Apply version
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import os
+          import re
+          path = Path("android/app/build.gradle")
+          text = path.read_text()
+          text = re.sub(r"versionCode\s+\d+", f'versionCode {os.environ["VERSION_CODE"]}', text)
+          text = re.sub(r'versionName\s+"[^"]+"', f'versionName "{os.environ["VERSION_NAME"]}"', text)
+          path.write_text(text)
+          PY
+        env:
+          VERSION_CODE: ${{ inputs.versionCode }}
+          VERSION_NAME: ${{ inputs.versionName }}
+
+      - name: Prepare signing key
+        run: |
+          if [ -n "$ANDROID_KEYSTORE_BASE64" ]; then
+            echo "$ANDROID_KEYSTORE_BASE64" | base64 -d > android/app/release.keystore
+            printf "storeFile=app/release.keystore\nstorePassword=%s\nkeyAlias=%s\nkeyPassword=%s\n" \
+              "$ANDROID_KEYSTORE_PASSWORD" "$ANDROID_KEY_ALIAS" "$ANDROID_KEY_PASSWORD" > android/keystore.properties
+          else
+            echo "No signing secrets configured; building release APK with debug signing fallback."
+          fi
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+
+      - name: Build APK
+        run: gradle -p android assembleRelease
+
+      - name: Publish APK manifest
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import shutil
+          from pathlib import Path
+
+          version_name = os.environ["VERSION_NAME"]
+          version_code = int(os.environ["VERSION_CODE"])
+          notes = os.environ["NOTES"]
+          release_dir = Path("releases")
+          release_dir.mkdir(exist_ok=True)
+          apk_name = f"DividendCalendar-{version_name}.apk"
+          shutil.copyfile("android/app/build/outputs/apk/release/app-release.apk", release_dir / apk_name)
+          manifest = {
+              "versionCode": version_code,
+              "versionName": version_name,
+              "apkUrl": f"https://raw.githubusercontent.com/raul-s-c/dividends_app/main/releases/{apk_name}",
+              "notes": notes,
+          }
+          (release_dir / "update.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+          PY
+        env:
+          VERSION_CODE: ${{ inputs.versionCode }}
+          VERSION_NAME: ${{ inputs.versionName }}
+          NOTES: ${{ inputs.notes }}
+
+      - name: Commit APK and manifest
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: publish android apk"
+          file_pattern: releases/*.apk releases/update.json android/app/build.gradle

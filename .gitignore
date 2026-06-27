@@ -5,3 +5,7 @@ __pycache__/
 data/portfolio.csv
 data/*.db-shm
 data/*.db-wal
+android/keystore.properties
+android/app/*.keystore
+android/app/build/
+android/.gradle/

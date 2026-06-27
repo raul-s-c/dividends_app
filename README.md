@@ -74,6 +74,45 @@ O en Windows:
 abrir_dividends_streamlit.bat
 ```
 
+## APK Android
+
+El repo incluye un primer proyecto Android nativo en `android/`.
+
+Para construir/publicar un APK sin pasarlo manualmente:
+
+1. En GitHub, abre `Actions`.
+2. Ejecuta `Build Android APK`.
+3. Indica `versionName`, `versionCode` y notas.
+4. El workflow compila el APK y actualiza:
+
+```text
+releases/DividendCalendar-<version>.apk
+releases/update.json
+```
+
+La app Android consulta:
+
+```text
+https://raw.githubusercontent.com/raul-s-c/dividends_app/main/releases/update.json
+```
+
+Ese manifest sigue el mismo patron que `nubeplay-releases`: contiene
+`versionCode`, `versionName`, `apkUrl` y `notes`. Si hay una version superior,
+la app ofrece descargar e instalar el APK.
+
+Para que una APK pueda actualizar encima de la anterior, configura en GitHub
+estos secretos con un keystore estable:
+
+```text
+ANDROID_KEYSTORE_BASE64
+ANDROID_KEYSTORE_PASSWORD
+ANDROID_KEY_ALIAS
+ANDROID_KEY_PASSWORD
+```
+
+Si no existen, el workflow usa firma debug como fallback para pruebas. Para Play
+Store o distribucion estable hay que firmar APK/AAB release con keystore fijo.
+
 ## ETFs
 
 Si. El pipeline ya soporta ETFs de forma practica:

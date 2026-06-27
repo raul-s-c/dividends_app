@@ -25,14 +25,19 @@ El repo incluye GitHub Actions:
 Se ejecuta cada dia a las `07:20 UTC` y tambien manualmente desde
 `Actions -> Update dividend calendar -> Run workflow`.
 
-El workflow calcula un rango movil: desde el 1 de enero del ano anterior hasta
-el 1 de enero de dentro de dos anos. En 2026, por ejemplo, cubre
-`2025-01-01` a `2028-01-01`.
+El workflow usa actualizacion incremental:
 
-Despues ejecuta:
+- Recalcula solo una ventana movil.
+- Por defecto rehace los ultimos `95` dias, aproximadamente un trimestre.
+- Tambien refresca los proximos `550` dias, para mantener anuncios futuros.
+- El historico anterior a la ventana no se borra ni se recalcula.
+- Si la fuente falla en algun dia, no reemplaza la ventana completa; conserva la
+  base previa y solo intenta upsert de lo que si haya respondido.
+
+Comando diario:
 
 ```powershell
-python dividend_calendar_pipeline.py --source nasdaq --start <start> --end <end> --workers 8 --include-unmatched
+python dividend_calendar_pipeline.py --source nasdaq --incremental --lookback-days 95 --forward-days 550 --workers 8 --include-unmatched
 ```
 
 Despues valida que haya eventos y commitea `data/dividends.db` si cambia.
@@ -42,13 +47,19 @@ Despues valida que haya eventos y commitea `data/dividends.db` si cambia.
 Actualizar datos:
 
 ```powershell
-python dividend_calendar_pipeline.py --source nasdaq --start 2025-01-01 --end 2027-01-01 --workers 8 --include-unmatched
+python dividend_calendar_pipeline.py --source nasdaq --incremental --lookback-days 95 --forward-days 550 --workers 8 --include-unmatched
 ```
 
 O en Windows:
 
 ```powershell
 actualizar_dividendos.bat
+```
+
+Rebuild amplio manual:
+
+```powershell
+python dividend_calendar_pipeline.py --source nasdaq --rebuild --incremental --workers 8 --include-unmatched
 ```
 
 Abrir app:

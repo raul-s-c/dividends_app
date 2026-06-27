@@ -49,6 +49,54 @@ _request_lock = threading.Lock()
 _last_request = 0.0
 _db_lock = threading.Lock()
 
+EVENT_COLS = [
+    "ticker",
+    "company_name",
+    "exchange",
+    "sector",
+    "state",
+    "asset_type",
+    "ex_dividend_date",
+    "record_date",
+    "pay_date",
+    "declaration_date",
+    "cash_amount",
+    "currency",
+    "frequency",
+    "distribution_type",
+    "status",
+    "source",
+    "source_event_id",
+    "updated_at",
+]
+
+EVENT_INSERT_SQL = """
+    INSERT INTO dividend_events (
+        ticker, company_name, exchange, sector, state, asset_type,
+        ex_dividend_date, record_date, pay_date, declaration_date, cash_amount,
+        currency, frequency, distribution_type, status, source,
+        source_event_id, updated_at
+    )
+    VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+    ON CONFLICT(ticker, source_event_id) DO UPDATE SET
+        company_name=excluded.company_name,
+        exchange=excluded.exchange,
+        sector=excluded.sector,
+        state=excluded.state,
+        asset_type=excluded.asset_type,
+        ex_dividend_date=excluded.ex_dividend_date,
+        record_date=excluded.record_date,
+        pay_date=excluded.pay_date,
+        declaration_date=excluded.declaration_date,
+        cash_amount=excluded.cash_amount,
+        currency=excluded.currency,
+        frequency=excluded.frequency,
+        distribution_type=excluded.distribution_type,
+        status=excluded.status,
+        source=excluded.source,
+        updated_at=excluded.updated_at
+"""
+
 
 @dataclass(frozen=True)
 class Company:
@@ -102,6 +150,13 @@ def iter_days(start_date: str, end_date: str) -> Iterable[date]:
 
 def now_utc() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+
+def rolling_window_dates(rebuild: bool = False, lookback_days: int = 95, forward_days: int = 550) -> tuple[str, str]:
+    today = date.today()
+    if rebuild:
+        return f"{today.year - 1}-01-01", f"{today.year + 2}-01-01"
+    return (today - timedelta(days=lookback_days)).isoformat(), (today + timedelta(days=forward_days)).isoformat()
 
 
 def classify_unmatched_asset_type(company_name: str) -> str:
@@ -424,58 +479,29 @@ def fetch_nasdaq_calendar(day: date, companies_by_ticker: dict[str, Company], in
 def upsert_events(rows: list[dict]) -> int:
     if not rows:
         return 0
-    cols = [
-        "ticker",
-        "company_name",
-        "exchange",
-        "sector",
-        "state",
-        "asset_type",
-        "ex_dividend_date",
-        "record_date",
-        "pay_date",
-        "declaration_date",
-        "cash_amount",
-        "currency",
-        "frequency",
-        "distribution_type",
-        "status",
-        "source",
-        "source_event_id",
-        "updated_at",
-    ]
-    values = [tuple(row.get(col) for col in cols) for row in rows]
+    values = [tuple(row.get(col) for col in EVENT_COLS) for row in rows]
     with _db_lock:
         conn = get_conn()
-        conn.executemany(
+        conn.executemany(EVENT_INSERT_SQL, values)
+        conn.commit()
+        conn.close()
+    return len(rows)
+
+
+def replace_source_window(rows: list[dict], source: str, start_date: str, end_date: str) -> int:
+    values = [tuple(row.get(col) for col in EVENT_COLS) for row in rows]
+    with _db_lock:
+        conn = get_conn()
+        conn.execute("BEGIN")
+        conn.execute(
             """
-            INSERT INTO dividend_events (
-                ticker, company_name, exchange, sector, state, asset_type,
-                ex_dividend_date, record_date, pay_date, declaration_date, cash_amount,
-                currency, frequency, distribution_type, status, source,
-                source_event_id, updated_at
-            )
-            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
-            ON CONFLICT(ticker, source_event_id) DO UPDATE SET
-                company_name=excluded.company_name,
-                exchange=excluded.exchange,
-                sector=excluded.sector,
-                state=excluded.state,
-                asset_type=excluded.asset_type,
-                ex_dividend_date=excluded.ex_dividend_date,
-                record_date=excluded.record_date,
-                pay_date=excluded.pay_date,
-                declaration_date=excluded.declaration_date,
-                cash_amount=excluded.cash_amount,
-                currency=excluded.currency,
-                frequency=excluded.frequency,
-                distribution_type=excluded.distribution_type,
-                status=excluded.status,
-                source=excluded.source,
-                updated_at=excluded.updated_at
+            DELETE FROM dividend_events
+            WHERE source=? AND ex_dividend_date >= ? AND ex_dividend_date < ?
             """,
-            values,
+            (source, start_date, end_date),
         )
+        if values:
+            conn.executemany(EVENT_INSERT_SQL, values)
         conn.commit()
         conn.close()
     return len(rows)
@@ -557,6 +583,7 @@ def run_nasdaq_calendar(
     workers: int = 8,
     include_unmatched: bool = False,
     exchanges: Iterable[str] = DEFAULT_EXCHANGES,
+    reconcile_window: bool = False,
 ) -> dict:
     companies = load_companies(ticker=ticker, exchanges=exchanges)
     companies_by_ticker = {company.ticker: company for company in companies}
@@ -575,7 +602,7 @@ def run_nasdaq_calendar(
             end_date,
             "nasdaq_calendar",
             len(companies),
-            "Nasdaq daily dividend calendar; rows filtered against SEC fundamentals.db universe.",
+            "Nasdaq daily dividend calendar; incremental window replacement when enabled.",
         ),
     )
     conn.commit()
@@ -584,6 +611,7 @@ def run_nasdaq_calendar(
     errors = 0
     events = 0
     buffer: list[dict] = []
+    all_rows: list[dict] = []
     print(f"Nasdaq dividend calendar: days={len(days):,} universe={len(companies):,} range={start_date}..{end_date}")
     with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, workers)) as executor:
         futures = {
@@ -603,14 +631,23 @@ def run_nasdaq_calendar(
                 rows = []
             if ticker and rows:
                 rows = [row for row in rows if row["ticker"].upper() == ticker.upper()]
-            if rows:
+            if reconcile_window and rows:
+                all_rows.extend(rows)
+            elif rows:
                 buffer.extend(rows)
-            if len(buffer) >= 500:
+            if not reconcile_window and len(buffer) >= 500:
                 events += upsert_events(buffer)
                 buffer.clear()
             if completed % 50 == 0 or completed == len(days):
-                print(f"  processed={completed:,}/{len(days):,} events={events + len(buffer):,} errors={errors:,}")
-    events += upsert_events(buffer)
+                pending_events = len(all_rows) if reconcile_window else len(buffer)
+                print(f"  processed={completed:,}/{len(days):,} events={events + pending_events:,} errors={errors:,}")
+    if reconcile_window and errors == 0:
+        events = replace_source_window(all_rows, "nasdaq_calendar", start_date, end_date)
+    else:
+        if reconcile_window and errors:
+            print("Window replacement skipped because at least one calendar day failed; upserting successful rows only.")
+            buffer.extend(all_rows)
+        events += upsert_events(buffer)
 
     conn = get_conn()
     conn.execute(
@@ -623,7 +660,14 @@ def run_nasdaq_calendar(
     )
     conn.commit()
     conn.close()
-    return {"days": len(days), "tickers": len(companies), "events": events, "errors": errors, "run_id": run_id}
+    return {
+        "days": len(days),
+        "tickers": len(companies),
+        "events": events,
+        "errors": errors,
+        "run_id": run_id,
+        "reconciled_window": bool(reconcile_window and errors == 0),
+    }
 
 
 def load_events(start_date: str, end_date: str, ticker: str | None = None) -> list[dict]:
@@ -649,22 +693,33 @@ def load_events(start_date: str, end_date: str, ticker: str | None = None) -> li
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--start", default="2025-01-01", help="Inclusive start date YYYY-MM-DD")
-    parser.add_argument("--end", default="2027-01-01", help="Exclusive end date YYYY-MM-DD")
+    parser.add_argument("--start", help="Inclusive start date YYYY-MM-DD")
+    parser.add_argument("--end", help="Exclusive end date YYYY-MM-DD")
     parser.add_argument("--ticker", help="Single ticker")
     parser.add_argument("--workers", type=int, default=8)
     parser.add_argument("--limit", type=int, help="Limit ticker count for tests")
     parser.add_argument("--exchanges", default="NYSE,Nasdaq,CBOE", help="Comma-separated source exchanges")
-    parser.add_argument("--source", choices=["yahoo", "nasdaq", "both"], default="yahoo")
+    parser.add_argument("--source", choices=["yahoo", "nasdaq", "both"], default="nasdaq")
     parser.add_argument("--include-unmatched", action="store_true", help="Keep Nasdaq rows not found in local SEC universe")
+    parser.add_argument("--incremental", action="store_true", help="Use a rolling window and replace only that source/date range")
+    parser.add_argument("--rebuild", action="store_true", help="Use a broad moving rebuild range instead of the incremental window")
+    parser.add_argument("--lookback-days", type=int, default=95, help="Incremental lookback window; default is roughly one quarter")
+    parser.add_argument("--forward-days", type=int, default=550, help="Incremental forward window; default is about 18 months")
     args = parser.parse_args()
     exchanges = [x.strip() for x in args.exchanges.split(",") if x.strip()]
+    default_start, default_end = rolling_window_dates(
+        rebuild=args.rebuild,
+        lookback_days=args.lookback_days,
+        forward_days=args.forward_days,
+    )
+    start_date = args.start or default_start
+    end_date = args.end or default_end
     results = []
     if args.source in ("yahoo", "both"):
         results.append(
             run_yahoo(
-                start_date=args.start,
-                end_date=args.end,
+                start_date=start_date,
+                end_date=end_date,
                 ticker=args.ticker,
                 workers=args.workers,
                 limit=args.limit,
@@ -676,12 +731,13 @@ def main() -> None:
             print("--limit only applies to the Yahoo ticker extractor; Nasdaq is date-based.")
         results.append(
             run_nasdaq_calendar(
-                start_date=args.start,
-                end_date=args.end,
+                start_date=start_date,
+                end_date=end_date,
                 ticker=args.ticker,
                 workers=args.workers,
                 include_unmatched=args.include_unmatched,
                 exchanges=exchanges,
+                reconcile_window=args.incremental,
             )
         )
     result = results[-1] if len(results) == 1 else results

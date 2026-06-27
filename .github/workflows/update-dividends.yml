@@ -22,19 +22,9 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Compute rolling date range
-        id: dates
+      - name: Update Nasdaq calendar incrementally
         run: |
-          python - <<'PY' >> "$GITHUB_OUTPUT"
-          from datetime import date
-          year = date.today().year
-          print(f"start={year - 1}-01-01")
-          print(f"end={year + 2}-01-01")
-          PY
-
-      - name: Update Nasdaq calendar
-        run: |
-          python dividend_calendar_pipeline.py --source nasdaq --start "${{ steps.dates.outputs.start }}" --end "${{ steps.dates.outputs.end }}" --workers 8 --include-unmatched
+          python dividend_calendar_pipeline.py --source nasdaq --incremental --lookback-days 95 --forward-days 550 --workers 8 --include-unmatched
 
       - name: Validate database
         run: |

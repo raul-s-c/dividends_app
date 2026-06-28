@@ -44,6 +44,44 @@ def save_portfolio(df: pd.DataFrame) -> None:
     clean.to_csv(PORTFOLIO_CSV, index=False)
 
 
+@st.cache_data(ttl=300)
+def load_universe() -> pd.DataFrame:
+    frames: list[pd.DataFrame] = []
+    if US_UNIVERSE_CSV.exists():
+        us = pd.read_csv(US_UNIVERSE_CSV).fillna("")
+        us["market_region"] = "USA"
+        frames.append(us)
+    if EUROPE_UNIVERSE_CSV.exists():
+        europe = pd.read_csv(EUROPE_UNIVERSE_CSV).fillna("")
+        europe = europe.rename(columns={"country": "state"})
+        europe["sector"] = ""
+        europe["market_region"] = "Europa"
+        frames.append(europe)
+    if not frames:
+        return pd.DataFrame(columns=["ticker", "name", "exchange", "sector", "state", "asset_type", "market_region"])
+    universe = pd.concat(frames, ignore_index=True, sort=False).fillna("")
+    universe["ticker"] = universe["ticker"].astype(str).str.upper().str.strip()
+    universe["ticker_base"] = universe["ticker"].str.split(".").str[0]
+    return universe.drop_duplicates(["ticker"], keep="first")
+
+
+def resolve_portfolio_tickers(portfolio_df: pd.DataFrame, universe_df: pd.DataFrame) -> pd.DataFrame:
+    if portfolio_df.empty:
+        portfolio_df["resolved_ticker"] = ""
+        return portfolio_df
+    resolved = portfolio_df.copy()
+    resolved["resolved_ticker"] = resolved["ticker"]
+    if universe_df.empty:
+        return resolved
+    lookup: dict[str, str] = {}
+    for base, group in universe_df.groupby("ticker_base"):
+        tickers = sorted(group["ticker"].dropna().astype(str).unique().tolist())
+        if len(tickers) == 1:
+            lookup[base] = tickers[0]
+    resolved["resolved_ticker"] = resolved["ticker"].map(lambda value: lookup.get(value, value))
+    return resolved
+
+
 def file_mtime(path: Path) -> str:
     if not path.exists():
         return "-"
@@ -168,12 +206,30 @@ with st.sidebar:
         st.cache_data.clear()
         st.rerun()
 
+universe = load_universe()
 portfolio = load_portfolio()
 
 tab_calendar, tab_portfolio, tab_data, tab_status = st.tabs(["Calendario", "Mi cartera", "Datos", "Estado"])
 
 with tab_portfolio:
     st.subheader("Cartera")
+    st.markdown("**Buscar instrumento**")
+    instrument_search = st.text_input("Ticker o nombre", "", placeholder="Ej: JGPI, JGPI.DE, JEPI, VUSA")
+    if instrument_search.strip():
+        q = instrument_search.strip().upper()
+        matches = universe[
+            universe["ticker"].astype(str).str.upper().str.contains(q, regex=False)
+            | universe["ticker_base"].astype(str).str.upper().eq(q)
+            | universe["name"].astype(str).str.upper().str.contains(q, regex=False)
+        ].copy()
+        if matches.empty:
+            st.warning("No encuentro ese ticker en el universo local. Prueba con el sufijo de mercado, por ejemplo .DE, .L, .MI o .AS.")
+        else:
+            st.dataframe(
+                matches[["ticker", "name", "exchange", "asset_type", "market_region"]].head(25),
+                use_container_width=True,
+                hide_index=True,
+            )
     st.caption("Añade tickers y acciones para estimar cobros próximos. Los datos se guardan localmente.")
     edited = st.data_editor(
         portfolio,
@@ -197,6 +253,7 @@ events = events_between(start_text, end_text)
 portfolio = load_portfolio()
 portfolio["ticker"] = portfolio.get("ticker", pd.Series(dtype=str)).astype(str).str.upper().str.strip()
 portfolio["shares"] = pd.to_numeric(portfolio.get("shares", 0), errors="coerce").fillna(0)
+portfolio = resolve_portfolio_tickers(portfolio, universe)
 
 if not events.empty:
     events["_source_rank"] = events["source"].map({"nasdaq_calendar": 0, "yahoo_chart_dividends": 1}).fillna(9)
@@ -208,7 +265,15 @@ if not events.empty:
     events["ex_dividend_date"] = pd.to_datetime(events["ex_dividend_date"]).dt.date
     events["cash_amount"] = pd.to_numeric(events["cash_amount"], errors="coerce").fillna(0)
 
-portfolio_events = events.merge(portfolio[["ticker", "shares"]], on="ticker", how="inner") if not events.empty and not portfolio.empty else pd.DataFrame()
+if not events.empty and not portfolio.empty:
+    portfolio_events = events.merge(
+        portfolio[["ticker", "resolved_ticker", "shares"]].rename(columns={"ticker": "portfolio_ticker"}),
+        left_on="ticker",
+        right_on="resolved_ticker",
+        how="inner",
+    ).drop(columns=["resolved_ticker"])
+else:
+    portfolio_events = pd.DataFrame()
 if not portfolio_events.empty:
     portfolio_events["estimated_cash"] = portfolio_events["cash_amount"] * portfolio_events["shares"]
 
@@ -260,12 +325,23 @@ with tab_calendar:
 
 with tab_portfolio:
     st.subheader("Cobros estimados")
+    resolved_view = portfolio[portfolio["ticker"] != portfolio["resolved_ticker"]] if "resolved_ticker" in portfolio.columns else pd.DataFrame()
+    if not resolved_view.empty:
+        st.markdown("**Tickers resueltos**")
+        st.dataframe(
+            resolved_view[["ticker", "resolved_ticker", "shares"]].rename(
+                columns={"ticker": "ticker introducido", "resolved_ticker": "ticker usado"}
+            ),
+            use_container_width=True,
+            hide_index=True,
+        )
     if portfolio_events.empty:
         st.info("Guarda una cartera con tickers que tengan dividendos cargados en el rango.")
     else:
         show = portfolio_events.sort_values(["ex_dividend_date", "ticker"])
         cols = [
             "ex_dividend_date",
+            "portfolio_ticker",
             "ticker",
             "company_name",
             "asset_type",

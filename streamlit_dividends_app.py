@@ -1,11 +1,14 @@
 from __future__ import annotations
 
 import csv
+import json
 import sqlite3
 import subprocess
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from io import StringIO
 from pathlib import Path
+from urllib.parse import urlencode
+from urllib.request import Request, urlopen
 
 import pandas as pd
 import streamlit as st
@@ -182,6 +185,143 @@ def search_universe(universe_df: pd.DataFrame, query: str) -> pd.DataFrame:
     ].copy()
 
 
+@st.cache_data(ttl=3600)
+def fetch_yahoo_dividend_snapshot(ticker: str) -> dict:
+    today_value = date.today()
+    end_day = today_value + timedelta(days=366)
+    start_day = today_value - timedelta(days=365 * 5 + 2)
+    symbol = pipeline.yahoo_symbol(ticker)
+    params = {
+        "period1": pipeline.to_unix_day(start_day.isoformat()),
+        "period2": pipeline.to_unix_day(end_day.isoformat()),
+        "interval": "1d",
+        "events": "div",
+        "includeAdjustedClose": "true",
+    }
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?{urlencode(params)}"
+    try:
+        with urlopen(Request(url, headers=pipeline.HTTP_HEADERS), timeout=12) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except Exception as exc:
+        return {"events": [], "price": None, "currency": "", "error": str(exc)}
+
+    result = (payload.get("chart", {}).get("result") or [None])[0]
+    if not result:
+        return {"events": [], "price": None, "currency": "", "error": "Sin respuesta Yahoo"}
+    meta = result.get("meta") or {}
+    currency = meta.get("currency") or ""
+    price = meta.get("regularMarketPrice") or meta.get("previousClose")
+    dividends = ((result.get("events") or {}).get("dividends") or {}).values()
+    rows = []
+    for item in dividends:
+        raw_date = item.get("date")
+        amount = item.get("amount")
+        if raw_date is None or amount is None:
+            continue
+        rows.append(
+            {
+                "ex_dividend_date": pipeline.from_unix_day(raw_date),
+                "cash_amount": float(amount),
+                "currency": currency,
+                "pay_date": None,
+                "status": "historical",
+                "source": "yahoo_chart_on_demand",
+            }
+        )
+    return {"events": rows, "price": price, "currency": currency, "error": ""}
+
+
+def dividend_history_for_ticker(ticker: str, local_events: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
+    cols = ["ex_dividend_date", "cash_amount", "currency", "pay_date", "status", "source"]
+    local = pd.DataFrame(columns=cols)
+    if not local_events.empty:
+        local = local_events[local_events["ticker"].astype(str).str.upper() == ticker.upper()].copy()
+        local = local[[c for c in cols if c in local.columns]]
+    snapshot = fetch_yahoo_dividend_snapshot(ticker)
+    remote = pd.DataFrame(snapshot.get("events") or [], columns=cols)
+    combined = pd.concat([local, remote], ignore_index=True, sort=False).fillna("")
+    if combined.empty:
+        return combined, snapshot
+    combined["ex_dividend_date"] = pd.to_datetime(combined["ex_dividend_date"], errors="coerce").dt.date
+    combined["cash_amount"] = pd.to_numeric(combined["cash_amount"], errors="coerce").fillna(0)
+    combined = (
+        combined.dropna(subset=["ex_dividend_date"])
+        .sort_values(["ex_dividend_date", "cash_amount", "source"], ascending=[False, False, True])
+        .drop_duplicates(["ex_dividend_date", "cash_amount"], keep="first")
+    )
+    return combined, snapshot
+
+
+def render_dividend_analytics(ticker: str, events_df: pd.DataFrame) -> None:
+    history, snapshot = dividend_history_for_ticker(ticker, events_df)
+    price = snapshot.get("price")
+    currency = snapshot.get("currency") or (history["currency"].replace("", pd.NA).dropna().iloc[0] if not history.empty and history["currency"].replace("", pd.NA).dropna().any() else "")
+
+    st.markdown("**Dividendos**")
+    if history.empty:
+        error = snapshot.get("error")
+        if error:
+            st.info(f"No hay dividendos cargados y Yahoo no devolvio historico ahora: {error}")
+        else:
+            st.info("No hay dividendos cargados ni historico Yahoo para este instrumento.")
+        return
+
+    hist = history.copy()
+    hist["date_ts"] = pd.to_datetime(hist["ex_dividend_date"])
+    today_ts = pd.Timestamp(date.today())
+    trailing_12m = hist[(hist["date_ts"] > today_ts - pd.DateOffset(months=12)) & (hist["date_ts"] <= today_ts)]["cash_amount"].sum()
+    current_yield = (trailing_12m / float(price) * 100) if price else None
+
+    m1, m2, m3, m4 = st.columns(4)
+    m1.metric("Rentabilidad actual", f"{current_yield:.2f}%" if current_yield is not None else "-")
+    m2.metric("Dividendos 12 meses", fmt_money(trailing_12m, currency))
+    m3.metric("Precio referencia", fmt_money(price, currency) if price else "-")
+    m4.metric("Eventos historicos", f"{len(hist):,}")
+
+    hist["year"] = hist["date_ts"].dt.year
+    hist["month"] = hist["date_ts"].dt.month
+    annual = hist.groupby("year", as_index=False)["cash_amount"].sum().sort_values("year", ascending=False)
+    annual["yield_on_current_price"] = annual["cash_amount"].map(lambda x: (x / float(price) * 100) if price else None)
+    annual_show = annual.rename(
+        columns={
+            "year": "Periodo",
+            "cash_amount": f"Dividendo en {currency or 'moneda'}",
+            "yield_on_current_price": "Rentabilidad sobre precio actual %",
+        }
+    )
+    if "Rentabilidad sobre precio actual %" in annual_show:
+        annual_show["Rentabilidad sobre precio actual %"] = annual_show["Rentabilidad sobre precio actual %"].map(
+            lambda x: f"{x:.2f}%" if pd.notna(x) else "-"
+        )
+
+    left, right = st.columns([1.05, 1])
+    with left:
+        st.markdown("**Rentabilidad historica de los dividendos**")
+        st.dataframe(annual_show, use_container_width=True, hide_index=True)
+    with right:
+        chart_df = annual.sort_values("year").rename(columns={"year": "Ano", "cash_amount": "Dividendos"})
+        st.markdown("**Contribucion anual**")
+        st.bar_chart(chart_df, x="Ano", y="Dividendos")
+
+    monthly = (
+        hist.groupby(["year", "month"], as_index=False)["cash_amount"].sum()
+        .pivot(index="year", columns="month", values="cash_amount")
+        .sort_index(ascending=False)
+    )
+    month_names = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sept", "oct", "nov", "dic"]
+    monthly = monthly.reindex(columns=range(1, 13))
+    monthly.columns = month_names
+    st.markdown("**Dividendos mensuales**")
+    st.dataframe(monthly.fillna(""), use_container_width=True)
+
+    st.markdown("**Eventos de dividendo**")
+    st.dataframe(
+        hist[["ex_dividend_date", "cash_amount", "currency", "pay_date", "status", "source"]],
+        use_container_width=True,
+        hide_index=True,
+    )
+
+
 def render_instrument_detail(ticker: str, universe_df: pd.DataFrame, events_df: pd.DataFrame) -> None:
     row = universe_df[universe_df["ticker"] == ticker]
     info = row.iloc[0].to_dict() if not row.empty else {"ticker": ticker}
@@ -217,22 +357,7 @@ def render_instrument_detail(ticker: str, universe_df: pd.DataFrame, events_df: 
     if description:
         st.caption(description)
 
-    instrument_events = events_df[events_df["ticker"].astype(str).str.upper() == ticker.upper()].copy() if not events_df.empty else pd.DataFrame()
-    if instrument_events.empty:
-        st.info("Este instrumento existe en el universo local, pero no tiene dividendos cargados en el rango seleccionado.")
-        return
-    instrument_events = instrument_events.sort_values("ex_dividend_date", ascending=False)
-    e1, e2, e3 = st.columns(3)
-    e1.metric("Dividendos en rango", f"{len(instrument_events):,}")
-    e2.metric("Ultima ex-date", str(instrument_events.iloc[0].get("ex_dividend_date", "-")))
-    e3.metric("Ultimo importe", fmt_money(instrument_events.iloc[0].get("cash_amount"), instrument_events.iloc[0].get("currency")))
-    st.dataframe(
-        instrument_events[
-            ["ex_dividend_date", "cash_amount", "currency", "pay_date", "status", "source"]
-        ],
-        use_container_width=True,
-        hide_index=True,
-    )
+    render_dividend_analytics(ticker, events_df)
 
 
 def file_mtime(path: Path) -> str:

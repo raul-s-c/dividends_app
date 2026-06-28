@@ -124,7 +124,10 @@ class Company:
 
 
 def yahoo_symbol(ticker: str) -> str:
-    return ticker.strip().upper().replace(".", "-")
+    clean = ticker.strip().upper()
+    if any(clean.endswith(suffix) for suffix in EUROPE_YAHOO_SUFFIXES):
+        return clean
+    return clean.replace(".", "-")
 
 
 def to_unix_day(value: str) -> int:

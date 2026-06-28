@@ -69,6 +69,15 @@ def load_universe() -> pd.DataFrame:
     return universe.drop_duplicates(["ticker"], keep="first")
 
 
+def sector_display(value, asset_type: str | None = "") -> str:
+    label = sic_to_sector(value)
+    if label:
+        return label
+    if asset_type and str(asset_type).strip():
+        return str(asset_type).strip()
+    return "Sin sector"
+
+
 def sic_to_sector(sic_val) -> str:
     try:
         sic = int(float(str(sic_val)))
@@ -133,6 +142,32 @@ def sic_to_sector(sic_val) -> str:
     if 8100 <= sic <= 8999:
         return "Professional Services"
     return "Other"
+
+
+def enrich_events(events_df: pd.DataFrame, universe_df: pd.DataFrame) -> pd.DataFrame:
+    if events_df.empty:
+        return events_df
+    enriched = events_df.copy()
+    for col in ["ticker", "company_name", "exchange", "sector", "asset_type", "state", "pay_date"]:
+        if col not in enriched.columns:
+            enriched[col] = ""
+    if not universe_df.empty:
+        meta_cols = ["ticker", "name", "exchange", "sector", "asset_type", "state", "market_region"]
+        meta = universe_df[[c for c in meta_cols if c in universe_df.columns]].drop_duplicates("ticker")
+        enriched = enriched.merge(meta, on="ticker", how="left", suffixes=("", "_universe"))
+        enriched["company_name"] = enriched["company_name"].replace("", pd.NA).fillna(enriched.get("name", ""))
+        for col in ["exchange", "sector", "asset_type", "state"]:
+            ucol = f"{col}_universe"
+            if ucol in enriched.columns:
+                enriched[col] = enriched[col].replace("", pd.NA).fillna(enriched[ucol]).fillna("")
+        enriched["market_region"] = enriched.get("market_region", "").fillna("")
+        drop_cols = [c for c in ["name", "exchange_universe", "sector_universe", "asset_type_universe", "state_universe"] if c in enriched.columns]
+        enriched = enriched.drop(columns=drop_cols)
+    else:
+        enriched["market_region"] = ""
+    enriched["sector_label"] = enriched.apply(lambda row: sector_display(row.get("sector"), row.get("asset_type")), axis=1)
+    enriched["pay_date_display"] = enriched["pay_date"].replace("", pd.NA).fillna("Pendiente")
+    return enriched
 
 
 @st.cache_data(ttl=300)
@@ -244,6 +279,7 @@ def dividend_history_for_ticker(ticker: str, local_events: pd.DataFrame) -> tupl
         return combined, snapshot
     combined["ex_dividend_date"] = pd.to_datetime(combined["ex_dividend_date"], errors="coerce").dt.date
     combined["cash_amount"] = pd.to_numeric(combined["cash_amount"], errors="coerce").fillna(0)
+    combined["pay_date_display"] = combined["pay_date"].replace("", pd.NA).fillna("Pendiente")
     combined = (
         combined.dropna(subset=["ex_dividend_date"])
         .sort_values(["ex_dividend_date", "cash_amount", "source"], ascending=[False, False, True])
@@ -281,7 +317,12 @@ def render_dividend_analytics(ticker: str, events_df: pd.DataFrame) -> None:
     hist["year"] = hist["date_ts"].dt.year
     hist["month"] = hist["date_ts"].dt.month
     annual = hist.groupby("year", as_index=False)["cash_amount"].sum().sort_values("year", ascending=False)
-    annual["yield_on_current_price"] = annual["cash_amount"].map(lambda x: (x / float(price) * 100) if price else None)
+    current_year = date.today().year
+    annual["yield_base_amount"] = annual.apply(
+        lambda row: trailing_12m if int(row["year"]) == current_year else row["cash_amount"],
+        axis=1,
+    )
+    annual["yield_on_current_price"] = annual["yield_base_amount"].map(lambda x: (x / float(price) * 100) if price else None)
     annual_show = annual.rename(
         columns={
             "year": "Periodo",
@@ -289,6 +330,7 @@ def render_dividend_analytics(ticker: str, events_df: pd.DataFrame) -> None:
             "yield_on_current_price": "Rentabilidad sobre precio actual %",
         }
     )
+    annual_show = annual_show[["Periodo", f"Dividendo en {currency or 'moneda'}", "Rentabilidad sobre precio actual %"]]
     if "Rentabilidad sobre precio actual %" in annual_show:
         annual_show["Rentabilidad sobre precio actual %"] = annual_show["Rentabilidad sobre precio actual %"].map(
             lambda x: f"{x:.2f}%" if pd.notna(x) else "-"
@@ -316,7 +358,85 @@ def render_dividend_analytics(ticker: str, events_df: pd.DataFrame) -> None:
 
     st.markdown("**Eventos de dividendo**")
     st.dataframe(
-        hist[["ex_dividend_date", "cash_amount", "currency", "pay_date", "status", "source"]],
+        hist[["ex_dividend_date", "cash_amount", "currency", "pay_date_display", "status", "source"]].rename(columns={"pay_date_display": "pay_date"}),
+        use_container_width=True,
+        hide_index=True,
+    )
+
+
+def render_global_monthly_calendar(events_df: pd.DataFrame) -> None:
+    st.markdown("**Calendario mensual global**")
+    if events_df.empty:
+        st.info("No hay eventos cargados para construir el calendario mensual.")
+        return
+
+    calendar = events_df.copy()
+    calendar["ex_dividend_date"] = pd.to_datetime(calendar["ex_dividend_date"], errors="coerce")
+    calendar["pay_date_dt"] = pd.to_datetime(calendar.get("pay_date", ""), errors="coerce")
+    calendar = calendar.dropna(subset=["ex_dividend_date"])
+    if calendar.empty:
+        st.info("No hay fechas de ex-dividend validas en el rango.")
+        return
+
+    month_options = calendar["ex_dividend_date"].dt.to_period("M").astype(str).sort_values().unique().tolist()
+    current_month = date.today().strftime("%Y-%m")
+    default_index = month_options.index(current_month) if current_month in month_options else 0
+
+    f1, f2, f3, f4 = st.columns(4)
+    selected_month = f1.selectbox("Mes", month_options, index=default_index, key="global_calendar_month")
+    regions = ["Todos"] + sorted([x for x in calendar.get("market_region", pd.Series(dtype=str)).dropna().astype(str).unique().tolist() if x])
+    types = ["Todos"] + sorted([x for x in calendar.get("asset_type", pd.Series(dtype=str)).dropna().astype(str).unique().tolist() if x])
+    sectors = ["Todos"] + sorted([x for x in calendar.get("sector_label", pd.Series(dtype=str)).dropna().astype(str).unique().tolist() if x])
+    selected_region = f2.selectbox("Region", regions, key="global_calendar_region")
+    selected_type = f3.selectbox("Asset type", types, key="global_calendar_asset_type")
+    selected_sector = f4.selectbox("Sector", sectors, key="global_calendar_sector")
+    text_filter = st.text_input("Filtrar calendario", "", placeholder="Ticker o nombre", key="global_calendar_text")
+
+    monthly_view = calendar[calendar["ex_dividend_date"].dt.to_period("M").astype(str) == selected_month].copy()
+    if selected_region != "Todos":
+        monthly_view = monthly_view[monthly_view["market_region"] == selected_region]
+    if selected_type != "Todos":
+        monthly_view = monthly_view[monthly_view["asset_type"] == selected_type]
+    if selected_sector != "Todos":
+        monthly_view = monthly_view[monthly_view["sector_label"] == selected_sector]
+    if text_filter.strip():
+        q = text_filter.strip().upper()
+        monthly_view = monthly_view[
+            monthly_view["ticker"].astype(str).str.upper().str.contains(q, regex=False)
+            | monthly_view["company_name"].astype(str).str.upper().str.contains(q, regex=False)
+        ]
+
+    if monthly_view.empty:
+        st.info("No hay eventos para esos filtros.")
+        return
+
+    monthly_view["ex_date"] = monthly_view["ex_dividend_date"].dt.date
+    monthly_view["payment_day"] = monthly_view["pay_date_dt"].dt.date.astype(str).replace("NaT", "Pendiente")
+    monthly_view["payment_day"] = monthly_view["payment_day"].replace("NaT", "Pendiente")
+    show_cols = [
+        "ex_date",
+        "payment_day",
+        "ticker",
+        "company_name",
+        "cash_amount",
+        "currency",
+        "asset_type",
+        "market_region",
+        "sector_label",
+        "source",
+    ]
+    st.dataframe(
+        monthly_view.sort_values(["ex_dividend_date", "ticker"])[show_cols].rename(
+            columns={
+                "ex_date": "ex-date",
+                "payment_day": "payment day",
+                "company_name": "nombre",
+                "cash_amount": "cantidad",
+                "asset_type": "asset type",
+                "market_region": "region",
+                "sector_label": "sector",
+            }
+        ),
         use_container_width=True,
         hide_index=True,
     )
@@ -327,7 +447,7 @@ def render_instrument_detail(ticker: str, universe_df: pd.DataFrame, events_df: 
     info = row.iloc[0].to_dict() if not row.empty else {"ticker": ticker}
     profile = load_sec_profile(ticker)
     name = profile.get("name") or info.get("name") or ticker
-    sector = profile.get("sector_name") or info.get("sector") or ""
+    sector = profile.get("sector_name") or sector_display(info.get("sector"), info.get("asset_type"))
     description = profile.get("description") or ""
 
     st.markdown(f"**{ticker} - {name}**")
@@ -524,6 +644,7 @@ if not events.empty:
     )
     events["ex_dividend_date"] = pd.to_datetime(events["ex_dividend_date"]).dt.date
     events["cash_amount"] = pd.to_numeric(events["cash_amount"], errors="coerce").fillna(0)
+    events = enrich_events(events, universe)
 
 portfolio_events = events.merge(portfolio[["ticker", "shares"]], on="ticker", how="inner") if not events.empty and not portfolio.empty else pd.DataFrame()
 if not portfolio_events.empty:
@@ -541,11 +662,13 @@ with tab_calendar:
     c3.metric("Pendientes", f"{len(upcoming):,}" if upcoming is not None else "0")
     c4.metric("Cartera estimada", fmt_money(portfolio_cash))
 
-    sectors = ["Todos"] + sorted([x for x in events["sector"].dropna().unique().tolist() if x]) if not events.empty else ["Todos"]
+    render_global_monthly_calendar(events)
+
+    sectors = ["Todos"] + sorted([x for x in events["sector_label"].dropna().unique().tolist() if x]) if not events.empty else ["Todos"]
     asset_types = ["Todos"] + sorted([x for x in events["asset_type"].dropna().unique().tolist() if x]) if not events.empty else ["Todos"]
-    selected_asset_type = st.selectbox("Tipo de activo", asset_types)
-    selected_sector = st.selectbox("Sector", sectors)
-    ticker_search = st.text_input("Buscar instrumento", "", placeholder="Ticker o nombre: JGPI, Apple, JPM...")
+    selected_asset_type = st.selectbox("Tipo de activo", asset_types, key="instrument_asset_type")
+    selected_sector = st.selectbox("Sector", sectors, key="instrument_sector")
+    ticker_search = st.text_input("Buscar instrumento", "", placeholder="Ticker o nombre: JGPI, Apple, JPM...", key="instrument_search")
 
     matched_instruments = search_universe(universe, ticker_search) if ticker_search.strip() else pd.DataFrame()
     selected_ticker = ""
@@ -578,7 +701,7 @@ with tab_calendar:
         if selected_asset_type != "Todos":
             view = view[view["asset_type"] == selected_asset_type]
         if selected_sector != "Todos":
-            view = view[view["sector"] == selected_sector]
+            view = view[view["sector_label"] == selected_sector]
         if ticker_search.strip():
             q = ticker_search.strip().upper()
             matched_tickers = set(matched_instruments["ticker"].astype(str).str.upper().tolist()) if not matched_instruments.empty else set()
@@ -600,14 +723,18 @@ with tab_calendar:
             "company_name",
             "asset_type",
             "exchange",
-            "sector",
+            "sector_label",
             "cash_amount",
             "currency",
             "status",
-            "pay_date",
+            "pay_date_display",
             "source",
         ]
-        st.dataframe(view[show_cols], use_container_width=True, hide_index=True)
+        st.dataframe(
+            view[show_cols].rename(columns={"sector_label": "sector", "pay_date_display": "pay_date"}),
+            use_container_width=True,
+            hide_index=True,
+        )
 
 with tab_portfolio:
     st.subheader("Cobros estimados")
@@ -624,10 +751,10 @@ with tab_portfolio:
             "cash_amount",
             "currency",
             "estimated_cash",
-            "pay_date",
+            "pay_date_display",
             "status",
         ]
-        st.dataframe(show[cols], use_container_width=True, hide_index=True)
+        st.dataframe(show[cols].rename(columns={"pay_date_display": "pay_date"}), use_container_width=True, hide_index=True)
         monthly = show.copy()
         monthly["month"] = pd.to_datetime(monthly["ex_dividend_date"]).dt.to_period("M").astype(str)
         grouped = monthly.groupby("month", as_index=False)["estimated_cash"].sum()

@@ -94,6 +94,14 @@ La app web incluye una pestana `Estado` con:
 - recuentos de universo USA y Europa;
 - cobertura por fuente y tipo de activo;
 - ultimas ejecuciones registradas en `dividend_runs`.
+- una pestana `Estrategia` para probar compra pre ex-date y venta al recuperar
+  el precio previo.
+
+Backtest de estrategia desde CLI:
+
+```powershell
+python dividend_capture_strategy.py --start 2025-01-01 --end 2025-12-31 --max-recovery-days 90 --limit-tickers 50 --max-events 300
+```
 
 O en Windows:
 

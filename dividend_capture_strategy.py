@@ -1,0 +1,420 @@
+from __future__ import annotations
+
+import argparse
+import json
+import sqlite3
+import time
+from dataclasses import dataclass
+from datetime import date, datetime, timedelta
+from pathlib import Path
+from urllib.parse import urlencode
+from urllib.request import Request, urlopen
+
+import pandas as pd
+
+import dividend_calendar_pipeline as pipeline
+
+
+APP_DIR = Path(__file__).resolve().parent
+DATA_DIR = APP_DIR / "data"
+DIVIDENDS_DB = DATA_DIR / "dividends.db"
+PRICE_CACHE_DB = DATA_DIR / "strategy_price_cache.db"
+
+
+@dataclass(frozen=True)
+class CaptureSettings:
+    start: str
+    end: str
+    max_recovery_days: int = 90
+    entry_lag_days: int = 1
+    use_high_for_recovery: bool = False
+    min_dividend_yield_pct: float = 0.0
+    limit_tickers: int = 0
+
+
+def to_unix(value: str) -> int:
+    return int(datetime.fromisoformat(value).replace(hour=0, minute=0, second=0, microsecond=0).timestamp())
+
+
+def from_unix(ts: int) -> str:
+    return datetime.utcfromtimestamp(int(ts)).date().isoformat()
+
+
+def init_price_cache() -> None:
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    conn = sqlite3.connect(PRICE_CACHE_DB)
+    try:
+        conn.execute(
+            """
+            CREATE TABLE IF NOT EXISTS daily_prices (
+                ticker TEXT NOT NULL,
+                price_date TEXT NOT NULL,
+                open REAL,
+                high REAL,
+                low REAL,
+                close REAL,
+                adj_close REAL,
+                volume REAL,
+                currency TEXT,
+                fetched_at TEXT NOT NULL,
+                PRIMARY KEY (ticker, price_date)
+            )
+            """
+        )
+        conn.execute("CREATE INDEX IF NOT EXISTS idx_daily_prices_ticker_date ON daily_prices(ticker, price_date)")
+        conn.commit()
+    finally:
+        conn.close()
+
+
+def read_cached_prices(ticker: str, start: str, end: str) -> pd.DataFrame:
+    if not PRICE_CACHE_DB.exists():
+        return pd.DataFrame()
+    conn = sqlite3.connect(PRICE_CACHE_DB)
+    try:
+        return pd.read_sql_query(
+            """
+            SELECT ticker, price_date, open, high, low, close, adj_close, volume, currency
+            FROM daily_prices
+            WHERE ticker=? AND price_date>=? AND price_date<=?
+            ORDER BY price_date
+            """,
+            conn,
+            params=(ticker, start, end),
+        )
+    finally:
+        conn.close()
+
+
+def write_cached_prices(df: pd.DataFrame) -> None:
+    if df.empty:
+        return
+    init_price_cache()
+    rows = []
+    fetched_at = datetime.utcnow().isoformat(timespec="seconds") + "Z"
+    for row in df.itertuples(index=False):
+        rows.append(
+            (
+                row.ticker,
+                row.price_date,
+                row.open,
+                row.high,
+                row.low,
+                row.close,
+                row.adj_close,
+                row.volume,
+                row.currency,
+                fetched_at,
+            )
+        )
+    conn = sqlite3.connect(PRICE_CACHE_DB)
+    try:
+        conn.executemany(
+            """
+            INSERT INTO daily_prices (
+                ticker, price_date, open, high, low, close, adj_close, volume, currency, fetched_at
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(ticker, price_date) DO UPDATE SET
+                open=excluded.open,
+                high=excluded.high,
+                low=excluded.low,
+                close=excluded.close,
+                adj_close=excluded.adj_close,
+                volume=excluded.volume,
+                currency=excluded.currency,
+                fetched_at=excluded.fetched_at
+            """,
+            rows,
+        )
+        conn.commit()
+    finally:
+        conn.close()
+
+
+def fetch_yahoo_prices(ticker: str, start: str, end: str, refresh: bool = False) -> pd.DataFrame:
+    init_price_cache()
+    cached = read_cached_prices(ticker, start, end)
+    if not refresh and not cached.empty:
+        cached_dates = set(cached["price_date"].astype(str))
+        expected_min = pd.Timestamp(start).date().isoformat()
+        expected_max = pd.Timestamp(end).date().isoformat()
+        if min(cached_dates) <= expected_min and max(cached_dates) >= expected_max:
+            return cached
+
+    symbol = pipeline.yahoo_symbol(ticker)
+    params = {
+        "period1": to_unix(start),
+        "period2": to_unix(end) + 86400,
+        "interval": "1d",
+        "includeAdjustedClose": "true",
+    }
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?{urlencode(params)}"
+    with urlopen(Request(url, headers=pipeline.HTTP_HEADERS), timeout=24) as response:
+        if response.status != 200:
+            raise RuntimeError(f"Yahoo prices status {response.status} for {ticker}")
+        payload = json.loads(response.read().decode("utf-8"))
+
+    result = (payload.get("chart", {}).get("result") or [None])[0]
+    if not result:
+        return cached
+    timestamps = result.get("timestamp") or []
+    quote = ((result.get("indicators") or {}).get("quote") or [{}])[0]
+    adj = ((result.get("indicators") or {}).get("adjclose") or [{}])[0].get("adjclose") or []
+    currency = (result.get("meta") or {}).get("currency") or ""
+    rows = []
+    for i, ts in enumerate(timestamps):
+        close = (quote.get("close") or [None] * len(timestamps))[i]
+        if close is None:
+            continue
+        rows.append(
+            {
+                "ticker": ticker,
+                "price_date": from_unix(ts),
+                "open": (quote.get("open") or [None] * len(timestamps))[i],
+                "high": (quote.get("high") or [None] * len(timestamps))[i],
+                "low": (quote.get("low") or [None] * len(timestamps))[i],
+                "close": close,
+                "adj_close": adj[i] if i < len(adj) else None,
+                "volume": (quote.get("volume") or [None] * len(timestamps))[i],
+                "currency": currency,
+            }
+        )
+    fetched = pd.DataFrame(rows)
+    write_cached_prices(fetched)
+    combined = pd.concat([cached, fetched], ignore_index=True, sort=False)
+    if combined.empty:
+        return combined
+    return combined.drop_duplicates(["ticker", "price_date"], keep="last").sort_values("price_date")
+
+
+def load_dividend_events(settings: CaptureSettings) -> pd.DataFrame:
+    conn = sqlite3.connect(DIVIDENDS_DB)
+    try:
+        df = pd.read_sql_query(
+            """
+            SELECT ticker, company_name, exchange, sector, asset_type,
+                   ex_dividend_date, pay_date, cash_amount, currency, source
+            FROM dividend_events
+            WHERE ex_dividend_date>=? AND ex_dividend_date<=?
+              AND cash_amount IS NOT NULL AND cash_amount>0
+            ORDER BY ex_dividend_date, ticker
+            """,
+            conn,
+            params=(settings.start, settings.end),
+        )
+    finally:
+        conn.close()
+    if settings.limit_tickers:
+        keep = sorted(df["ticker"].dropna().unique().tolist())[: settings.limit_tickers]
+        df = df[df["ticker"].isin(keep)].copy()
+    return df
+
+
+def previous_trading_row(prices: pd.DataFrame, ex_date: str, lag_days: int) -> pd.Series | None:
+    ex_ts = pd.Timestamp(ex_date)
+    candidates = prices[pd.to_datetime(prices["price_date"]) < ex_ts].copy()
+    if candidates.empty:
+        return None
+    candidates = candidates.sort_values("price_date")
+    offset = max(1, lag_days)
+    if len(candidates) < offset:
+        return candidates.iloc[0]
+    return candidates.iloc[-offset]
+
+
+def first_recovery_row(prices: pd.DataFrame, ex_date: str, target_price: float, max_days: int, use_high: bool) -> pd.Series | None:
+    ex_ts = pd.Timestamp(ex_date)
+    limit_ts = ex_ts + pd.Timedelta(days=max_days)
+    window = prices[(pd.to_datetime(prices["price_date"]) >= ex_ts) & (pd.to_datetime(prices["price_date"]) <= limit_ts)].copy()
+    if window.empty:
+        return None
+    price_col = "high" if use_high else "close"
+    recovered = window[pd.to_numeric(window[price_col], errors="coerce") >= target_price]
+    if recovered.empty:
+        return None
+    return recovered.sort_values("price_date").iloc[0]
+
+
+def analyze_event(event: pd.Series, prices: pd.DataFrame, settings: CaptureSettings) -> dict | None:
+    entry = previous_trading_row(prices, str(event.ex_dividend_date), settings.entry_lag_days)
+    if entry is None or not entry.get("close"):
+        return None
+    entry_price = float(entry["close"])
+    dividend = float(event.cash_amount)
+    dividend_yield = dividend / entry_price if entry_price > 0 else 0.0
+    if dividend_yield * 100 < settings.min_dividend_yield_pct:
+        return None
+
+    recovery = first_recovery_row(
+        prices,
+        str(event.ex_dividend_date),
+        entry_price,
+        settings.max_recovery_days,
+        settings.use_high_for_recovery,
+    )
+    entry_date = str(entry["price_date"])
+    ex_date = str(event.ex_dividend_date)
+    ex_row = prices[pd.to_datetime(prices["price_date"]) >= pd.Timestamp(ex_date)].sort_values("price_date").head(1)
+    ex_close = float(ex_row.iloc[0]["close"]) if not ex_row.empty and pd.notna(ex_row.iloc[0]["close"]) else None
+    drop_pct = ((ex_close - entry_price) / entry_price * 100) if ex_close else None
+
+    recovered = recovery is not None
+    recovery_date = str(recovery["price_date"]) if recovered else ""
+    exit_price = float(recovery["close"]) if recovered else None
+    holding_days = max(1, (pd.Timestamp(recovery_date) - pd.Timestamp(entry_date)).days) if recovered else None
+    price_return = ((exit_price - entry_price) / entry_price) if exit_price else None
+    total_return = (price_return + dividend_yield) if price_return is not None else None
+    annualized = ((1 + total_return) ** (365 / holding_days) - 1) if total_return is not None and holding_days else None
+
+    return {
+        "ticker": event.ticker,
+        "company_name": event.company_name,
+        "asset_type": event.asset_type,
+        "exchange": event.exchange,
+        "sector": event.sector,
+        "ex_dividend_date": ex_date,
+        "pay_date": event.pay_date,
+        "cash_amount": dividend,
+        "currency": event.currency,
+        "entry_date": entry_date,
+        "entry_price": entry_price,
+        "ex_close": ex_close,
+        "ex_drop_pct": drop_pct,
+        "recovered": recovered,
+        "recovery_date": recovery_date,
+        "holding_days": holding_days,
+        "exit_price": exit_price,
+        "dividend_yield_pct": dividend_yield * 100,
+        "price_return_pct": price_return * 100 if price_return is not None else None,
+        "total_return_pct": total_return * 100 if total_return is not None else None,
+        "annualized_return_pct": annualized * 100 if annualized is not None else None,
+    }
+
+
+def run_capture_backtest(settings: CaptureSettings, refresh_prices: bool = False, max_events: int = 0) -> pd.DataFrame:
+    events = load_dividend_events(settings)
+    if events.empty:
+        return pd.DataFrame()
+    events["ex_dividend_date"] = pd.to_datetime(events["ex_dividend_date"]).dt.date.astype(str)
+    tickers = events["ticker"].dropna().astype(str).unique().tolist()
+    rows = []
+    price_start = (pd.Timestamp(settings.start) - pd.Timedelta(days=14)).date().isoformat()
+    price_end = (pd.Timestamp(settings.end) + pd.Timedelta(days=settings.max_recovery_days + 7)).date().isoformat()
+    for i, ticker in enumerate(tickers, start=1):
+        try:
+            prices = fetch_yahoo_prices(ticker, price_start, price_end, refresh=refresh_prices)
+        except Exception as exc:
+            print(f"ERR prices {ticker}: {exc}")
+            continue
+        if prices.empty:
+            continue
+        sub = events[events["ticker"] == ticker]
+        for event in sub.itertuples(index=False):
+            row = analyze_event(event, prices, settings)
+            if row:
+                rows.append(row)
+                if max_events and len(rows) >= max_events:
+                    return pd.DataFrame(rows)
+        if i % 25 == 0:
+            time.sleep(0.25)
+    return pd.DataFrame(rows)
+
+
+def summarize_by_ticker(results: pd.DataFrame) -> pd.DataFrame:
+    if results.empty:
+        return pd.DataFrame()
+    recovered = results[results["recovered"]].copy()
+    grouped = results.groupby("ticker", as_index=False).agg(
+        company_name=("company_name", "last"),
+        events=("ticker", "count"),
+        recovery_rate_pct=("recovered", lambda x: float(x.mean() * 100)),
+        avg_dividend_yield_pct=("dividend_yield_pct", "mean"),
+    )
+    if recovered.empty:
+        grouped["median_recovery_days"] = None
+        grouped["avg_annualized_return_pct"] = None
+        return grouped
+    rec_stats = recovered.groupby("ticker", as_index=False).agg(
+        median_recovery_days=("holding_days", "median"),
+        avg_recovery_days=("holding_days", "mean"),
+        avg_annualized_return_pct=("annualized_return_pct", "mean"),
+        best_annualized_return_pct=("annualized_return_pct", "max"),
+    )
+    return grouped.merge(rec_stats, on="ticker", how="left").sort_values(
+        ["recovery_rate_pct", "median_recovery_days", "avg_dividend_yield_pct"],
+        ascending=[False, True, False],
+    )
+
+
+def simulate_reinvestment(results: pd.DataFrame, capital: float = 1000.0) -> pd.DataFrame:
+    if results.empty:
+        return pd.DataFrame()
+    candidates = results[results["recovered"]].copy()
+    if candidates.empty:
+        return pd.DataFrame()
+    candidates["entry_ts"] = pd.to_datetime(candidates["entry_date"])
+    candidates["exit_ts"] = pd.to_datetime(candidates["recovery_date"])
+    candidates = candidates.sort_values(["entry_ts", "annualized_return_pct"], ascending=[True, False])
+    free_at = pd.Timestamp.min
+    current_capital = float(capital)
+    trades = []
+    for row in candidates.itertuples(index=False):
+        if row.entry_ts < free_at:
+            continue
+        shares = current_capital / float(row.entry_price)
+        dividend_cash = shares * float(row.cash_amount)
+        exit_value = shares * float(row.exit_price)
+        pnl = exit_value - current_capital + dividend_cash
+        current_capital += pnl
+        free_at = row.exit_ts
+        trades.append(
+            {
+                "entry_date": row.entry_date,
+                "exit_date": row.recovery_date,
+                "ticker": row.ticker,
+                "entry_price": row.entry_price,
+                "exit_price": row.exit_price,
+                "shares": shares,
+                "dividend_cash": dividend_cash,
+                "holding_days": row.holding_days,
+                "trade_return_pct": pnl / (current_capital - pnl) * 100,
+                "capital_after": current_capital,
+            }
+        )
+    return pd.DataFrame(trades)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Backtest de compra pre ex-date y venta al recuperar precio.")
+    parser.add_argument("--start", default="2024-01-01")
+    parser.add_argument("--end", default=date.today().isoformat())
+    parser.add_argument("--max-recovery-days", type=int, default=90)
+    parser.add_argument("--min-dividend-yield-pct", type=float, default=0.0)
+    parser.add_argument("--limit-tickers", type=int, default=0)
+    parser.add_argument("--max-events", type=int, default=0)
+    parser.add_argument("--capital", type=float, default=1000.0)
+    parser.add_argument("--refresh-prices", action="store_true")
+    parser.add_argument("--use-high-for-recovery", action="store_true")
+    args = parser.parse_args()
+
+    settings = CaptureSettings(
+        start=args.start,
+        end=args.end,
+        max_recovery_days=args.max_recovery_days,
+        min_dividend_yield_pct=args.min_dividend_yield_pct,
+        limit_tickers=args.limit_tickers,
+        use_high_for_recovery=args.use_high_for_recovery,
+    )
+    results = run_capture_backtest(settings, refresh_prices=args.refresh_prices, max_events=args.max_events)
+    print(f"events_analyzed={len(results)} recovered={int(results['recovered'].sum()) if not results.empty else 0}")
+    if not results.empty:
+        print(summarize_by_ticker(results).head(20).to_string(index=False))
+        trades = simulate_reinvestment(results, capital=args.capital)
+        if not trades.empty:
+            print("\nSimulacion reinversion")
+            print(trades.tail(10).to_string(index=False))
+            print(f"capital_final={trades.iloc[-1]['capital_after']:.2f}")
+
+
+if __name__ == "__main__":
+    main()

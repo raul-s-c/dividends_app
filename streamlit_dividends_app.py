@@ -13,6 +13,7 @@ from urllib.request import Request, urlopen
 import pandas as pd
 import streamlit as st
 
+import dividend_capture_strategy as capture
 import dividend_calendar_pipeline as pipeline
 
 
@@ -584,6 +585,127 @@ def csv_download(df: pd.DataFrame) -> str:
     return out.getvalue()
 
 
+@st.cache_data(ttl=1800)
+def run_capture_lab(
+    start: str,
+    end: str,
+    max_recovery_days: int,
+    min_dividend_yield_pct: float,
+    limit_tickers: int,
+    max_events: int,
+    use_high_for_recovery: bool,
+) -> pd.DataFrame:
+    settings = capture.CaptureSettings(
+        start=start,
+        end=end,
+        max_recovery_days=max_recovery_days,
+        min_dividend_yield_pct=min_dividend_yield_pct,
+        limit_tickers=limit_tickers,
+        use_high_for_recovery=use_high_for_recovery,
+    )
+    return capture.run_capture_backtest(settings, max_events=max_events)
+
+
+def render_capture_strategy_tab() -> None:
+    st.subheader("Estrategia compra pre ex-date")
+    st.caption(
+        "Backtest experimental: compra al cierre previo al ex-date, cobra dividendo "
+        "y vende cuando el cierre recupera el precio de entrada."
+    )
+    c1, c2, c3, c4 = st.columns(4)
+    strategy_start = c1.date_input("Desde backtest", value=date(2024, 1, 1), key="capture_start")
+    strategy_end = c2.date_input("Hasta backtest", value=date.today(), key="capture_end")
+    max_recovery_days = c3.number_input("Max dias recuperacion", min_value=5, max_value=365, value=90, step=5)
+    capital = c4.number_input("Capital inicial", min_value=100.0, value=1000.0, step=100.0)
+
+    f1, f2, f3, f4 = st.columns(4)
+    min_yield = f1.number_input("Yield minimo evento %", min_value=0.0, value=0.0, step=0.1)
+    limit_tickers = f2.number_input("Limite tickers", min_value=0, value=40, step=10)
+    max_events = f3.number_input("Limite eventos", min_value=0, value=250, step=50)
+    use_high = f4.checkbox("Recuperacion intradia high", value=False)
+
+    if st.button("Ejecutar backtest", type="primary"):
+        st.session_state["capture_run_requested"] = True
+        st.cache_data.clear()
+
+    if not st.session_state.get("capture_run_requested"):
+        st.info("Configura el experimento y pulsa Ejecutar backtest para descargar precios y calcular recuperaciones.")
+        return
+
+    with st.spinner("Calculando recuperaciones y cacheando precios..."):
+        results = run_capture_lab(
+            strategy_start.isoformat(),
+            strategy_end.isoformat(),
+            int(max_recovery_days),
+            float(min_yield),
+            int(limit_tickers),
+            int(max_events),
+            bool(use_high),
+        )
+
+    if results.empty:
+        st.info("No hay resultados para esos parametros. Prueba ampliar fechas o bajar el yield minimo.")
+        return
+
+    recovered = results[results["recovered"]].copy()
+    r1, r2, r3, r4 = st.columns(4)
+    r1.metric("Eventos analizados", f"{len(results):,}")
+    r2.metric("Recuperados", f"{len(recovered):,}")
+    r3.metric("Tasa recuperacion", f"{results['recovered'].mean() * 100:.1f}%")
+    r4.metric("Mediana dias", f"{recovered['holding_days'].median():.0f}" if not recovered.empty else "-")
+
+    summary = capture.summarize_by_ticker(results)
+    if not summary.empty:
+        st.markdown("**Ranking por ticker**")
+        st.dataframe(
+            summary[
+                [
+                    "ticker",
+                    "company_name",
+                    "events",
+                    "recovery_rate_pct",
+                    "median_recovery_days",
+                    "avg_dividend_yield_pct",
+                    "avg_annualized_return_pct",
+                ]
+            ],
+            use_container_width=True,
+            hide_index=True,
+        )
+
+    st.markdown("**Eventos historicos**")
+    event_cols = [
+        "ex_dividend_date",
+        "ticker",
+        "company_name",
+        "cash_amount",
+        "currency",
+        "entry_date",
+        "entry_price",
+        "ex_close",
+        "ex_drop_pct",
+        "recovered",
+        "recovery_date",
+        "holding_days",
+        "dividend_yield_pct",
+        "total_return_pct",
+        "annualized_return_pct",
+    ]
+    st.dataframe(results[event_cols].sort_values(["recovered", "annualized_return_pct"], ascending=[False, False]), use_container_width=True, hide_index=True)
+
+    trades = capture.simulate_reinvestment(results, capital=float(capital))
+    st.markdown("**Simulacion secuencial reinvirtiendo**")
+    if trades.empty:
+        st.info("No hay operaciones recuperadas para simular reinversion.")
+    else:
+        final_capital = trades.iloc[-1]["capital_after"]
+        s1, s2, s3 = st.columns(3)
+        s1.metric("Operaciones", f"{len(trades):,}")
+        s2.metric("Capital final", fmt_money(final_capital, "EUR"))
+        s3.metric("Retorno total", f"{(final_capital / float(capital) - 1) * 100:.2f}%")
+        st.dataframe(trades, use_container_width=True, hide_index=True)
+
+
 st.title("Dividend Calendar USA")
 st.caption("Calendario personal de ex-dividend dates e importes para acciones y ETFs.")
 
@@ -607,7 +729,7 @@ with st.sidebar:
 universe = load_universe()
 portfolio = load_portfolio()
 
-tab_calendar, tab_portfolio, tab_data, tab_status = st.tabs(["Calendario", "Mi cartera", "Datos", "Estado"])
+tab_calendar, tab_portfolio, tab_strategy, tab_data, tab_status = st.tabs(["Calendario", "Mi cartera", "Estrategia", "Datos", "Estado"])
 
 with tab_portfolio:
     st.subheader("Cartera")
@@ -759,6 +881,9 @@ with tab_portfolio:
         monthly["month"] = pd.to_datetime(monthly["ex_dividend_date"]).dt.to_period("M").astype(str)
         grouped = monthly.groupby("month", as_index=False)["estimated_cash"].sum()
         st.bar_chart(grouped, x="month", y="estimated_cash")
+
+with tab_strategy:
+    render_capture_strategy_tab()
 
 with tab_data:
     st.subheader("Base local")

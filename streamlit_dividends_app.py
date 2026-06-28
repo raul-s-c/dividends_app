@@ -38,7 +38,13 @@ def fmt_money(value, currency: str | None = "USD") -> str:
 def load_portfolio() -> pd.DataFrame:
     if not PORTFOLIO_CSV.exists():
         return pd.DataFrame(columns=["ticker", "shares", "avg_cost", "notes"])
-    return pd.read_csv(PORTFOLIO_CSV).fillna("")
+    df = pd.read_csv(PORTFOLIO_CSV).fillna("")
+    df["ticker"] = df.get("ticker", pd.Series(dtype=str)).astype(str).str.upper().str.strip()
+    df["shares"] = pd.to_numeric(df.get("shares", 0), errors="coerce").fillna(0.0)
+    df["avg_cost"] = pd.to_numeric(df.get("avg_cost", 0), errors="coerce").fillna(0.0)
+    if "notes" not in df.columns:
+        df["notes"] = ""
+    return df
 
 
 def save_portfolio(df: pd.DataFrame) -> None:
@@ -46,6 +52,8 @@ def save_portfolio(df: pd.DataFrame) -> None:
     clean = df.copy()
     clean["ticker"] = clean["ticker"].astype(str).str.upper().str.strip()
     clean = clean[clean["ticker"] != ""]
+    clean["shares"] = pd.to_numeric(clean.get("shares", 0), errors="coerce").fillna(0.0)
+    clean["avg_cost"] = pd.to_numeric(clean.get("avg_cost", 0), errors="coerce").fillna(0.0)
     clean.to_csv(PORTFOLIO_CSV, index=False)
 
 
@@ -145,6 +153,30 @@ def sic_to_sector(sic_val) -> str:
     return "Other"
 
 
+@st.cache_data(ttl=600)
+def load_sec_profiles_table() -> pd.DataFrame:
+    if not SEC_FUNDAMENTALS_DB.exists():
+        return pd.DataFrame(columns=["ticker_base", "sic_code", "sic_industry", "sic_sector"])
+    conn = sqlite3.connect(SEC_FUNDAMENTALS_DB)
+    try:
+        df = pd.read_sql_query(
+            """
+            SELECT UPPER(ticker) AS ticker_base,
+                   sector AS sic_code,
+                   sic_description AS sic_industry
+            FROM companies
+            WHERE ticker IS NOT NULL AND ticker<>''
+            """,
+            conn,
+        )
+    finally:
+        conn.close()
+    if df.empty:
+        return pd.DataFrame(columns=["ticker_base", "sic_code", "sic_industry", "sic_sector"])
+    df["sic_sector"] = df["sic_code"].map(sic_to_sector)
+    return df.drop_duplicates("ticker_base", keep="first")
+
+
 def enrich_events(events_df: pd.DataFrame, universe_df: pd.DataFrame) -> pd.DataFrame:
     if events_df.empty:
         return events_df
@@ -166,6 +198,16 @@ def enrich_events(events_df: pd.DataFrame, universe_df: pd.DataFrame) -> pd.Data
         enriched = enriched.drop(columns=drop_cols)
     else:
         enriched["market_region"] = ""
+    sec_profiles = load_sec_profiles_table()
+    if not sec_profiles.empty:
+        enriched["ticker_base"] = enriched["ticker"].astype(str).str.upper().str.split(".").str[0]
+        enriched = enriched.merge(sec_profiles, on="ticker_base", how="left")
+        enriched["sector"] = enriched["sector"].replace("", pd.NA).fillna(enriched.get("sic_code", "")).fillna("")
+        enriched = enriched.drop(columns=["ticker_base"])
+    else:
+        enriched["sic_code"] = ""
+        enriched["sic_industry"] = ""
+        enriched["sic_sector"] = ""
     enriched["sector_label"] = enriched.apply(lambda row: sector_display(row.get("sector"), row.get("asset_type")), axis=1)
     enriched["pay_date_display"] = enriched["pay_date"].replace("", pd.NA).fillna("Pendiente")
     return enriched
@@ -219,6 +261,46 @@ def search_universe(universe_df: pd.DataFrame, query: str) -> pd.DataFrame:
         | universe_df["ticker_base"].astype(str).str.upper().str.contains(q, regex=False)
         | universe_df["name"].astype(str).str.upper().str.contains(q, regex=False)
     ].copy()
+
+
+def resolve_unique_ticker(value: str, universe_df: pd.DataFrame) -> str:
+    ticker = str(value or "").upper().strip()
+    if not ticker or universe_df.empty:
+        return ticker
+    exact = universe_df[universe_df["ticker"].astype(str).str.upper() == ticker]
+    if not exact.empty:
+        return str(exact.iloc[0]["ticker"])
+    base = universe_df[universe_df["ticker_base"].astype(str).str.upper() == ticker]
+    options = sorted(base["ticker"].dropna().astype(str).unique().tolist())
+    return options[0] if len(options) == 1 else ticker
+
+
+def apply_portfolio_ticker_resolution(df: pd.DataFrame, universe_df: pd.DataFrame) -> pd.DataFrame:
+    if df.empty or "ticker" not in df.columns:
+        return df
+    out = df.copy()
+    out["ticker"] = out["ticker"].map(lambda value: resolve_unique_ticker(value, universe_df))
+    return out
+
+
+def selectable_ticker_table(df: pd.DataFrame, key: str, **kwargs) -> str:
+    if df.empty or "ticker" not in df.columns:
+        st.dataframe(df, **kwargs)
+        return ""
+    try:
+        selection = st.dataframe(
+            df,
+            on_select="rerun",
+            selection_mode="single-row",
+            key=key,
+            **kwargs,
+        )
+        rows = getattr(getattr(selection, "selection", None), "rows", [])
+        if rows:
+            return str(df.reset_index(drop=True).iloc[rows[0]]["ticker"])
+    except TypeError:
+        st.dataframe(df, **kwargs)
+    return ""
 
 
 @st.cache_data(ttl=3600)
@@ -365,11 +447,11 @@ def render_dividend_analytics(ticker: str, events_df: pd.DataFrame) -> None:
     )
 
 
-def render_global_monthly_calendar(events_df: pd.DataFrame) -> None:
+def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.DataFrame) -> str:
     st.markdown("**Calendario mensual global**")
     if events_df.empty:
         st.info("No hay eventos cargados para construir el calendario mensual.")
-        return
+        return ""
 
     calendar = events_df.copy()
     calendar["ex_dividend_date"] = pd.to_datetime(calendar["ex_dividend_date"], errors="coerce")
@@ -402,14 +484,27 @@ def render_global_monthly_calendar(events_df: pd.DataFrame) -> None:
         monthly_view = monthly_view[monthly_view["sector_label"] == selected_sector]
     if text_filter.strip():
         q = text_filter.strip().upper()
+        matched_instruments = search_universe(universe_df, text_filter)
+        matched_tickers = set(matched_instruments["ticker"].astype(str).str.upper().tolist()) if not matched_instruments.empty else set()
         monthly_view = monthly_view[
-            monthly_view["ticker"].astype(str).str.upper().str.contains(q, regex=False)
+            monthly_view["ticker"].astype(str).str.upper().isin(matched_tickers)
+            | monthly_view["ticker"].astype(str).str.upper().str.contains(q, regex=False)
             | monthly_view["company_name"].astype(str).str.upper().str.contains(q, regex=False)
         ]
 
     if monthly_view.empty:
+        if text_filter.strip():
+            matches = search_universe(universe_df, text_filter)
+            if not matches.empty:
+                st.info("No hay eventos en este mes para esos filtros, pero estos instrumentos existen en el universo.")
+                show = matches[["ticker", "name", "exchange", "asset_type", "market_region"]].head(50).reset_index(drop=True)
+                clicked = selectable_ticker_table(show, "global_calendar_instrument_matches", use_container_width=True, hide_index=True)
+                if clicked:
+                    return clicked
+                options = show["ticker"].astype(str).tolist()
+                return st.selectbox("Abrir ficha desde calendario", options, key="global_calendar_open_match") if options else ""
         st.info("No hay eventos para esos filtros.")
-        return
+        return ""
 
     monthly_view["ex_date"] = monthly_view["ex_dividend_date"].dt.date
     monthly_view["payment_day"] = monthly_view["pay_date_dt"].dt.date.astype(str).replace("NaT", "Pendiente")
@@ -424,10 +519,11 @@ def render_global_monthly_calendar(events_df: pd.DataFrame) -> None:
         "asset_type",
         "market_region",
         "sector_label",
+        "sic_code",
+        "sic_industry",
         "source",
     ]
-    st.dataframe(
-        monthly_view.sort_values(["ex_dividend_date", "ticker"])[show_cols].rename(
+    display = monthly_view.sort_values(["ex_dividend_date", "ticker"])[show_cols].rename(
             columns={
                 "ex_date": "ex-date",
                 "payment_day": "payment day",
@@ -436,11 +532,17 @@ def render_global_monthly_calendar(events_df: pd.DataFrame) -> None:
                 "asset_type": "asset type",
                 "market_region": "region",
                 "sector_label": "sector",
+                "sic_code": "SIC",
+                "sic_industry": "industria SEC",
             }
-        ),
+        )
+    clicked = selectable_ticker_table(
+        display,
+        "global_calendar_events",
         use_container_width=True,
         hide_index=True,
     )
+    return clicked
 
 
 def render_instrument_detail(ticker: str, universe_df: pd.DataFrame, events_df: pd.DataFrame) -> None:
@@ -450,10 +552,16 @@ def render_instrument_detail(ticker: str, universe_df: pd.DataFrame, events_df: 
     name = profile.get("name") or info.get("name") or ticker
     sector = profile.get("sector_name") or sector_display(info.get("sector"), info.get("asset_type"))
     description = profile.get("description") or ""
+    asset_type = info.get("asset_type") or profile.get("entity_type") or ""
+    sic_code = profile.get("sector") or info.get("sic_code") or ""
+    sic_industry = profile.get("sic_description") or info.get("sic_industry") or ""
+    if not sic_code and str(asset_type).lower().find("etf") >= 0:
+        sic_code = "No aplica"
+        sic_industry = "Fondo/ETF sin clasificacion SIC SEC"
 
     st.markdown(f"**{ticker} - {name}**")
     d1, d2, d3, d4 = st.columns(4)
-    d1.metric("Tipo", info.get("asset_type") or profile.get("entity_type") or "-")
+    d1.metric("Tipo", asset_type or "-")
     d2.metric("Mercado", info.get("exchange") or profile.get("exchange") or "-")
     d3.metric("Region", info.get("market_region") or info.get("region") or "-")
     d4.metric("Sector", sector or "-")
@@ -463,8 +571,8 @@ def render_instrument_detail(ticker: str, universe_df: pd.DataFrame, events_df: 
         "Nombre": name,
         "Exchange": info.get("exchange") or profile.get("exchange") or "",
         "Sector": sector,
-        "SIC": profile.get("sector") or "",
-        "Industria SEC": profile.get("sic_description") or "",
+        "SIC": sic_code,
+        "Industria SEC": sic_industry,
         "Estado/Pais": profile.get("state") or info.get("state") or "",
         "Entidad": profile.get("entity_type") or "",
         "Anios SEC": f"{profile.get('min_year', '')}-{profile.get('max_year', '')}".strip("-"),
@@ -657,7 +765,7 @@ def render_capture_strategy_tab() -> None:
     summary = capture.summarize_by_ticker(results)
     if not summary.empty:
         st.markdown("**Ranking por ticker**")
-        st.dataframe(
+        clicked = selectable_ticker_table(
             summary[
                 [
                     "ticker",
@@ -669,9 +777,12 @@ def render_capture_strategy_tab() -> None:
                     "avg_annualized_return_pct",
                 ]
             ],
+            "strategy_summary_table",
             use_container_width=True,
             hide_index=True,
         )
+        if clicked:
+            render_instrument_detail(clicked, universe, events)
 
     st.markdown("**Eventos historicos**")
     event_cols = [
@@ -691,7 +802,14 @@ def render_capture_strategy_tab() -> None:
         "total_return_pct",
         "annualized_return_pct",
     ]
-    st.dataframe(results[event_cols].sort_values(["recovered", "annualized_return_pct"], ascending=[False, False]), use_container_width=True, hide_index=True)
+    clicked = selectable_ticker_table(
+        results[event_cols].sort_values(["recovered", "annualized_return_pct"], ascending=[False, False]),
+        "strategy_events_table",
+        use_container_width=True,
+        hide_index=True,
+    )
+    if clicked:
+        render_instrument_detail(clicked, universe, events)
 
     trades = capture.simulate_reinvestment(results, capital=float(capital))
     st.markdown("**Simulacion secuencial reinvirtiendo**")
@@ -703,7 +821,9 @@ def render_capture_strategy_tab() -> None:
         s1.metric("Operaciones", f"{len(trades):,}")
         s2.metric("Capital final", fmt_money(final_capital, "EUR"))
         s3.metric("Retorno total", f"{(final_capital / float(capital) - 1) * 100:.2f}%")
-        st.dataframe(trades, use_container_width=True, hide_index=True)
+        clicked = selectable_ticker_table(trades, "strategy_trades_table", use_container_width=True, hide_index=True)
+        if clicked:
+            render_instrument_detail(clicked, universe, events)
 
 
 st.title("Dividend Calendar USA")
@@ -746,6 +866,7 @@ with tab_portfolio:
         },
     )
     if st.button("Guardar cartera", type="primary"):
+        edited = apply_portfolio_ticker_resolution(edited, universe)
         save_portfolio(edited)
         st.success("Cartera guardada.")
         st.cache_data.clear()
@@ -756,6 +877,8 @@ events = events_between(start_text, end_text)
 portfolio = load_portfolio()
 portfolio["ticker"] = portfolio.get("ticker", pd.Series(dtype=str)).astype(str).str.upper().str.strip()
 portfolio["shares"] = pd.to_numeric(portfolio.get("shares", 0), errors="coerce").fillna(0)
+portfolio["input_ticker"] = portfolio["ticker"]
+portfolio["ticker"] = portfolio["ticker"].map(lambda value: resolve_unique_ticker(value, universe))
 
 if not events.empty:
     events["_source_rank"] = events["source"].map({"nasdaq_calendar": 0, "yahoo_chart_dividends": 1}).fillna(9)
@@ -784,7 +907,7 @@ with tab_calendar:
     c3.metric("Pendientes", f"{len(upcoming):,}" if upcoming is not None else "0")
     c4.metric("Cartera estimada", fmt_money(portfolio_cash))
 
-    render_global_monthly_calendar(events)
+    selected_ticker = render_global_monthly_calendar(events, universe)
 
     sectors = ["Todos"] + sorted([x for x in events["sector_label"].dropna().unique().tolist() if x]) if not events.empty else ["Todos"]
     asset_types = ["Todos"] + sorted([x for x in events["asset_type"].dropna().unique().tolist() if x]) if not events.empty else ["Todos"]
@@ -793,7 +916,6 @@ with tab_calendar:
     ticker_search = st.text_input("Buscar instrumento", "", placeholder="Ticker o nombre: JGPI, Apple, JPM...", key="instrument_search")
 
     matched_instruments = search_universe(universe, ticker_search) if ticker_search.strip() else pd.DataFrame()
-    selected_ticker = ""
     if ticker_search.strip():
         if matched_instruments.empty:
             st.warning("No encuentro instrumentos en el universo local con ese texto.")
@@ -801,22 +923,18 @@ with tab_calendar:
             st.markdown("**Instrumentos encontrados**")
             instrument_cols = ["ticker", "name", "exchange", "asset_type", "market_region"]
             instrument_view = matched_instruments[instrument_cols].head(100).reset_index(drop=True)
-            try:
-                selection = st.dataframe(
-                    instrument_view,
-                    use_container_width=True,
-                    hide_index=True,
-                    on_select="rerun",
-                    selection_mode="single-row",
-                )
-                rows = getattr(getattr(selection, "selection", None), "rows", [])
-                if rows:
-                    selected_ticker = str(instrument_view.iloc[rows[0]]["ticker"])
-            except TypeError:
-                st.dataframe(instrument_view, use_container_width=True, hide_index=True)
+            clicked = selectable_ticker_table(
+                instrument_view,
+                "instrument_search_results",
+                use_container_width=True,
+                hide_index=True,
+            )
+            if clicked:
+                selected_ticker = clicked
             options = instrument_view["ticker"].astype(str).tolist()
             if options:
-                selected_ticker = st.selectbox("Abrir ficha", options, index=0 if not selected_ticker else options.index(selected_ticker))
+                selected_index = options.index(selected_ticker) if selected_ticker in options else 0
+                selected_ticker = st.selectbox("Abrir ficha", options, index=selected_index)
 
     view = events.copy()
     if not view.empty:
@@ -846,17 +964,22 @@ with tab_calendar:
             "asset_type",
             "exchange",
             "sector_label",
+            "sic_code",
+            "sic_industry",
             "cash_amount",
             "currency",
             "status",
             "pay_date_display",
             "source",
         ]
-        st.dataframe(
+        clicked = selectable_ticker_table(
             view[show_cols].rename(columns={"sector_label": "sector", "pay_date_display": "pay_date"}),
+            "calendar_events_table",
             use_container_width=True,
             hide_index=True,
         )
+        if clicked:
+            render_instrument_detail(clicked, universe, events)
 
 with tab_portfolio:
     st.subheader("Cobros estimados")
@@ -876,7 +999,14 @@ with tab_portfolio:
             "pay_date_display",
             "status",
         ]
-        st.dataframe(show[cols].rename(columns={"pay_date_display": "pay_date"}), use_container_width=True, hide_index=True)
+        clicked = selectable_ticker_table(
+            show[cols].rename(columns={"pay_date_display": "pay_date"}),
+            "portfolio_events_table",
+            use_container_width=True,
+            hide_index=True,
+        )
+        if clicked:
+            render_instrument_detail(clicked, universe, events)
         monthly = show.copy()
         monthly["month"] = pd.to_datetime(monthly["ex_dividend_date"]).dt.to_period("M").astype(str)
         grouped = monthly.groupby("month", as_index=False)["estimated_cash"].sum()
@@ -896,7 +1026,9 @@ with tab_data:
             file_name=f"dividend_events_{start_text}_{end_text}.csv",
             mime="text/csv",
         )
-        st.dataframe(events, use_container_width=True, hide_index=True)
+        clicked = selectable_ticker_table(events, "data_events_table", use_container_width=True, hide_index=True)
+        if clicked:
+            render_instrument_detail(clicked, universe, events)
     st.warning(
         "Primera version: ex-date e importe vienen de eventos de mercado Yahoo/Nasdaq; "
         "SEC/EDGAR se usa para universo y metadatos. Pay date y record date quedan "

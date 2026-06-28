@@ -171,17 +171,23 @@ def write_cached_prices(df: pd.DataFrame) -> None:
         conn.close()
 
 
-def fetch_yahoo_prices(ticker: str, start: str, end: str, refresh: bool = False) -> pd.DataFrame:
+def fetch_yahoo_prices(ticker: str, start: str, end: str, refresh: bool = False, progress: bool = False) -> pd.DataFrame:
     init_price_cache()
     sec_prices = read_sec_prices(ticker, start, end)
     if not refresh and has_price_coverage(sec_prices, start, end):
+        if progress:
+            print(f"  precios {ticker}: sec_data/prices.db ({len(sec_prices)} dias)", flush=True)
         return sec_prices
 
     cached = read_cached_prices(ticker, start, end)
     if not refresh and not cached.empty:
         if has_price_coverage(cached, start, end):
+            if progress:
+                print(f"  precios {ticker}: cache estrategia ({len(cached)} dias)", flush=True)
             return cached
 
+    if progress:
+        print(f"  precios {ticker}: descargando Yahoo", flush=True)
     symbol = pipeline.yahoo_symbol(ticker)
     params = {
         "period1": to_unix(start),
@@ -332,22 +338,39 @@ def analyze_event(event: pd.Series, prices: pd.DataFrame, settings: CaptureSetti
     }
 
 
-def run_capture_backtest(settings: CaptureSettings, refresh_prices: bool = False, max_events: int = 0) -> pd.DataFrame:
+def run_capture_backtest(
+    settings: CaptureSettings,
+    refresh_prices: bool = False,
+    max_events: int = 0,
+    progress: bool = False,
+) -> pd.DataFrame:
     events = load_dividend_events(settings)
     if events.empty:
+        if progress:
+            print("No hay eventos de dividendos para el rango.", flush=True)
         return pd.DataFrame()
     events["ex_dividend_date"] = pd.to_datetime(events["ex_dividend_date"]).dt.date.astype(str)
     tickers = events["ticker"].dropna().astype(str).unique().tolist()
+    if progress:
+        print(
+            f"Backtest capture: eventos={len(events):,} tickers={len(tickers):,} "
+            f"rango={settings.start}..{settings.end} max_recovery={settings.max_recovery_days}d",
+            flush=True,
+        )
     rows = []
     price_start = (pd.Timestamp(settings.start) - pd.Timedelta(days=14)).date().isoformat()
     price_end = (pd.Timestamp(settings.end) + pd.Timedelta(days=settings.max_recovery_days + 7)).date().isoformat()
     for i, ticker in enumerate(tickers, start=1):
+        if progress:
+            print(f"[{i}/{len(tickers)}] {ticker}: eventos={len(events[events['ticker'] == ticker])}", flush=True)
         try:
-            prices = fetch_yahoo_prices(ticker, price_start, price_end, refresh=refresh_prices)
+            prices = fetch_yahoo_prices(ticker, price_start, price_end, refresh=refresh_prices, progress=progress)
         except Exception as exc:
             print(f"ERR prices {ticker}: {exc}")
             continue
         if prices.empty:
+            if progress:
+                print(f"  sin precios {ticker}", flush=True)
             continue
         sub = events[events["ticker"] == ticker]
         for event in sub.itertuples(index=False):
@@ -355,7 +378,12 @@ def run_capture_backtest(settings: CaptureSettings, refresh_prices: bool = False
             if row:
                 rows.append(row)
                 if max_events and len(rows) >= max_events:
+                    if progress:
+                        print(f"Limite max_events alcanzado: {max_events}", flush=True)
                     return pd.DataFrame(rows)
+        if progress:
+            recovered = sum(1 for row in rows if row.get("ticker") == ticker and row.get("recovered"))
+            print(f"  completado {ticker}: recuperados={recovered} acumulados={len(rows)}", flush=True)
         if i % 25 == 0:
             time.sleep(0.25)
     return pd.DataFrame(rows)
@@ -446,7 +474,7 @@ def main() -> None:
         limit_tickers=args.limit_tickers,
         use_high_for_recovery=args.use_high_for_recovery,
     )
-    results = run_capture_backtest(settings, refresh_prices=args.refresh_prices, max_events=args.max_events)
+    results = run_capture_backtest(settings, refresh_prices=args.refresh_prices, max_events=args.max_events, progress=True)
     print(f"events_analyzed={len(results)} recovered={int(results['recovered'].sum()) if not results.empty else 0}")
     if not results.empty:
         print(summarize_by_ticker(results).head(20).to_string(index=False))

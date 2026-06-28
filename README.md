@@ -9,7 +9,7 @@ importe por accion y, cuando esta disponible, `payment date`.
 - `data/us_universe.csv`: universo base de 3.904 tickers USA (`NYSE`,
   `Nasdaq`, `CBOE`) exportado desde el proyecto SEC original y ampliado con
   ETFs/ETNs/fondos desde el screener ETF de Nasdaq.
-- `data/europe_etf_universe.csv`: universo europeo inicial para ETFs UCITS en
+- `data/europe_etf_universe.csv`: universo europeo para ETFs UCITS en
   Alemania/Xetra, London Stock Exchange, Borsa Italiana y Euronext Amsterdam.
 - `data/dividends.db`: base SQLite con los eventos de dividendos.
 - `nasdaq_calendar`: fuente principal para `ex_dividend_date`, `pay_date`,
@@ -58,6 +58,10 @@ Actualizar solo el universo europeo sin tocar dividendos:
 ```powershell
 python dividend_calendar_pipeline.py --europe-universe-only --workers 8
 ```
+
+Este comando hace una busqueda amplia por proveedor, indice y tematica
+(`iShares MSCI World`, `Vanguard S&P 500`, `JPMorgan Dividend`, etc.) y despues
+valida variantes cruzadas `.DE`, `.L`, `.MI` y `.AS`.
 
 Despues valida que haya eventos y commitea `data/dividends.db` si cambia.
 
@@ -179,6 +183,8 @@ Si. El pipeline ya soporta ETFs de forma practica:
   del screener ETF de Nasdaq, no solo con valores presentes en SEC.
 - Tambien refresca `data/europe_etf_universe.csv` para ETFs europeos con
   simbolos Yahoo como `JGPI.DE`, `JEPG.L`, `JEPG.MI`, `VUSA.AS` o `IWDA.AS`.
+- El universo europeo se descubre con combinaciones de gestoras, indices y
+  tematicas, y valida variantes en Xetra, Londres, Italia y Amsterdam.
 - `--universe-only` permite actualizar solo ese universo de tickers.
 - `--europe-universe-only` permite actualizar solo el universo europeo.
 - `--include-unmatched` conserva eventos de Nasdaq que no estan en el universo
@@ -214,3 +220,4 @@ La base local actual contiene:
 - 8.498 eventos desde `yahoo_chart_dividends`.
 - 7.179 instrumentos en `data/us_universe.csv`.
 - 3.207 ETFs/ETNs/fondos unicos cargados desde el screener ETF.
+- 793 ETFs/listings europeos en `data/europe_etf_universe.csv`.

@@ -54,6 +54,34 @@ EUROPE_ETF_SEARCH_SEEDS = (
     "IWDA", "SWDA", "CSPX", "IUSA", "IWRD", "ISF", "IUKD", "EMIM",
     "EQQQ", "EQQB", "EXS1", "SPY5", "TDIV", "IAEX", "IMAE", "IB01",
 )
+EUROPE_ETF_DISCOVERY_SEEDS = (
+    "UCITS", "ETF", "iShares", "Vanguard", "Xtrackers", "Amundi", "Lyxor",
+    "SPDR", "WisdomTree", "Invesco", "JPMorgan", "JPM", "HSBC", "UBS",
+    "VanEck", "Franklin", "Fidelity", "BNP Paribas", "Legal General",
+    "L&G", "Global X", "HANetf", "Tabula", "Ossiam", "Deka", "DWS",
+    "MSCI World", "MSCI EM", "MSCI Emerging", "MSCI Europe", "MSCI USA",
+    "S&P 500", "Nasdaq 100", "FTSE All-World", "FTSE Developed",
+    "Stoxx Europe", "Euro Stoxx", "DAX", "CAC", "AEX", "FTSE 100",
+    "Dividend", "Quality", "Value", "Momentum", "Minimum Volatility",
+    "High Yield", "Bond", "Treasury", "Corporate Bond", "Aggregate Bond",
+    "Gold", "Commodity", "Healthcare", "Technology", "Energy", "Financials",
+)
+EUROPE_ETF_PROVIDERS = (
+    "iShares", "Vanguard", "Xtrackers", "Amundi", "SPDR", "WisdomTree",
+    "Invesco", "JPMorgan", "HSBC", "UBS", "VanEck", "Franklin",
+    "Fidelity", "BNP Paribas", "Deka", "L&G", "Global X", "HANetf",
+)
+EUROPE_ETF_INDEX_TERMS = (
+    "MSCI World", "MSCI Emerging Markets", "MSCI Europe", "MSCI USA",
+    "MSCI Japan", "MSCI China", "S&P 500", "Nasdaq 100", "Dow Jones",
+    "FTSE All-World", "FTSE Developed", "FTSE Emerging", "FTSE 100",
+    "Euro Stoxx 50", "Stoxx Europe 600", "DAX", "AEX", "FTSE MIB",
+    "Dividend", "Quality", "Value", "Momentum", "Minimum Volatility",
+    "Small Cap", "Healthcare", "Technology", "Semiconductor", "Energy",
+    "Financials", "Utilities", "Clean Energy", "Artificial Intelligence",
+    "Bond", "Treasury", "Corporate Bond", "Aggregate Bond", "High Yield",
+    "Money Market", "Gold", "Commodity",
+)
 
 HTTP_HEADERS = {
     "User-Agent": "Mozilla/5.0 dividend-calendar-research/0.1",
@@ -578,13 +606,39 @@ def update_us_universe(include_etfs: bool = True, workers: int = 4) -> dict:
 
 def fetch_yahoo_search_quotes(query: str) -> list[dict]:
     url = "https://query1.finance.yahoo.com/v1/finance/search"
-    params = {"q": query, "quotesCount": 25, "newsCount": 0}
+    params = {"q": query, "quotesCount": 50, "newsCount": 0}
     request = Request(url + "?" + urlencode(params), headers=HTTP_HEADERS)
     with urlopen(request, timeout=REQ_TIMEOUT) as response:
         if response.status != 200:
             raise RuntimeError(f"Yahoo search status {response.status}")
         payload = json.loads(response.read().decode("utf-8"))
     return payload.get("quotes") or []
+
+
+def yahoo_quote_to_europe_company(quote: dict, updated_at: str, provider: str = "yahoo_search") -> Company | None:
+    ticker = normalize_ticker(quote.get("symbol"))
+    suffix = next((s for s in EUROPE_YAHOO_SUFFIXES if ticker.endswith(s)), "")
+    quote_type = (quote.get("quoteType") or "").upper()
+    if not suffix or quote_type not in {"ETF", "MUTUALFUND"}:
+        return None
+    name = quote.get("shortname") or quote.get("longname") or ""
+    return Company(
+        ticker=ticker,
+        name=name,
+        exchange=EUROPE_YAHOO_SUFFIXES[suffix],
+        sector="Europe",
+        state=EUROPE_YAHOO_SUFFIXES[suffix],
+        asset_type="ETF/Fund",
+    )
+
+
+def fetch_yahoo_exact_europe_etf(symbol: str, updated_at: str) -> Company | None:
+    quotes = fetch_yahoo_search_quotes(symbol)
+    target = normalize_ticker(symbol)
+    for quote in quotes:
+        if normalize_ticker(quote.get("symbol")) == target:
+            return yahoo_quote_to_europe_company(quote, updated_at, provider="yahoo_variant")
+    return None
 
 
 def read_europe_etf_universe() -> list[Company]:
@@ -630,35 +684,98 @@ def update_europe_etf_universe(workers: int = 4, seeds: Iterable[str] = EUROPE_E
                         "updated_at": row.get("updated_at") or "",
                     }
 
+    def upsert(company: Company, provider: str) -> None:
+        existing[company.ticker] = {
+            "ticker": company.ticker,
+            "name": company.name,
+            "exchange": company.exchange,
+            "country": company.state,
+            "region": "Europe",
+            "asset_type": "ETF/Fund",
+            "provider": provider,
+            "updated_at": updated_at,
+        }
+
     updated_at = now_utc()
-    seed_list = sorted({str(seed).strip().upper() for seed in seeds if str(seed).strip()})
+    provider_index_seeds = tuple(
+        f"{provider} {term}"
+        for provider in EUROPE_ETF_PROVIDERS
+        for term in EUROPE_ETF_INDEX_TERMS
+    )
+    seed_list = sorted(
+        {
+            str(seed).strip()
+            for seed in tuple(seeds) + EUROPE_ETF_DISCOVERY_SEEDS + provider_index_seeds
+            if str(seed).strip()
+        }
+    )
+    print(
+        "Europe ETF universe: "
+        f"{len(seed_list)} discovery searches across "
+        f"{', '.join(EUROPE_YAHOO_SUFFIXES.values())}"
+    )
     discovered = 0
-    with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, workers)) as executor:
+    bases: set[str] = set()
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, min(workers, 8))) as executor:
         futures = {executor.submit(fetch_yahoo_search_quotes, seed): seed for seed in seed_list}
-        for future in concurrent.futures.as_completed(futures):
+        for done, future in enumerate(concurrent.futures.as_completed(futures), start=1):
             seed = futures[future]
             try:
                 quotes = future.result()
             except Exception as exc:
                 print(f"ERR yahoo_search {seed}: {exc}")
                 continue
+            if done == 1 or done % 50 == 0 or done == len(futures):
+                print(
+                    "Europe ETF discovery progress: "
+                    f"{done}/{len(futures)} searches, "
+                    f"{len(existing)} tickers, {len(bases)} bases"
+                )
             for quote in quotes:
-                ticker = normalize_ticker(quote.get("symbol"))
-                suffix = next((s for s in EUROPE_YAHOO_SUFFIXES if ticker.endswith(s)), "")
-                if not suffix or (quote.get("quoteType") or "").upper() != "ETF":
+                company = yahoo_quote_to_europe_company(quote, updated_at)
+                if not company:
                     continue
-                name = quote.get("shortname") or quote.get("longname") or ""
-                existing[ticker] = {
-                    "ticker": ticker,
-                    "name": name,
-                    "exchange": EUROPE_YAHOO_SUFFIXES[suffix],
-                    "country": EUROPE_YAHOO_SUFFIXES[suffix],
-                    "region": "Europe",
-                    "asset_type": "ETF/Fund",
-                    "provider": "yahoo_search",
-                    "updated_at": updated_at,
-                }
+                upsert(company, "yahoo_search")
+                for suffix in EUROPE_YAHOO_SUFFIXES:
+                    if company.ticker.endswith(suffix):
+                        bases.add(company.ticker[: -len(suffix)])
+                        break
                 discovered += 1
+
+    for ticker in list(existing):
+        for suffix in EUROPE_YAHOO_SUFFIXES:
+            if ticker.endswith(suffix):
+                bases.add(ticker[: -len(suffix)])
+                break
+
+    variant_candidates = sorted(
+        {
+            f"{base}{suffix}"
+            for base in bases
+            for suffix in EUROPE_YAHOO_SUFFIXES
+            if base and f"{base}{suffix}" not in existing
+        }
+    )
+    variants_loaded = 0
+    print(f"Europe ETF variants: validating {len(variant_candidates)} cross-listing candidates")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, min(workers, 6))) as executor:
+        futures = {executor.submit(fetch_yahoo_exact_europe_etf, symbol, updated_at): symbol for symbol in variant_candidates}
+        for done, future in enumerate(concurrent.futures.as_completed(futures), start=1):
+            symbol = futures[future]
+            try:
+                company = future.result()
+            except Exception as exc:
+                print(f"ERR yahoo_variant {symbol}: {exc}")
+                continue
+            if done == 1 or done % 50 == 0 or done == len(futures):
+                print(
+                    "Europe ETF variant progress: "
+                    f"{done}/{len(futures)} checked, {variants_loaded} loaded"
+                )
+            if not company:
+                continue
+            upsert(company, "yahoo_variant")
+            variants_loaded += 1
 
     fields = ["ticker", "name", "exchange", "country", "region", "asset_type", "provider", "updated_at"]
     with EUROPE_ETF_CSV.open("w", encoding="utf-8", newline="") as fh:
@@ -670,6 +787,8 @@ def update_europe_etf_universe(workers: int = 4, seeds: Iterable[str] = EUROPE_E
     return {
         "europe_universe_rows": len(existing),
         "discovered_quotes": discovered,
+        "variant_candidates": len(variant_candidates),
+        "variants_loaded": variants_loaded,
         "universe_file": str(EUROPE_ETF_CSV),
     }
 

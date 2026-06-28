@@ -119,6 +119,12 @@ El laboratorio de estrategia usa primero `..\sec_data\prices.db` si existe
 para precios diarios USA. Si no encuentra cobertura suficiente para un ticker,
 descarga precios desde Yahoo y los cachea en `data/strategy_price_cache.db`.
 
+Auditar cobertura de datos desde 2025 hasta hoy:
+
+```powershell
+python data_coverage_check.py --start 2025-01-01
+```
+
 O en Windows:
 
 ```powershell

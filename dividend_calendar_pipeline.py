@@ -37,10 +37,11 @@ DIVIDENDS_DB = DATA_DIR / "dividends.db"
 UNIVERSE_CSV = DATA_DIR / "us_universe.csv"
 EUROPE_ETF_CSV = DATA_DIR / "europe_etf_universe.csv"
 
-REQ_TIMEOUT = 16
+REQ_TIMEOUT = 24
 YAHOO_SLEEP = 0.08
 DEFAULT_EXCHANGES = ("NYSE", "Nasdaq", "CBOE")
 NASDAQ_SCREENER_PAGE_SIZE = 50
+NASDAQ_SCREENER_RETRIES = 3
 EUROPE_YAHOO_SUFFIXES = {
     ".DE": "Germany/Xetra",
     ".L": "London Stock Exchange",
@@ -463,10 +464,22 @@ def fetch_nasdaq_etf_universe(workers: int = 4) -> list[Company]:
             "Origin": "https://www.nasdaq.com",
             "Referer": "https://www.nasdaq.com/market-activity/etf/screener",
         }
-        with urlopen(Request(url + "?" + urlencode(params), headers=headers), timeout=REQ_TIMEOUT) as response:
-            if response.status != 200:
-                raise RuntimeError(f"Nasdaq ETF screener status {response.status}")
-            payload = json.loads(response.read().decode("utf-8"))
+        last_error: Exception | None = None
+        for attempt in range(1, NASDAQ_SCREENER_RETRIES + 1):
+            try:
+                throttle()
+                with urlopen(Request(url + "?" + urlencode(params), headers=headers), timeout=REQ_TIMEOUT) as response:
+                    if response.status != 200:
+                        raise RuntimeError(f"Nasdaq ETF screener status {response.status}")
+                    payload = json.loads(response.read().decode("utf-8"))
+                break
+            except Exception as exc:
+                last_error = exc
+                if attempt == NASDAQ_SCREENER_RETRIES:
+                    raise
+                time.sleep(0.7 * attempt)
+        else:
+            raise RuntimeError(f"Nasdaq ETF screener failed at offset {offset}: {last_error}")
         records = ((payload.get("data") or {}).get("records") or {})
         data = ((records.get("data") or {}).get("rows") or [])
         total = int(records.get("totalrecords") or 0)
@@ -476,11 +489,14 @@ def fetch_nasdaq_etf_universe(workers: int = 4) -> list[Company]:
     offsets = list(range(NASDAQ_SCREENER_PAGE_SIZE, total, NASDAQ_SCREENER_PAGE_SIZE))
     all_rows = list(first_rows)
     if offsets:
-        with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, workers)) as executor:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, min(workers, 4))) as executor:
             futures = [executor.submit(fetch_page, offset) for offset in offsets]
             for future in concurrent.futures.as_completed(futures):
-                _offset, _total, rows = future.result()
-                all_rows.extend(rows)
+                try:
+                    _offset, _total, rows = future.result()
+                    all_rows.extend(rows)
+                except Exception as exc:
+                    print(f"ERR nasdaq_etf_page: {exc}")
 
     companies: list[Company] = []
     seen: set[str] = set()
@@ -526,7 +542,11 @@ def update_us_universe(include_etfs: bool = True, workers: int = 4) -> dict:
     updated_at = now_utc()
     etfs: list[Company] = []
     if include_etfs:
-        etfs = fetch_nasdaq_etf_universe(workers=workers)
+        try:
+            etfs = fetch_nasdaq_etf_universe(workers=workers)
+        except Exception as exc:
+            print(f"WARN: no se pudo refrescar el universo ETF USA; se conserva el CSV existente. Detalle: {exc}")
+            etfs = []
         for etf in etfs:
             existing[etf.ticker] = {
                 "ticker": etf.ticker,

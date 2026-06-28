@@ -34,6 +34,7 @@ El workflow usa actualizacion incremental:
 - Por defecto rehace los ultimos `95` dias, aproximadamente un trimestre.
 - Tambien refresca los proximos `550` dias, para mantener anuncios futuros.
 - El historico anterior a la ventana no se borra ni se recalcula.
+- El screener ETF usa reintentos y menor concurrencia para evitar timeouts.
 - Si la fuente falla en algun dia, no reemplaza la ventana completa; conserva la
   base previa y solo intenta upsert de lo que si haya respondido.
 

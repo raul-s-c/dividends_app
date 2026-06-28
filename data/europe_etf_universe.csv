@@ -1,19 +1,53 @@
 ticker,name,exchange,country,region,asset_type,provider,updated_at
-JGPI.DE,JPM ETFs(I)-Glbl Eq.Pr.Inc.,Germany/Xetra,Germany,Europe,ETF/Fund,manual_seed,
-JEPG.L,JPMorgan Global Equity Premium Income UCITS ETF,London Stock Exchange,United Kingdom,Europe,ETF/Fund,manual_seed,
-JEPG.MI,JPM Global Equity Premium Income UCITS ETF,Borsa Italiana,Italy,Europe,ETF/Fund,manual_seed,
-JEPI.L,JPMorgan US Equity Premium Income UCITS ETF,London Stock Exchange,United Kingdom,Europe,ETF/Fund,manual_seed,
-JEPI.MI,JPM US Equity Premium Income Active UCITS ETF,Borsa Italiana,Italy,Europe,ETF/Fund,manual_seed,
-JEPQ.L,JPMorgan Nasdaq Equity Premium Income UCITS ETF,London Stock Exchange,United Kingdom,Europe,ETF/Fund,manual_seed,
-JEPQ.MI,JPM Nasdaq Equity Premium Income UCITS ETF,Borsa Italiana,Italy,Europe,ETF/Fund,manual_seed,
-VUSA.L,Vanguard S&P 500 UCITS ETF,London Stock Exchange,United Kingdom,Europe,ETF/Fund,manual_seed,
-VUSA.AS,Vanguard S&P 500 UCITS ETF,Euronext Amsterdam,Netherlands,Europe,ETF/Fund,manual_seed,
+CSPX.AS,iShares Core S&P 500 UCITS ETF ,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+CSPX.L,ISHARES VII PLC ISHRS CORE S&P ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+EMIM.AS,iShares Core MSCI Emerging Mark,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+EMIM.L,ISHARES PLC ISHARES CORE EM IMI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+EQQB.DE,InvescoMI3 NASDAQ100 ETF      R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+EQQQ.L,INVESCO MARKETS III PLC INVESCO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+EQQQ.MI,INVESCO EQQQ NASDAQ-100 UCITS E,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+EXS1.AS,iShares Core DAX UCITS ETF EUR ,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+EXS1.DE,iShares Core DAX UCITS ETF DE I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+IAEX.AS,iShares AEX,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+IAEX.L,ISHARES PLC ISHARES AEX UCITS E,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+IB01.L,ISHARES PLC ISH $ TR BND 0-1YR ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+IMAE.AS,iShares Core MSCI Europe UCITS ,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+IUSA.L,ISHARES PLC ISHARES S&P 500 UCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+IWDA.AS,iShares Core MSCI World UCITS E,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+IWDA.L,ISHARES III PLC ISHRS CORE MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+IWRD.AS,iShares MSCI World UCITS ETF (D,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+IWRD.L,ISHARES PLC ISHARES MSCI WORLD ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+IWRD.MI,ISHARES MSCI WORLD UCITS ETF US,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+JEPG.L,JPMORGAN ETFS (IRELAND) ICAV JP,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+JEPG.MI,JPM Global Equity Premium Incom,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+JEPI.L,JPMORGAN ETFS (IRELAND) ICAV JP,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+JEPI.MI,JPM US Equity Premium Income Ac,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+JEPQ.L,JPMORGAN ETFS (IRELAND) ICAV JP,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+JEPQ.MI,JPM Nasdaq Equity Premium Incom,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+JGPI.DE,JPM ETFs(I)-Glbl Eq.Pr.Inc.   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+SPY5.L,SSGA SPDR ETFS EUROPE I PLC SS ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+SWDA.L,ISHARES III PLC ISHRS CORE MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+SWDA.MI,ISHARES CORE MSCI WORLD UCITS E,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+TDIV.AS,VanEck Morningstar Developed Ma,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+TDIV.L,VANECK ETFS N.V. VANECK MORNING,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+TDIV.MI,VanEck Morningstar Developed Ma,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+VEVE.AS,Vanguard FTSE Developed World U,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+VEVE.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+VEVE.MI,VANGUARD FTSE DEVELOPED WORLD U,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+VFEA.DE,Vanguard FTSE Em.Markets U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+VFEA.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+VFEA.MI,Vanguard Ftse Emerg Markets Uci,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+VHYL.AS,VANGUARD FTSE All-World High Di,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+VHYL.MI,VANGUARD FTSE ALLWLD HIDIV YLD ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+VUAA.DE,Vanguard S&P 500 UCITS ETF    R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+VUAA.L,VANGUARD FUNDS PLC VANGUARD S&P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+VUAA.MI,VANGUARD S&P 500 UCITS ETF ACC,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+VUSA.AS,Vanguard S&P 500 UCITS ETF,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
 VUSA.DE,Vanguard S&P 500 UCITS ETF,Germany/Xetra,Germany,Europe,ETF/Fund,manual_seed,
-VUAA.L,Vanguard S&P 500 UCITS ETF Acc,London Stock Exchange,United Kingdom,Europe,ETF/Fund,manual_seed,
-VUAA.MI,Vanguard S&P 500 UCITS ETF Acc,Borsa Italiana,Italy,Europe,ETF/Fund,manual_seed,
-VUAA.DE,Vanguard S&P 500 UCITS ETF Acc,Germany/Xetra,Germany,Europe,ETF/Fund,manual_seed,
-EQQQ.L,Invesco EQQQ Nasdaq-100 UCITS ETF,London Stock Exchange,United Kingdom,Europe,ETF/Fund,manual_seed,
-EQQQ.MI,Invesco EQQQ Nasdaq-100 UCITS ETF,Borsa Italiana,Italy,Europe,ETF/Fund,manual_seed,
-EQQB.DE,Invesco EQQQ Nasdaq-100 UCITS ETF,Germany/Xetra,Germany,Europe,ETF/Fund,manual_seed,
-IWDA.L,iShares Core MSCI World UCITS ETF,London Stock Exchange,United Kingdom,Europe,ETF/Fund,manual_seed,
-IWDA.AS,iShares Core MSCI World UCITS ETF,Euronext Amsterdam,Netherlands,Europe,ETF/Fund,manual_seed,
+VUSA.L,VANGUARD FUNDS PLC VANGUARD S&P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+VWCE.AS,Vanguard Ftse All-World Ucits E,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+VWCE.DE,Vanguard FTSE All-World U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+VWCE.MI,Vanguard Ftse All-World Ucits E,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+VWRL.AS,Vanguard FTSE All-World UCITS E,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+VWRL.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00
+VWRL.MI,Vanguard FTSE All-World UCITS E,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T10:09:34+00:00

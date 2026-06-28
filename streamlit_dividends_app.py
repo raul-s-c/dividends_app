@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import csv
-from datetime import date, timedelta
+import sqlite3
+import subprocess
+from datetime import date, datetime
 from io import StringIO
 from pathlib import Path
 
@@ -13,6 +15,8 @@ import dividend_calendar_pipeline as pipeline
 
 APP_DIR = Path(__file__).resolve().parent
 PORTFOLIO_CSV = APP_DIR / "data" / "portfolio.csv"
+US_UNIVERSE_CSV = APP_DIR / "data" / "us_universe.csv"
+EUROPE_UNIVERSE_CSV = APP_DIR / "data" / "europe_etf_universe.csv"
 
 st.set_page_config(page_title="Dividend Calendar USA", page_icon="Div", layout="wide")
 
@@ -40,6 +44,96 @@ def save_portfolio(df: pd.DataFrame) -> None:
     clean.to_csv(PORTFOLIO_CSV, index=False)
 
 
+def file_mtime(path: Path) -> str:
+    if not path.exists():
+        return "-"
+    return datetime.fromtimestamp(path.stat().st_mtime).strftime("%Y-%m-%d %H:%M:%S")
+
+
+def git_commit() -> str:
+    try:
+        completed = subprocess.run(
+            ["git", "rev-parse", "--short", "HEAD"],
+            cwd=APP_DIR,
+            capture_output=True,
+            text=True,
+            timeout=3,
+            check=False,
+        )
+        return completed.stdout.strip() or "-"
+    except Exception:
+        return "-"
+
+
+def csv_count(path: Path) -> int:
+    if not path.exists():
+        return 0
+    with path.open("r", encoding="utf-8", newline="") as fh:
+        return max(0, sum(1 for _ in fh) - 1)
+
+
+@st.cache_data(ttl=120)
+def data_status() -> dict:
+    status = {
+        "db_path": str(pipeline.DIVIDENDS_DB),
+        "db_updated": file_mtime(pipeline.DIVIDENDS_DB),
+        "code_commit": git_commit(),
+        "us_universe_rows": csv_count(US_UNIVERSE_CSV),
+        "europe_universe_rows": csv_count(EUROPE_UNIVERSE_CSV),
+        "total_events": 0,
+        "min_ex_date": "-",
+        "max_ex_date": "-",
+        "runs": [],
+        "sources": [],
+        "asset_types": [],
+    }
+    if not pipeline.DIVIDENDS_DB.exists():
+        return status
+    conn = sqlite3.connect(pipeline.DIVIDENDS_DB)
+    try:
+        row = conn.execute(
+            "SELECT COUNT(*), MIN(ex_dividend_date), MAX(ex_dividend_date) FROM dividend_events"
+        ).fetchone()
+        status["total_events"] = int(row[0] or 0)
+        status["min_ex_date"] = row[1] or "-"
+        status["max_ex_date"] = row[2] or "-"
+        status["sources"] = pd.read_sql_query(
+            """
+            SELECT source, COUNT(*) AS events, COUNT(DISTINCT ticker) AS tickers,
+                   MIN(ex_dividend_date) AS first_ex_date,
+                   MAX(ex_dividend_date) AS last_ex_date
+            FROM dividend_events
+            GROUP BY source
+            ORDER BY events DESC
+            """,
+            conn,
+        ).to_dict("records")
+        status["asset_types"] = pd.read_sql_query(
+            """
+            SELECT COALESCE(asset_type, '') AS asset_type,
+                   COUNT(*) AS events,
+                   COUNT(DISTINCT ticker) AS tickers
+            FROM dividend_events
+            GROUP BY COALESCE(asset_type, '')
+            ORDER BY events DESC
+            """,
+            conn,
+        ).to_dict("records")
+        status["runs"] = pd.read_sql_query(
+            """
+            SELECT started_at, finished_at, source, start_date, end_date,
+                   tickers_requested, events_upserted, errors
+            FROM dividend_runs
+            ORDER BY started_at DESC
+            LIMIT 12
+            """,
+            conn,
+        ).to_dict("records")
+    finally:
+        conn.close()
+    return status
+
+
 @st.cache_data(ttl=120)
 def events_between(start: str, end: str) -> pd.DataFrame:
     return pd.DataFrame(pipeline.load_events(start, end))
@@ -55,7 +149,7 @@ def csv_download(df: pd.DataFrame) -> str:
 
 
 st.title("Dividend Calendar USA")
-st.caption("Calendario personal de ex-dividend dates e importes para empresas cotizadas en USA.")
+st.caption("Calendario personal de ex-dividend dates e importes para acciones y ETFs.")
 
 with st.sidebar:
     st.header("Rango")
@@ -68,12 +162,15 @@ with st.sidebar:
         st.error("La fecha final debe ser posterior a la inicial.")
     st.divider()
     st.header("Actualizar")
-    st.caption("Ejecuta el pipeline desde terminal para refrescar datos diarios.")
-    st.code("python dividends_app/dividend_calendar_pipeline.py --start 2025-01-01 --end 2027-01-01 --workers 8")
+    st.caption("Comando único recomendado para refrescar datos diarios.")
+    st.code("python dividend_calendar_pipeline.py --daily-update --lookback-days 95 --forward-days 550 --workers 8")
+    if st.button("Recargar vista"):
+        st.cache_data.clear()
+        st.rerun()
 
 portfolio = load_portfolio()
 
-tab_calendar, tab_portfolio, tab_data = st.tabs(["Calendario", "Mi cartera", "Datos"])
+tab_calendar, tab_portfolio, tab_data, tab_status = st.tabs(["Calendario", "Mi cartera", "Datos", "Estado"])
 
 with tab_portfolio:
     st.subheader("Cartera")
@@ -198,7 +295,34 @@ with tab_data:
         )
         st.dataframe(events, use_container_width=True, hide_index=True)
     st.warning(
-        "Primera version: ex-date e importe vienen de eventos de mercado Yahoo; "
+        "Primera versión: ex-date e importe vienen de eventos de mercado Yahoo/Nasdaq; "
         "SEC/EDGAR se usa para universo y metadatos. Pay date y record date quedan "
         "preparados en el esquema para incorporar una fuente corporate-actions validada."
     )
+
+with tab_status:
+    st.subheader("Estado de actualización")
+    status = data_status()
+    s1, s2, s3, s4 = st.columns(4)
+    s1.metric("Eventos totales", f"{status['total_events']:,}")
+    s2.metric("Universo USA", f"{status['us_universe_rows']:,}")
+    s3.metric("Universo Europa", f"{status['europe_universe_rows']:,}")
+    s4.metric("Commit código", status["code_commit"])
+
+    s5, s6, s7 = st.columns(3)
+    s5.metric("Primera ex-date", status["min_ex_date"])
+    s6.metric("Última ex-date", status["max_ex_date"])
+    s7.metric("DB modificada", status["db_updated"])
+
+    st.code("python dividend_calendar_pipeline.py --daily-update --lookback-days 95 --forward-days 550 --workers 8")
+    st.caption(f"Base: {status['db_path']}")
+
+    if status["runs"]:
+        st.markdown("**Últimas ejecuciones**")
+        st.dataframe(pd.DataFrame(status["runs"]), use_container_width=True, hide_index=True)
+    if status["sources"]:
+        st.markdown("**Cobertura por fuente**")
+        st.dataframe(pd.DataFrame(status["sources"]), use_container_width=True, hide_index=True)
+    if status["asset_types"]:
+        st.markdown("**Cobertura por tipo de activo**")
+        st.dataframe(pd.DataFrame(status["asset_types"]), use_container_width=True, hide_index=True)

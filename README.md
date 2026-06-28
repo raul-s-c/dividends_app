@@ -43,6 +43,9 @@ Comando diario:
 python dividend_calendar_pipeline.py --daily-update --lookback-days 95 --forward-days 550 --workers 8
 ```
 
+Este es el comando para actualizar TODO: universo USA, universo europeo,
+dividendos USA y dividendos europeos en ventana incremental.
+
 Actualizar solo el universo USA/ETF sin tocar dividendos:
 
 ```powershell
@@ -82,6 +85,14 @@ Abrir app:
 ```powershell
 streamlit run streamlit_dividends_app.py
 ```
+
+La app web incluye una pestana `Estado` con:
+
+- commit de codigo local;
+- fecha de modificacion de `data/dividends.db`;
+- recuentos de universo USA y Europa;
+- cobertura por fuente y tipo de activo;
+- ultimas ejecuciones registradas en `dividend_runs`.
 
 O en Windows:
 

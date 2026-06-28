@@ -3,6 +3,7 @@ __pycache__/
 .pytest_cache/
 .streamlit/secrets.toml
 data/portfolio.csv
+data/strategy_price_cache.db
 data/*.db-shm
 data/*.db-wal
 android/keystore.properties

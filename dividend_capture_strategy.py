@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import sqlite3
+import sys
 import time
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta
@@ -10,7 +11,14 @@ from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
-import pandas as pd
+try:
+    import pandas as pd
+except ModuleNotFoundError as exc:
+    if exc.name != "pandas":
+        raise
+    print("Falta pandas en este Python. Instala dependencias con:")
+    print("  python -m pip install -r requirements.txt")
+    sys.exit(1)
 
 import dividend_calendar_pipeline as pipeline
 
@@ -19,6 +27,7 @@ APP_DIR = Path(__file__).resolve().parent
 DATA_DIR = APP_DIR / "data"
 DIVIDENDS_DB = DATA_DIR / "dividends.db"
 PRICE_CACHE_DB = DATA_DIR / "strategy_price_cache.db"
+SEC_PRICES_DB = APP_DIR.parent / "sec_data" / "prices.db"
 
 
 @dataclass(frozen=True)
@@ -86,6 +95,37 @@ def read_cached_prices(ticker: str, start: str, end: str) -> pd.DataFrame:
         conn.close()
 
 
+def read_sec_prices(ticker: str, start: str, end: str) -> pd.DataFrame:
+    if not SEC_PRICES_DB.exists():
+        return pd.DataFrame()
+    conn = sqlite3.connect(SEC_PRICES_DB)
+    try:
+        df = pd.read_sql_query(
+            """
+            SELECT ticker, date AS price_date, open, high, low, close,
+                   adj_close, volume, '' AS currency
+            FROM daily_prices
+            WHERE UPPER(ticker)=UPPER(?) AND date>=? AND date<=?
+            ORDER BY date
+            """,
+            conn,
+            params=(ticker, start, end),
+        )
+    finally:
+        conn.close()
+    return df
+
+
+def has_price_coverage(df: pd.DataFrame, start: str, end: str) -> bool:
+    if df.empty or "price_date" not in df.columns:
+        return False
+    dates = pd.to_datetime(df["price_date"], errors="coerce").dropna()
+    if dates.empty:
+        return False
+    # Trading calendars have weekends/holidays; allow a small edge gap.
+    return dates.min() <= pd.Timestamp(start) + pd.Timedelta(days=7) and dates.max() >= pd.Timestamp(end) - pd.Timedelta(days=7)
+
+
 def write_cached_prices(df: pd.DataFrame) -> None:
     if df.empty:
         return
@@ -133,12 +173,13 @@ def write_cached_prices(df: pd.DataFrame) -> None:
 
 def fetch_yahoo_prices(ticker: str, start: str, end: str, refresh: bool = False) -> pd.DataFrame:
     init_price_cache()
+    sec_prices = read_sec_prices(ticker, start, end)
+    if not refresh and has_price_coverage(sec_prices, start, end):
+        return sec_prices
+
     cached = read_cached_prices(ticker, start, end)
     if not refresh and not cached.empty:
-        cached_dates = set(cached["price_date"].astype(str))
-        expected_min = pd.Timestamp(start).date().isoformat()
-        expected_max = pd.Timestamp(end).date().isoformat()
-        if min(cached_dates) <= expected_min and max(cached_dates) >= expected_max:
+        if has_price_coverage(cached, start, end):
             return cached
 
     symbol = pipeline.yahoo_symbol(ticker)
@@ -181,7 +222,7 @@ def fetch_yahoo_prices(ticker: str, start: str, end: str, refresh: bool = False)
         )
     fetched = pd.DataFrame(rows)
     write_cached_prices(fetched)
-    combined = pd.concat([cached, fetched], ignore_index=True, sort=False)
+    combined = pd.concat([sec_prices, cached, fetched], ignore_index=True, sort=False)
     if combined.empty:
         return combined
     return combined.drop_duplicates(["ticker", "price_date"], keep="last").sort_values("price_date")

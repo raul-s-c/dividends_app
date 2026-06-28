@@ -63,6 +63,18 @@ Despues valida que haya eventos y commitea `data/dividends.db` si cambia.
 
 ## Ejecutar en local
 
+Instalar dependencias:
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+O en Windows:
+
+```powershell
+instalar_dependencias.bat
+```
+
 Actualizar datos:
 
 ```powershell
@@ -102,6 +114,10 @@ Backtest de estrategia desde CLI:
 ```powershell
 python dividend_capture_strategy.py --start 2025-01-01 --end 2025-12-31 --max-recovery-days 90 --limit-tickers 50 --max-events 300
 ```
+
+El laboratorio de estrategia usa primero `..\sec_data\prices.db` si existe
+para precios diarios USA. Si no encuentra cobertura suficiente para un ticker,
+descarga precios desde Yahoo y los cachea en `data/strategy_price_cache.db`.
 
 O en Windows:
 

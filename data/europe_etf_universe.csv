@@ -1,113 +1,117 @@
 ticker,name,exchange,country,region,asset_type,provider,updated_at
-0IYH.L,GLOBAL X GOLD EXPLORERS ETF GLO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+0IYH.L,GLOBAL X GOLD EXPLORERS ETF GLO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 0JDT.L,ISHARES GOLD TRUST ISHARES GOLD,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 0JFH.L,ISHARES MSCI EMERGING MARKETS E,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-0KZF.L,SPDR GOLD SHARES SPDR GOLD SHAR,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0LLW.L,VANGUARD DIVIDEND APPRECIATION ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+0KZF.L,SPDR GOLD SHARES SPDR GOLD SHAR,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0LLW.L,VANGUARD DIVIDEND APPRECIATION ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 0LOE.L,VANGUARD SMALL-CAP GROWTH INDEX,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
 0MKK.L,ISHARES GOLD CHF HEDGED (CH) IS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-0MKN.L,UBS ETF (CH) - GOLD (USD) A-DIS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P00000CSE.L,0P00000CSE.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P00000CUH.L,0P00000CUH.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P00000DI9.L,0P00000DI9.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-0P00000R29.L,BlackRock Corporate Bond A Acc,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P00000SW0.L,0P00000SW0.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+0MKN.L,UBS ETF (CH) - GOLD (USD) A-DIS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P00000CSE.L,0P00000CSE.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P00000CUH.L,0P00000CUH.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P00000DI9.L,0P00000DI9.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P00000R29.L,BlackRock Corporate Bond A Acc,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P00000R53.L,0P00000R53.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P00000SW0.L,0P00000SW0.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 0P000026O3.L,0P000026O3.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-0P0000HKIQ.L,0P0000HKIQ.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-0P0000HKIR.L,0P0000HKIR.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-0P0000M4O3.L,0P0000M4O3.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0000P1B7.L,0P0000P1B7.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-0P0000W4GM.L,0P0000W4GM.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+0P0000HKIQ.L,0P0000HKIQ.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0000HKIR.L,0P0000HKIR.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0000M4O3.L,0P0000M4O3.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0000P1B7.L,0P0000P1B7.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0000W4GM.L,0P0000W4GM.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 0P0000WGST.L,0P0000WGST.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0000WGSU.L,0P0000WGSU.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0000WV73.L,0P0000WV73.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-0P0000WV7B.L,0P0000WV7B.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-0P0000X6HK.L,0P0000X6HK.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0000XAFG.L,0P0000XAFG.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0000XAFH.L,0P0000XAFH.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0000XBPN.L,0P0000XBPN.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+0P0000WGSU.L,0P0000WGSU.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0000WV73.L,0P0000WV73.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0000WV7B.L,0P0000WV7B.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0000X6HK.L,0P0000X6HK.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0000XAFG.L,0P0000XAFG.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0000XAFH.L,0P0000XAFH.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0000XBPN.L,0P0000XBPN.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0000Y2N1.L,0P0000Y2N1.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 0P000127U9.L,0P000127U9.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P00012DTH.L,Legal & General UK Property Fu,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P00012DTK.L,Legal & General UK Property Fu,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+0P00012DTH.L,Legal & General UK Property Fu,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P00012DTK.L,Legal & General UK Property Fu,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 0P000135WS.L,0P000135WS.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P00013P6H.L,0P00013P6H.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P00013P6I.L,0P00013P6I.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P00013P6J.L,0P00013P6J.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P000159KA.L,0P000159KA.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P000177KL.L,0P000177KL.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P000185UE.L,0P000185UE.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+0P00013P6H.L,0P00013P6H.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P00013P6I.L,0P00013P6I.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P00013P6J.L,0P00013P6J.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P000159KA.L,0P000159KA.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P000177KL.L,0P000177KL.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P000185UE.L,0P000185UE.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 0P0001B6NW.L,BlackRock US Opportunities X G,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001BO2R.L,0P0001BO2R.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001BO2S.L,0P0001BO2S.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001CLDH.L,0P0001CLDH.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001CLDL.L,0P0001CLDL.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001CLDN.L,0P0001CLDN.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+0P0001BO2R.L,0P0001BO2R.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001BO2S.L,0P0001BO2S.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001CLDH.L,0P0001CLDH.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001CLDJ.L,0P0001CLDJ.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001CLDL.L,0P0001CLDL.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001CLDN.L,0P0001CLDN.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 0P0001D9BO.L,0P0001D9BO.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-0P0001D9BQ.L,0P0001D9BQ.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001DCZ1.L,0P0001DCZ1.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-0P0001DJUB.L,0P0001DJUB.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-0P0001DWES.L,0P0001DWES.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001H3OR.L,0P0001H3OR.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001H77I.L,0P0001H77I.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+0P0001D9BQ.L,0P0001D9BQ.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001DCZ1.L,0P0001DCZ1.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001DJUB.L,0P0001DJUB.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001DWES.L,0P0001DWES.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001H3OR.L,0P0001H3OR.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001H77I.L,0P0001H77I.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 0P0001IFVE.L,0P0001IFVE.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001M0SC.L,0P0001M0SC.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+0P0001IFVF.L,0P0001IFVF.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001M0SC.L,0P0001M0SC.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 0P0001MPBV.L,0P0001MPBV.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-0P0001O7DN.L,0P0001O7DN.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001PSW3.L,0P0001PSW3.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001QAB9.L,0P0001QAB9.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001QIEI.L,0P0001QIEI.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+0P0001O7DN.L,0P0001O7DN.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001PSW3.L,0P0001PSW3.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001QAB9.L,0P0001QAB9.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001QIEI.L,0P0001QIEI.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 0P0001QIEJ.L,0P0001QIEJ.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001QZ2Y.L,0P0001QZ2Y.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001SKTO.L,0P0001SKTO.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001TJEF.L,0P0001TJEF.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001TJEG.L,0P0001TJEG.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001TJEI.L,0P0001TJEI.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001TJEJ.L,0P0001TJEJ.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001TJEK.L,0P0001TJEK.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001WTDF.L,0P0001WTDF.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-0P0001X9JY.L,0P0001X9JY.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+0P0001QZ2Y.L,0P0001QZ2Y.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001SKTO.L,0P0001SKTO.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001TJEF.L,0P0001TJEF.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001TJEG.L,0P0001TJEG.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001TJEI.L,0P0001TJEI.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001TJEJ.L,0P0001TJEJ.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001TJEK.L,0P0001TJEK.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001WTDF.L,0P0001WTDF.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+0P0001X9JY.L,0P0001X9JY.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 0VQL.L,ISHARES GOLD EUR HEDGED (CH) IS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-0W84.L,DEKA EURO STOXX 50 (THESAURIERE,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-100D.L,MULTI UNITS LUXEMBOURG AMUNDI C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-100EUA.MI,UBS FTSE 100 UCITS ETF GBP dis,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-100H.L,MULTI UNITS LUXEMBOURG AMUNDI C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-2B78.DE,iShares IV-Healthc.Innovation R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-2B7K.DE,iShsIV-MSCI Wld.SRI UCITS ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+0W84.L,DEKA EURO STOXX 50 (THESAURIERE,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+100D.L,MULTI UNITS LUXEMBOURG AMUNDI C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+100EUA.MI,UBS FTSE 100 UCITS ETF GBP dis,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+100H.L,MULTI UNITS LUXEMBOURG AMUNDI C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+2B78.DE,iShares IV-Healthc.Innovation R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+2B7K.DE,iShsIV-MSCI Wld.SRI UCITS ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 2B7S.DE,iShs DL Treas.Bd 1-3yr U.ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-2BUL.L,WISDOMTREE COMMODITY SECURITIES,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-2NGA.L,WISDOMTREE COMMODITY SECURITIES,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-2UKL.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-2UKS.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-36BZ.DE,iShsIV-MSCI China A UCITS ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-3BAS.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+2BUL.L,WISDOMTREE COMMODITY SECURITIES,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+2NGA.L,WISDOMTREE COMMODITY SECURITIES,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+2UKL.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+2UKS.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+36BZ.DE,iShsIV-MSCI China A UCITS ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+3BAS.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 3BAS.MI,WT EURO STOXX banks 3x Daily Sh,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
-3DEL.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-3DEL.MI,WISDOMTREE DAX 3X DAILY LEVERAG,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-3DES.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-3DES.MI,WISDOMTREE DAX 3X DAILY SHORT,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-3EUL.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
+3DEL.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+3DEL.MI,WISDOMTREE DAX 3X DAILY LEVERAG,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+3DES.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+3DES.MI,WISDOMTREE DAX 3X DAILY SHORT,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+3EUL.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 3EUL.MI,WISDOMTREE EURO STOXX 50 3X DAI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-3EUS.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-3EUS.MI,WISDOMTREE EURO STOXX 50 3X DAI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+3EUS.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+3EUS.MI,WISDOMTREE EURO STOXX 50 3X DAI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 3GOL.MI,WISDOMTREE GOLD 3X DAILY LEVERA,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-3GOS.MI,WISDOMTREE GOLD 3X DAILY SHORT,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-3ITL.MI,WISDOMTREE FTSE MIB 3X DAILY LE,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-3ITS.MI,WISDOMTREE FTSE MIB 3X DAILY SH,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+3GOS.MI,WISDOMTREE GOLD 3X DAILY SHORT,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+3ITL.MI,WISDOMTREE FTSE MIB 3X DAILY LE,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+3ITS.MI,WISDOMTREE FTSE MIB 3X DAILY SH,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 3LDE.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-3LES.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-3LEU.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-3LGO.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-3SDE.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-3SUR.DE,iShsIV-MSCI USA SRI UCITS ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-3UKS.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+3LES.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+3LEU.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+3LGO.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+3SDE.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+3SUR.DE,iShsIV-MSCI USA SRI UCITS ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+3UKS.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 3USL.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-3USL.MI,WISDOMTREE S&P 500 3X DAILY LEV,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
+3USL.MI,WISDOMTREE S&P 500 3X DAILY LEV,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 3USS.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-29T12:13:39+00:00
-3USS.MI,WISDOMTREE S&P 500 3X DAILY SHO,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+3USS.MI,WISDOMTREE S&P 500 3X DAILY SHO,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 4UBQ.DE,UBS(Irl)ETF-S&P 500 SS UC.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 500E.AS,Amundi S&P 500 Swap UCITS ETF U,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-500G.L,AMUNDI INDEX SOLUTIONS AMUNDI S,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-500P.L,FRANKLIN TEMPLETON ICAV FRK SP ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+500G.L,AMUNDI INDEX SOLUTIONS AMUNDI S,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+500P.L,FRANKLIN TEMPLETON ICAV FRK SP,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 5ESG.DE,InvescoMI S&P500 ESG ETF      R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 5ESG.L,UBS (IRL) ETF PLC UBS S&P 500 S,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 5ESG.MI,Invesco S&P 500 Scored & Screen,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
@@ -115,351 +119,371 @@ ticker,name,exchange,country,region,asset_type,provider,updated_at
 5ITL.MI,WisdomTree FTSE MIB 5x Daily Le,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 5PAH.DE,Gl.X S&P 500 Ann.Tail H.U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 5TYS.MI,WISDOMTREE US TSY 10Y 5X DAILY ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-600X.AS,State Street SPDR STOXX Europe ,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-600X.MI,State Street SPDR STOXX Europe ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-6AQQ.DE,AIS-Amundi NASDAQ-100 Swap UE N,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-6PSE.DE,InvescoMI MSCI USA ETF        R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-A500.MI,Amundi S&P 500 Swap UCITS ETF E,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-AE5B.DE,MUL-Am.MSCI Europe ACTION     A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+600X.AS,State Street SPDR STOXX Europe ,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+600X.MI,State Street SPDR STOXX Europe ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+6AQQ.DE,AIS-Amundi NASDAQ-100 Swap UE N,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+6PSE.DE,InvescoMI MSCI USA ETF        R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+A500.MI,Amundi S&P 500 Swap UCITS ETF E,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+AE5B.DE,MUL-Am.MSCI Europe ACTION     A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 AHYZ.DE,AIS-A.MSCI JPN ESG BR.Tran.UE A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-AIAG.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-AIAI.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-AIAI.MI,L&G ARTIFICIAL INTELLIGENCE UCI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-AIGE.MI,WISDOMTREE ENERGY,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-ALLG.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+AIAG.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+AIAI.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+AIAI.MI,L&G ARTIFICIAL INTELLIGENCE UCI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+AIGE.MI,WISDOMTREE ENERGY,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+ALLG.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 ALLW.DE,Xtr.IEXtr.FTSE All-Wld ETF    R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-ALLW.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-ALLW.MI,Xtrackers FTSE All-World UCITS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+ALLW.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+ALLW.MI,Xtrackers FTSE All-World UCITS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 AMAP.L,HANETF ICAV SATURNA AL-K GBL FO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-AME6.DE,AIS-Amundi Stoxx Eur. 600 ESG N,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+AME6.DE,AIS-Amundi Stoxx Eur. 600 ESG N,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 AMEI.DE,AIS-Amundi MSCI EM SRI CPA UE A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-AMEQ.DE,AIS-Amundi MSCI Eu.Quality F. N,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+AMEQ.DE,AIS-Amundi MSCI Eu.Quality F. N,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 ARMY.L,HANETF ICAV FUTURE OF EU DEF SC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-ASWC.DE,HanETF-Fut.of Defence ETF     R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+ASWC.DE,HanETF-Fut.of Defence ETF     R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 AUCO.AS,L&G Gold Mining UCITS ETF,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-AUCO.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-AUCO.MI,L&G GOLD MINING UCITS ETF UCITS,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-AUCP.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-AUM5.DE,AIS-Amundi S&P 500 Swap U.ETF N,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-AW13.DE,UBS IRL ETF-MSCI Eur.CL.PA.AL.R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+AUCO.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+AUCO.MI,L&G GOLD MINING UCITS ETF UCITS,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+AUCP.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+AUM5.DE,AIS-Amundi S&P 500 Swap U.ETF N,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+AW13.DE,UBS IRL ETF-MSCI Eur.CL.PA.AL.R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 AW1C.DE,UBS IE ETF-SP500ESG ELIT.U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-AW1I.DE,UBS(Irl)ETF-Jap. Un.UCITS ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+AW1I.DE,UBS(Irl)ETF-Jap. Un.UCITS ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 AW1Q.DE,UBS(I)ETF-MSCI Jap.CL.Pa.AL.UER,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 AWEX.DE,Xtr.IEX.FTSE All-Wld ex US ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-AWEX.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-AWEX.MI,Xtrackers FTSE All-World ex US ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-BCFM.DE,UBS-Nasdaq-100 ESG enh        R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-BCFN.DE,UBS(Irl)ETF-Nasdaq-100 U.ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-BCFP.DE,UBS(Irl)ETF-Nasdaq-100 U.ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-BENE.MI,WISDOMTREE ENERGY ENHANCED,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-BERMIB.MI,Amundi FTSE MIB Dly -1X Inv UCI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
+AWEX.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+AWEX.MI,Xtrackers FTSE All-World ex US ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+BCFK.DE,UBSS-UBS S&P 500 Eq. Weight SFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+BCFM.DE,UBS-Nasdaq-100 ESG enh        R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+BCFN.DE,UBS(Irl)ETF-Nasdaq-100 U.ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+BCFP.DE,UBS(Irl)ETF-Nasdaq-100 U.ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+BENE.MI,WISDOMTREE ENERGY ENHANCED,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+BERMIB.MI,Amundi FTSE MIB Dly -1X Inv UCI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 BSX.MI,Amundi ESTOXX50 Dly -1X Inv UCI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-BULL.MI,WISDOMTREE GOLD,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+BULL.MI,WISDOMTREE GOLD,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 BXX.MI,Amundi ESTOXX50 Dly -2X Inv UCI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-BYBG.L,AMUNDI INDEX SOLUTIONS AMUNDI S,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
+BYBG.L,AMUNDI INDEX SOLUTIONS AMUNDI S,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 CAPE.L,OSSIAM LUX OSSIAM ETF SHILLER B,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
-CAPE.MI,OSSIAM SH BAR CAPE EU SECT VAL ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-CBU2.DE,iShs3-G.Agg.Bd ESG SRI U.ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+CAPE.MI,OSSIAM SH BAR CAPE EU SECT VAL ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+CBU2.DE,iShs3-G.Agg.Bd ESG SRI U.ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 CBU7.AS,iShares USD Treas Bond 3-7yr UC,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-CBU7.L,ISHARES VII PLC ISHRS USD TRSRY,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-CHINA.MI,UBS MSCI China A SF UCITS ETF U,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+CBU7.L,ISHARES VII PLC ISHRS USD TRSRY,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+CCEUAS.MI,UBS CMCI Composite SF UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+CHINA.MI,UBS MSCI China A SF UCITS ETF U,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 CHM.MI,Amundi STOXX Eu 600 Bas Mat UCI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-CHPA.L,FRANKLIN TEMPLETON ICAV FRK MSC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-CHSE.DE,UBS EURO STOXX 50 ESG         A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-CINESG.MI,UBS MSCI China Universal UCITS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
+CHPA.L,FRANKLIN TEMPLETON ICAV FRK MSC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+CHSE.DE,UBS EURO STOXX 50 ESG         A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+CINESG.MI,UBS MSCI China Universal UCITS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 CJ1.MI,Amundi MSCI Japan ESG Broad Tra,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-CJ1P.L,AMUNDI INDEX SOLUTIONS AMUNDI M,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+CJ1P.L,AMUNDI INDEX SOLUTIONS AMUNDI M,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 CLEM.MI,Amundi MSCI Emerging Markets ES,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 CMB1.L,ISHARES VII PLC ISHARES FTSE MI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-CNAA.DE,MUF-Amundi MSCI China A U.ETF A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+CNAA.DE,MUF-Amundi MSCI China A U.ETF A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 CNAA.L,MULTI UNITS FRANCE LYXOR MSCI C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 CNAA.MI,Amundi MSCI China A UCITS ETF-A,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
+CNAL.L,MULTI UNITS FRANCE LYXOR MSCI C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 CNDX.AS,iShares NASDAQ 100 UCITS ETF US,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
 CNDX.L,ISHARES VII PLC ISHRS NASDAQ 10,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
+CNEG.L,AMUNDI INDEX SOLUTIONS AMUNDI M,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 CNEU.L,AMUNDI INDEX SOLUTIONS AMUNDI M,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 CNSG.L,UBS (LUX) FUND SOLUTIONS UBS MS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-CNUA.DE,UBS FdSo-UBS MSCI C.A SF U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-CNUA.L,UBS (IRL) FUND SOLUTIONS PLC UB,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+CNUA.DE,UBS FdSo-UBS MSCI C.A SF U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+CNUA.L,UBS (IRL) FUND SOLUTIONS PLC UB,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 CNYA.AS,iShares MSCI China A UCITS ETF ,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 CNYA.L,ISHARES IV PLC ISHS MSCI CHINA ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-COME.MI,State Street SPDR Commodity EUR,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+COME.MI,State Street SPDR Commodity EUR,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 COMF.AS,L&G Longer Dated All Commoditie,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
 COMF.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 COMF.MI,L&G LONGER DATED ALL COMM UCITS,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
 CSBGU3.MI,ISHARES $ TREA 1-3YR UCITS ETF ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-CSMIB.MI,ISHARES FTSE MIB UCITS ETF EUR ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-CSPX.AS,iShares Core S&P 500 UCITS ETF ,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-CSPX.L,ISHARES VII PLC ISHRS CORE S&P ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-CSY2.DE,UBS(Irl)ETF-M.US.S.U.ETF      R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-CSY7.DE,UBS(Irl)ETF-M.W.S.U.ETF       R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+CSMIB.MI,ISHARES FTSE MIB UCITS ETF EUR ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+CSPX.AS,iShares Core S&P 500 UCITS ETF ,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+CSPX.L,ISHARES VII PLC ISHRS CORE S&P ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+CSY2.DE,UBS(Irl)ETF-M.US.S.U.ETF      R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+CSY7.DE,UBS(Irl)ETF-M.W.S.U.ETF       R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 CSYU.DE,UBS(Irl)ETF-M.U.T125 U.U.ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 CT5.L,UBS (IRL) ETF PLC UBSETF IRL SP,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-D100.DE,MUL-Amund.Core FTSE 100 S.ETF U,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-D5BK.DE,Xtr.FTSE Devel.Europ.R.Estate I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-D6RH.DE,Deka Nasdaq-100 UCITS ETF     I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-D6RI.DE,Deka S&P 500 UCITS ETF        I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-D6RP.DE,Deka MSCI Worl.C.Ch.ESG CTB UEI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+D100.DE,MUL-Amund.Core FTSE 100 S.ETF U,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+D5BK.DE,Xtr.FTSE Devel.Europ.R.Estate I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+D6RH.DE,Deka Nasdaq-100 UCITS ETF     I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+D6RI.DE,Deka S&P 500 UCITS ETF        I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+D6RP.DE,Deka MSCI Worl.C.Ch.ESG CTB UEI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 D6RQ.DE,Deka MSCI USA Cl.Ch.ctb UE    I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 D6RR.DE,Deka MSCI Euro.C.Ch.ESG CTB UEI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-DBX9.DE,Xtrackers MSCI China A U.ETF  I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-DBXI.DE,Xtrackers FTSE MIB            I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-DBXP.DE,Xtr.II Eurozone Gov.Bond 1-3  I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-DEL2.DE,L&G-L&G DAX Daily 2x Long UETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+DBPG.DE,Xtr.S&P 500 2x Lev.Daily Swap I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+DBX9.DE,Xtrackers MSCI China A U.ETF  I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+DBXI.DE,Xtrackers FTSE MIB            I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+DBXP.DE,Xtr.II Eurozone Gov.Bond 1-3  I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+DEL2.DE,L&G-L&G DAX Daily 2x Long UETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 DEL2.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-DEL2.MI,L&G DAX DAILY 2X LONG UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-DELF.DE,L&G UE-L&G MSCI Eur.Sel.U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-DES2.DE,L&G-L&G DAX Daily 2X Short    R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+DEL2.MI,L&G DAX DAILY 2X LONG UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+DELF.DE,L&G UE-L&G MSCI Eur.Sel.U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+DES2.DE,L&G-L&G DAX Daily 2X Short    R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 DES2.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 DES2.MI,L&G DAX DAILY 2X SHORT UCITS ET,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-DJAM.DE,Amundi DJ Indl Average        A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-DJE.MI,Amundi Dow Jones Industrial Ave,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-DJEL.L,LYXOR INTERNATIONAL ASSET MANAG,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-DJEU.L,LYXOR INTERNATIONAL ASSET MANAG,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+DJAM.DE,Amundi DJ Indl Average        A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+DJE.MI,Amundi Dow Jones Industrial Ave,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+DJEL.L,LYXOR INTERNATIONAL ASSET MANAG,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+DJEU.L,LYXOR INTERNATIONAL ASSET MANAG,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 DL2P.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-DOCG.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-DOCT.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-DOCT.MI,L&G Healthcare Technology & Inn,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+DOCG.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+DOCT.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+DOCT.MI,L&G Healthcare Technology & Inn,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 DRDR.L,ISHARES IV PLC ISHS HEALTHCARE ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 DS2P.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-DWLD.DE,FT-Franklin FTSE Dev.Wld ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+DWLD.DE,FT-Franklin FTSE Dev.Wld ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 DWLD.L,FRANKLIN TEMPLETON ICAV FRANKLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-DXSK.DE,Xtr.MSCI Eu.Co.Stpls          I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+DXSK.DE,Xtr.MSCI Eu.Co.Stpls          I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 DXSP.DE,Xtr.Euro Stoxx 50 Sh.Da.Swap  I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-DYLD.DE,Glbl X DAX Covered Call ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-E50ESG.MI,UBS EURO STOXX 50 ESG UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+DYLD.DE,Glbl X DAX Covered Call ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+E50ESG.MI,UBS EURO STOXX 50 ESG UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 EBUL.MI,WISDOMTREE GOLD - EUR DAILY HED,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EDFS.DE,Amu.Idx Sol-STOXX Eur.DEFENSE A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EDMW.DE,iShsIV-MSCI Wld CTB Enh.ESG UER,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+EDFS.DE,Amu.Idx Sol-STOXX Eur.DEFENSE A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EDMW.DE,iShsIV-MSCI Wld CTB Enh.ESG UER,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 EEMU.L,BNP Paribas Easy MSCI EMU Min TE UCITS ETF – EUR,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
-EEMU.MI,BNP PARIBAS EASY MSCI EMU Min T,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+EEMU.MI,BNP PARIBAS EASY MSCI EMU Min T,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 EEUR.L,Invesco MSCI Europe Universal Screened UCITS ETF,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-EEUR.MI,Invesco MSCI Europe Universal S,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EHDL.DE,InvescoMI3 FTSE EM DivLV ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EHYA.AS,iShares  High Yield Corp Bond E,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+EEUR.MI,Invesco MSCI Europe Universal S,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EHDL.DE,InvescoMI3 FTSE EM DivLV ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EHYA.AS,iShares  High Yield Corp Bond E,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 EHYA.MI,iShares  High Yield Corp Bond E,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-EL40.DE,Deka MSCI EM ESG Focus Sel.UE I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+EL40.DE,Deka MSCI EM ESG Focus Sel.UE I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 EL41.DE,Deka MSCI USA MC UCITS ETF    I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EL42.DE,Deka MSCI Europe UCITS ETF    I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-EL43.DE,Deka MSCI Europe MC UCITS ETF I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EL44.DE,Deka MSCI Japan UCITS ETF     I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EL45.DE,Deka MSCI Jap.Cl.Ch.ESG CTB UEI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EL46.DE,Deka MSCI China ex A Sh.UC.ETFI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EL4B.DE,Deka EURO STOXX 50 UCITS ETF  I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EL4F.DE,DK DAX (AUSSCHUETTEND),Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EL4I.DE,Deka MSCI USA LC UCITS ETF    I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EL4M.DE,Deka iB.EO L.Sov.D.3-5 U.ETF  I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EL4X.DE,Deka DAXplus Maximum Div.U.ETFI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+EL42.DE,Deka MSCI Europe UCITS ETF    I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EL43.DE,Deka MSCI Europe MC UCITS ETF I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EL44.DE,Deka MSCI Japan UCITS ETF     I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EL45.DE,Deka MSCI Jap.Cl.Ch.ESG CTB UEI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EL46.DE,Deka MSCI China ex A Sh.UC.ETFI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EL4B.DE,Deka EURO STOXX 50 UCITS ETF  I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EL4F.DE,DK DAX (AUSSCHUETTEND),Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EL4I.DE,Deka MSCI USA LC UCITS ETF    I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EL4M.DE,Deka iB.EO L.Sov.D.3-5 U.ETF  I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EL4X.DE,Deka DAXplus Maximum Div.U.ETFI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 EL4Z.DE,Deka MSCI USA UCITS ETF       I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-ELFA.DE,Deka EURO STOXX 50 ESG Flt.U.EI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-ELFW.DE,Deka MSCI World UCITS ETF     I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EMERG.MI,Franklin FTSE Emerging Markets ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EMGD.DE,FT-Franklin FTSE Em.Mkts ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EMGM.DE,FT-Franklin FTSE Em.Mkts ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+ELFA.DE,Deka EURO STOXX 50 ESG Flt.U.EI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+ELFW.DE,Deka MSCI World UCITS ETF     I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EMERG.MI,Franklin FTSE Emerging Markets ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EMGD.DE,FT-Franklin FTSE Em.Mkts ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EMGM.DE,FT-Franklin FTSE Em.Mkts ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 EMGM.L,FRANKLIN TEMPLETON ICAV FRANKLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-EMHD.L,INVESCO MARKETS III PLC INVESCO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EMHD.MI,INVESCO FTSE EM HI DIX LOW VOL ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EMIM.AS,iShares Core MSCI Emerging Mark,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EMIM.L,ISHARES PLC ISHARES CORE EM IMI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EMPR.L,FRANKLIN TEMPLETON ICAV FRK MSC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EMRD.L,SSGA SPDR ETFS EUROPE I PLC SPD,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EMRG.MI,State Street SPDR MSCI Emerging,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+EMHD.L,INVESCO MARKETS III PLC INVESCO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EMHD.MI,INVESCO FTSE EM HI DIX LOW VOL ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EMIM.AS,iShares Core MSCI Emerging Mark,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EMIM.L,ISHARES PLC ISHARES CORE EM IMI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EMPR.L,FRANKLIN TEMPLETON ICAV FRK MSC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EMRD.L,SSGA SPDR ETFS EUROPE I PLC SPD,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EMRG.MI,State Street SPDR MSCI Emerging,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 EMSD.L,SSGA SPDR ETFS EUROPE I PLC SPD,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 EMSM.DE,InvescoMI MSCI EM ETF         R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EMSM.L,SSGA SPDR ETFS EUROPE I PLC SS ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
+EMSM.L,SSGA SPDR ETFS EUROPE I PLC SS ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 EMSRI.MI,Amundi MSCI Emerging Markets SR,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
 EMXC.DE,MUL Amundi Emerg ex-China     U,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
-EMXC.L,MULTI UNITS LUXEMBOURG AMUNDI M,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+EMXC.L,MULTI UNITS LUXEMBOURG AMUNDI M,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 EMXC.MI,Amundi MSCI Emrgng Ex China UCI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
-ENCG.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EQQB.DE,InvescoMI3 NASDAQ100 ETF      R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+ENCG.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EQQB.DE,InvescoMI3 NASDAQ100 ETF      R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 EQQD.DE,IN.MKTS-Invesco NASD.100 Swap R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
 EQQD.L,INVESCO MARKETS PLC IVZ NASDAQ-,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-EQQQ.DE,InvescoMI3 NASDAQ100 ETF      R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EQQQ.L,INVESCO MARKETS III PLC INVESCO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+EQQQ.DE,InvescoMI3 NASDAQ100 ETF      R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EQQQ.L,INVESCO MARKETS III PLC INVESCO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 EQQQ.MI,INVESCO EQQQ NASDAQ-100 UCITS E,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-EQQS.L,INVESCO MARKETS PLC IVZ NASDAQ-,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-ES50.DE,iShs V-EUR STOXX 50 ESG U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-ESDU.L,AMUNDI INDEX SOLUTIONS AMUNDI M,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-ESEM.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-ESES.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+EQQS.L,INVESCO MARKETS PLC IVZ NASDAQ-,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+ES50.DE,iShs V-EUR STOXX 50 ESG U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+ESDU.L,AMUNDI INDEX SOLUTIONS AMUNDI M,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+ESEM.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+ESES.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 ESGE.DE,IM2-MSCI Eur.Univ.Screen.U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 ESGE.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
 ESGE.MI,Amundi MSCI Europe ESG Selectio,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-ESGJ.DE,IM2-MSCI EM Univ.Screen.U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-ESGJ.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-ESGM.DE,IM2-MSCI EM Univ.Screen.U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+ESGJ.DE,IM2-MSCI EM Univ.Screen.U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+ESGJ.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+ESGM.DE,IM2-MSCI EM Univ.Screen.U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 ESGU.DE,IM2-MSCI USA Univ.Scr.U.ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 ESGU.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
 ESGU.MI,Invesco MSCI USA Universal Scre,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
-ESGX.DE,IM2-MSCI Eur.x.UK.Univ.Sc.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+ESGW.DE,InvMI2-MSCI Wld Univ.Sreen.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+ESGW.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-07-01T10:51:24+00:00
+ESGW.MI,Invesco MSCI World Universal Sc,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-07-01T10:51:24+00:00
+ESGX.DE,IM2-MSCI Eur.x.UK.Univ.Sc.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 ESIE.DE,iSh.VI p.-iSh.MSCI Eur.Ene.Se.R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 ESIE.L,ISHARES VI PLC ISH MSCI EPE ES ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-ESIT.DE,iS.VI p.-iSh.MSCI Eu.In.Te.Se.R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
+ESIF.DE,iSh.VI p.-iSh.MSCI Eur.Fin.Se.R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+ESIF.L,ISHARES VI PLC ISH MSCI EPE FS ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-07-01T10:51:24+00:00
+ESIT.DE,iS.VI p.-iSh.MSCI Eu.In.Te.Se.R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 ESIT.L,ISHARES VI PLC ISH MSCI EPE ITS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-ESJS.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-ESPB.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-ESUD.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+ESJS.L,ESJS.L,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+ESPB.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+ESUD.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 ETFMIB.MI,Amundi FTSE MIB UCITS ETF-Dist,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EUEA.AS,iShares Core EURO STOXX 50 UCIT,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EUN0.DE,iShs VI-E.MSCI Eur.Min.Vol.U.ER,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EUN4.DE,iShs3-EO Agg.Bd ESG SRI U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EUPA.DE,Oss-SHILLER BARC.CAPE Gl.SEC.VA,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EUPA.L,FRANKLIN TEMPLETON ICAV FRK STX,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EUPA.MI,FRANKLIN STOXX600 PARIS CLIMAT ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+EUEA.AS,iShares Core EURO STOXX 50 UCIT,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EUN0.DE,iShs VI-E.MSCI Eur.Min.Vol.U.ER,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EUN4.DE,iShs3-EO Agg.Bd ESG SRI U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EUNK.DE,iShsIII-C.MSCI Eu.U.E.EUR Acc R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EUPA.DE,Oss-SHILLER BARC.CAPE Gl.SEC.VA,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EUPA.L,FRANKLIN TEMPLETON ICAV FRK STX,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EUPA.MI,FRANKLIN STOXX600 PARIS CLIMAT ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 EUPB.AS,iShares MSCI Europe Paris-Align,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
 EUPB.DE,Oss-SHILLER BARC.CAPE Gl.SEC.VA,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EURPA.MI,UBS MSCI Europe Climate Paris A,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EURSRI.MI,UBS MSCI Europe Socially Respon,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EWQA.DE,Inv.NASDAQ 100 Eq.W.Idx ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+EURPA.MI,UBS MSCI Europe Climate Paris A,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EURSRI.MI,UBS MSCI Europe Socially Respon,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EWQA.DE,Inv.NASDAQ 100 Eq.W.Idx ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 EWQX.L,INVESCO MARKETS II PLC IVZ NASD,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 EWSP.AS,iShares S&P 500 Equal Weight UC,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-EWSP.L,ISHARES III PLC ISHARES S&P 500,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+EWSP.L,ISHARES III PLC ISHARES S&P 500,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 EWSP.MI,iShares S&P 500 Equal Weight UC,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-EXCN.DE,FT-FTSE Em.ex China ETF       R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+EXCN.DE,FT-FTSE Em.ex China ETF       R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 EXCN.L,FRANKLIN TEMPLETON ICAV FRANKLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-EXCN.MI,Franklin FTSE Emerging ex China,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EXIA.DE,iShares DAX ESG UCITS ETF     I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EXS1.AS,iShares Core DAX UCITS ETF EUR ,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EXS1.DE,iShares Core DAX UCITS ETF DE I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-EXS1.MI,ISHARES CORE DAX UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-EXSA.DE,iSh.STOXX Europe 600 U.ETF DE I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EXSA.MI,ISHARES STOXX EUROPE600EUR DIS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+EXCN.MI,Franklin FTSE Emerging ex China,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EXIA.DE,iShares DAX ESG UCITS ETF     I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EXS1.AS,iShares Core DAX UCITS ETF EUR ,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EXS1.DE,iShares Core DAX UCITS ETF DE I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EXS1.MI,ISHARES CORE DAX UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EXSA.DE,iSh.STOXX Europe 600 U.ETF DE I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EXSA.MI,ISHARES STOXX EUROPE600EUR DIS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EXSG.DE,iSh.EO ST.Sel.Div.30 U.ETF DE I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 EXUS.DE,Xtr.IE-Xtr.MSCI Wld EX USA ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-EXUS.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+EXUS.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 EXUS.MI,Xtrackers MSCI World ex USA UCI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-EXV1.DE,iSh.ST.Euro.600 Banks U.ETF DEI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EXV3.DE,iSh.ST.Eu.600 Technol.U.ETF DEI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EXW1.DE,iShares Core EO STOX.50 U.E.DEI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-EXX5.DE,iSh.DJ U.S.Select Div.U.ETF DEI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+EXV1.DE,iSh.ST.Euro.600 Banks U.ETF DEI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EXV3.DE,iSh.ST.Eu.600 Technol.U.ETF DEI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EXW1.DE,iShares Core EO STOX.50 U.E.DEI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+EXX5.DE,iSh.DJ U.S.Select Div.U.ETF DEI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 EXX5.MI,ISHARES DJ US SELECT DIVIDEND U,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-EXXT.DE,iShare.NASDAQ-100 UCITS ETF DEI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-FAITH.MI,Franklin MSCI Wrld Catholic Pr ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-FD5BM.DE,Xtrackers S&P 500 Swap U.ETF  I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-FD6RH.DE,Deka Nasdaq-100 UCITS ETF     I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-FD6RI.DE,Deka S&P 500 UCITS ETF        I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+EXXT.DE,iShare.NASDAQ-100 UCITS ETF DEI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FAITH.MI,Franklin MSCI Wrld Catholic Pr ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FD5BM.DE,Xtrackers S&P 500 Swap U.ETF  I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FD6RH.DE,Deka Nasdaq-100 UCITS ETF     I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FD6RI.DE,Deka S&P 500 UCITS ETF        I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 FDEL2.DE,L&G-L&G DAX Daily 2x Long UETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
 FEL46.DE,Deka MSCI China ex A Sh.UC.ETFI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-FEPI.L,HANETF II ICAV REX TECH INN PRE,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+FEPI.L,HANETF II ICAV REX TECH INN PRE,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 FEPI.MI,Rex Tech Innovation Premium Inc,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
-FETLX.DE,L&G-L&G Gold Mining UCITS ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-FEXIA.DE,iShares DAX ESG UCITS ETF     I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+FETLX.DE,L&G-L&G Gold Mining UCITS ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FEXIA.DE,iShares DAX ESG UCITS ETF     I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 FG1CE.DE,InvescoM2 Clean Energy ETF    R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 FH4ZN.DE,HSBC S&P 500 UCITS ETF        R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-FH4ZZ.DE,HSBC EURO STOXX 50 UCITS ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-FLX5.DE,FT ICAV-Fr.S&P500 P.A.Cl.U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-FLXA.DE,FT-Em.Ma.So.De.Va.U.ETF       R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-FLXP.DE,FT ICAV-ST.Eu.600 P.A.Cl.U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+FH4ZZ.DE,HSBC EURO STOXX 50 UCITS ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FLX5.DE,FT ICAV-Fr.S&P500 P.A.Cl.U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FLXA.DE,FT-Em.Ma.So.De.Va.U.ETF       R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FLXP.DE,FT ICAV-ST.Eu.600 P.A.Cl.U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 FNADA.DE,MUL-AMUNDI MSCI Japan U.ETF   N,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-FRCJ.DE,UBS MSCI Japan Socially Resp. I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-FRCP.MI,FRANKLIN MSCI CHINA PARIS ALIG ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-FRENW.DE,L&G  ETF-L&G Clean Energy  ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-FREP.MI,FRANKLIN MSCI EMERG MKTS PARIS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+FRCJ.DE,UBS MSCI Japan Socially Resp. I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FRCP.MI,FRANKLIN MSCI CHINA PARIS ALIG ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FRENW.DE,L&G  ETF-L&G Clean Energy  ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FREP.MI,FRANKLIN MSCI EMERG MKTS PARIS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 FS6X0.DE,InvescoMI EURO STOXX 50 ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-FSCOM.DE,SPDR Commodity ETF            R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+FSC0I.DE,InvescoMI MSCI Japan ETF      R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FSCOM.DE,SPDR Commodity ETF            R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 FSEAC.DE,UBS MSCI World Soc.Res.       N,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-FTAW.AS,iShares FTSE All-World UCITS ET,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-FTAW.L,ISHARES II PLC ISHRS FTSE ALLWO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-FTS100.MI,Amundi Core FTSE 100 Swap UCITS,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-FTSS.DE,iShs II-iShs FTSE All-Wld ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-FTWD.DE,Inv.Mkt.II-FTSE All-Wld U.E.  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-FTWD.L,INVESCO MARKETS II PLC IVZ FTSE,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+FSPU.DE,Frank.Temp.S&P 500 Screen.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FTAW.AS,iShares FTSE All-World UCITS ET,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FTAW.L,ISHARES II PLC ISHRS FTSE ALLWO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FTCD.DE,FT IC.Fr.S&P 500 Cons.Disc.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FTCS.DE,FT IC.Fr.S&P 500 Comm.Serv.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FTCS.L,FIRST TRUST GLOBAL FUNDS ICAV F,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-07-01T10:51:24+00:00
+FTFN.DE,FT IC.Fr.S&P 500 Fin.ETF      R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FTS100.MI,Amundi Core FTSE 100 Swap UCITS,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FTSS.DE,iShs II-iShs FTSE All-Wld ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FTTC.DE,FT IC.Fr.S&P 500 Inf.Techn.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FTWD.DE,Inv.Mkt.II-FTSE All-Wld U.E.  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FTWD.L,INVESCO MARKETS II PLC IVZ FTSE,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 FUET1.DE,UBS MSCI USA Socially Resp.   N,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-FUET5.DE,UBS EURO STOXX 50 ESG         A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+FUET5.DE,UBS EURO STOXX 50 ESG         A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 FUIMP.DE,UBS MSCI USA Socially Resp.   N,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-FUSA.DE,Fidelity US Quality Income ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+FUSA.DE,Fidelity US Quality Income ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 FUSA.L,FIDELITY UCITS ICAV US QUALITY ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
 FUSA.MI,FIDELITY US QUALITY INCOME UCIT,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
-FVCH.DE,FT ICAV-Fr.MSCI Chn PAC U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-FVEM.DE,FT ICAV-Fr.MSCI EM PAC U.ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+FVCH.DE,FT ICAV-Fr.MSCI Chn PAC U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FVEM.DE,FT ICAV-Fr.MSCI EM PAC U.ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 FVVSM.DE,VanEck Semiconductor UC.ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-FWEA.DE,Inv.Mkt.II-FTSE All-Wld U.E.  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+FWEA.DE,Inv.Mkt.II-FTSE All-Wld U.E.  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 FWEA.MI,Invesco FTSE-All World UCITS ET,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+FWIA.DE,Inv.Mkt.II-FTSE All-Wld U.E.  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 FWRA.L,INVESCO MARKETS II PLC IVZ FTSE,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-FWRA.MI,Invesco FTSE-All World UCITS ET,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+FWRA.MI,Invesco FTSE-All World UCITS ET,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 FWRG.L,INVESCO MARKETS II PLC IVZ FTSE,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-FWSD.L,INVESCO MARKETS II PLC IVZ FTSE,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+FWSD.L,INVESCO MARKETS II PLC IVZ FTSE,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 FXDDX.DE,Xtrackers DAX ESG Screened UC I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-FZPDJ.DE,SPDR MSCI Japan UCITS ETF     R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-FZPDW.DE,SPDR MSCI Japan UCITS ETF     R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-FZSG0.DE,HANetf-Gold Miners Screened   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-G1CD.DE,InvescoM2 Clean Energy ETF    R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-G1CE.DE,InvescoM2 Clean Energy ETF    R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-G2X.DE,VanEck Gold Miners UC.ETF     R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-GLAB.L,SSGA SPDR ETFS EUROPE I PLC SS ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-GLDU.AS,Amundi Gold Miners UCITS ETF Di,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+FZPDJ.DE,SPDR MSCI Japan UCITS ETF     R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FZPDW.DE,SPDR MSCI Japan UCITS ETF     R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+FZSG0.DE,HANetf-Gold Miners Screened   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+G1CD.DE,InvescoM2 Clean Energy ETF    R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+G1CE.DE,InvescoM2 Clean Energy ETF    R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+G2X.DE,VanEck Gold Miners UC.ETF     R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+GLAB.L,SSGA SPDR ETFS EUROPE I PLC SS ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+GLDU.AS,Amundi Gold Miners UCITS ETF Di,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 GLUX.DE,AIS-Amundi Global Luxury U.ETFN,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 GLUX.MI,Amundi Global Luxury UCITS ETF ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
 GOVE.L,HANETF ICAV JUPITER GLOBAL GOV ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-29T12:13:39+00:00
-GOVE.MI,Jupiter Global Government Bond ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-GR8.L,HANETF ICAV MAKING EUROPE GREAT,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
+GOVE.MI,Jupiter Global Government Bond ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+GR8.L,HANETF ICAV MAKING EUROPE GREAT,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 H41E.DE,HSBC-HSBC M.E.Mkts Val.Scr.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-H41F.DE,HSBC-HSBC M.E.Mkts S.C.Scr.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-H4ZA.DE,HSBC EURO STOXX 50 UCITS ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+H41F.DE,HSBC-HSBC M.E.Mkts S.C.Scr.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+H4ZA.DE,HSBC EURO STOXX 50 UCITS ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 H4ZY.DE,HSBC MSCI WORLD UCITS ETF     R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
 H50A.L,HSBC ETFS PLC HSBC EURO STOXX 5,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 H50A.MI,HSBC EURO STOXX 50 UCITS ETF EU,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 H50E.L,HSBC ETFS PLC HSBC EURO STOXX 5,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-H50E.MI,HSBC EURO STOXX 50 UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-HCAA.L,HSBC ETFS PLC HSBC MSCI CHINA A,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+H50E.MI,HSBC EURO STOXX 50 UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+HCAA.L,HSBC ETFS PLC HSBC MSCI CHINA A,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 HCHS.L,HSBC ETFS PLC HSBC MSCI CHINA U,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-HDEM.L,INVESCO MARKETS III PLC INVESCO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+HDEM.L,INVESCO MARKETS III PLC INVESCO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 HEAL.AS,iShares Healthcare Innovation U,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 HEAL.L,ISHARES IV PLC ISHS HEALTHCARE ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-HEAL.MI,ISHARES HEALTHCARE INNOV UCITS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-HEMC.L,HSBC ETFS PLC HSBC MSCI EM UCIT,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-HEMV.L,HSBC ETFS PLC HSBC MSCI EM VALU,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-HESC.L,HSBC ETFS PLC HSBC MSCI EM SC S,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-HIEM.L,HSBC ETFS PLC HSBC MSCI EM ISLA,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+HEAL.MI,ISHARES HEALTHCARE INNOV UCITS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+HEMC.L,HSBC ETFS PLC HSBC MSCI EM UCIT,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+HEMV.L,HSBC ETFS PLC HSBC MSCI EM VALU,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+HESC.L,HSBC ETFS PLC HSBC MSCI EM SC S,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+HIEM.L,HSBC ETFS PLC HSBC MSCI EM ISLA,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 HIJP.L,HSBC ETFS PLC HSBC MSCI JAPAN I,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 HIPS.L,HSBC ETFS PLC HSBC MSCI EUROPE ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-HIUA.L,HSBC ETFS PLC HSBC MSCI USA ISL,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-HIWO.L,HSBC ETFS PLC HSBC MSCI WORLD I,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-HJAP.DE,HSBC ETFs-H.MSCI Jap.Cl.Pa.Al.R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+HIUA.L,HSBC ETFS PLC HSBC MSCI USA ISL,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+HIWO.L,HSBC ETFS PLC HSBC MSCI WORLD I,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+HJAP.DE,HSBC ETFs-H.MSCI Jap.Cl.Pa.Al.R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 HMCA.L,HSBC ETFS PLC HSBC MSCI CHINA A,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
 HMCA.MI,HSBC MSCI CHINA A UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-HMCH.L,HSBC ETFS PLC HSBC MSCI CHINA U,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+HMCH.L,HSBC ETFS PLC HSBC MSCI CHINA U,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 HMCH.MI,HSBC MSCI CHINA UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-HMCT.L,HSBC ETFS PLC HSBC MSCI CHINA A,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+HMCT.L,HSBC ETFS PLC HSBC MSCI CHINA A,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 HMEA.L,HSBC ETFS PLC HSBC MSCI EUROPE ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 HMEU.L,HSBC ETFS PLC HSBC MSCI EUROPE ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 HMEU.MI,HSBC MSCI EUROPE UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-HMJA.L,HSBC ETFS PLC HSBC MSCI JAPAN U,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+HMJA.L,HSBC ETFS PLC HSBC MSCI JAPAN U,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 HMJD.L,HSBC ETFS PLC HSBC MSCI JAPAN U,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 HMJD.MI,HSBC MSCI JAPAN UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-HMUD.L,HSBC ETFS PLC HSBC MSCI USA UCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-HMUS.L,HSBC ETFS PLC HSBC MSCI USA UCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+HMUD.L,HSBC ETFS PLC HSBC MSCI USA UCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+HMUS.L,HSBC ETFS PLC HSBC MSCI USA UCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 HPAE.DE,HSBC ETFs-MSCI Eur.Cl.P.Al.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-29T12:13:39+00:00
-HPAE.L,HSBC ETFS PLC HSBC MSCI EUROPE ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-HPAE.MI,HSBC MSCI EUROPE CLIMATE PARIS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-HPAS.L,HSBC ETFS PLC HSBC MSCI USA CLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
+HPAE.L,HSBC ETFS PLC HSBC MSCI EUROPE ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+HPAE.MI,HSBC MSCI EUROPE CLIMATE PARIS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+HPAS.L,HSBC ETFS PLC HSBC MSCI USA CLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 HPAU.DE,HSBC ETFs-MSCI USA Cl.P.Al.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
 HPAU.L,HSBC ETFS PLC HSBC MSCI USA CLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 HPAW.DE,HSBC ETFs-MSCI Wld Cl.P.Al.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 HPAW.L,HSBC ETFS PLC HSBC MSCI WORLD C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-HPAW.MI,HSBC MSCI WORLD CLIMATE PARIS U,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-HPEF.L,HSBC ETFS PLC HSBC MSCI EM PAB ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-HPEM.L,HSBC ETFS PLC HSBC MSCI EM PAB ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-HPJP.L,HSBC ETFS PLC HSBC MSCI JAPAN C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+HPAW.MI,HSBC MSCI WORLD CLIMATE PARIS U,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+HPEF.L,HSBC ETFS PLC HSBC MSCI EM PAB ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+HPEM.L,HSBC ETFS PLC HSBC MSCI EM PAB ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+HPJP.L,HSBC ETFS PLC HSBC MSCI JAPAN C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 HPJS.L,HSBC ETFS PLC HSBC MSCI JAPAN C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 HPUD.L,HSBC ETFS PLC HSBC MSCI USA CL ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-HSPA.L,HSBC ETFS PLC HSBC S&P 500 UCIT,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-HSPA.MI,HSBC S&P 500 UCITS ETF USD ACC,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+HSPA.L,HSBC ETFS PLC HSBC S&P 500 UCIT,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+HSPA.MI,HSBC S&P 500 UCITS ETF USD ACC,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 HSPD.L,HSBC ETFS PLC HSBC S&P 500 UCIT,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
 HSPD.MI,HSBC S&P 500 UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 HSPS.L,HSBC ETFS PLC HSBC S&P 500 UCIT,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 HUKX.L,HSBC ETFS PLC HSBC FTSE 100 UCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 HWVL.L,HSBC ETFS PLC HSBC MSCI WORLD V,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-29T12:13:39+00:00
-HWVL.MI,HSBC MSCI WORLD VALUE SCREENED ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-HWVS.L,HSBC ETFS PLC HSBC MSCI WORLD V,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-HYPE.DE,iShs III-iS.EO HY C.BD E P-A CR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IAEA.AS,iShares AEX UCITS ETF EUR (Acc),Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IAEX.AS,iShares AEX,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IAEX.L,ISHARES PLC ISHARES AEX UCITS E,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+HWVL.MI,HSBC MSCI WORLD VALUE SCREENED ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+HWVS.L,HSBC ETFS PLC HSBC MSCI WORLD V,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+HYPE.DE,iShs III-iS.EO HY C.BD E P-A CR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IAEA.AS,iShares AEX UCITS ETF EUR (Acc),Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IAEX.AS,iShares AEX,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IAEX.L,ISHARES PLC ISHARES AEX UCITS E,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 IAIX.L,INVESCO MARKETS II PLC INVESCO ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IAUP.L,ISHARES V PUBLIC LIMITED COMPAN,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IB01.L,ISHARES PLC ISH $ TR BND 0-1YR ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IBC2.DE,iShsII-$Hgh Yld Corp Bd U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IBCF.DE,iShsV-S&P500 EUR Hgd U.ETF AccR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+IAUP.L,ISHARES V PUBLIC LIMITED COMPAN,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IB01.L,ISHARES PLC ISH $ TR BND 0-1YR ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IBC2.DE,iShsII-$Hgh Yld Corp Bd U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IBCF.DE,iShsV-S&P500 EUR Hgd U.ETF AccR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 IBCG.DE,iShsV-MSCI Jap.EUR Hdg U-ETF AR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 IBCI.AS,iShares Euro Inflation Linked G,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 IBCI.DE,iShs EO Inf.Li.Gov.Bd U.ETF(D)R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
@@ -467,198 +491,205 @@ IBCI.L,ISHARES PLC ISHARES EUR I.L GOV,London Stock Exchange,London Stock Exchan
 IBCI.MI,ISHARES INFL LINKED GOVT UCITS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 IBTM.L,ISHARES II PLC ISHRS $ TREAS BO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 IBTM.MI,ISHARES $ TREASURY 7-10YR UCITS,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-IBTU.L,ISHARES PLC ISH $ TR BND 0-1YR ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
+IBTU.L,ISHARES PLC ISH $ TR BND 0-1YR ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 ICFP.DE,InvIM2-MSCI E.L.Cath.Prin.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 ICFP.MI,Invesco MSCI Europe Catholic Pr,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 ICHD.AS,iShares MSCI China UCITS ETF US,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-ICNT.DE,InvescoM2 MSCI China Tech ConnR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IDTL.L,ISHARES IV PLC ISHS $ TRSRY BD ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IEAG.AS,iShares  Aggregate Bond ESG SRI,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IEAG.MI,iShares  Aggregate Bond ESG SRI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IEMM.AS,iShares MSCI Emerging Markets U,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IESE.AS,iShares MSCI Europe SRI UCITS E,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+ICNT.DE,InvescoM2 MSCI China Tech ConnR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IDTL.L,ISHARES IV PLC ISHS $ TRSRY BD ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IEAG.AS,iShares  Aggregate Bond ESG SRI,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IEAG.MI,iShares  Aggregate Bond ESG SRI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IEMM.AS,iShares MSCI Emerging Markets U,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IESE.AS,iShares MSCI Europe SRI UCITS E,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 IESE.MI,ISHARES MSCI EUROPE SRI UCITS E,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-IEXA.DE,iShsIII-EO Cor.Bd ex-Fin.U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IGDA.L,INVESCO MARKETS II PLC IVZ DJ I,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+IEXA.DE,iShsIII-EO Cor.Bd ex-Fin.U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IGDA.L,INVESCO MARKETS II PLC IVZ DJ I,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 IGEA.L,ISHARES III PLC ISHRS EMR ASIA ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IHHG.L,ISHARES II PLC ISH $ HY CORP BO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+IHHG.L,ISHARES II PLC ISH $ HY CORP BO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IHYA.L,ISHARES II PLC IS $ HY CORPORAT,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 IJPE.AS,iShares MSCI Japan EUR Hedged U,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 IJPE.L,ISHARES V PUBLIC LIMITED COMPAN,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-IJPE.MI,ISHARES MSCI JAPAN EUR HDG UCIT,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IMAE.AS,iShares Core MSCI Europe UCITS ,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+IJPE.MI,ISHARES MSCI JAPAN EUR HDG UCIT,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IMAE.AS,iShares Core MSCI Europe UCITS ,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 IMIB.L,ISHARES II PLC ISHARES FTSE MIB,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-IMIB.MI,ISHARES FTSE MIB UCITS ETF EUR ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+IMIB.MI,ISHARES FTSE MIB UCITS ETF EUR ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 INDG.MI,Amundi STOXX Euro 600 Indus UCI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-INSU.L,INVESCO MARKETS II PLC IVZ US I,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-INSX.L,INVESCO MARKETS II PLC IVZ US I,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-INTL.L,WISDOMTREE ISSUER ICAV WT ART I,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+INSU.L,INVESCO MARKETS II PLC IVZ US I,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+INSX.L,INVESCO MARKETS II PLC IVZ US I,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+INTL.L,WISDOMTREE ISSUER ICAV WT ART I,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 IQQJ.DE,iShs MSCI Japan U.ETF USD (D) R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IQQU.DE,iShs MSCI Eur.xUK UCITS ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IS04.DE,iShsIV-DL Treas.Bd 20+yr U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-ISUS.L,ISHARES II PLC ISHRS MSCI USA I,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-ISWD.L,ISHARES II PLC ISHRS MSCI WRLD ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-ITBL.MI,WISDOMTREE FTSE MIB BANKS,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+IQQU.DE,iShs MSCI Eur.xUK UCITS ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IS04.DE,iShsIV-DL Treas.Bd 20+yr U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+ISFA.AS,iShares Core FTSE 100 UCITS ETF,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+ISUS.L,ISHARES II PLC ISHRS MSCI USA I,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+ISWD.L,ISHARES II PLC ISHRS MSCI WRLD ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+ITBL.MI,WISDOMTREE FTSE MIB BANKS,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 ITEP.L,HANETF ICAV HAN-GINS TECH MEGAT,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 IUKD.L,ISHARES PLC ISHARES UK DIVIDEND,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-IUKD.MI,ISHARES UK DIVIDEND UCITS ETF D,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IUSA.AS,iShares Core S&P 500 UCITS ETF ,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+IUKD.MI,ISHARES UK DIVIDEND UCITS ETF D,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IUSA.AS,iShares Core S&P 500 UCITS ETF ,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 IUSA.DE,iShs Core S&P 500 UC.ETF USDD R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
-IUSA.L,ISHARES PLC ISHARES S&P 500 UCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+IUSA.L,ISHARES PLC ISHARES S&P 500 UCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 IUSA.MI,ISHARESCORES&P500$(DIST) UCITS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
-IUSE.L,ISHARES V PUBLIC LIMITED COMPAN,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+IUSE.L,ISHARES V PUBLIC LIMITED COMPAN,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 IUSE.MI,ISHARES S&P 500 EUR HEDGED UCIT,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-29T12:13:39+00:00
 IUSL.DE,iShsII-DJ Glb.Leaders Scr.UETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IVAI.DE,I.M.II-Inv.Art.Int.Ena.ETF AccR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IVAI.L,INVESCO MARKETS II PLC INVESCO ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IVAI.MI,Invesco AI Enablers UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-IWDA.AS,iShares Core MSCI World UCITS E,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IWDA.L,ISHARES III PLC ISHRS CORE MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IWRD.AS,iShares MSCI World UCITS ETF (D,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IWRD.L,ISHARES PLC ISHARES MSCI WORLD ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-IWRD.MI,ISHARES MSCI WORLD UCITS ETF US,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+IVAI.DE,I.M.II-Inv.Art.Int.Ena.ETF AccR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IVAI.L,INVESCO MARKETS II PLC INVESCO ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IVAI.MI,Invesco AI Enablers UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IWDA.AS,iShares Core MSCI World UCITS E,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IWDA.L,ISHARES III PLC ISHRS CORE MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IWRD.AS,iShares MSCI World UCITS ETF (D,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IWRD.L,ISHARES PLC ISHARES MSCI WORLD ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+IWRD.MI,ISHARES MSCI WORLD UCITS ETF US,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 IWSZ.L,ISHARES IV PLC ISHS MSCI WORLD ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
 IWSZ.MI,iShares MSCI World Mid-Cap Equa,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-29T12:13:39+00:00
-JAAA.L,JANUS HENDERSON TABULA FUND JH ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+JAAA.L,JANUS HENDERSON TABULA FUND JH ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 JAGA.DE,JPM ETFs(I)-Global Aggre.Bd   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
 JAGA.L,JPMORGAN ETFS (IRELAND) ICAV JP,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
 JAGA.MI,JPM Global Agg Bd Active UCITS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-JARI.DE,AIS-Amu.MSCI Japan SRI CPAUE  A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+JARI.DE,AIS-Amu.MSCI Japan SRI CPAUE  A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 JARI.L,AMUNDI INDEX SOLUTIONS AMUNDI M,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-JEPG.L,JPMORGAN ETFS (IRELAND) ICAV JP,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-JEPG.MI,JPM Global Equity Premium Incom,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-JEPI.L,JPMORGAN ETFS (IRELAND) ICAV JP,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-JEPI.MI,JPM US Equity Premium Income Ac,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-JEPQ.L,JPMORGAN ETFS (IRELAND) ICAV JP,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-JEPQ.MI,JPM Nasdaq Equity Premium Incom,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-JGPI.DE,JPM ETFs(I)-Glbl Eq.Pr.Inc.   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+JEPG.L,JPMORGAN ETFS (IRELAND) ICAV JP,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+JEPG.MI,JPM Global Equity Premium Incom,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+JEPI.L,JPMORGAN ETFS (IRELAND) ICAV JP,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+JEPI.MI,JPM US Equity Premium Income Ac,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+JEPQ.L,JPMORGAN ETFS (IRELAND) ICAV JP,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+JEPQ.MI,JPM Nasdaq Equity Premium Incom,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+JGGI.L,JPMorgan Global Growth & Income Investment Trust,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+JGPI.DE,JPM ETFs(I)-Glbl Eq.Pr.Inc.   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 JNHD.DE,MUL-AMUNDI MSCI Japan U.ETF   N,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-JPA.MI,UBS MSCI Japan Climate Paris Al,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-JPE.MI,UBS MSCI Japan Climate Paris Al,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+JPA.MI,UBS MSCI Japan Climate Paris Al,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+JPE.MI,UBS MSCI Japan Climate Paris Al,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 JPESG.MI,UBS MSCI Japan Universal UCITS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 JPJP.L,SSGA SPDR ETFS EUROPE I PLC SS ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 JPSR.AS,UBS MSCI Japan Socially Respons,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 JPSR.L,UBS (LUX) FUND SOLUTIONS UBS MS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 JPSR.MI,UBS MSCI Japan Socially Respons,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-JPXU.L,AMUNDI INDEX SOLUTIONS AMUNDI M,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-JPXX.L,AMUNDI INDEX SOLUTIONS AMUNDI M,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
+JPXU.L,AMUNDI INDEX SOLUTIONS AMUNDI M,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+JPXX.L,AMUNDI INDEX SOLUTIONS AMUNDI M,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 JPXY.AS,Amundi MSCI Japan SRI Climate P,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
 L100.L,MULTI UNITS LUXEMBOURG AMUNDI C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-LBRT.L,WISDOMTREE COMMODITY SECURITIES,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+LBRT.L,WISDOMTREE COMMODITY SECURITIES,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 LBRT.MI,WISDOMTREE BRENT CRUDE OIL 2X D,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 LBUL.AS,WT 2x Daily Long Gold,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-LBUL.L,WISDOMTREE COMMODITY SECURITIES,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-LBUL.MI,WISDOMTREE GOLD 2X DAILY LEVERA,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-LCUJ.DE,MUL-AMUNDI MSCI Japan U.ETF   N,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-LDAP.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+LBUL.L,WISDOMTREE COMMODITY SECURITIES,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+LBUL.MI,WISDOMTREE GOLD 2X DAILY LEVERA,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+LCUJ.DE,MUL-AMUNDI MSCI Japan U.ETF   N,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+LDAP.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 LDAP.MI,L&G APAC ex-Japan Quality Divid,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-LDAX.DE,MUL Amundi DAX III            U,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-LEVMIB.MI,Amundi FTSE MIB Daily (2x) Leve,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-LOIL.L,WISDOMTREE COMMODITY SECURITIES,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+LDAX.DE,MUL Amundi DAX III            U,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+LEVMIB.MI,Amundi FTSE MIB Daily (2x) Leve,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+LOIL.L,WISDOMTREE COMMODITY SECURITIES,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 LOIL.MI,WISDOMTREE WTI CRUDE OIL 2X DAI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-LQDH.AS,iShares $ Corporate Bond Intere,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+LQDH.AS,iShares $ Corporate Bond Intere,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 LQDH.L,ISHARES PLC ISHRS $ CRP BND INT,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-LUK2.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+LUK2.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 LVO.AS,Amundi S&P 500 VIX Futures Enha,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-LVO.MI,LYXOR SP500 VIX FUT EN ROL UCIT,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-LYP6.DE,AIS-Amundi Core Stoxx Eur.600 A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+LVO.MI,LYXOR SP500 VIX FUT EN ROL UCIT,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+LYP6.DE,AIS-Amundi Core Stoxx Eur.600 A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 LYYA.DE,MUF-Amundi MSCI Wld Swap II UEA,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-MCHN.DE,InvescoM2 China AllShs St.Con.R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+MCHN.DE,InvescoM2 China AllShs St.Con.R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 MCHN.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-MCHN.MI,INVESCO MSCI CHINA ALL SHARE UC,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+MCHN.MI,INVESCO MSCI CHINA ALL SHARE UC,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 MCHT.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 MCHT.MI,INVESCO MSCI CHINA TECH ALLS UC,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-MCTS.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+MCTS.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 MIBA.MI,Amundi FTSE MIB UCITS ETF-A,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
 MIBX.L,MULTI UNITS FRANCE LYXOR FTSE M,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-MIDG.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-MIDS.DE,LG ETF-MSCI Wld Mid Cap ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+MIDG.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+MIDS.DE,LG ETF-MSCI Wld Mid Cap ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 MIDS.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-MIDS.MI,L&G MSCI World Mid Cap UCITS ET,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-MIVB.DE,AIS-AM.MSCI EUR SRI CPAUE     A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-MIVU.DE,AIS-Amun.MSCI USA Min.Vo.Fact.A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-MSEU.L,MULTI UNITS FRANCE AMUNDI EURO ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-MWOJ.DE,Amundi-MSCI USA ESG Sel.Ext.UER,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-MWOP.DE,Amu.MSCI Wld ESG Select.U.ETF I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-MXEU.L,INVESCO MARKETS PLC INVESCO MSC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
+MIDS.MI,L&G MSCI World Mid Cap UCITS ET,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+MIVB.DE,AIS-AM.MSCI EUR SRI CPAUE     A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+MIVU.DE,AIS-Amun.MSCI USA Min.Vo.Fact.A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+MSEU.L,MULTI UNITS FRANCE AMUNDI EURO ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+MWOJ.DE,Amundi-MSCI USA ESG Sel.Ext.UER,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+MWOP.DE,Amu.MSCI Wld ESG Select.U.ETF I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+MXEU.L,INVESCO MARKETS PLC INVESCO MSC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 MXFS.L,INVESCO MARKETS PLC INVESCO MSC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 MXFS.MI,INVESCO MSCI EMERGING MARKETS U,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-MXJP.L,INVESCO MARKETS PLC INVESCO MSC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+MXJP.L,INVESCO MARKETS PLC INVESCO MSC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 MXUK.DE,I.M.I IVZ MSCI EU ex-UK ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 MXUK.L,INVESCO MARKETS PLC INVESCO MSC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 MXUS.L,INVESCO MARKETS PLC INVESCO MSC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-MXUS.MI,INVESCO MSCI USA UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-MXWO.L,INVESCO MARKETS PLC INVESCO MSC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-NASQ.AS,iSh NASDAQ 100 Swap UCITS ETF U,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-NQSE.DE,iShsVII-NASDAQ 100 UCITS ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+MXUS.MI,INVESCO MSCI USA UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+MXWO.L,INVESCO MARKETS PLC INVESCO MSC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+NASQ.AS,iSh NASDAQ 100 Swap UCITS ETF U,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+NQSE.DE,iShsVII-NASDAQ 100 UCITS ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 OG35.DE,OSSIAM L.-O.EO G.Bds 3-5y C.R.I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
-OG35.MI,OSSIAM EURO GOV 3-5 CARB REDUC ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-OP5E.DE,OSSIAM L-OSSIAM MSCI JAPAN NR A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-OP6E.DE,OSSMLX-BB AS.P.exJP PABNR     A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-OSX5.L,SOURCE MARKETS PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-PABC.L,FRANKLIN TEMPLETON ICAV FRK MSC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-PABE.L,FRANKLIN TEMPLETON ICAV FRK MSC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+OG35.MI,OSSIAM EURO GOV 3-5 CARB REDUC ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+OP5E.DE,OSSIAM L-OSSIAM MSCI JAPAN NR A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+OP6E.DE,OSSMLX-BB AS.P.exJP PABNR     A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+OSX5.L,SOURCE MARKETS PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+PABC.L,FRANKLIN TEMPLETON ICAV FRK MSC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+PABE.L,FRANKLIN TEMPLETON ICAV FRK MSC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 PABX.DE,Am.ETF-MSCI W.SRI Cl.Par.Alig.B,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-PABY.DE,Am.ETF-MSCI W.SRI Cl.Par.Alig.B,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+PABY.DE,Am.ETF-MSCI W.SRI Cl.Par.Alig.B,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 PAEM.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-29T12:13:39+00:00
-PAEM.MI,INVESCO MSCI EM ESG CLIM PARIS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-PAEU.MI,INVESCO MSCI EUROP ESG CLIM PA ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-PAEX.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+PAEM.MI,INVESCO MSCI EM ESG CLIM PARIS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+PAEU.MI,INVESCO MSCI EUROP ESG CLIM PA ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+PAEX.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 PAJP.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
 PAJP.MI,INVESCO MSCI JPN ESG CLIMA PAR ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
 PAJS.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-PARI.AS,Franklin STOXX Europe 600 Paris,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-PARI.L,FRANKLIN TEMPLETON ICAV FRK STX,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+PARI.AS,Franklin STOXX Europe 600 Paris,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+PARI.L,FRANKLIN TEMPLETON ICAV FRK STX,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 PAUS.DE,IMII-MSCI US.ESG Cl.Par.Al.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 PAUS.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
 PAUS.MI,INVESCO MSCI USA ESG CLIME PAR ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
 PAWD.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 PAWD.MI,INVESCO MSCI WRLD ESG CLIM PAR ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-PAWS.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-QAIU.DE,Glbl X ETFs-ARTIF.INTELL.ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-QDVE.DE,iShsV-S&P 500 Inf.Te.Sec.U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
+PAWS.L,INVESCO MARKETS II PLC IVZ MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+QAIU.DE,Glbl X ETFs-ARTIF.INTELL.ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+QDVE.DE,iShsV-S&P 500 Inf.Te.Sec.U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 QDVX.DE,iShsII-MSCI Eur.Qu.Div.Adv.UE R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-QQQ3.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-QQQ3.MI,WISDOMTREE NASDAQ 100 3X DAILY ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-QQQA.L,UBS (IRL) ETF PLC UBS NASDAQ-10,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-QQQS.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-QQQS.MI,WISDOMTREE NASDAQ 100 3X DAILY ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-QS5L.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+QQQ3.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+QQQ3.MI,WISDOMTREE NASDAQ 100 3X DAILY ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+QQQA.L,UBS (IRL) ETF PLC UBS NASDAQ-10,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+QQQS.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+QQQS.MI,WISDOMTREE NASDAQ 100 3X DAILY ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+QS5L.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 QS5L.MI,WisdomTree NASDAQ 100 5x Daily ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-QS5S.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+QS5S.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 QYLU.L,GLOBAL X ETFS ICAV GLOBAL X NAS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-RENG.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-RENW.DE,L&G  ETF-L&G Clean Energy  ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-RENW.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+RENG.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+RENW.DE,L&G  ETF-L&G Clean Energy  ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+RENW.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 RENW.MI,L&G CLEAN ENERGY UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-RIEG.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-RIEU.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-RIEU.MI,L&G MSCI Europe Climate Pathway,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-S100.L,INVESCO MARKETS PLC INVESCO FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+RIEG.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+RIEU.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+RIEU.MI,L&G MSCI Europe Climate Pathway,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+S100.L,INVESCO MARKETS PLC INVESCO FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 S5EE.L,UBS (IRL) ETF PLC UBS S&P 500 E,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-S5SD.DE,UBS(Irl)ETF-S&P 500 SS UC.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
+S5SD.DE,UBS(Irl)ETF-S&P 500 SS UC.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 S5SD.L,UBS (IRL) ETF PLC UBS S&P 500 S,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
+S5SG.DE,UBS(Irl)ETF-S&P 500 SS UC.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 S600.L,INVESCO MARKETS PLC INVESCO STO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 S6X0.DE,InvescoMI EURO STOXX 50 ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-SADH.DE,Amu.ETF-MSCI USA ESG Sel.U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SBIN.DE,AIS-MSCI EM.ESG BROAD Trans.UEA,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+SADH.DE,Amu.ETF-MSCI USA ESG Sel.U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SBIN.DE,AIS-MSCI EM.ESG BROAD Trans.UEA,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 SBUL.AS,WT 1x Daily Short Gold,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-SBUL.MI,WISDOMTREE GOLD 1X DAILY SHORT,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SC02.DE,InvescoMI STXE600 Fin ETF     R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SC04.DE,InvescoMI STXE600 HH.G ETF    R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+SBUL.MI,WISDOMTREE GOLD 1X DAILY SHORT,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SC02.DE,InvescoMI STXE600 Fin ETF     R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SC04.DE,InvescoMI STXE600 HH.G ETF    R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 SC0E.DE,InvescoM.I MSCI Europe ETF    R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SC0R.DE,InvescoMI STXE600 Travl ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+SC0I.DE,InvescoMI MSCI Japan ETF      R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SC0R.DE,InvescoMI STXE600 Travl ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 SC0S.DE,InvescoMI STXE600 Indst ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 SC0X.DE,InvescoMI STXE600 Tech ETF    R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SCOM.DE,SPDR Commodity ETF            R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SCOM.L,State Street SPDR Commodity UCITS ETF USD Unhedge Acc,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SCOM.MI,State Street SPDR Commodity UCI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+SCOM.DE,SPDR Commodity ETF            R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SCOM.L,State Street SPDR Commodity UCITS ETF USD Unhedge Acc,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SCOM.MI,State Street SPDR Commodity UCI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 SDJ600.MI,INVESCO STOXX EUROPE 600 UCITS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-SDJE5D.MI,INVESCO EURO STOXX 50 UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SEAG.L,ISHARES III PLC ISHRES EUR AGG ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+SDJE5D.MI,INVESCO EURO STOXX 50 UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SEAG.L,ISHARES III PLC ISHRES EUR AGG ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 SGEA.L,ISHARES III PLC ISHRS EMR ASIA ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-SHYU.L,ISHARES II PLC ISHRS $ HIGH YIE,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SMEU.L,INVESCO MARKETS PLC INVESCO MSC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-SMGB.L,VANECK UCITS ETFS PLC VANECK SE,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+SHYU.L,ISHARES II PLC ISHRS $ HIGH YIE,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SMEU.L,INVESCO MARKETS PLC INVESCO MSC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SMGB.L,VANECK UCITS ETFS PLC VANECK SE,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SMH.L,VANECK UCITS ETFS PLC VANECK SE,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-07-01T10:51:24+00:00
+SMH.MI,VANECK SEMICONDUCTOR  UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 SMSJPN.MI,INVESCO MSCI JAPAN UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 SOIL.L,WISDOMTREE COMMODITY SECURITIES,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 SOIL.MI,WISDOMTREE WTI CRUDE OIL 1X DAI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
@@ -667,149 +698,155 @@ SPELE.MI,UBS S&P 500 ESG Elite UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ET
 SPESG.MI,UBS S&P 500 Scored & Screened U,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 SPEX.L,INVESCO MARKETS II PLC INVESCO ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 SPQH.DE,Gl.X ETFs ICAV-S&P 500 Q.T.H. R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-SPQH.L,GLOBAL X ETFS ICAV GX S&P 500 Q,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+SPQH.L,GLOBAL X ETFS ICAV GX S&P 500 Q,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 SPQH.MI,GLOBAL X S&P500 QUART TAIL HDG ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-SPX2S.MI,Amundi Nasdaq-100 Daily (-1x) I,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SPX5.L,SSGA SPDR ETFS EUROPE I PLC SS ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+SPX2S.MI,Amundi Nasdaq-100 Daily (-1x) I,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SPX5.L,SSGA SPDR ETFS EUROPE I PLC SS ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 SPY5.DE,SPDR S&P 500 UCITS ETF        R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 SPY5.L,SSGA SPDR ETFS EUROPE I PLC SS ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 SPY5.MI,State Street SPDR S&P 500 UCITS,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SPYJ.DE,SPDR Dow Jones Glb.Rl Est.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-SPYK.DE,St.Str.SPDR MSCI Eur.Tech.UETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+SPYJ.DE,SPDR Dow Jones Glb.Rl Est.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SPYK.DE,St.Str.SPDR MSCI Eur.Tech.UETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 SPYL.AS,State Street SPDR S&P 500 UCITS,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-SPYL.DE,SGASE1-State Street SP500 UE  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SPYL.L,SSGA SPDR ETFS EUROPE I PLC SS ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
+SPYL.DE,SGASE1-State Street SP500 UE  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SPYL.L,SSGA SPDR ETFS EUROPE I PLC SS ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 SPYM.DE,St.Str.SP.MS.Em.Mkts Ucits ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SPYN.DE,SSSPDR MSCI Europe Energy UETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SPYT.DE,St.Str.SPDR MSCI Eu.Co.Sv.UETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SPYX.DE,SPDR MSCI Emer.Mkts Sm.Cap ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-STKX.MI,State Street SPDR MSCI Europe T,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-STOR.AS,iShares Energy Storage & Hydrog,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SUK1.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SUK2.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SWDA.L,ISHARES III PLC ISHRS CORE MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SWDA.MI,ISHARES CORE MSCI WORLD UCITS E,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+SPYN.DE,SSSPDR MSCI Europe Energy UETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SPYT.DE,St.Str.SPDR MSCI Eu.Co.Sv.UETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SPYX.DE,SPDR MSCI Emer.Mkts Sm.Cap ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SRIW.L,UBS (IRL) ETF PLC UBS MSCI WORL,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+STKX.MI,State Street SPDR MSCI Europe T,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+STOR.AS,iShares Energy Storage & Hydrog,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SUK1.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SUK2.L,LEGAL & GENERAL UCITS ETF PUBLI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SWDA.L,ISHARES III PLC ISHRS CORE MSCI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SWDA.MI,ISHARES CORE MSCI WORLD UCITS E,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 SX5S.L,INVESCO MARKETS PLC INVESCO EUR,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-SXR0.DE,iShs VI-E.MSCI Wld Min.Vo.U.E.R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SXR8.DE,iShs VII-Core S&P 500 U.ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SXRS.DE,iShs VI-iShs Div.Com.SW.UC.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SXRV.DE,iShsVII-NASDAQ 100 UCITS ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SXRW.DE,iShs VII-C.FTSE 100 E.GBP     R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SXYD.L,GLOBAL X ETFS ICAV GLOBAL X STO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SY7D.DE,Gl X EUR STOXX 50 COV.CALL ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SYLD.L,GLOBAL X ETFS ICAV GLOBAL X STO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-SYLD.MI,GLOBAL X EURO STOXX 50 COVERED ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-TDIV.AS,VanEck Morningstar Developed Ma,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-TDIV.L,VANECK ETFS N.V. VANECK MORNING,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-TDIV.MI,VanEck Morningstar Developed Ma,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-TDT.AS,VanEck AEX UCITS ETF,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-TGGD.L,TABULA ICAV TAB GCC BONDS UCITS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+SXR0.DE,iShs VI-E.MSCI Wld Min.Vo.U.E.R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SXR8.DE,iShs VII-Core S&P 500 U.ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SXRS.DE,iShs VI-iShs Div.Com.SW.UC.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SXRV.DE,iShsVII-NASDAQ 100 UCITS ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SXRW.DE,iShs VII-C.FTSE 100 E.GBP     R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SXYD.L,GLOBAL X ETFS ICAV GLOBAL X STO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SY7D.DE,Gl X EUR STOXX 50 COV.CALL ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SYLD.L,GLOBAL X ETFS ICAV GLOBAL X STO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+SYLD.MI,GLOBAL X EURO STOXX 50 COVERED ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+TAGH.L,TABULA ICAV TAB ASIA HY ESG ETF,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+TDIV.AS,VanEck Morningstar Developed Ma,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+TDIV.L,VANECK ETFS N.V. VANECK MORNING,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+TDIV.MI,VanEck Morningstar Developed Ma,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+TDT.AS,VanEck AEX UCITS ETF,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+TGGD.L,TABULA ICAV TAB GCC BONDS UCITS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 U1FB.DE,UBS MSCI Japan Socially Resp. I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-UB03.L,UBS (LUX) FUND SOLUTIONS UBS FT,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
+UB03.L,UBS (LUX) FUND SOLUTIONS UBS FT,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 UC68.L,UBS (LUX) FUND SOLUTIONS UBS MS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-UET1.DE,UBS MSCI USA Socially Resp.   N,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-UET5.DE,UBS EURO STOXX 50 ESG         A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-UETC.DE,UBS(L)F.S-UBS MS.CH.UN.UC.E.  A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-UIM3.DE,UBS FTSE 100 UCITS ETF        I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+UET1.DE,UBS MSCI USA Socially Resp.   N,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+UET5.DE,UBS EURO STOXX 50 ESG         A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+UETC.DE,UBS(L)F.S-UBS MS.CH.UN.UC.E.  A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+UIM3.DE,UBS FTSE 100 UCITS ETF        I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 UIM6.DE,UBS MSCI USA UCITS ETF        I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 UIW1.DE,UBS MSCI Europe Socially Resp.A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-UIW3.DE,UBS MSCI Europe Socially Resp.A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+UIW3.DE,UBS MSCI Europe Socially Resp.A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 USCO.L,Franklin Templeton ICAV - Franklin S&P 500 Financials Ucits Etf,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 USCO.MI,State Street SPDR Bloomberg U.S,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 USPA.AS,Franklin S&P 500 Paris Aligned ,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 USPA.L,FRANKLIN TEMPLETON ICAV FRK SP ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 USPA.MI,FRANKLIN S&P500 PARIS CLIMATE U,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-USSC.L,SSGA SPDR ETFS EUROPE II PLC SS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+USSC.L,SSGA SPDR ETFS EUROPE II PLC SS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 USSMC.MI,UBS MSCI USA Small Cap Selectio,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 USVL.L,SSGA SPDR ETFS EUROPE II PLC SS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 UVAL.L,SSGA SPDR ETFS EUROPE II PLC SS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 VALW.L,SSGA SPDR ETFS EUROPE II PLC SS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 VCEU.MI,AMUNDI MSCI EU VALUE FAC UCITS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-VDEM.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-VERX.AS,Vanguard FTSE Developed Europe ,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+VDEM.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+VERX.AS,Vanguard FTSE Developed Europe ,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 VERX.DE,Vang.FTSE Dev.Eur.ex UK U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
 VERX.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
 VEUR.AS,VANGUARD FTSE Developed Europe ,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 VEUR.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 VEUR.MI,VANGUARD FTSE DEVELOPED EUROPE ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-VEVE.AS,Vanguard FTSE Developed World U,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-VEVE.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-VEVE.MI,VANGUARD FTSE DEVELOPED WORLD U,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-VFEA.DE,Vanguard FTSE Em.Markets U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-VFEA.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-VFEA.MI,Vanguard Ftse Emerg Markets Uci,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+VEVE.AS,Vanguard FTSE Developed World U,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+VEVE.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+VEVE.MI,VANGUARD FTSE DEVELOPED WORLD U,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+VFEA.DE,Vanguard FTSE Em.Markets U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+VFEA.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+VFEA.MI,Vanguard Ftse Emerg Markets Uci,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 VFEG.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-VGVF.DE,Vang.FTSE Develop.World U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-VGWL.DE,Vanguard FTSE All-World U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+VGEU.DE,Vanguard FTSE Dev.Europe U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+VGVF.DE,Vang.FTSE Develop.World U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+VGWL.DE,Vanguard FTSE All-World U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 VHVG.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-VHYA.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+VHYA.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 VHYA.MI,Vanguard FTSE All-World High Di,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
-VHYL.AS,VANGUARD FTSE All-World High Di,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+VHYL.AS,VANGUARD FTSE All-World High Di,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 VHYL.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-VHYL.MI,VANGUARD FTSE ALLWLD HIDIV YLD ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-VILX.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+VHYL.MI,VANGUARD FTSE ALLWLD HIDIV YLD ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+VILX.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 VIXL.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-VIXL.MI,WISDOMTREE S&P 500 VIX 2.25X DA,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-VUAA.DE,Vanguard S&P 500 UCITS ETF    R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-VUAA.L,VANGUARD FUNDS PLC VANGUARD S&P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-VUAA.MI,VANGUARD S&P 500 UCITS ETF ACC,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-VUKE.DE,Vanguard FTSE 100 UCITS ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
+VIXL.MI,WISDOMTREE S&P 500 VIX 2.25X DA,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+VUAA.DE,Vanguard S&P 500 UCITS ETF    R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+VUAA.L,VANGUARD FUNDS PLC VANGUARD S&P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+VUAA.MI,VANGUARD S&P 500 UCITS ETF ACC,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+VUKE.DE,Vanguard FTSE 100 UCITS ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 VUKE.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-VUKE.MI,VANGUARD FTSE 100 UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-VUKG.DE,Vanguard FTSE 100 UCITS ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+VUKE.MI,VANGUARD FTSE 100 UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+VUKG.DE,Vanguard FTSE 100 UCITS ETF   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 VUKG.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-VUSA.AS,Vanguard S&P 500 UCITS ETF,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+VUSA.AS,Vanguard S&P 500 UCITS ETF,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 VUSA.DE,Vanguard S&P 500 UCITS ETF,Germany/Xetra,Germany,Europe,ETF/Fund,manual_seed,
-VUSA.L,VANGUARD FUNDS PLC VANGUARD S&P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+VUSA.L,VANGUARD FUNDS PLC VANGUARD S&P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 VUSA.MI,VANGUARD S&P 500 UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 VWCE.AS,Vanguard Ftse All-World Ucits E,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-VWCE.DE,Vanguard FTSE All-World U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-VWCE.MI,Vanguard Ftse All-World Ucits E,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+VWCE.DE,Vanguard FTSE All-World U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+VWCE.MI,Vanguard Ftse All-World Ucits E,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 VWCG.AS,Vanguard FTSE Developed Europe ,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
 VWCG.DE,Vanguard FTSE Dev.Europe U.ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 VWCG.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
 VWCG.MI,VANGUARD FTSE DEVELOP EUROPE UC,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
-VWRA.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-VWRL.AS,Vanguard FTSE All-World UCITS E,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-VWRL.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-VWRL.MI,Vanguard FTSE All-World UCITS E,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-WCMS.AS,iShares MSCI World Communicatio,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+VWRA.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+VWRL.AS,Vanguard FTSE All-World UCITS E,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+VWRL.L,VANGUARD FUNDS PLC VANGUARD FTS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+VWRL.MI,Vanguard FTSE All-World UCITS E,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+WCMS.AS,iShares MSCI World Communicatio,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 WENS.AS,iShares MSCI World Energy Secto,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 WENS.L,ISHARES V PUBLIC LIMITED COMPAN,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 WENT.L,WISDOMTREE MULTI ASSET ISSUER P,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-WENT.MI,WISDOMTREE ENERGY TRANSITION ME,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+WENT.MI,WISDOMTREE ENERGY TRANSITION ME,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 WFIN.AS,State Street SPDR MSCI World Fi,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 WFIN.L,SSGA SPDR ETFS EUROPE II PLC SS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 WFIN.MI,State Street SPDR MSCI World Fi,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-WGDP.DE,Am.ETF IC.-A.FT.AW GDP-WEI.ETFB,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+WGDP.DE,Am.ETF IC.-A.FT.AW GDP-WEI.ETFB,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 WMGG.L,WISDOMTREE ISSUER ICAV WISDOMTR,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-WMIB.MI,WISDOMTREE FTSE MIB,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-WORLD.MI,Franklin FTSE Developed World U,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+WMIB.MI,WISDOMTREE FTSE MIB,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+WORLD.MI,Franklin FTSE Developed World U,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+WS5X.MI,WISDOMTREE EURO STOXX 50,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 WSPX.MI,WISDOMTREE S&P 500,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
 WSREUA.MI,UBS MSCI World Socially Respons,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-WSRUS.MI,UBS MSCI World Socially Respons,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-WTAI.L,WISDOMTREE ISSUER ICAV WISDOMTR,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-WTAI.MI,WISDOMTREE ARTIF INTEL UCITS ET,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+WSRUS.MI,UBS MSCI World Socially Respons,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+WTAI.L,WISDOMTREE ISSUER ICAV WISDOMTR,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+WTAI.MI,WISDOMTREE ARTIF INTEL UCITS ET,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 WTEF.DE,WisdomTree-US Efficient Core  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
-WTEF.L,WISDOMTREE ISSUER ICAV WISDOMTR,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-WTEL.AS,State Street SPDR MSCI World Co,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+WTEF.L,WISDOMTREE ISSUER ICAV WISDOMTR,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+WTEL.AS,State Street SPDR MSCI World Co,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 WTEL.L,SSGA SPDR ETFS EUROPE II PLC SS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
 WTEL.MI,State Street SPDR MSCI World Co,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
-WTI2.DE,WisdomTree Artif.Intel..U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+WTI2.DE,WisdomTree Artif.Intel..U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 WTI2.L,LEVERAGE SHARES PUBLIC LIMITED ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 WUTI.AS,State Street SPDR MSCI World Ut,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
 WUTI.L,SSGA SPDR ETFS EUROPE II PLC SS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 WUTI.MI,State Street SPDR MSCI World Ut,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 WVAL.AS,State Street SPDR MSCI World Va,Euronext Amsterdam,Euronext Amsterdam,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-WVAL.L,SSGA SPDR ETFS EUROPE II PLC SS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XAD6.MI,XTRACKERS PHYSICAL SILVER ETC (,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XAIX.DE,Xtr.(IE)-Art.Int.+Big Data ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XAIX.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XAIX.MI,XTRACKERS ART INTEL & BIG DATA ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XAM0.DE,Am.ETF-MSCI W.SRI Cl.Par.Alig.B,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XBHE.DE,L&G-Cor.Bd ex-Ban.Hig.Rat.0-2YR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+WVAL.L,SSGA SPDR ETFS EUROPE II PLC SS,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+X7PS.L,INVESCO MARKETS PLC INVESCO STO,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-07-01T10:51:24+00:00
+X7PS.MI,INVESCO STX EUR 600 OPTIM BANK ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XAD6.MI,XTRACKERS PHYSICAL SILVER ETC (,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XAIX.DE,Xtr.(IE)-Art.Int.+Big Data ETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XAIX.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XAIX.MI,XTRACKERS ART INTEL & BIG DATA ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XAM0.DE,Am.ETF-MSCI W.SRI Cl.Par.Alig.B,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XBHE.DE,L&G-Cor.Bd ex-Ban.Hig.Rat.0-2YR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XBHE.MI,L&G Corporate Bond ex-Banks Hig,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-XBRMIB.MI,Amundi FTSE MIB Dly -2X Inv UCI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XBRMIB.MI,Amundi FTSE MIB Dly -2X Inv UCI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XCNA.DE,Xtr.MSCI China A Screened SwapA,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
 XCNA.L,XTRACKERS X MSCI CHINA A ESG SC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
 XCNA.MI,Xtrackers MSCI China A Screened,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
@@ -823,30 +860,37 @@ XDAX.L,XTRACKERS X DAX,London Stock Exchange,London Stock Exchange,Europe,ETF/Fu
 XDAX.MI,XTRACKERS DAX UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 XDDX.DE,Xtrackers DAX ESG Screened UC I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 XDDX.L,XTRACKERS X DAX ESG SCREENED UC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-XDER.L,XTRACKERS X FTSE EUROPE REAL ES,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XDER.MI,XTRACKERS FTSE DEV EU REAL EST ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XDPU.DE,Xtr.(IE) - S+P 500            R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
+XDEG.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XDER.L,XTRACKERS X FTSE EUROPE REAL ES,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XDER.MI,XTRACKERS FTSE DEV EU REAL EST ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XDPU.DE,Xtr.(IE) - S+P 500            R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XDPU.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
 XDPU.MI,XTRACKERS S&P500 UCITS ETF A,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 XDUK.DE,Xtrackers FTSE 100            I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 XDUK.L,XTRACKERS X FTSE 100,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 XDW0.DE,Xtr.(IE) - MSCI World Energy  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 XDW0.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-XDW0.MI,XTRACKERS MSCI WORLD ENERGY UCI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XDW0.MI,XTRACKERS MSCI WORLD ENERGY UCI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XDWD.DE,Xtr.(IE) - MSCI World         R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XDWD.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-07-01T10:51:24+00:00
+XDWD.MI,XTRACKERS MSCI WORLD UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-07-01T10:51:24+00:00
 XDWH.DE,Xtr.(IE)-MSCI Wrld Health CareR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 XDWH.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 XDWH.MI,XTRACKERS MSCI WORLD HEAL CARE ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 XDWM.DE,Xtr.(IE)-MSCI World Materials R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 XDWM.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-XDWM.MI,XTRACKERS MSCI WORLD MATERIALS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XDWM.MI,XTRACKERS MSCI WORLD MATERIALS ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XDWS.DE,Xtr.(IE)-MSCI Wrld Con.StaplesR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
 XDWS.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
-XDWS.MI,XTRACKERS MSCI WORLD CONS STAP ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XDWS.MI,XTRACKERS MSCI WORLD CONS STAP ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XDWT.DE,Xtr.(IE)-MSCI Wo.Inform.Techn.R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-07-01T10:51:24+00:00
+XDWT.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-07-01T10:51:24+00:00
+XDWT.MI,XTRACKERS MSCI WORLD INFOR TEC ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XEMC.DE,XtrIE)MSCI EM Clim.Trans.ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 XEMC.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
 XEMD.DE,Xtr.(IE)-MSCI Emerging MarketsR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 XEMD.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-XEML.DE,XtrackersII-JPM EM LGB UC.ETF A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XEML.DE,XtrackersII-JPM EM LGB UC.ETF A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XEML.L,XTRACKERS II X JPM EM LOCAL GOV,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
 XEML.MI,Xtrackers JPM EM Local Gover UC,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
 XEMP.L,XTRACKERS II X JPM EM LOCAL GOV,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
@@ -858,82 +902,82 @@ XESX.L,XTRACKERS X EURO STOXX 50 1D,London Stock Exchange,London Stock Exchange,
 XESX.MI,XTRACKERS EURO STOXX 50 UCITS E,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 XLEP.L,INVESCO MARKETS PLC INVESCO ENE,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
 XLES.L,INVESCO MARKETS PLC INVESCO ENE,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XLES.MI,INVESCO ENERGY S&P US SEL SECT ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XLFQ.L,INVESCO MARKETS PLC INVESCO FIN,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XLFS.L,INVESCO MARKETS PLC INVESCO FIN,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XLFS.MI,INVESCO FINANCS S&P US SEL SEC ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XLES.MI,INVESCO ENERGY S&P US SEL SECT ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XLFQ.L,INVESCO MARKETS PLC INVESCO FIN,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XLFS.L,INVESCO MARKETS PLC INVESCO FIN,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XLFS.MI,INVESCO FINANCS S&P US SEL SEC ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XLKQ.L,INVESCO MARKETS PLC INVESCO TEC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 XLKS.L,INVESCO MARKETS PLC INVESCO TEC,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XLKS.MI,INVESCO TECHNO S&P US SEL SEC U,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XLUP.L,INVESCO MARKETS PLC INVESCO UTI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XLUS.L,INVESCO MARKETS PLC INVESCO UTI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XLUS.MI,INVESCO UTIL S&P US SEL SEC UCI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XLKS.MI,INVESCO TECHNO S&P US SEL SEC U,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XLUP.L,INVESCO MARKETS PLC INVESCO UTI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XLUS.L,INVESCO MARKETS PLC INVESCO UTI,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XLUS.MI,INVESCO UTIL S&P US SEL SEC UCI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XMCM.DE,Xtrackers MSCI Emerg.Mkts SwapA,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XMCM.L,XTRACKERS XTRACKERS MSCI EM SWA,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XMCM.L,XTRACKERS XTRACKERS MSCI EM SWA,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XMEM.DE,Xtrackers MSCI Emerg.Mkts SwapI,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-29T12:13:39+00:00
 XMEM.L,XTRACKERS X MSCI EMERGING MARKE,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-29T12:13:39+00:00
 XMEM.MI,XTRACKERS MSCI EMERG MKTS SWAP ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-XMIB.MI,XTRACKERS FTSE MIB UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XMJD.L,XTRACKERS X MSCI JAPAN,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XMJP.L,XTRACKERS X MSCI JAPAN,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XMIB.MI,XTRACKERS FTSE MIB UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XMJD.L,XTRACKERS X MSCI JAPAN,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XMJP.L,XTRACKERS X MSCI JAPAN,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XMJP.MI,XTRACKERS MSCI JAPAN UCITS ETF ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-XMLD.DE,L&G-L&G Art.Intell.UCITS ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XMLD.DE,L&G-L&G Art.Intell.UCITS ETF  R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XMLD.L,XTRACKERS XMLD X MSCI EM LATAM ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-XMLH.DE,L&G Health.Tech.& Innov.U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XMLH.DE,L&G Health.Tech.& Innov.U.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XMMD.L,XTRACKERS X MSCI EMERGING MARKE,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 XMME.DE,Xtr.(IE)-MSCI Emerging MarketsR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
 XMME.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-XMME.MI,XTRACKERS MSCI EMERG MARKETS UC,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XMME.MI,XTRACKERS MSCI EMERG MARKETS UC,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XMMS.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 XMUJ.L,XTRACKERS X MSCI JAPAN USD,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 XMWX.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-XNAQ.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XNAS.DE,Xtr.IE)Xtr.NASDAQ 100 ETF     R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XNAS.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XNAS.MI,XTRACKERS NASDAQ 100 UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XREA.DE,Xtr.(IE)-FTSE D.Eur.xUK R.Est.R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-XRMU.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XNAQ.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XNAS.DE,Xtr.IE)Xtr.NASDAQ 100 ETF     R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XNAS.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XNAS.MI,XTRACKERS NASDAQ 100 UCITS ETF,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XREA.DE,Xtr.(IE)-FTSE D.Eur.xUK R.Est.R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XRMU.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XS6R.DE,Xtr.MSCI Europe Utilities U.E.I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 XS6R.L,XTRACKERS X MSCI EU UTILITIES E,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 XSPR.L,XTRACKERS X MSCI EU MATERIALS E,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 XSPS.L,XTRACKERS X S&P500 INVERSE DAIL,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-XSPS.MI,XTRACKERS S&P500 INV DAY SWAP U,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XSSX.L,XTRACKERS X EURO STOXX 50 SHORT,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
+XSPS.MI,XTRACKERS S&P500 INV DAY SWAP U,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XSSX.L,XTRACKERS X EURO STOXX 50 SHORT,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XSSX.MI,XTRACK EUSTX 50 SHT DAILY SWAP ,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XSX6.DE,Xtrackers Stoxx Europe 600    I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XSX6.DE,Xtrackers Stoxx Europe 600    I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XSX6.L,XTRACKERS X STOXX EUROPE 600,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
 XSX6.MI,XTRACKERS STOXX EUROPE 600 UCIT,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:20:30+00:00
-XSX7.DE,Xtrackers Stoxx Europe 600    A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XSX7.DE,Xtrackers Stoxx Europe 600    A,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XSXE.DE,Xtrackers Stoxx Europe 600    I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XUCM.DE,Xtr.IE-Xtr.MS.US Com.Serv.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XUCM.DE,Xtr.IE-Xtr.MS.US Com.Serv.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XUCM.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-XUKS.DE,Xtr.FTSE 100 Short Daily Swap I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XUKS.DE,Xtr.FTSE 100 Short Daily Swap I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XUKS.L,XTRACKERS X FTSE100 SHORT DAILY,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 XUKX.DE,Xtrackers FTSE 100 Income     I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
 XUKX.L,XTRACKERS X FTSE 100 INCOME,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-28T17:24:25+00:00
-XWBS.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XWCS.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XWBS.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+XWCS.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XWEM.DE,Xtr-MSCI Wld Mo.ESG ETF       R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
 XWEM.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 XX25.L,XTRACKERS XTRACKERS MSCI CHINA ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-XX25.MI,Xtrackers MSCI China A UCITS ET,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XX25.MI,Xtrackers MSCI China A UCITS ET,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XX2D.L,XTRACKERS XTRACKERS MSCI CHINA ,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-XXSC.DE,Xtr.MSCI Europe Small Cap     I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XXSC.DE,Xtr.MSCI Europe Small Cap     I,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XXSC.L,XTRACKERS X MSCI EUROPE SMALL C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 XXSC.MI,XTRACKERS MSCI EU SMALLCAP UCIT,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-XZDE.DE,Xtr.IE-MSCI Eur.Hgh Di.Yld ESGR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+XZDE.DE,Xtr.IE-MSCI Eur.Hgh Di.Yld ESGR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XZEM.DE,Xtr.(IE)-MSCI Em.Mkts ESG U.E.R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
 XZEM.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-30T10:42:21+00:00
 XZEM.MI,XTRACKERS MSCI EMERGING ESG UCI,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
 XZMU.DE,Xtr.(IE)-MSCI USA ESG UCI.ETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
-XZMU.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
+XZMU.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
 XZMU.MI,XTRACKERS MSCI USA ESG UCITS ET,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 XZSP.DE,Xtr.IE)Xtr.S&P500 Sc.&Scr.UETFR,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 XZSP.L,"XZSP.L,0P0001Q6CW,0",London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_variant,2026-06-28T17:24:25+00:00
 XZSP.MI,Xtrackers S&P 500 Scored & Scre,Borsa Italiana,Borsa Italiana,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
 XZSS.L,XTRACKERS (IE) PUBLIC LIMITED C,London Stock Exchange,London Stock Exchange,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
 ZPDJ.DE,SPDR MSCI Japan UCITS ETF     R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-ZPDW.DE,SPDR MSCI Japan UCITS ETF     R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-ZPDX.DE,SSSEE2-St.S.E 600SRI U.ETF    R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
-ZPRU.DE,St.Str.SPDR MSCI USA Val.UETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-29T12:13:39+00:00
-ZSG0.DE,HANetf-Gold Miners Screened   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-06-30T10:42:21+00:00
+ZPDW.DE,SPDR MSCI Japan UCITS ETF     R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+ZPDX.DE,SSSEE2-St.S.E 600SRI U.ETF    R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+ZPRU.DE,St.Str.SPDR MSCI USA Val.UETF R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00
+ZSG0.DE,HANetf-Gold Miners Screened   R,Germany/Xetra,Germany/Xetra,Europe,ETF/Fund,yahoo_search,2026-07-01T10:51:24+00:00

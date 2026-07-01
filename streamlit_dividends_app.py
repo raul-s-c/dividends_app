@@ -67,13 +67,17 @@ def load_universe() -> pd.DataFrame:
     if EUROPE_UNIVERSE_CSV.exists():
         europe = pd.read_csv(EUROPE_UNIVERSE_CSV).fillna("")
         europe = europe.rename(columns={"country": "state"})
-        europe["sector"] = ""
+        if "sector" not in europe.columns:
+            europe["sector"] = ""
         europe["market_region"] = "Europa"
         frames.append(europe)
     if not frames:
-        return pd.DataFrame(columns=["ticker", "name", "exchange", "sector", "state", "asset_type", "market_region"])
+        return pd.DataFrame(columns=["ticker", "isin", "name", "exchange", "sector", "state", "asset_type", "market_region"])
     universe = pd.concat(frames, ignore_index=True, sort=False).fillna("")
     universe["ticker"] = universe["ticker"].astype(str).str.upper().str.strip()
+    if "isin" not in universe.columns:
+        universe["isin"] = ""
+    universe["isin"] = universe["isin"].astype(str).str.upper().str.strip()
     universe["ticker_base"] = universe["ticker"].str.split(".").str[0]
     return universe.drop_duplicates(["ticker"], keep="first")
 
@@ -181,11 +185,11 @@ def enrich_events(events_df: pd.DataFrame, universe_df: pd.DataFrame) -> pd.Data
     if events_df.empty:
         return events_df
     enriched = events_df.copy()
-    for col in ["ticker", "company_name", "exchange", "sector", "asset_type", "state", "pay_date"]:
+    for col in ["ticker", "isin", "company_name", "exchange", "sector", "asset_type", "state", "pay_date"]:
         if col not in enriched.columns:
             enriched[col] = ""
     if not universe_df.empty:
-        meta_cols = ["ticker", "name", "exchange", "sector", "asset_type", "state", "market_region"]
+        meta_cols = ["ticker", "isin", "name", "exchange", "sector", "asset_type", "state", "market_region"]
         meta = universe_df[[c for c in meta_cols if c in universe_df.columns]].drop_duplicates("ticker")
         enriched = enriched.merge(meta, on="ticker", how="left", suffixes=("", "_universe"))
         enriched["company_name"] = enriched["company_name"].replace("", pd.NA).fillna(enriched.get("name", ""))
@@ -259,6 +263,7 @@ def search_universe(universe_df: pd.DataFrame, query: str) -> pd.DataFrame:
     return universe_df[
         universe_df["ticker"].astype(str).str.upper().str.contains(q, regex=False)
         | universe_df["ticker_base"].astype(str).str.upper().str.contains(q, regex=False)
+        | universe_df.get("isin", pd.Series("", index=universe_df.index)).astype(str).str.upper().str.contains(q, regex=False)
         | universe_df["name"].astype(str).str.upper().str.contains(q, regex=False)
     ].copy()
 
@@ -476,6 +481,13 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
     text_filter = st.text_input("Filtrar calendario", "", placeholder="Ticker o nombre", key="global_calendar_text")
 
     monthly_view = calendar[calendar["ex_dividend_date"].dt.to_period("M").astype(str) == selected_month].copy()
+    day_options = ["Todos"] + [
+        str(day)
+        for day in sorted(monthly_view["ex_dividend_date"].dt.date.dropna().unique().tolist())
+    ]
+    selected_day = st.selectbox("Dia", day_options, key="global_calendar_day")
+    if selected_day != "Todos":
+        monthly_view = monthly_view[monthly_view["ex_dividend_date"].dt.date.astype(str) == selected_day]
     if selected_region != "Todos":
         monthly_view = monthly_view[monthly_view["market_region"] == selected_region]
     if selected_type != "Todos":
@@ -497,7 +509,7 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
             matches = search_universe(universe_df, text_filter)
             if not matches.empty:
                 st.info("No hay eventos en este mes para esos filtros, pero estos instrumentos existen en el universo.")
-                show = matches[["ticker", "name", "exchange", "asset_type", "market_region"]].head(50).reset_index(drop=True)
+                show = matches[["ticker", "isin", "name", "exchange", "asset_type", "market_region"]].head(50).reset_index(drop=True)
                 clicked = selectable_ticker_table(show, "global_calendar_instrument_matches", use_container_width=True, hide_index=True)
                 if clicked:
                     return clicked
@@ -513,6 +525,7 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
         "ex_date",
         "payment_day",
         "ticker",
+        "isin",
         "company_name",
         "cash_amount",
         "currency",
@@ -568,6 +581,7 @@ def render_instrument_detail(ticker: str, universe_df: pd.DataFrame, events_df: 
 
     meta = {
         "Ticker": ticker,
+        "ISIN": info.get("isin") or "",
         "Nombre": name,
         "Exchange": info.get("exchange") or profile.get("exchange") or "",
         "Sector": sector,
@@ -577,6 +591,7 @@ def render_instrument_detail(ticker: str, universe_df: pd.DataFrame, events_df: 
         "Entidad": profile.get("entity_type") or "",
         "Anios SEC": f"{profile.get('min_year', '')}-{profile.get('max_year', '')}".strip("-"),
         "Fuente universo": info.get("provider") or "",
+        "Fuente perfil": info.get("profile_provider") or "",
     }
     st.dataframe(
         pd.DataFrame([meta]).replace("", "-"),
@@ -921,7 +936,7 @@ with tab_calendar:
             st.warning("No encuentro instrumentos en el universo local con ese texto.")
         else:
             st.markdown("**Instrumentos encontrados**")
-            instrument_cols = ["ticker", "name", "exchange", "asset_type", "market_region"]
+            instrument_cols = ["ticker", "isin", "name", "exchange", "asset_type", "market_region"]
             instrument_view = matched_instruments[instrument_cols].head(100).reset_index(drop=True)
             clicked = selectable_ticker_table(
                 instrument_view,
@@ -960,6 +975,7 @@ with tab_calendar:
         show_cols = [
             "ex_dividend_date",
             "ticker",
+            "isin",
             "company_name",
             "asset_type",
             "exchange",

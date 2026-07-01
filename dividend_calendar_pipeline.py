@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import concurrent.futures
 import csv
+import re
 import json
 import random
 import sqlite3
@@ -48,6 +49,13 @@ EUROPE_YAHOO_SUFFIXES = {
     ".MI": "Borsa Italiana",
     ".AS": "Euronext Amsterdam",
 }
+EUROPE_FT_MARKETS = {
+    ".DE": ("GER:EUR",),
+    ".L": ("LSE:GBP", "LSE:GBX"),
+    ".MI": ("MIL:EUR",),
+    ".AS": ("AEX:EUR", "AMS:EUR"),
+}
+ISIN_RE = re.compile(r"<th>ISIN</th><td>([A-Z]{2}[A-Z0-9]{10})</td>")
 EUROPE_ETF_SEARCH_SEEDS = (
     "JGPI", "JEPG", "JEPI", "JEPQ",
     "VUSA", "VUAA", "VWRL", "VWCE", "VHYL", "VEVE", "VFEA",
@@ -641,6 +649,30 @@ def fetch_yahoo_exact_europe_etf(symbol: str, updated_at: str) -> Company | None
     return None
 
 
+def ft_profile_candidates(ticker: str) -> list[str]:
+    clean = normalize_ticker(ticker)
+    for suffix, markets in EUROPE_FT_MARKETS.items():
+        if clean.endswith(suffix):
+            base = clean[: -len(suffix)]
+            return [f"https://markets.ft.com/data/etfs/tearsheet/summary?s={base}:{market}" for market in markets]
+    return []
+
+
+def fetch_ft_etf_profile(ticker: str) -> dict:
+    for url in ft_profile_candidates(ticker):
+        try:
+            with urlopen(Request(url, headers=HTTP_HEADERS), timeout=REQ_TIMEOUT) as response:
+                if response.status != 200:
+                    continue
+                html = response.read().decode("utf-8", errors="ignore")
+        except Exception:
+            continue
+        match = ISIN_RE.search(html)
+        if match:
+            return {"isin": match.group(1), "profile_url": url, "profile_provider": "markets_ft"}
+    return {}
+
+
 def read_europe_etf_universe() -> list[Company]:
     if not EUROPE_ETF_CSV.exists():
         return []
@@ -681,10 +713,14 @@ def update_europe_etf_universe(workers: int = 4, seeds: Iterable[str] = EUROPE_E
                         "region": row.get("region") or "Europe",
                         "asset_type": row.get("asset_type") or "ETF/Fund",
                         "provider": row.get("provider") or "manual",
+                        "isin": row.get("isin") or "",
+                        "profile_url": row.get("profile_url") or "",
+                        "profile_provider": row.get("profile_provider") or "",
                         "updated_at": row.get("updated_at") or "",
                     }
 
     def upsert(company: Company, provider: str) -> None:
+        previous = existing.get(company.ticker, {})
         existing[company.ticker] = {
             "ticker": company.ticker,
             "name": company.name,
@@ -693,6 +729,9 @@ def update_europe_etf_universe(workers: int = 4, seeds: Iterable[str] = EUROPE_E
             "region": "Europe",
             "asset_type": "ETF/Fund",
             "provider": provider,
+            "isin": previous.get("isin", ""),
+            "profile_url": previous.get("profile_url", ""),
+            "profile_provider": previous.get("profile_provider", ""),
             "updated_at": updated_at,
         }
 
@@ -777,7 +816,41 @@ def update_europe_etf_universe(workers: int = 4, seeds: Iterable[str] = EUROPE_E
             upsert(company, "yahoo_variant")
             variants_loaded += 1
 
-    fields = ["ticker", "name", "exchange", "country", "region", "asset_type", "provider", "updated_at"]
+    missing_profile = sorted([ticker for ticker, row in existing.items() if not row.get("isin")])
+    profiles_loaded = 0
+    print(f"Europe ETF profiles: enriching {len(missing_profile)} missing ISINs from Markets FT")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, min(workers, 6))) as executor:
+        futures = {executor.submit(fetch_ft_etf_profile, ticker): ticker for ticker in missing_profile}
+        for done, future in enumerate(concurrent.futures.as_completed(futures), start=1):
+            ticker = futures[future]
+            try:
+                profile = future.result()
+            except Exception as exc:
+                print(f"ERR ft_profile {ticker}: {exc}")
+                continue
+            if done == 1 or done % 50 == 0 or done == len(futures):
+                print(
+                    "Europe ETF profile progress: "
+                    f"{done}/{len(futures)} checked, {profiles_loaded} ISINs loaded"
+                )
+            if profile:
+                existing[ticker].update(profile)
+                existing[ticker]["updated_at"] = updated_at
+                profiles_loaded += 1
+
+    fields = [
+        "ticker",
+        "isin",
+        "name",
+        "exchange",
+        "country",
+        "region",
+        "asset_type",
+        "provider",
+        "profile_provider",
+        "profile_url",
+        "updated_at",
+    ]
     with EUROPE_ETF_CSV.open("w", encoding="utf-8", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=fields)
         writer.writeheader()
@@ -789,6 +862,8 @@ def update_europe_etf_universe(workers: int = 4, seeds: Iterable[str] = EUROPE_E
         "discovered_quotes": discovered,
         "variant_candidates": len(variant_candidates),
         "variants_loaded": variants_loaded,
+        "profiles_loaded": profiles_loaded,
+        "isins": sum(1 for row in existing.values() if row.get("isin")),
         "universe_file": str(EUROPE_ETF_CSV),
     }
 

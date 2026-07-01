@@ -3,6 +3,9 @@
 App Streamlit y pipeline diario para mantener un calendario de dividendos USA.
 Permite cargar una cartera local y estimar cobros por `ex-dividend date`,
 importe por accion y, cuando esta disponible, `payment date`.
+La vista principal incluye calendario mensual global, filtro por dia, ex-date,
+payment date, importe, sector, region, tipo de activo e ISIN; al seleccionar un
+ticker se abre su ficha.
 
 ## Datos incluidos
 
@@ -62,6 +65,8 @@ python dividend_calendar_pipeline.py --europe-universe-only --workers 8
 Este comando hace una busqueda amplia por proveedor, indice y tematica
 (`iShares MSCI World`, `Vanguard S&P 500`, `JPMorgan Dividend`, etc.) y despues
 valida variantes cruzadas `.DE`, `.L`, `.MI` y `.AS`.
+Tambien enriquece el universo europeo con `ISIN` y URL de ficha usando Markets
+FT cuando encuentra una ficha compatible para el ticker/mercado.
 
 Despues valida que haya eventos y commitea `data/dividends.db` si cambia.
 
@@ -185,6 +190,8 @@ Si. El pipeline ya soporta ETFs de forma practica:
   simbolos Yahoo como `JGPI.DE`, `JEPG.L`, `JEPG.MI`, `VUSA.AS` o `IWDA.AS`.
 - El universo europeo se descubre con combinaciones de gestoras, indices y
   tematicas, y valida variantes en Xetra, Londres, Italia y Amsterdam.
+- Para ETFs europeos, el CSV guarda `isin`, `profile_provider` y `profile_url`
+  cuando la ficha se puede validar.
 - `--universe-only` permite actualizar solo ese universo de tickers.
 - `--europe-universe-only` permite actualizar solo el universo europeo.
 - `--include-unmatched` conserva eventos de Nasdaq que no estan en el universo
@@ -220,4 +227,5 @@ La base local actual contiene:
 - 8.498 eventos desde `yahoo_chart_dividends`.
 - 7.179 instrumentos en `data/us_universe.csv`.
 - 3.207 ETFs/ETNs/fondos unicos cargados desde el screener ETF.
-- 793 ETFs/listings europeos en `data/europe_etf_universe.csv`.
+- 872 ETFs/listings europeos en `data/europe_etf_universe.csv`.
+- 609 ETFs/listings europeos con `ISIN` validado desde Markets FT.

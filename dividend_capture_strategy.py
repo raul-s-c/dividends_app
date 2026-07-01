@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 import argparse
+import concurrent.futures
 import json
 import sqlite3
 import sys
+import threading
 import time
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta
@@ -31,6 +33,8 @@ SEC_PRICES_DB = APP_DIR.parent / "sec_data" / "prices.db"
 CAPTURE_EVENTS_CSV = DATA_DIR / "capture_event_results.csv"
 CAPTURE_TICKER_SIGNAL_CSV = DATA_DIR / "capture_ticker_signal.csv"
 CAPTURE_SEGMENT_SIGNAL_CSV = DATA_DIR / "capture_segment_signal.csv"
+YAHOO_PRICE_TIMEOUT = 10
+_price_cache_lock = threading.Lock()
 
 
 @dataclass(frozen=True)
@@ -108,11 +112,11 @@ def read_sec_prices(ticker: str, start: str, end: str) -> pd.DataFrame:
             SELECT ticker, date AS price_date, open, high, low, close,
                    adj_close, volume, '' AS currency
             FROM daily_prices
-            WHERE UPPER(ticker)=UPPER(?) AND date>=? AND date<=?
+            WHERE ticker=? AND date>=? AND date<=?
             ORDER BY date
             """,
             conn,
-            params=(ticker, start, end),
+            params=(ticker.upper().strip(), start, end),
         )
     finally:
         conn.close()
@@ -150,28 +154,29 @@ def write_cached_prices(df: pd.DataFrame) -> None:
                 fetched_at,
             )
         )
-    conn = sqlite3.connect(PRICE_CACHE_DB)
-    try:
-        conn.executemany(
-            """
-            INSERT INTO daily_prices (
-                ticker, price_date, open, high, low, close, adj_close, volume, currency, fetched_at
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            ON CONFLICT(ticker, price_date) DO UPDATE SET
-                open=excluded.open,
-                high=excluded.high,
-                low=excluded.low,
-                close=excluded.close,
-                adj_close=excluded.adj_close,
-                volume=excluded.volume,
-                currency=excluded.currency,
-                fetched_at=excluded.fetched_at
-            """,
-            rows,
-        )
-        conn.commit()
-    finally:
-        conn.close()
+    with _price_cache_lock:
+        conn = sqlite3.connect(PRICE_CACHE_DB)
+        try:
+            conn.executemany(
+                """
+                INSERT INTO daily_prices (
+                    ticker, price_date, open, high, low, close, adj_close, volume, currency, fetched_at
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ON CONFLICT(ticker, price_date) DO UPDATE SET
+                    open=excluded.open,
+                    high=excluded.high,
+                    low=excluded.low,
+                    close=excluded.close,
+                    adj_close=excluded.adj_close,
+                    volume=excluded.volume,
+                    currency=excluded.currency,
+                    fetched_at=excluded.fetched_at
+                """,
+                rows,
+            )
+            conn.commit()
+        finally:
+            conn.close()
 
 
 def fetch_yahoo_prices(ticker: str, start: str, end: str, refresh: bool = False, progress: bool = False) -> pd.DataFrame:
@@ -199,7 +204,7 @@ def fetch_yahoo_prices(ticker: str, start: str, end: str, refresh: bool = False,
         "includeAdjustedClose": "true",
     }
     url = f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?{urlencode(params)}"
-    with urlopen(Request(url, headers=pipeline.HTTP_HEADERS), timeout=24) as response:
+    with urlopen(Request(url, headers=pipeline.HTTP_HEADERS), timeout=YAHOO_PRICE_TIMEOUT) as response:
         if response.status != 200:
             raise RuntimeError(f"Yahoo prices status {response.status} for {ticker}")
         payload = json.loads(response.read().decode("utf-8"))
@@ -346,6 +351,7 @@ def run_capture_backtest(
     refresh_prices: bool = False,
     max_events: int = 0,
     progress: bool = False,
+    workers: int = 1,
 ) -> pd.DataFrame:
     events = load_dividend_events(settings)
     if events.empty:
@@ -363,6 +369,52 @@ def run_capture_backtest(
     rows = []
     price_start = (pd.Timestamp(settings.start) - pd.Timedelta(days=14)).date().isoformat()
     price_end = (pd.Timestamp(settings.end) + pd.Timedelta(days=settings.max_recovery_days + 7)).date().isoformat()
+
+    def process_ticker(index: int, ticker: str) -> tuple[int, str, list[dict], str]:
+        try:
+            prices = fetch_yahoo_prices(ticker, price_start, price_end, refresh=refresh_prices, progress=False)
+        except Exception as exc:
+            return index, ticker, [], f"ERR prices {ticker}: {exc}"
+        if prices.empty:
+            return index, ticker, [], f"sin precios {ticker}"
+        ticker_rows = []
+        sub = events[events["ticker"] == ticker]
+        for event in sub.itertuples(index=False):
+            row = analyze_event(event, prices, settings)
+            if row:
+                ticker_rows.append(row)
+        return index, ticker, ticker_rows, ""
+
+    worker_count = max(1, int(workers or 1))
+    if worker_count > 1:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=worker_count) as executor:
+            futures = {
+                executor.submit(process_ticker, i, ticker): (i, ticker)
+                for i, ticker in enumerate(tickers, start=1)
+            }
+            for completed, future in enumerate(concurrent.futures.as_completed(futures), start=1):
+                i, ticker = futures[future]
+                try:
+                    _idx, _ticker, ticker_rows, message = future.result()
+                except Exception as exc:
+                    print(f"ERR worker {ticker}: {exc}", flush=True)
+                    continue
+                if message:
+                    print(message, flush=True)
+                rows.extend(ticker_rows)
+                if progress:
+                    recovered = sum(1 for row in ticker_rows if row.get("recovered"))
+                    print(
+                        f"[{completed}/{len(tickers)}] {ticker}: eventos={len(events[events['ticker'] == ticker])} "
+                        f"recuperados={recovered} acumulados={len(rows)}",
+                        flush=True,
+                    )
+                if max_events and len(rows) >= max_events:
+                    if progress:
+                        print(f"Limite max_events alcanzado: {max_events}", flush=True)
+                    break
+        return pd.DataFrame(rows)
+
     for i, ticker in enumerate(tickers, start=1):
         if progress:
             print(f"[{i}/{len(tickers)}] {ticker}: eventos={len(events[events['ticker'] == ticker])}", flush=True)
@@ -600,6 +652,7 @@ def main() -> None:
     parser.add_argument("--use-high-for-recovery", action="store_true")
     parser.add_argument("--save-signal", action="store_true", help="Guarda senales para la app en data/capture_*_signal.csv")
     parser.add_argument("--min-signal-events", type=int, default=2, help="Eventos minimos por ticker para incluirlo en la senal")
+    parser.add_argument("--workers", type=int, default=1, help="Tickers en paralelo para acelerar el backtest")
     args = parser.parse_args()
 
     settings = CaptureSettings(
@@ -610,7 +663,13 @@ def main() -> None:
         limit_tickers=args.limit_tickers,
         use_high_for_recovery=args.use_high_for_recovery,
     )
-    results = run_capture_backtest(settings, refresh_prices=args.refresh_prices, max_events=args.max_events, progress=True)
+    results = run_capture_backtest(
+        settings,
+        refresh_prices=args.refresh_prices,
+        max_events=args.max_events,
+        progress=True,
+        workers=args.workers,
+    )
     print(f"events_analyzed={len(results)} recovered={int(results['recovered'].sum()) if not results.empty else 0}")
     if not results.empty:
         summary = summarize_by_ticker(results)

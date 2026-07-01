@@ -130,9 +130,17 @@ Guardar la senal de `TAE esperado` para que aparezca en el calendario:
 python dividend_capture_strategy.py --start 2025-01-01 --end 2026-07-01 --max-recovery-days 90 --limit-tickers 120 --max-events 800 --save-signal --min-signal-events 2
 ```
 
+Ejecucion completa, sin limites, usando varios workers:
+
+```powershell
+python dividend_capture_strategy.py --start 2025-01-01 --end 2026-07-01 --max-recovery-days 90 --workers 12 --save-signal --min-signal-events 2
+```
+
 El laboratorio de estrategia usa primero `..\sec_data\prices.db` si existe
 para precios diarios USA. Si no encuentra cobertura suficiente para un ticker,
 descarga precios desde Yahoo y los cachea en `data/strategy_price_cache.db`.
+La ejecucion completa actual analizo 22.070 eventos, genero senal para 2.480
+tickers con al menos dos eventos y 348 segmentos/clusters.
 
 Auditar cobertura de datos desde 2025 hasta hoy:
 

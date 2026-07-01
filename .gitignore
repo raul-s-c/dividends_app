@@ -1,6 +1,7 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
+logs/
 .streamlit/secrets.toml
 data/portfolio.csv
 data/strategy_price_cache.db

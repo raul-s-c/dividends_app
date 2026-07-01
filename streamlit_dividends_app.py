@@ -928,6 +928,7 @@ def run_capture_lab(
     limit_tickers: int,
     max_events: int,
     use_high_for_recovery: bool,
+    workers: int,
 ) -> pd.DataFrame:
     settings = capture.CaptureSettings(
         start=start,
@@ -937,7 +938,7 @@ def run_capture_lab(
         limit_tickers=limit_tickers,
         use_high_for_recovery=use_high_for_recovery,
     )
-    return capture.run_capture_backtest(settings, max_events=max_events)
+    return capture.run_capture_backtest(settings, max_events=max_events, workers=workers)
 
 
 def render_capture_strategy_tab() -> None:
@@ -957,6 +958,7 @@ def render_capture_strategy_tab() -> None:
     limit_tickers = f2.number_input("Limite tickers", min_value=0, value=40, step=10)
     max_events = f3.number_input("Limite eventos", min_value=0, value=250, step=50)
     use_high = f4.checkbox("Recuperacion intradia high", value=False)
+    workers = st.slider("Workers", min_value=1, max_value=12, value=4, step=1)
 
     if st.button("Ejecutar backtest", type="primary"):
         st.session_state["capture_run_requested"] = True
@@ -975,6 +977,7 @@ def render_capture_strategy_tab() -> None:
             int(limit_tickers),
             int(max_events),
             bool(use_high),
+            int(workers),
         )
 
     if results.empty:

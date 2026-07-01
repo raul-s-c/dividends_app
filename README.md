@@ -124,6 +124,12 @@ Backtest de estrategia desde CLI:
 python dividend_capture_strategy.py --start 2025-01-01 --end 2025-12-31 --max-recovery-days 90 --limit-tickers 50 --max-events 300
 ```
 
+Guardar la senal de `TAE esperado` para que aparezca en el calendario:
+
+```powershell
+python dividend_capture_strategy.py --start 2025-01-01 --end 2026-07-01 --max-recovery-days 90 --limit-tickers 120 --max-events 800 --save-signal --min-signal-events 2
+```
+
 El laboratorio de estrategia usa primero `..\sec_data\prices.db` si existe
 para precios diarios USA. Si no encuentra cobertura suficiente para un ticker,
 descarga precios desde Yahoo y los cachea en `data/strategy_price_cache.db`.

@@ -28,6 +28,9 @@ DATA_DIR = APP_DIR / "data"
 DIVIDENDS_DB = DATA_DIR / "dividends.db"
 PRICE_CACHE_DB = DATA_DIR / "strategy_price_cache.db"
 SEC_PRICES_DB = APP_DIR.parent / "sec_data" / "prices.db"
+CAPTURE_EVENTS_CSV = DATA_DIR / "capture_event_results.csv"
+CAPTURE_TICKER_SIGNAL_CSV = DATA_DIR / "capture_ticker_signal.csv"
+CAPTURE_SEGMENT_SIGNAL_CSV = DATA_DIR / "capture_segment_signal.csv"
 
 
 @dataclass(frozen=True)
@@ -311,7 +314,7 @@ def analyze_event(event: pd.Series, prices: pd.DataFrame, settings: CaptureSetti
     holding_days = max(1, (pd.Timestamp(recovery_date) - pd.Timestamp(entry_date)).days) if recovered else None
     price_return = ((exit_price - entry_price) / entry_price) if exit_price else None
     total_return = (price_return + dividend_yield) if price_return is not None else None
-    annualized = ((1 + total_return) ** (365 / holding_days) - 1) if total_return is not None and holding_days else None
+    annualized = (total_return * 365 / holding_days) if total_return is not None and holding_days else None
 
     return {
         "ticker": event.ticker,
@@ -395,24 +398,155 @@ def summarize_by_ticker(results: pd.DataFrame) -> pd.DataFrame:
     recovered = results[results["recovered"]].copy()
     grouped = results.groupby("ticker", as_index=False).agg(
         company_name=("company_name", "last"),
+        asset_type=("asset_type", "last"),
+        exchange=("exchange", "last"),
+        sector=("sector", "last"),
+        currency=("currency", "last"),
         events=("ticker", "count"),
+        recovered_events=("recovered", "sum"),
         recovery_rate_pct=("recovered", lambda x: float(x.mean() * 100)),
         avg_dividend_yield_pct=("dividend_yield_pct", "mean"),
+        median_dividend_yield_pct=("dividend_yield_pct", "median"),
+        avg_ex_drop_pct=("ex_drop_pct", "mean"),
+        latest_ex_dividend_date=("ex_dividend_date", "max"),
     )
     if recovered.empty:
         grouped["median_recovery_days"] = None
         grouped["avg_annualized_return_pct"] = None
+        grouped["risk_adjusted_tae_pct"] = None
         return grouped
     rec_stats = recovered.groupby("ticker", as_index=False).agg(
         median_recovery_days=("holding_days", "median"),
         avg_recovery_days=("holding_days", "mean"),
+        std_recovery_days=("holding_days", "std"),
         avg_annualized_return_pct=("annualized_return_pct", "mean"),
+        median_annualized_return_pct=("annualized_return_pct", "median"),
         best_annualized_return_pct=("annualized_return_pct", "max"),
+        std_annualized_return_pct=("annualized_return_pct", "std"),
     )
-    return grouped.merge(rec_stats, on="ticker", how="left").sort_values(
+    out = grouped.merge(rec_stats, on="ticker", how="left")
+    out["risk_adjusted_tae_pct"] = out["avg_annualized_return_pct"].fillna(0) * out["recovery_rate_pct"].fillna(0) / 100
+    out["expected_tae_pct"] = out["risk_adjusted_tae_pct"]
+    out["speed_score"] = (100 - out["median_recovery_days"].clip(lower=0, upper=100)).fillna(0)
+    out["security_score"] = out["recovery_rate_pct"].fillna(0)
+    out["stability_score"] = (100 - out["std_recovery_days"].fillna(100).clip(lower=0, upper=100)).fillna(0)
+    out["capture_score"] = (
+        out["security_score"] * 0.45
+        + out["speed_score"] * 0.30
+        + out["stability_score"] * 0.15
+        + out["avg_dividend_yield_pct"].fillna(0).clip(upper=10) * 1.0
+    )
+    out["speed_cluster"] = out["median_recovery_days"].map(classify_speed)
+    out["safety_cluster"] = out["recovery_rate_pct"].map(classify_safety)
+    out["stability_cluster"] = out["std_recovery_days"].map(classify_stability)
+    out["capture_cluster"] = out.apply(classify_capture_cluster, axis=1)
+    return out.sort_values(
         ["recovery_rate_pct", "median_recovery_days", "avg_dividend_yield_pct"],
         ascending=[False, True, False],
     )
+
+
+def classify_speed(days: object) -> str:
+    if pd.isna(days):
+        return "Sin recuperacion"
+    days = float(days)
+    if days <= 7:
+        return "Muy rapida"
+    if days <= 21:
+        return "Rapida"
+    if days <= 60:
+        return "Media"
+    return "Lenta"
+
+
+def classify_safety(rate: object) -> str:
+    if pd.isna(rate):
+        return "Sin datos"
+    rate = float(rate)
+    if rate >= 90:
+        return "Alta"
+    if rate >= 70:
+        return "Media-alta"
+    if rate >= 50:
+        return "Media"
+    return "Baja"
+
+
+def classify_stability(std_days: object) -> str:
+    if pd.isna(std_days):
+        return "Sin datos"
+    std_days = float(std_days)
+    if std_days <= 5:
+        return "Muy estable"
+    if std_days <= 15:
+        return "Estable"
+    if std_days <= 35:
+        return "Variable"
+    return "Muy variable"
+
+
+def classify_capture_cluster(row: pd.Series) -> str:
+    safety = row.get("recovery_rate_pct")
+    speed = row.get("median_recovery_days")
+    stability = row.get("std_recovery_days")
+    tae = row.get("risk_adjusted_tae_pct")
+    if pd.isna(safety) or float(safety) < 50:
+        return "Especulativo"
+    if pd.notna(speed) and float(speed) <= 21 and pd.notna(safety) and float(safety) >= 80:
+        if pd.notna(tae) and float(tae) >= 25:
+            return "Rapido y rentable"
+        return "Rapido defensivo"
+    if pd.notna(stability) and float(stability) <= 15 and pd.notna(safety) and float(safety) >= 70:
+        return "Estable"
+    if pd.notna(tae) and float(tae) >= 25:
+        return "Rentable pero lento"
+    return "Observacion"
+
+
+def summarize_by_segment(ticker_signal: pd.DataFrame) -> pd.DataFrame:
+    if ticker_signal.empty:
+        return pd.DataFrame()
+    dimensions = ["asset_type", "exchange", "sector", "speed_cluster", "safety_cluster", "stability_cluster", "capture_cluster"]
+    rows = []
+    for dimension in dimensions:
+        if dimension not in ticker_signal.columns:
+            continue
+        grouped = ticker_signal.groupby(dimension, dropna=False)
+        for value, group in grouped:
+            if str(value) in ("", "nan", "None"):
+                continue
+            rows.append(
+                {
+                    "dimension": dimension,
+                    "segment": value,
+                    "tickers": group["ticker"].nunique(),
+                    "events": group["events"].sum(),
+                    "avg_recovery_rate_pct": group["recovery_rate_pct"].mean(),
+                    "median_recovery_days": group["median_recovery_days"].median(),
+                    "avg_dividend_yield_pct": group["avg_dividend_yield_pct"].mean(),
+                    "avg_expected_tae_pct": group["expected_tae_pct"].mean(),
+                    "avg_capture_score": group["capture_score"].mean(),
+                    "top_ticker": group.sort_values("capture_score", ascending=False).iloc[0]["ticker"],
+                }
+            )
+    return pd.DataFrame(rows).sort_values(["dimension", "avg_capture_score"], ascending=[True, False])
+
+
+def save_capture_signal(results: pd.DataFrame, min_events: int = 2) -> tuple[pd.DataFrame, pd.DataFrame]:
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    if results.empty:
+        pd.DataFrame().to_csv(CAPTURE_EVENTS_CSV, index=False)
+        pd.DataFrame().to_csv(CAPTURE_TICKER_SIGNAL_CSV, index=False)
+        pd.DataFrame().to_csv(CAPTURE_SEGMENT_SIGNAL_CSV, index=False)
+        return pd.DataFrame(), pd.DataFrame()
+    results.to_csv(CAPTURE_EVENTS_CSV, index=False)
+    ticker_signal = summarize_by_ticker(results)
+    if min_events > 1 and not ticker_signal.empty:
+        ticker_signal = ticker_signal[ticker_signal["events"] >= min_events].copy()
+    segment_signal = summarize_by_segment(ticker_signal)
+    ticker_signal.to_csv(CAPTURE_TICKER_SIGNAL_CSV, index=False)
+    segment_signal.to_csv(CAPTURE_SEGMENT_SIGNAL_CSV, index=False)
+    return ticker_signal, segment_signal
 
 
 def simulate_reinvestment(results: pd.DataFrame, capital: float = 1000.0) -> pd.DataFrame:
@@ -464,6 +598,8 @@ def main() -> None:
     parser.add_argument("--capital", type=float, default=1000.0)
     parser.add_argument("--refresh-prices", action="store_true")
     parser.add_argument("--use-high-for-recovery", action="store_true")
+    parser.add_argument("--save-signal", action="store_true", help="Guarda senales para la app en data/capture_*_signal.csv")
+    parser.add_argument("--min-signal-events", type=int, default=2, help="Eventos minimos por ticker para incluirlo en la senal")
     args = parser.parse_args()
 
     settings = CaptureSettings(
@@ -477,7 +613,16 @@ def main() -> None:
     results = run_capture_backtest(settings, refresh_prices=args.refresh_prices, max_events=args.max_events, progress=True)
     print(f"events_analyzed={len(results)} recovered={int(results['recovered'].sum()) if not results.empty else 0}")
     if not results.empty:
-        print(summarize_by_ticker(results).head(20).to_string(index=False))
+        summary = summarize_by_ticker(results)
+        print(summary.head(20).to_string(index=False))
+        if args.save_signal:
+            ticker_signal, segment_signal = save_capture_signal(results, min_events=args.min_signal_events)
+            print("\nSenal guardada")
+            print(f"ticker_signal={CAPTURE_TICKER_SIGNAL_CSV} rows={len(ticker_signal)}")
+            print(f"segment_signal={CAPTURE_SEGMENT_SIGNAL_CSV} rows={len(segment_signal)}")
+            if not segment_signal.empty:
+                print("\nTop segmentos")
+                print(segment_signal.head(20).to_string(index=False))
         trades = simulate_reinvestment(results, capital=args.capital)
         if not trades.empty:
             print("\nSimulacion reinversion")

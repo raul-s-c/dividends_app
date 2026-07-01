@@ -22,6 +22,8 @@ APP_DIR = Path(__file__).resolve().parent
 PORTFOLIO_CSV = APP_DIR / "data" / "portfolio.csv"
 US_UNIVERSE_CSV = APP_DIR / "data" / "us_universe.csv"
 EUROPE_UNIVERSE_CSV = APP_DIR / "data" / "europe_etf_universe.csv"
+CAPTURE_TICKER_SIGNAL_CSV = APP_DIR / "data" / "capture_ticker_signal.csv"
+CAPTURE_SEGMENT_SIGNAL_CSV = APP_DIR / "data" / "capture_segment_signal.csv"
 SEC_FUNDAMENTALS_DB = APP_DIR.parent / "sec_data" / "fundamentals.db"
 
 st.set_page_config(page_title="Dividend Calendar USA", page_icon="Div", layout="wide")
@@ -81,6 +83,39 @@ def load_universe() -> pd.DataFrame:
     universe["isin"] = universe["isin"].astype(str).str.upper().str.strip()
     universe["ticker_base"] = universe["ticker"].str.split(".").str[0]
     return universe.drop_duplicates(["ticker"], keep="first")
+
+
+@st.cache_data(ttl=300)
+def load_capture_ticker_signal() -> pd.DataFrame:
+    if not CAPTURE_TICKER_SIGNAL_CSV.exists():
+        return pd.DataFrame()
+    signal = pd.read_csv(CAPTURE_TICKER_SIGNAL_CSV).fillna("")
+    if "ticker" not in signal.columns:
+        return pd.DataFrame()
+    signal["ticker"] = signal["ticker"].astype(str).str.upper().str.strip()
+    numeric_cols = [
+        "events",
+        "recovered_events",
+        "recovery_rate_pct",
+        "avg_dividend_yield_pct",
+        "median_recovery_days",
+        "avg_recovery_days",
+        "avg_annualized_return_pct",
+        "risk_adjusted_tae_pct",
+        "expected_tae_pct",
+        "capture_score",
+    ]
+    for col in numeric_cols:
+        if col in signal.columns:
+            signal[col] = pd.to_numeric(signal[col], errors="coerce")
+    return signal.drop_duplicates("ticker", keep="first")
+
+
+@st.cache_data(ttl=300)
+def load_capture_segment_signal() -> pd.DataFrame:
+    if not CAPTURE_SEGMENT_SIGNAL_CSV.exists():
+        return pd.DataFrame()
+    return pd.read_csv(CAPTURE_SEGMENT_SIGNAL_CSV).fillna("")
 
 
 def sector_display(value, asset_type: str | None = "") -> str:
@@ -215,6 +250,38 @@ def enrich_events(events_df: pd.DataFrame, universe_df: pd.DataFrame) -> pd.Data
         enriched["sic_sector"] = ""
     enriched["sector_label"] = enriched.apply(lambda row: sector_display(row.get("sector"), row.get("asset_type")), axis=1)
     enriched["pay_date_display"] = enriched["pay_date"].replace("", pd.NA).fillna("Pendiente")
+    capture_signal = load_capture_ticker_signal()
+    if not capture_signal.empty:
+        signal_cols = [
+            "ticker",
+            "events",
+            "recovered_events",
+            "recovery_rate_pct",
+            "median_recovery_days",
+            "avg_dividend_yield_pct",
+            "expected_tae_pct",
+            "risk_adjusted_tae_pct",
+            "capture_score",
+            "speed_cluster",
+            "safety_cluster",
+            "stability_cluster",
+            "capture_cluster",
+        ]
+        signal = capture_signal[[c for c in signal_cols if c in capture_signal.columns]].copy()
+        signal = signal.rename(
+            columns={
+                "events": "capture_events",
+                "recovered_events": "capture_recovered_events",
+                "avg_dividend_yield_pct": "capture_avg_dividend_yield_pct",
+            }
+        )
+        enriched = enriched.merge(signal, on="ticker", how="left")
+    for col in ["expected_tae_pct", "capture_score", "recovery_rate_pct", "median_recovery_days"]:
+        if col not in enriched.columns:
+            enriched[col] = pd.NA
+    for col in ["speed_cluster", "safety_cluster", "stability_cluster", "capture_cluster"]:
+        if col not in enriched.columns:
+            enriched[col] = ""
     return enriched
 
 
@@ -499,6 +566,11 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
             placeholder="Ticker, ISIN, nombre, sector, mercado...",
             key="global_calendar_text",
         )
+        f12, f13, f14, f15 = st.columns(4)
+        selected_capture_clusters = f12.multiselect("Cluster captura", options_for("capture_cluster"), key="global_calendar_capture_clusters")
+        selected_speed_clusters = f13.multiselect("Rapidez", options_for("speed_cluster"), key="global_calendar_speed_clusters")
+        selected_safety_clusters = f14.multiselect("Seguridad", options_for("safety_cluster"), key="global_calendar_safety_clusters")
+        min_expected_tae = f15.number_input("TAE esperado min %", min_value=0.0, value=0.0, step=1.0, key="global_calendar_min_tae")
 
     monthly_view = calendar[calendar["ex_dividend_date"].dt.to_period("M").astype(str) == selected_month].copy()
     filter_map = {
@@ -510,6 +582,9 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
         "status": selected_statuses,
         "currency": selected_currencies,
         "sic_code": selected_sic,
+        "capture_cluster": selected_capture_clusters,
+        "speed_cluster": selected_speed_clusters,
+        "safety_cluster": selected_safety_clusters,
     }
     for column, selected_values in filter_map.items():
         if selected_values and column in monthly_view.columns:
@@ -519,12 +594,27 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
         monthly_view = monthly_view[monthly_view["pay_date_dt"].notna()]
     elif pay_date_filter == "Pendiente":
         monthly_view = monthly_view[monthly_view["pay_date_dt"].isna()]
+    if min_expected_tae > 0 and "expected_tae_pct" in monthly_view.columns:
+        monthly_view = monthly_view[pd.to_numeric(monthly_view["expected_tae_pct"], errors="coerce").fillna(-1) >= float(min_expected_tae)]
 
     if text_filter.strip():
         q = text_filter.strip().upper()
         matched_instruments = search_universe(universe_df, text_filter)
         matched_tickers = set(matched_instruments["ticker"].astype(str).str.upper().tolist()) if not matched_instruments.empty else set()
-        searchable_cols = ["ticker", "isin", "company_name", "exchange", "asset_type", "market_region", "sector_label", "sic_code", "sic_industry"]
+        searchable_cols = [
+            "ticker",
+            "isin",
+            "company_name",
+            "exchange",
+            "asset_type",
+            "market_region",
+            "sector_label",
+            "sic_code",
+            "sic_industry",
+            "capture_cluster",
+            "speed_cluster",
+            "safety_cluster",
+        ]
         text_mask = pd.Series(False, index=monthly_view.index)
         for col in searchable_cols:
             if col in monthly_view.columns:
@@ -553,11 +643,13 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
     month_label = date(selected_year, selected_month_number, 1).strftime("%B %Y")
     total_amount = monthly_view["cash_amount"].sum()
     known_pay_dates = int(monthly_view["pay_date_dt"].notna().sum())
-    m1, m2, m3, m4 = st.columns(4)
+    avg_tae = pd.to_numeric(monthly_view.get("expected_tae_pct", pd.Series(dtype=float)), errors="coerce").mean()
+    m1, m2, m3, m4, m5 = st.columns(5)
     m1.metric("Eventos filtrados", f"{len(monthly_view):,}")
     m2.metric("Instrumentos", f"{monthly_view['ticker'].nunique():,}")
     m3.metric("Con payment date", f"{known_pay_dates:,}")
     m4.metric("Importe bruto", f"{total_amount:,.2f}")
+    m5.metric("TAE esperado medio", f"{avg_tae:.1f}%" if pd.notna(avg_tae) else "-")
 
     st.markdown(f"**{month_label}**")
     st.caption("Cada dia se puede desplegar para ver ex-dates, fecha de pago e importe. Pulsa un ticker para abrir su ficha.")
@@ -587,8 +679,10 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
                     for pos, row in enumerate(day_rows.sort_values(["ticker", "cash_amount"]).itertuples(), start=1):
                         pay_label = getattr(row, "payment_day", "Pendiente") or "Pendiente"
                         amount_label = f"{getattr(row, 'cash_amount', 0):.4g} {getattr(row, 'currency', '')}".strip()
+                        tae = getattr(row, "expected_tae_pct", None)
+                        tae_label = f" | TAE {float(tae):.1f}%" if pd.notna(tae) else ""
                         ticker = str(getattr(row, "ticker", ""))
-                        st.caption(f"{amount_label} | pago {pay_label}")
+                        st.caption(f"{amount_label} | pago {pay_label}{tae_label}")
                         if st.button(ticker, key=f"calendar_day_{selected_month}_{day_number}_{pos}_{ticker}_{getattr(row, 'source_event_id', '')}"):
                             selected_from_calendar = ticker
 
@@ -600,6 +694,14 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
         "company_name",
         "cash_amount",
         "currency",
+        "capture_avg_dividend_yield_pct",
+        "recovery_rate_pct",
+        "median_recovery_days",
+        "expected_tae_pct",
+        "capture_score",
+        "capture_cluster",
+        "speed_cluster",
+        "safety_cluster",
         "asset_type",
         "market_region",
         "sector_label",
@@ -613,6 +715,14 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
                 "payment_day": "payment day",
                 "company_name": "nombre",
                 "cash_amount": "cantidad",
+                "capture_avg_dividend_yield_pct": "yield hist %",
+                "recovery_rate_pct": "recuperacion %",
+                "median_recovery_days": "dias rec mediana",
+                "expected_tae_pct": "TAE esperado %",
+                "capture_score": "score captura",
+                "capture_cluster": "cluster captura",
+                "speed_cluster": "rapidez",
+                "safety_cluster": "seguridad",
                 "asset_type": "asset type",
                 "market_region": "region",
                 "sector_label": "sector",
@@ -672,6 +782,35 @@ def render_instrument_detail(ticker: str, universe_df: pd.DataFrame, events_df: 
     )
     if description:
         st.caption(description)
+
+    signal = load_capture_ticker_signal()
+    if not signal.empty:
+        capture_row = signal[signal["ticker"] == ticker]
+        if not capture_row.empty:
+            cap = capture_row.iloc[0]
+            st.markdown("**Senal historica de captura**")
+            s1, s2, s3, s4, s5 = st.columns(5)
+            s1.metric("TAE esperado", f"{cap.get('expected_tae_pct'):.1f}%" if pd.notna(cap.get("expected_tae_pct")) else "-")
+            s2.metric("Recuperacion", f"{cap.get('recovery_rate_pct'):.1f}%" if pd.notna(cap.get("recovery_rate_pct")) else "-")
+            s3.metric("Dias mediana", f"{cap.get('median_recovery_days'):.0f}" if pd.notna(cap.get("median_recovery_days")) else "-")
+            s4.metric("Yield medio", f"{cap.get('avg_dividend_yield_pct'):.2f}%" if pd.notna(cap.get("avg_dividend_yield_pct")) else "-")
+            s5.metric("Score", f"{cap.get('capture_score'):.1f}" if pd.notna(cap.get("capture_score")) else "-")
+            st.dataframe(
+                pd.DataFrame(
+                    [
+                        {
+                            "Cluster captura": cap.get("capture_cluster", ""),
+                            "Rapidez": cap.get("speed_cluster", ""),
+                            "Seguridad": cap.get("safety_cluster", ""),
+                            "Estabilidad": cap.get("stability_cluster", ""),
+                            "Eventos analizados": cap.get("events", ""),
+                            "Eventos recuperados": cap.get("recovered_events", ""),
+                        }
+                    ]
+                ).replace("", "-"),
+                use_container_width=True,
+                hide_index=True,
+            )
 
     render_dividend_analytics(ticker, events_df)
 
@@ -857,10 +996,17 @@ def render_capture_strategy_tab() -> None:
                 [
                     "ticker",
                     "company_name",
+                    "asset_type",
+                    "exchange",
                     "events",
                     "recovery_rate_pct",
                     "median_recovery_days",
                     "avg_dividend_yield_pct",
+                    "expected_tae_pct",
+                    "capture_score",
+                    "capture_cluster",
+                    "speed_cluster",
+                    "safety_cluster",
                     "avg_annualized_return_pct",
                 ]
             ],
@@ -870,6 +1016,31 @@ def render_capture_strategy_tab() -> None:
         )
         if clicked:
             render_instrument_detail(clicked, universe, events)
+
+        segment_signal = capture.summarize_by_segment(summary)
+        if not segment_signal.empty:
+            st.markdown("**Segmentos y clusters**")
+            st.dataframe(
+                segment_signal[
+                    [
+                        "dimension",
+                        "segment",
+                        "tickers",
+                        "events",
+                        "avg_recovery_rate_pct",
+                        "median_recovery_days",
+                        "avg_expected_tae_pct",
+                        "avg_capture_score",
+                        "top_ticker",
+                    ]
+                ],
+                use_container_width=True,
+                hide_index=True,
+            )
+        if st.button("Guardar senal en calendario", key="save_capture_signal"):
+            ticker_signal, saved_segments = capture.save_capture_signal(results)
+            st.success(f"Senal guardada: {len(ticker_signal):,} tickers y {len(saved_segments):,} segmentos.")
+            st.cache_data.clear()
 
     st.markdown("**Eventos historicos**")
     event_cols = [
@@ -1054,6 +1225,14 @@ with tab_calendar:
             "sector_label",
             "sic_code",
             "sic_industry",
+            "capture_avg_dividend_yield_pct",
+            "recovery_rate_pct",
+            "median_recovery_days",
+            "expected_tae_pct",
+            "capture_score",
+            "capture_cluster",
+            "speed_cluster",
+            "safety_cluster",
             "cash_amount",
             "currency",
             "status",

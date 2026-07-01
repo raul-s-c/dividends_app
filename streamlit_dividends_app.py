@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import calendar as month_calendar
 import json
 import sqlite3
 import subprocess
@@ -464,45 +465,71 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
     calendar = calendar.dropna(subset=["ex_dividend_date"])
     if calendar.empty:
         st.info("No hay fechas de ex-dividend validas en el rango.")
-        return
+        return ""
 
     month_options = calendar["ex_dividend_date"].dt.to_period("M").astype(str).sort_values().unique().tolist()
     current_month = date.today().strftime("%Y-%m")
     default_index = month_options.index(current_month) if current_month in month_options else 0
 
-    f1, f2, f3, f4 = st.columns(4)
-    selected_month = f1.selectbox("Mes", month_options, index=default_index, key="global_calendar_month")
-    regions = ["Todos"] + sorted([x for x in calendar.get("market_region", pd.Series(dtype=str)).dropna().astype(str).unique().tolist() if x])
-    types = ["Todos"] + sorted([x for x in calendar.get("asset_type", pd.Series(dtype=str)).dropna().astype(str).unique().tolist() if x])
-    sectors = ["Todos"] + sorted([x for x in calendar.get("sector_label", pd.Series(dtype=str)).dropna().astype(str).unique().tolist() if x])
-    selected_region = f2.selectbox("Region", regions, key="global_calendar_region")
-    selected_type = f3.selectbox("Asset type", types, key="global_calendar_asset_type")
-    selected_sector = f4.selectbox("Sector", sectors, key="global_calendar_sector")
-    text_filter = st.text_input("Filtrar calendario", "", placeholder="Ticker o nombre", key="global_calendar_text")
+    def options_for(column: str) -> list[str]:
+        if column not in calendar.columns:
+            return []
+        values = calendar[column].dropna().astype(str)
+        return sorted([value for value in values.unique().tolist() if value and value != "nan"])
+
+    with st.container(border=True):
+        f1, f2, f3, f4 = st.columns([1.2, 1.4, 1.4, 1.4])
+        selected_month = f1.selectbox("Mes", month_options, index=default_index, key="global_calendar_month")
+        selected_regions = f2.multiselect("Region", options_for("market_region"), key="global_calendar_regions")
+        selected_types = f3.multiselect("Asset type", options_for("asset_type"), key="global_calendar_asset_types")
+        selected_exchanges = f4.multiselect("Mercado", options_for("exchange"), key="global_calendar_exchanges")
+
+        f5, f6, f7, f8 = st.columns(4)
+        selected_sectors = f5.multiselect("Sector", options_for("sector_label"), key="global_calendar_sectors")
+        selected_sources = f6.multiselect("Fuente", options_for("source"), key="global_calendar_sources")
+        selected_statuses = f7.multiselect("Estado", options_for("status"), key="global_calendar_statuses")
+        selected_currencies = f8.multiselect("Moneda", options_for("currency"), key="global_calendar_currencies")
+
+        f9, f10, f11 = st.columns([1.2, 1.2, 2.4])
+        selected_sic = f9.multiselect("SIC", options_for("sic_code"), key="global_calendar_sic")
+        pay_date_filter = f10.selectbox("Fecha pago", ["Todos", "Con fecha", "Pendiente"], key="global_calendar_pay_date_filter")
+        text_filter = f11.text_input(
+            "Buscar",
+            "",
+            placeholder="Ticker, ISIN, nombre, sector, mercado...",
+            key="global_calendar_text",
+        )
 
     monthly_view = calendar[calendar["ex_dividend_date"].dt.to_period("M").astype(str) == selected_month].copy()
-    day_options = ["Todos"] + [
-        str(day)
-        for day in sorted(monthly_view["ex_dividend_date"].dt.date.dropna().unique().tolist())
-    ]
-    selected_day = st.selectbox("Dia", day_options, key="global_calendar_day")
-    if selected_day != "Todos":
-        monthly_view = monthly_view[monthly_view["ex_dividend_date"].dt.date.astype(str) == selected_day]
-    if selected_region != "Todos":
-        monthly_view = monthly_view[monthly_view["market_region"] == selected_region]
-    if selected_type != "Todos":
-        monthly_view = monthly_view[monthly_view["asset_type"] == selected_type]
-    if selected_sector != "Todos":
-        monthly_view = monthly_view[monthly_view["sector_label"] == selected_sector]
+    filter_map = {
+        "market_region": selected_regions,
+        "asset_type": selected_types,
+        "exchange": selected_exchanges,
+        "sector_label": selected_sectors,
+        "source": selected_sources,
+        "status": selected_statuses,
+        "currency": selected_currencies,
+        "sic_code": selected_sic,
+    }
+    for column, selected_values in filter_map.items():
+        if selected_values and column in monthly_view.columns:
+            monthly_view = monthly_view[monthly_view[column].astype(str).isin(selected_values)]
+
+    if pay_date_filter == "Con fecha":
+        monthly_view = monthly_view[monthly_view["pay_date_dt"].notna()]
+    elif pay_date_filter == "Pendiente":
+        monthly_view = monthly_view[monthly_view["pay_date_dt"].isna()]
+
     if text_filter.strip():
         q = text_filter.strip().upper()
         matched_instruments = search_universe(universe_df, text_filter)
         matched_tickers = set(matched_instruments["ticker"].astype(str).str.upper().tolist()) if not matched_instruments.empty else set()
-        monthly_view = monthly_view[
-            monthly_view["ticker"].astype(str).str.upper().isin(matched_tickers)
-            | monthly_view["ticker"].astype(str).str.upper().str.contains(q, regex=False)
-            | monthly_view["company_name"].astype(str).str.upper().str.contains(q, regex=False)
-        ]
+        searchable_cols = ["ticker", "isin", "company_name", "exchange", "asset_type", "market_region", "sector_label", "sic_code", "sic_industry"]
+        text_mask = pd.Series(False, index=monthly_view.index)
+        for col in searchable_cols:
+            if col in monthly_view.columns:
+                text_mask = text_mask | monthly_view[col].astype(str).str.upper().str.contains(q, regex=False)
+        monthly_view = monthly_view[monthly_view["ticker"].astype(str).str.upper().isin(matched_tickers) | text_mask]
 
     if monthly_view.empty:
         if text_filter.strip():
@@ -521,6 +548,50 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
     monthly_view["ex_date"] = monthly_view["ex_dividend_date"].dt.date
     monthly_view["payment_day"] = monthly_view["pay_date_dt"].dt.date.astype(str).replace("NaT", "Pendiente")
     monthly_view["payment_day"] = monthly_view["payment_day"].replace("NaT", "Pendiente")
+
+    selected_year, selected_month_number = [int(part) for part in selected_month.split("-")]
+    month_label = date(selected_year, selected_month_number, 1).strftime("%B %Y")
+    total_amount = monthly_view["cash_amount"].sum()
+    known_pay_dates = int(monthly_view["pay_date_dt"].notna().sum())
+    m1, m2, m3, m4 = st.columns(4)
+    m1.metric("Eventos filtrados", f"{len(monthly_view):,}")
+    m2.metric("Instrumentos", f"{monthly_view['ticker'].nunique():,}")
+    m3.metric("Con payment date", f"{known_pay_dates:,}")
+    m4.metric("Importe bruto", f"{total_amount:,.2f}")
+
+    st.markdown(f"**{month_label}**")
+    st.caption("Cada dia se puede desplegar para ver ex-dates, fecha de pago e importe. Pulsa un ticker para abrir su ficha.")
+
+    weekdays = ["Lu", "Ma", "Mi", "Ju", "Vi", "Sa", "Do"]
+    header_cols = st.columns(7)
+    for col, label in zip(header_cols, weekdays):
+        col.markdown(f"**{label}**")
+
+    selected_from_calendar = ""
+    grouped_by_day = {day: day_rows for day, day_rows in monthly_view.groupby(monthly_view["ex_dividend_date"].dt.day)}
+    for week in month_calendar.Calendar(firstweekday=0).monthdayscalendar(selected_year, selected_month_number):
+        cols = st.columns(7)
+        for col, day_number in zip(cols, week):
+            if day_number == 0:
+                col.container(border=True)
+                continue
+            day_rows = grouped_by_day.get(day_number, pd.DataFrame())
+            with col.container(border=True):
+                if day_rows.empty:
+                    st.markdown(f"**{day_number}**")
+                    st.caption("Sin eventos")
+                    continue
+                count = len(day_rows)
+                amount = day_rows["cash_amount"].sum()
+                with st.expander(f"{day_number} · {count} eventos · {amount:,.2f}", expanded=False):
+                    for pos, row in enumerate(day_rows.sort_values(["ticker", "cash_amount"]).itertuples(), start=1):
+                        pay_label = getattr(row, "payment_day", "Pendiente") or "Pendiente"
+                        amount_label = f"{getattr(row, 'cash_amount', 0):.4g} {getattr(row, 'currency', '')}".strip()
+                        ticker = str(getattr(row, "ticker", ""))
+                        st.caption(f"{amount_label} | pago {pay_label}")
+                        if st.button(ticker, key=f"calendar_day_{selected_month}_{day_number}_{pos}_{ticker}_{getattr(row, 'source_event_id', '')}"):
+                            selected_from_calendar = ticker
+
     show_cols = [
         "ex_date",
         "payment_day",
@@ -549,13 +620,14 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
                 "sic_industry": "industria SEC",
             }
         )
+    st.markdown("**Detalle filtrado**")
     clicked = selectable_ticker_table(
         display,
         "global_calendar_events",
         use_container_width=True,
         hide_index=True,
     )
-    return clicked
+    return selected_from_calendar or clicked
 
 
 def render_instrument_detail(ticker: str, universe_df: pd.DataFrame, events_df: pd.DataFrame) -> None:

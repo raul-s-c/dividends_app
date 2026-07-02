@@ -44,4 +44,5 @@ jobs:
             --capital 1000 \
             --min-success-30d-pct 80 \
             --max-trend-risk 70 \
+            --min-yield-real-pct 2 \
             --send-email

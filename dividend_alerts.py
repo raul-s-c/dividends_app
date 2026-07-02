@@ -31,7 +31,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--capital", type=float, default=1000.0, help="Capital simulado por compra.")
     parser.add_argument("--min-success-30d-pct", type=float, default=80.0)
     parser.add_argument("--max-trend-risk", type=float, default=70.0)
-    parser.add_argument("--min-yield-real-pct", type=float, default=0.0)
+    parser.add_argument("--min-yield-real-pct", type=float, default=2.0)
     parser.add_argument("--top", type=int, default=30)
     parser.add_argument("--as-of", default=date.today().isoformat())
     parser.add_argument("--send-email", action="store_true")

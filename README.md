@@ -87,6 +87,7 @@ El informe aplica esta regla operativa:
 capital por compra: 1000
 exito 30d minimo: 80%
 riesgo tendencia maximo: 70/100
+yield real minimo: 2%
 horizonte: proximos 7 dias
 ```
 

@@ -96,6 +96,7 @@ def load_capture_ticker_signal() -> pd.DataFrame:
     numeric_cols = [
         "events",
         "recovered_events",
+        "latest_entry_price",
         "recovery_rate_pct",
         "avg_dividend_yield_pct",
         "median_recovery_days",
@@ -258,6 +259,7 @@ def enrich_events(events_df: pd.DataFrame, universe_df: pd.DataFrame) -> pd.Data
             "recovered_events",
             "recovery_rate_pct",
             "median_recovery_days",
+            "latest_entry_price",
             "avg_dividend_yield_pct",
             "expected_tae_pct",
             "risk_adjusted_tae_pct",
@@ -276,6 +278,16 @@ def enrich_events(events_df: pd.DataFrame, universe_df: pd.DataFrame) -> pd.Data
             }
         )
         enriched = enriched.merge(signal, on="ticker", how="left")
+    if "latest_entry_price" in enriched.columns:
+        reference_price = pd.to_numeric(enriched["latest_entry_price"], errors="coerce")
+        cash_amount = pd.to_numeric(enriched["cash_amount"], errors="coerce")
+        enriched["event_yield_real_pct"] = (cash_amount / reference_price * 100).where(reference_price > 0)
+    if "event_yield_real_pct" not in enriched.columns:
+        enriched["event_yield_real_pct"] = pd.NA
+    recovery_days = pd.to_numeric(enriched.get("median_recovery_days", pd.Series(dtype=float)), errors="coerce").replace(0, pd.NA)
+    recovery_rate = pd.to_numeric(enriched.get("recovery_rate_pct", pd.Series(dtype=float)), errors="coerce").fillna(0)
+    event_yield = pd.to_numeric(enriched["event_yield_real_pct"], errors="coerce")
+    enriched["event_expected_tae_pct"] = event_yield * 365 / recovery_days * recovery_rate / 100
     for col in ["expected_tae_pct", "capture_score", "recovery_rate_pct", "median_recovery_days"]:
         if col not in enriched.columns:
             enriched[col] = pd.NA
@@ -570,7 +582,11 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
         selected_capture_clusters = f12.multiselect("Cluster captura", options_for("capture_cluster"), key="global_calendar_capture_clusters")
         selected_speed_clusters = f13.multiselect("Rapidez", options_for("speed_cluster"), key="global_calendar_speed_clusters")
         selected_safety_clusters = f14.multiselect("Seguridad", options_for("safety_cluster"), key="global_calendar_safety_clusters")
-        min_expected_tae = f15.number_input("TAE esperado min %", min_value=0.0, value=0.0, step=1.0, key="global_calendar_min_tae")
+        min_expected_tae = f15.number_input("TAE evento min %", min_value=0.0, value=0.0, step=1.0, key="global_calendar_min_tae")
+        f16, f17, f18 = st.columns(3)
+        min_dividend_amount = f16.number_input("Dividendo min", min_value=0.0, value=0.0, step=0.01, key="global_calendar_min_dividend_amount")
+        min_event_yield = f17.number_input("Yield real min %", min_value=0.0, value=0.0, step=0.05, key="global_calendar_min_event_yield")
+        max_recovery_days_filter = f18.number_input("Dias recuperacion max", min_value=0, value=0, step=1, key="global_calendar_max_recovery_days")
 
     monthly_view = calendar[calendar["ex_dividend_date"].dt.to_period("M").astype(str) == selected_month].copy()
     filter_map = {
@@ -594,8 +610,14 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
         monthly_view = monthly_view[monthly_view["pay_date_dt"].notna()]
     elif pay_date_filter == "Pendiente":
         monthly_view = monthly_view[monthly_view["pay_date_dt"].isna()]
-    if min_expected_tae > 0 and "expected_tae_pct" in monthly_view.columns:
-        monthly_view = monthly_view[pd.to_numeric(monthly_view["expected_tae_pct"], errors="coerce").fillna(-1) >= float(min_expected_tae)]
+    if min_dividend_amount > 0:
+        monthly_view = monthly_view[pd.to_numeric(monthly_view["cash_amount"], errors="coerce").fillna(-1) >= float(min_dividend_amount)]
+    if min_event_yield > 0 and "event_yield_real_pct" in monthly_view.columns:
+        monthly_view = monthly_view[pd.to_numeric(monthly_view["event_yield_real_pct"], errors="coerce").fillna(-1) >= float(min_event_yield)]
+    if max_recovery_days_filter > 0 and "median_recovery_days" in monthly_view.columns:
+        monthly_view = monthly_view[pd.to_numeric(monthly_view["median_recovery_days"], errors="coerce").fillna(10_000) <= float(max_recovery_days_filter)]
+    if min_expected_tae > 0 and "event_expected_tae_pct" in monthly_view.columns:
+        monthly_view = monthly_view[pd.to_numeric(monthly_view["event_expected_tae_pct"], errors="coerce").fillna(-1) >= float(min_expected_tae)]
 
     if text_filter.strip():
         q = text_filter.strip().upper()
@@ -614,6 +636,7 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
             "capture_cluster",
             "speed_cluster",
             "safety_cluster",
+            "event_yield_real_pct",
         ]
         text_mask = pd.Series(False, index=monthly_view.index)
         for col in searchable_cols:
@@ -643,7 +666,7 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
     month_label = date(selected_year, selected_month_number, 1).strftime("%B %Y")
     total_amount = monthly_view["cash_amount"].sum()
     known_pay_dates = int(monthly_view["pay_date_dt"].notna().sum())
-    avg_tae = pd.to_numeric(monthly_view.get("expected_tae_pct", pd.Series(dtype=float)), errors="coerce").mean()
+    avg_tae = pd.to_numeric(monthly_view.get("event_expected_tae_pct", pd.Series(dtype=float)), errors="coerce").mean()
     m1, m2, m3, m4, m5 = st.columns(5)
     m1.metric("Eventos filtrados", f"{len(monthly_view):,}")
     m2.metric("Instrumentos", f"{monthly_view['ticker'].nunique():,}")
@@ -679,7 +702,7 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
                     for pos, row in enumerate(day_rows.sort_values(["ticker", "cash_amount"]).itertuples(), start=1):
                         pay_label = getattr(row, "payment_day", "Pendiente") or "Pendiente"
                         amount_label = f"{getattr(row, 'cash_amount', 0):.4g} {getattr(row, 'currency', '')}".strip()
-                        tae = getattr(row, "expected_tae_pct", None)
+                        tae = getattr(row, "event_expected_tae_pct", None)
                         tae_label = f" | TAE {float(tae):.1f}%" if pd.notna(tae) else ""
                         ticker = str(getattr(row, "ticker", ""))
                         st.caption(f"{amount_label} | pago {pay_label}{tae_label}")
@@ -695,8 +718,10 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
         "cash_amount",
         "currency",
         "capture_avg_dividend_yield_pct",
+        "event_yield_real_pct",
         "recovery_rate_pct",
         "median_recovery_days",
+        "event_expected_tae_pct",
         "expected_tae_pct",
         "capture_score",
         "capture_cluster",
@@ -716,9 +741,11 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
                 "company_name": "nombre",
                 "cash_amount": "cantidad",
                 "capture_avg_dividend_yield_pct": "yield hist %",
+                "event_yield_real_pct": "yield real evento %",
                 "recovery_rate_pct": "recuperacion %",
                 "median_recovery_days": "dias rec mediana",
-                "expected_tae_pct": "TAE esperado %",
+                "event_expected_tae_pct": "TAE evento %",
+                "expected_tae_pct": "TAE hist ticker %",
                 "capture_score": "score captura",
                 "capture_cluster": "cluster captura",
                 "speed_cluster": "rapidez",
@@ -1229,8 +1256,10 @@ with tab_calendar:
             "sic_code",
             "sic_industry",
             "capture_avg_dividend_yield_pct",
+            "event_yield_real_pct",
             "recovery_rate_pct",
             "median_recovery_days",
+            "event_expected_tae_pct",
             "expected_tae_pct",
             "capture_score",
             "capture_cluster",

@@ -447,6 +447,7 @@ def run_capture_backtest(
 def summarize_by_ticker(results: pd.DataFrame) -> pd.DataFrame:
     if results.empty:
         return pd.DataFrame()
+    results = results.sort_values(["ticker", "ex_dividend_date"]).copy()
     recovered = results[results["recovered"]].copy()
     grouped = results.groupby("ticker", as_index=False).agg(
         company_name=("company_name", "last"),
@@ -454,6 +455,7 @@ def summarize_by_ticker(results: pd.DataFrame) -> pd.DataFrame:
         exchange=("exchange", "last"),
         sector=("sector", "last"),
         currency=("currency", "last"),
+        latest_entry_price=("entry_price", "last"),
         events=("ticker", "count"),
         recovered_events=("recovered", "sum"),
         recovery_rate_pct=("recovered", lambda x: float(x.mean() * 100)),
@@ -477,7 +479,14 @@ def summarize_by_ticker(results: pd.DataFrame) -> pd.DataFrame:
         std_annualized_return_pct=("annualized_return_pct", "std"),
     )
     out = grouped.merge(rec_stats, on="ticker", how="left")
-    out["risk_adjusted_tae_pct"] = out["avg_annualized_return_pct"].fillna(0) * out["recovery_rate_pct"].fillna(0) / 100
+    recovery_days = out["median_recovery_days"].replace(0, pd.NA)
+    out["risk_adjusted_tae_pct"] = (
+        out["avg_dividend_yield_pct"].fillna(0)
+        * 365
+        / recovery_days
+        * out["recovery_rate_pct"].fillna(0)
+        / 100
+    )
     out["expected_tae_pct"] = out["risk_adjusted_tae_pct"]
     out["speed_score"] = (100 - out["median_recovery_days"].clip(lower=0, upper=100)).fillna(0)
     out["security_score"] = out["recovery_rate_pct"].fillna(0)

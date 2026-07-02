@@ -141,6 +141,11 @@ para precios diarios USA. Si no encuentra cobertura suficiente para un ticker,
 descarga precios desde Yahoo y los cachea en `data/strategy_price_cache.db`.
 La ejecucion completa actual analizo 22.070 eventos, genero senal para 2.480
 tickers con al menos dos eventos y 348 segmentos/clusters.
+El `TAE esperado` se calcula separando dos piezas: yield real del reparto
+(`cash_amount / precio de referencia`) y dias historicos de recuperacion del
+ticker, ajustado por la tasa historica de recuperacion. En el calendario se
+puede filtrar por importe minimo de dividendo, yield real minimo, TAE minimo y
+dias maximos de recuperacion.
 
 Auditar cobertura de datos desde 2025 hasta hoy:
 

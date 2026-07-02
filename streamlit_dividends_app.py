@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import csv
 import calendar as month_calendar
+import html
 import json
 import sqlite3
 import subprocess
@@ -532,6 +533,146 @@ def render_dividend_analytics(ticker: str, events_df: pd.DataFrame) -> None:
     )
 
 
+@st.cache_data(ttl=300)
+def load_local_price_history(ticker: str, start: str, end: str) -> pd.DataFrame:
+    clean = str(ticker or "").upper().strip()
+    if not clean:
+        return pd.DataFrame()
+    frames = []
+    sec_prices = capture.read_sec_prices(clean, start, end)
+    if not sec_prices.empty:
+        frames.append(sec_prices)
+    cached_prices = capture.read_cached_prices(clean, start, end)
+    if not cached_prices.empty:
+        frames.append(cached_prices)
+    if not frames:
+        return pd.DataFrame()
+    prices = pd.concat(frames, ignore_index=True, sort=False)
+    prices["price_date"] = pd.to_datetime(prices["price_date"], errors="coerce")
+    prices["close"] = pd.to_numeric(prices["close"], errors="coerce")
+    prices = prices.dropna(subset=["price_date", "close"])
+    if prices.empty:
+        return prices
+    return prices.sort_values("price_date").drop_duplicates("price_date", keep="last")
+
+
+def mini_price_svg(prices: pd.DataFrame, ex_dates: list[pd.Timestamp], width: int = 300, height: int = 130) -> str:
+    if prices.empty:
+        return "<div class='ticker-hover-empty'>Sin precios locales cacheados</div>"
+    chart = prices.copy().sort_values("price_date")
+    if len(chart) < 2:
+        return "<div class='ticker-hover-empty'>Historico insuficiente</div>"
+    min_date = chart["price_date"].min()
+    max_date = chart["price_date"].max()
+    min_price = float(chart["close"].min())
+    max_price = float(chart["close"].max())
+    if max_price <= min_price:
+        max_price = min_price + 1
+    total_seconds = max(1, (max_date - min_date).total_seconds())
+    left, right, top, bottom = 12, width - 10, 10, height - 22
+    x_span = right - left
+    y_span = bottom - top
+
+    def x_for(ts: pd.Timestamp) -> float:
+        return left + ((ts - min_date).total_seconds() / total_seconds) * x_span
+
+    def y_for(price: float) -> float:
+        return bottom - ((price - min_price) / (max_price - min_price)) * y_span
+
+    points = " ".join(f"{x_for(row.price_date):.1f},{y_for(float(row.close)):.1f}" for row in chart.itertuples())
+    lines = []
+    for ex_date in ex_dates:
+        if pd.isna(ex_date) or ex_date < min_date or ex_date > max_date:
+            continue
+        x = x_for(ex_date)
+        lines.append(f"<line x1='{x:.1f}' y1='{top}' x2='{x:.1f}' y2='{bottom}' class='ex-line' />")
+    first = chart.iloc[0]
+    last = chart.iloc[-1]
+    return (
+        f"<svg viewBox='0 0 {width} {height}' class='ticker-hover-svg' role='img'>"
+        f"<rect x='0' y='0' width='{width}' height='{height}' rx='6' class='svg-bg' />"
+        f"<line x1='{left}' y1='{bottom}' x2='{right}' y2='{bottom}' class='axis' />"
+        f"<line x1='{left}' y1='{top}' x2='{left}' y2='{bottom}' class='axis' />"
+        f"{''.join(lines)}"
+        f"<polyline points='{points}' class='price-line' />"
+        f"<text x='{left}' y='{height - 6}' class='axis-label'>{html.escape(str(first['price_date'].date()))}</text>"
+        f"<text x='{right}' y='{height - 6}' text-anchor='end' class='axis-label'>{html.escape(str(last['price_date'].date()))}</text>"
+        f"<text x='{right}' y='{top + 10}' text-anchor='end' class='price-label'>{last['close']:.2f}</text>"
+        f"</svg>"
+    )
+
+
+def ticker_hover_card_html(ticker: str, row, events_df: pd.DataFrame, chart_end: date) -> str:
+    clean = str(ticker or "").upper().strip()
+    if not clean:
+        return ""
+    start = (pd.Timestamp(chart_end) - pd.DateOffset(months=12)).date().isoformat()
+    end = pd.Timestamp(chart_end).date().isoformat()
+    prices = load_local_price_history(clean, start, end)
+    ticker_events = events_df[events_df["ticker"].astype(str).str.upper() == clean].copy() if not events_df.empty else pd.DataFrame()
+    if not ticker_events.empty:
+        ticker_events["ex_ts"] = pd.to_datetime(ticker_events["ex_dividend_date"], errors="coerce")
+        ex_dates = ticker_events[(ticker_events["ex_ts"] <= pd.Timestamp(chart_end))]["ex_ts"].dropna().tolist()
+    else:
+        ex_dates = []
+    svg = mini_price_svg(prices, ex_dates)
+    company = html.escape(str(getattr(row, "company_name", "") or clean))
+    try:
+        amount_label = f"{float(getattr(row, 'cash_amount', 0)):.4g}"
+    except (TypeError, ValueError):
+        amount_label = "-"
+    currency = html.escape(str(getattr(row, "currency", "") or ""))
+    pay_label_raw = getattr(row, "payment_day", "") or getattr(row, "pay_date_display", "") or "Pendiente"
+    pay_label = html.escape(str(pay_label_raw))
+    tae = getattr(row, "event_expected_tae_pct", None)
+    tae_label = f"{float(tae):.1f}%" if pd.notna(tae) else "-"
+    return f"""
+    <span class="ticker-hover-wrap">
+      <span class="ticker-hover-symbol">{html.escape(clean)}</span>
+      <span class="ticker-hover-card">
+        <strong>{html.escape(clean)} - {company}</strong>
+        <span class="ticker-hover-meta">Div: {html.escape(amount_label)} {currency} | pago {pay_label} | TAE {html.escape(tae_label)}</span>
+        {svg}
+        <span class="ticker-hover-meta">Lineas verticales: ex-dividend dates pasados en el rango.</span>
+      </span>
+    </span>
+    """
+
+
+def inject_ticker_hover_css() -> None:
+    st.markdown(
+        """
+        <style>
+        .ticker-hover-wrap { position: relative; display: inline-block; margin: 2px 0; }
+        .ticker-hover-symbol {
+            display: inline-flex; align-items: center; justify-content: center;
+            min-width: 56px; padding: 3px 7px; border-radius: 5px;
+            background: #eef2f7; color: #0f172a; font-weight: 700; font-size: 0.82rem;
+            border: 1px solid #d8dee8; cursor: default;
+        }
+        .ticker-hover-card {
+            visibility: hidden; opacity: 0; pointer-events: none;
+            position: absolute; z-index: 50; left: 0; top: 26px; width: 330px;
+            padding: 10px; border: 1px solid #d6dde8; border-radius: 7px;
+            background: #ffffff; color: #0f172a; box-shadow: 0 12px 32px rgba(15, 23, 42, 0.18);
+            transition: opacity 120ms ease;
+        }
+        .ticker-hover-wrap:hover .ticker-hover-card { visibility: visible; opacity: 1; }
+        .ticker-hover-meta { display: block; color: #64748b; font-size: 0.72rem; margin: 4px 0 6px; }
+        .ticker-hover-svg { width: 100%; height: auto; display: block; }
+        .svg-bg { fill: #f8fafc; }
+        .axis { stroke: #cbd5e1; stroke-width: 1; }
+        .price-line { fill: none; stroke: #0f6fc6; stroke-width: 2; }
+        .ex-line { stroke: #ef4444; stroke-width: 1.4; stroke-dasharray: 3 3; opacity: 0.85; }
+        .axis-label { fill: #64748b; font-size: 9px; }
+        .price-label { fill: #0f172a; font-size: 10px; font-weight: 700; }
+        .ticker-hover-empty { padding: 28px 8px; background: #f8fafc; border-radius: 6px; color: #64748b; text-align: center; }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
 def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.DataFrame) -> str:
     st.markdown("**Calendario mensual global**")
     if events_df.empty:
@@ -664,6 +805,8 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
 
     selected_year, selected_month_number = [int(part) for part in selected_month.split("-")]
     month_label = date(selected_year, selected_month_number, 1).strftime("%B %Y")
+    month_last_day = month_calendar.monthrange(selected_year, selected_month_number)[1]
+    chart_end = date(selected_year, selected_month_number, month_last_day)
     total_amount = monthly_view["cash_amount"].sum()
     known_pay_dates = int(monthly_view["pay_date_dt"].notna().sum())
     avg_tae = pd.to_numeric(monthly_view.get("event_expected_tae_pct", pd.Series(dtype=float)), errors="coerce").mean()
@@ -676,6 +819,7 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
 
     st.markdown(f"**{month_label}**")
     st.caption("Cada dia se puede desplegar para ver ex-dates, fecha de pago e importe. Pulsa un ticker para abrir su ficha.")
+    inject_ticker_hover_css()
 
     weekdays = ["Lu", "Ma", "Mi", "Ju", "Vi", "Sa", "Do"]
     header_cols = st.columns(7)
@@ -706,7 +850,8 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
                         tae_label = f" | TAE {float(tae):.1f}%" if pd.notna(tae) else ""
                         ticker = str(getattr(row, "ticker", ""))
                         st.caption(f"{amount_label} | pago {pay_label}{tae_label}")
-                        if st.button(ticker, key=f"calendar_day_{selected_month}_{day_number}_{pos}_{ticker}_{getattr(row, 'source_event_id', '')}"):
+                        st.markdown(ticker_hover_card_html(ticker, row, events_df, chart_end), unsafe_allow_html=True)
+                        if st.button("Abrir", key=f"calendar_day_{selected_month}_{day_number}_{pos}_{ticker}_{getattr(row, 'source_event_id', '')}"):
                             selected_from_calendar = ticker
 
     show_cols = [
@@ -1283,7 +1428,9 @@ def render_capture_recommendation_calendar(events_df: pd.DataFrame, universe_df:
         selected_month = st.selectbox("Mes de entrada", month_options, key="capture_signal_month")
         month_rows = recommendations[recommendations["entry_dt"].dt.to_period("M").astype(str) == selected_month]
         year, month_num = [int(part) for part in selected_month.split("-")]
+        chart_end = date(year, month_num, month_calendar.monthrange(year, month_num)[1])
         st.markdown(f"**Entradas estimadas {selected_month}**")
+        inject_ticker_hover_css()
         weekdays = ["Lu", "Ma", "Mi", "Ju", "Vi", "Sa", "Do"]
         for col, label in zip(st.columns(7), weekdays):
             col.markdown(f"**{label}**")
@@ -1303,7 +1450,8 @@ def render_capture_recommendation_calendar(events_df: pd.DataFrame, universe_df:
                     for pos, row in enumerate(rows.sort_values("rank_dia").itertuples(), start=1):
                         ticker = str(getattr(row, "ticker", ""))
                         st.caption(f"#{int(getattr(row, 'rank_dia', pos))} ex {getattr(row, 'ex_date', '')} | {getattr(row, 'cash_amount', 0):.4g}")
-                        if st.button(ticker, key=f"capture_signal_{selected_month}_{day_number}_{pos}_{ticker}"):
+                        st.markdown(ticker_hover_card_html(ticker, row, events_df, chart_end), unsafe_allow_html=True)
+                        if st.button("Abrir", key=f"capture_signal_{selected_month}_{day_number}_{pos}_{ticker}"):
                             selected_ticker = ticker
         if selected_ticker:
             render_instrument_detail(selected_ticker, universe_df, events_df)

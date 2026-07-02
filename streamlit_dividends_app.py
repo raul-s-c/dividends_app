@@ -1115,12 +1115,217 @@ def render_portfolio_strategy_charts(
                 render_instrument_detail(clicked, universe, events)
 
 
+def strategy_criterion_label(criterion: str) -> str:
+    labels = {
+        "capture_score": "Score captura",
+        "event_expected_tae_pct": "TAE esperada del evento",
+        "event_yield_real_pct": "Yield real del reparto",
+        "recovery_rate_pct": "Seguridad de recuperacion",
+        "median_recovery_days": "Rapidez de recuperacion",
+    }
+    return labels.get(criterion, criterion)
+
+
+def build_capture_recommendations(
+    events_df: pd.DataFrame,
+    criterion: str,
+    max_positions: int = 2,
+    horizon_days: int = 45,
+    min_event_yield_pct: float = 0.0,
+    min_recovery_rate_pct: float = 0.0,
+    max_recovery_days: int = 0,
+) -> pd.DataFrame:
+    if events_df.empty:
+        return pd.DataFrame()
+    signals = events_df.copy()
+    signals["ex_dividend_dt"] = pd.to_datetime(signals["ex_dividend_date"], errors="coerce")
+    signals = signals.dropna(subset=["ex_dividend_dt"])
+    today_ts = pd.Timestamp(date.today())
+    max_ts = today_ts + pd.Timedelta(days=int(horizon_days))
+    signals = signals[(signals["ex_dividend_dt"] >= today_ts) & (signals["ex_dividend_dt"] <= max_ts)].copy()
+    if signals.empty:
+        return signals
+    signals["entry_dt"] = signals["ex_dividend_dt"] - pd.Timedelta(days=1)
+    signals["entry_date"] = signals["entry_dt"].dt.date
+    signals["ex_date"] = signals["ex_dividend_dt"].dt.date
+    signals["days_to_entry"] = (signals["entry_dt"].dt.normalize() - today_ts.normalize()).dt.days
+    signals["accion"] = signals["days_to_entry"].map(
+        lambda days: "Comprar hoy" if days == 0 else ("Vigilar entrada pasada" if days < 0 else f"Esperar {days} dias")
+    )
+    for col in ["event_yield_real_pct", "event_expected_tae_pct", "capture_score", "recovery_rate_pct", "median_recovery_days", "cash_amount"]:
+        if col in signals.columns:
+            signals[col] = pd.to_numeric(signals[col], errors="coerce")
+    if min_event_yield_pct > 0 and "event_yield_real_pct" in signals.columns:
+        signals = signals[signals["event_yield_real_pct"].fillna(-1) >= float(min_event_yield_pct)]
+    if min_recovery_rate_pct > 0 and "recovery_rate_pct" in signals.columns:
+        signals = signals[signals["recovery_rate_pct"].fillna(-1) >= float(min_recovery_rate_pct)]
+    if max_recovery_days > 0 and "median_recovery_days" in signals.columns:
+        signals = signals[signals["median_recovery_days"].fillna(10_000) <= float(max_recovery_days)]
+    if signals.empty:
+        return signals
+    sort_ascending = criterion == "median_recovery_days"
+    if criterion not in signals.columns:
+        criterion = "capture_score"
+    signals["_criterion_value"] = pd.to_numeric(signals[criterion], errors="coerce")
+    signals = signals.dropna(subset=["_criterion_value"])
+    if signals.empty:
+        return signals
+    signals = signals.sort_values(
+        ["entry_dt", "_criterion_value", "event_yield_real_pct"],
+        ascending=[True, sort_ascending, False],
+    )
+    signals["rank_dia"] = signals.groupby("entry_date")["_criterion_value"].rank(method="first", ascending=sort_ascending)
+    signals = signals[signals["rank_dia"] <= int(max_positions)].copy()
+    signals["criterio"] = criterion
+    signals["criterio_valor"] = signals["_criterion_value"]
+
+    def fmt_signal_number(value, suffix: str = "", decimals: int = 1) -> str:
+        try:
+            if pd.isna(value):
+                return "-"
+            return f"{float(value):.{decimals}f}{suffix}"
+        except (TypeError, ValueError):
+            return "-"
+
+    signals["justificacion"] = signals.apply(
+        lambda row: (
+            f"{strategy_criterion_label(criterion)} {fmt_signal_number(row.get('criterio_valor'), decimals=2)}; "
+            f"yield real {fmt_signal_number(row.get('event_yield_real_pct'), '%', 2)} del reparto; "
+            f"recuperacion historica {fmt_signal_number(row.get('recovery_rate_pct'), '%', 1)} en mediana "
+            f"{fmt_signal_number(row.get('median_recovery_days'), '', 0)} dias; "
+            f"TAE evento {fmt_signal_number(row.get('event_expected_tae_pct'), '%', 1)}."
+        )
+        if pd.notna(row.get("criterio_valor"))
+        else "",
+        axis=1,
+    )
+    return signals.sort_values(["entry_dt", "rank_dia", "_criterion_value"], ascending=[True, True, sort_ascending])
+
+
+def render_capture_recommendation_calendar(events_df: pd.DataFrame, universe_df: pd.DataFrame) -> None:
+    st.markdown("**Senales operativas: que comprar segun el criterio**")
+    st.caption("Selecciona un criterio y la app genera un calendario de entradas estimadas. La entrada se calcula como el dia anterior al ex-date.")
+    if events_df.empty:
+        st.info("No hay eventos cargados para generar senales.")
+        return
+
+    c1, c2, c3, c4 = st.columns([1.6, 1, 1, 1])
+    criterion = c1.selectbox(
+        "Criterio",
+        ["capture_score", "event_expected_tae_pct", "event_yield_real_pct", "recovery_rate_pct", "median_recovery_days"],
+        format_func=strategy_criterion_label,
+        key="capture_signal_criterion",
+    )
+    max_positions = c2.number_input("Max posiciones", min_value=1, max_value=10, value=2, step=1, key="capture_signal_max_positions")
+    horizon_days = c3.number_input("Horizonte dias", min_value=7, max_value=365, value=45, step=7, key="capture_signal_horizon")
+    signal_month = c4.selectbox(
+        "Vista",
+        ["Proximas senales", "Calendario mensual"],
+        key="capture_signal_view",
+    )
+    f1, f2, f3 = st.columns(3)
+    min_event_yield = f1.number_input("Yield real min %", min_value=0.0, value=0.0, step=0.05, key="capture_signal_min_yield")
+    min_recovery = f2.number_input("Recuperacion min %", min_value=0.0, max_value=100.0, value=0.0, step=5.0, key="capture_signal_min_recovery")
+    max_days = f3.number_input("Dias recuperacion max", min_value=0, value=0, step=1, key="capture_signal_max_days")
+
+    recommendations = build_capture_recommendations(
+        events_df,
+        criterion=criterion,
+        max_positions=int(max_positions),
+        horizon_days=int(horizon_days),
+        min_event_yield_pct=float(min_event_yield),
+        min_recovery_rate_pct=float(min_recovery),
+        max_recovery_days=int(max_days),
+    )
+    if recommendations.empty:
+        st.info("No hay senales con esos filtros.")
+        return
+
+    top_today = recommendations[recommendations["accion"] == "Comprar hoy"]
+    n1, n2, n3, n4 = st.columns(4)
+    n1.metric("Senales", f"{len(recommendations):,}")
+    n2.metric("Comprar hoy", f"{len(top_today):,}")
+    n3.metric("Tickers", f"{recommendations['ticker'].nunique():,}")
+    n4.metric("Siguiente valor criterio", f"{recommendations['criterio_valor'].iloc[0]:.2f}")
+
+    explanation = {
+        "capture_score": "Mejor equilibrio entre yield del reparto, rapidez, seguridad y consistencia historica.",
+        "event_expected_tae_pct": "Prioriza el retorno anualizado esperado de este reparto concreto, usando yield real del evento y recuperacion historica.",
+        "event_yield_real_pct": "Prioriza cobrar el dividendo mas grande respecto al precio de referencia, aunque pueda tardar mas en recuperar.",
+        "recovery_rate_pct": "Prioriza activos que historicamente recuperaron mas veces el precio previo.",
+        "median_recovery_days": "Prioriza activos que historicamente recuperaron antes el precio previo.",
+    }
+    st.info(explanation.get(criterion, "Criterio seleccionado."))
+
+    show_cols = [
+        "accion",
+        "entry_date",
+        "ex_date",
+        "pay_date_display",
+        "rank_dia",
+        "ticker",
+        "company_name",
+        "cash_amount",
+        "currency",
+        "criterio_valor",
+        "event_yield_real_pct",
+        "event_expected_tae_pct",
+        "capture_score",
+        "recovery_rate_pct",
+        "median_recovery_days",
+        "capture_cluster",
+        "justificacion",
+    ]
+    visible_cols = [col for col in show_cols if col in recommendations.columns]
+
+    if signal_month == "Calendario mensual":
+        month_options = recommendations["entry_dt"].dt.to_period("M").astype(str).sort_values().unique().tolist()
+        selected_month = st.selectbox("Mes de entrada", month_options, key="capture_signal_month")
+        month_rows = recommendations[recommendations["entry_dt"].dt.to_period("M").astype(str) == selected_month]
+        year, month_num = [int(part) for part in selected_month.split("-")]
+        st.markdown(f"**Entradas estimadas {selected_month}**")
+        weekdays = ["Lu", "Ma", "Mi", "Ju", "Vi", "Sa", "Do"]
+        for col, label in zip(st.columns(7), weekdays):
+            col.markdown(f"**{label}**")
+        grouped = {day: rows for day, rows in month_rows.groupby(month_rows["entry_dt"].dt.day)}
+        selected_ticker = ""
+        for week in month_calendar.Calendar(firstweekday=0).monthdayscalendar(year, month_num):
+            cols = st.columns(7)
+            for col, day_number in zip(cols, week):
+                with col.container(border=True):
+                    if day_number == 0:
+                        continue
+                    rows = grouped.get(day_number, pd.DataFrame())
+                    st.markdown(f"**{day_number}**")
+                    if rows.empty:
+                        st.caption("Sin senal")
+                        continue
+                    for pos, row in enumerate(rows.sort_values("rank_dia").itertuples(), start=1):
+                        ticker = str(getattr(row, "ticker", ""))
+                        st.caption(f"#{int(getattr(row, 'rank_dia', pos))} ex {getattr(row, 'ex_date', '')} | {getattr(row, 'cash_amount', 0):.4g}")
+                        if st.button(ticker, key=f"capture_signal_{selected_month}_{day_number}_{pos}_{ticker}"):
+                            selected_ticker = ticker
+        if selected_ticker:
+            render_instrument_detail(selected_ticker, universe_df, events_df)
+
+    clicked = selectable_ticker_table(
+        recommendations[visible_cols],
+        "capture_recommendations_table",
+        use_container_width=True,
+        hide_index=True,
+    )
+    if clicked:
+        render_instrument_detail(clicked, universe_df, events_df)
+
+
 def render_capture_strategy_tab() -> None:
     st.subheader("Estrategia compra pre ex-date")
     st.caption(
         "Backtest experimental: compra al cierre previo al ex-date, cobra dividendo "
         "y vende cuando el cierre recupera el precio de entrada."
     )
+    render_capture_recommendation_calendar(events, universe)
+    st.divider()
     c1, c2, c3, c4 = st.columns(4)
     strategy_start = c1.date_input("Desde backtest", value=date(2024, 1, 1), key="capture_start")
     strategy_end = c2.date_input("Hasta backtest", value=date.today(), key="capture_end")

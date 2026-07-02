@@ -291,6 +291,33 @@ def first_recovery_row(prices: pd.DataFrame, ex_date: str, target_price: float, 
     return recovered.sort_values("price_date").iloc[0]
 
 
+def first_recovery_row_from_entry(prices: pd.DataFrame, entry_date: str, target_price: float, max_days: int, use_high: bool) -> pd.Series | None:
+    entry_ts = pd.Timestamp(entry_date)
+    limit_ts = entry_ts + pd.Timedelta(days=max_days)
+    price_dates = pd.to_datetime(prices["price_date"], errors="coerce")
+    window = prices[(price_dates > entry_ts) & (price_dates <= limit_ts)].copy()
+    if window.empty:
+        return None
+    price_col = "high" if use_high else "close"
+    recovered = window[pd.to_numeric(window[price_col], errors="coerce") >= target_price]
+    if recovered.empty:
+        return None
+    return recovered.sort_values("price_date").iloc[0]
+
+
+def forced_exit_row(prices: pd.DataFrame, entry_date: str, max_days: int) -> pd.Series | None:
+    entry_ts = pd.Timestamp(entry_date)
+    target_ts = entry_ts + pd.Timedelta(days=max_days)
+    price_dates = pd.to_datetime(prices["price_date"], errors="coerce")
+    after = prices[price_dates >= target_ts].copy()
+    if not after.empty:
+        return after.sort_values("price_date").iloc[0]
+    before = prices[(price_dates > entry_ts) & (price_dates < target_ts)].copy()
+    if not before.empty:
+        return before.sort_values("price_date").iloc[-1]
+    return None
+
+
 def analyze_event(event: pd.Series, prices: pd.DataFrame, settings: CaptureSettings) -> dict | None:
     entry = previous_trading_row(prices, str(event.ex_dividend_date), settings.entry_lag_days)
     if entry is None or not entry.get("close"):
@@ -322,6 +349,24 @@ def analyze_event(event: pd.Series, prices: pd.DataFrame, settings: CaptureSetti
     total_return = (price_return + dividend_yield) if price_return is not None else None
     annualized = (total_return * 365 / holding_days) if total_return is not None and holding_days else None
 
+    recovery_30d = first_recovery_row_from_entry(
+        prices,
+        entry_date,
+        entry_price,
+        30,
+        settings.use_high_for_recovery,
+    )
+    recovered_30d = recovery_30d is not None
+    recovery_30d_date = str(recovery_30d["price_date"]) if recovered_30d else ""
+    recovery_30d_days = max(1, (pd.Timestamp(recovery_30d_date) - pd.Timestamp(entry_date)).days) if recovered_30d else None
+
+    forced_30d = forced_exit_row(prices, entry_date, 30)
+    forced_30d_date = str(forced_30d["price_date"]) if forced_30d is not None else ""
+    forced_30d_price = float(forced_30d["close"]) if forced_30d is not None and pd.notna(forced_30d["close"]) else None
+    forced_30d_days = max(1, (pd.Timestamp(forced_30d_date) - pd.Timestamp(entry_date)).days) if forced_30d_date else None
+    forced_30d_price_return = ((forced_30d_price - entry_price) / entry_price) if forced_30d_price else None
+    forced_30d_total_return = (forced_30d_price_return + dividend_yield) if forced_30d_price_return is not None else None
+
     return {
         "ticker": event.ticker,
         "company_name": event.company_name,
@@ -344,6 +389,14 @@ def analyze_event(event: pd.Series, prices: pd.DataFrame, settings: CaptureSetti
         "price_return_pct": price_return * 100 if price_return is not None else None,
         "total_return_pct": total_return * 100 if total_return is not None else None,
         "annualized_return_pct": annualized * 100 if annualized is not None else None,
+        "recovered_30d": recovered_30d,
+        "recovery_30d_date": recovery_30d_date,
+        "recovery_30d_days": recovery_30d_days,
+        "forced_30d_date": forced_30d_date,
+        "forced_30d_price": forced_30d_price,
+        "forced_30d_days": forced_30d_days,
+        "forced_30d_price_return_pct": forced_30d_price_return * 100 if forced_30d_price_return is not None else None,
+        "forced_30d_total_return_pct": forced_30d_total_return * 100 if forced_30d_total_return is not None else None,
     }
 
 
@@ -449,6 +502,14 @@ def summarize_by_ticker(results: pd.DataFrame) -> pd.DataFrame:
     if results.empty:
         return pd.DataFrame()
     results = results.sort_values(["ticker", "ex_dividend_date"]).copy()
+    if "recovered_30d" not in results.columns:
+        results["recovered_30d"] = False
+    for col in [
+        "forced_30d_total_return_pct",
+        "recovery_30d_days",
+    ]:
+        if col not in results.columns:
+            results[col] = pd.NA
     recovered = results[results["recovered"]].copy()
     grouped = results.groupby("ticker", as_index=False).agg(
         company_name=("company_name", "last"),
@@ -460,9 +521,14 @@ def summarize_by_ticker(results: pd.DataFrame) -> pd.DataFrame:
         events=("ticker", "count"),
         recovered_events=("recovered", "sum"),
         recovery_rate_pct=("recovered", lambda x: float(x.mean() * 100)),
+        recovered_30d_events=("recovered_30d", "sum"),
+        success_30d_pct=("recovered_30d", lambda x: float(x.mean() * 100)),
         avg_dividend_yield_pct=("dividend_yield_pct", "mean"),
         median_dividend_yield_pct=("dividend_yield_pct", "median"),
         avg_ex_drop_pct=("ex_drop_pct", "mean"),
+        avg_forced_30d_total_return_pct=("forced_30d_total_return_pct", "mean"),
+        median_forced_30d_total_return_pct=("forced_30d_total_return_pct", "median"),
+        worst_forced_30d_total_return_pct=("forced_30d_total_return_pct", "min"),
         latest_ex_dividend_date=("ex_dividend_date", "max"),
     )
     if recovered.empty:
@@ -480,6 +546,14 @@ def summarize_by_ticker(results: pd.DataFrame) -> pd.DataFrame:
         std_annualized_return_pct=("annualized_return_pct", "std"),
     )
     out = grouped.merge(rec_stats, on="ticker", how="left")
+    if "recovered_30d" in results.columns:
+        recovered_30 = results[results["recovered_30d"].astype(bool)].copy()
+        if not recovered_30.empty:
+            rec_30_stats = recovered_30.groupby("ticker", as_index=False).agg(
+                median_recovery_30d_days=("recovery_30d_days", "median"),
+                avg_recovery_30d_days=("recovery_30d_days", "mean"),
+            )
+            out = out.merge(rec_30_stats, on="ticker", how="left")
     recovery_days = out["median_recovery_days"].replace(0, pd.NA)
     out["risk_adjusted_tae_pct"] = (
         out["avg_dividend_yield_pct"].fillna(0)
@@ -686,6 +760,7 @@ def summarize_by_segment(ticker_signal: pd.DataFrame) -> pd.DataFrame:
                     "tickers": group["ticker"].nunique(),
                     "events": group["events"].sum(),
                     "avg_recovery_rate_pct": group["recovery_rate_pct"].mean(),
+                    "avg_success_30d_pct": group["success_30d_pct"].mean() if "success_30d_pct" in group.columns else None,
                     "median_recovery_days": group["median_recovery_days"].median(),
                     "avg_dividend_yield_pct": group["avg_dividend_yield_pct"].mean(),
                     "avg_expected_tae_pct": group["expected_tae_pct"].mean(),
@@ -760,6 +835,12 @@ def enrich_results_with_signal(results: pd.DataFrame, ticker_signal: pd.DataFram
     signal_cols = [
         "ticker",
         "recovery_rate_pct",
+        "success_30d_pct",
+        "recovered_30d_events",
+        "median_recovery_30d_days",
+        "avg_forced_30d_total_return_pct",
+        "median_forced_30d_total_return_pct",
+        "worst_forced_30d_total_return_pct",
         "median_recovery_days",
         "avg_dividend_yield_pct",
         "expected_tae_pct",
@@ -882,6 +963,9 @@ def simulate_portfolio_capture(
                     "event_expected_tae_pct": row.event_expected_tae_pct,
                     "event_trend_adjusted_tae_pct": getattr(row, "event_trend_adjusted_tae_pct", None),
                     "recovery_rate_pct": row.recovery_rate_pct,
+                    "success_30d_pct": getattr(row, "success_30d_pct", None),
+                    "avg_forced_30d_total_return_pct": getattr(row, "avg_forced_30d_total_return_pct", None),
+                    "worst_forced_30d_total_return_pct": getattr(row, "worst_forced_30d_total_return_pct", None),
                     "median_recovery_days": row.median_recovery_days,
                     "capture_score": row.capture_score,
                     "trend_adjusted_capture_score": getattr(row, "trend_adjusted_capture_score", None),
@@ -945,7 +1029,7 @@ def main() -> None:
     parser.add_argument("--min-signal-events", type=int, default=2, help="Eventos minimos por ticker para incluirlo en la senal")
     parser.add_argument("--workers", type=int, default=1, help="Tickers en paralelo para acelerar el backtest")
     parser.add_argument("--max-positions", type=int, default=2, help="Posiciones simultaneas maximas para simulacion de cartera")
-    parser.add_argument("--rank-by", default="trend_adjusted_capture_score", choices=["trend_adjusted_capture_score", "event_trend_adjusted_tae_pct", "event_expected_tae_pct", "event_yield_real_pct", "capture_score", "recovery_rate_pct"])
+    parser.add_argument("--rank-by", default="trend_adjusted_capture_score", choices=["trend_adjusted_capture_score", "success_30d_pct", "event_trend_adjusted_tae_pct", "event_expected_tae_pct", "event_yield_real_pct", "capture_score", "recovery_rate_pct"])
     parser.add_argument("--min-event-yield-pct", type=float, default=0.0)
     parser.add_argument("--min-recovery-rate-pct", type=float, default=0.0)
     parser.add_argument("--max-median-recovery-days", type=float, default=0.0)
@@ -988,7 +1072,7 @@ def main() -> None:
         ticker_signal = summarize_by_ticker(results)
         rankers = [args.rank_by]
         if args.compare_rankings:
-            rankers = ["trend_adjusted_capture_score", "event_trend_adjusted_tae_pct", "event_expected_tae_pct", "event_yield_real_pct", "capture_score", "recovery_rate_pct"]
+            rankers = ["trend_adjusted_capture_score", "success_30d_pct", "event_trend_adjusted_tae_pct", "event_expected_tae_pct", "event_yield_real_pct", "capture_score", "recovery_rate_pct"]
         portfolio_runs = []
         portfolio_by_rank: dict[str, pd.DataFrame] = {}
         for rank_by in rankers:

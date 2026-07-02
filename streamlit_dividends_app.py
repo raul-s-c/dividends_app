@@ -1113,6 +1113,34 @@ def render_capture_strategy_tab() -> None:
         if clicked:
             render_instrument_detail(clicked, universe, events)
 
+    st.markdown("**Simulacion cartera max 2 posiciones**")
+    signal_for_run = capture.summarize_by_ticker(results)
+    rank_options = ["event_expected_tae_pct", "event_yield_real_pct", "capture_score", "recovery_rate_pct"]
+    portfolio_summaries = []
+    portfolio_by_rank = {}
+    for rank_by in rank_options:
+        portfolio_run = capture.simulate_portfolio_capture(
+            results,
+            capital=float(capital),
+            max_positions=2,
+            rank_by=rank_by,
+            ticker_signal=signal_for_run,
+        )
+        portfolio_by_rank[rank_by] = portfolio_run
+        summary = capture.portfolio_backtest_summary(portfolio_run, float(capital))
+        summary["rank_by"] = rank_by
+        portfolio_summaries.append(summary)
+    comparison = pd.DataFrame(portfolio_summaries).sort_values("capital_final", ascending=False)
+    st.dataframe(comparison, use_container_width=True, hide_index=True)
+    if not comparison.empty:
+        best_rank = str(comparison.iloc[0]["rank_by"])
+        st.markdown(f"**Operaciones mejor criterio: {best_rank}**")
+        best_trades = portfolio_by_rank.get(best_rank, pd.DataFrame())
+        if not best_trades.empty:
+            clicked = selectable_ticker_table(best_trades, "strategy_portfolio_trades_table", use_container_width=True, hide_index=True)
+            if clicked:
+                render_instrument_detail(clicked, universe, events)
+
 
 st.title("Dividend Calendar USA")
 st.caption("Calendario personal de ex-dividend dates e importes para acciones y ETFs.")

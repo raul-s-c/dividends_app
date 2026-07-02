@@ -33,6 +33,7 @@ SEC_PRICES_DB = APP_DIR.parent / "sec_data" / "prices.db"
 CAPTURE_EVENTS_CSV = DATA_DIR / "capture_event_results.csv"
 CAPTURE_TICKER_SIGNAL_CSV = DATA_DIR / "capture_ticker_signal.csv"
 CAPTURE_SEGMENT_SIGNAL_CSV = DATA_DIR / "capture_segment_signal.csv"
+CAPTURE_PORTFOLIO_BACKTEST_CSV = DATA_DIR / "capture_portfolio_backtest.csv"
 YAHOO_PRICE_TIMEOUT = 10
 _price_cache_lock = threading.Lock()
 
@@ -648,6 +649,165 @@ def simulate_reinvestment(results: pd.DataFrame, capital: float = 1000.0) -> pd.
     return pd.DataFrame(trades)
 
 
+def enrich_results_with_signal(results: pd.DataFrame, ticker_signal: pd.DataFrame | None = None) -> pd.DataFrame:
+    if results.empty:
+        return pd.DataFrame()
+    enriched = results.copy()
+    if ticker_signal is None or ticker_signal.empty:
+        ticker_signal = summarize_by_ticker(results)
+    signal_cols = [
+        "ticker",
+        "recovery_rate_pct",
+        "median_recovery_days",
+        "avg_dividend_yield_pct",
+        "expected_tae_pct",
+        "capture_score",
+        "speed_cluster",
+        "safety_cluster",
+        "stability_cluster",
+        "capture_cluster",
+    ]
+    signal = ticker_signal[[c for c in signal_cols if c in ticker_signal.columns]].copy()
+    enriched = enriched.merge(signal, on="ticker", how="left", suffixes=("", "_signal"))
+    reference_price = pd.to_numeric(enriched["entry_price"], errors="coerce")
+    cash_amount = pd.to_numeric(enriched["cash_amount"], errors="coerce")
+    enriched["event_yield_real_pct"] = (cash_amount / reference_price * 100).where(reference_price > 0)
+    recovery_days = pd.to_numeric(enriched["median_recovery_days"], errors="coerce").replace(0, pd.NA)
+    recovery_rate = pd.to_numeric(enriched["recovery_rate_pct"], errors="coerce").fillna(0)
+    enriched["event_expected_tae_pct"] = enriched["event_yield_real_pct"] * 365 / recovery_days * recovery_rate / 100
+    return enriched
+
+
+def simulate_portfolio_capture(
+    results: pd.DataFrame,
+    capital: float = 1000.0,
+    max_positions: int = 2,
+    rank_by: str = "event_expected_tae_pct",
+    min_event_yield_pct: float = 0.0,
+    min_recovery_rate_pct: float = 0.0,
+    max_median_recovery_days: float = 0.0,
+    ticker_signal: pd.DataFrame | None = None,
+) -> pd.DataFrame:
+    candidates = enrich_results_with_signal(results, ticker_signal)
+    if candidates.empty:
+        return pd.DataFrame()
+    candidates = candidates[candidates["recovered"].astype(bool)].copy()
+    candidates["entry_ts"] = pd.to_datetime(candidates["entry_date"], errors="coerce")
+    candidates["exit_ts"] = pd.to_datetime(candidates["recovery_date"], errors="coerce")
+    candidates = candidates.dropna(subset=["entry_ts", "exit_ts", "entry_price", "exit_price", "cash_amount"])
+    if min_event_yield_pct > 0:
+        candidates = candidates[pd.to_numeric(candidates["event_yield_real_pct"], errors="coerce").fillna(-1) >= min_event_yield_pct]
+    if min_recovery_rate_pct > 0:
+        candidates = candidates[pd.to_numeric(candidates["recovery_rate_pct"], errors="coerce").fillna(-1) >= min_recovery_rate_pct]
+    if max_median_recovery_days > 0:
+        candidates = candidates[pd.to_numeric(candidates["median_recovery_days"], errors="coerce").fillna(10_000) <= max_median_recovery_days]
+    if candidates.empty:
+        return pd.DataFrame()
+    if rank_by not in candidates.columns:
+        rank_by = "event_expected_tae_pct"
+    candidates["_rank"] = pd.to_numeric(candidates[rank_by], errors="coerce").fillna(-1)
+    candidates = candidates.sort_values(["entry_ts", "_rank", "event_yield_real_pct"], ascending=[True, False, False])
+
+    cash = float(capital)
+    open_positions: list[dict] = []
+    trades: list[dict] = []
+    equity_points: list[dict] = []
+
+    for entry_day, day_rows in candidates.groupby("entry_ts", sort=True):
+        still_open = []
+        for pos in open_positions:
+            if pos["exit_ts"] <= entry_day:
+                cash += pos["exit_cash"]
+                pos["capital_after_close"] = cash
+                trades.append(pos)
+            else:
+                still_open.append(pos)
+        open_positions = still_open
+
+        slots = max(0, int(max_positions) - len(open_positions))
+        if slots <= 0 or cash <= 0:
+            equity_points.append({"date": entry_day.date().isoformat(), "cash": cash, "open_positions": len(open_positions), "equity": cash + sum(p["entry_cash"] for p in open_positions)})
+            continue
+
+        open_tickers = {str(pos["ticker"]) for pos in open_positions}
+        day_candidates = day_rows[~day_rows["ticker"].astype(str).isin(open_tickers)].drop_duplicates("ticker", keep="first")
+        selected = day_candidates.head(slots)
+        if selected.empty:
+            equity_points.append({"date": entry_day.date().isoformat(), "cash": cash, "open_positions": len(open_positions), "equity": cash + sum(p["entry_cash"] for p in open_positions)})
+            continue
+        allocation = cash / max(1, len(selected))
+        for row in selected.itertuples(index=False):
+            if cash <= 0:
+                break
+            entry_cash = min(allocation, cash)
+            if entry_cash <= 0:
+                continue
+            shares = entry_cash / float(row.entry_price)
+            dividend_cash = shares * float(row.cash_amount)
+            exit_cash = shares * float(row.exit_price) + dividend_cash
+            pnl = exit_cash - entry_cash
+            cash -= entry_cash
+            open_positions.append(
+                {
+                    "entry_date": row.entry_date,
+                    "exit_date": row.recovery_date,
+                    "ticker": row.ticker,
+                    "company_name": row.company_name,
+                    "asset_type": row.asset_type,
+                    "exchange": row.exchange,
+                    "entry_price": row.entry_price,
+                    "exit_price": row.exit_price,
+                    "cash_amount": row.cash_amount,
+                    "shares": shares,
+                    "entry_cash": entry_cash,
+                    "exit_cash": exit_cash,
+                    "dividend_cash": dividend_cash,
+                    "pnl": pnl,
+                    "trade_return_pct": pnl / entry_cash * 100,
+                    "holding_days": row.holding_days,
+                    "event_yield_real_pct": row.event_yield_real_pct,
+                    "event_expected_tae_pct": row.event_expected_tae_pct,
+                    "recovery_rate_pct": row.recovery_rate_pct,
+                    "median_recovery_days": row.median_recovery_days,
+                    "capture_score": row.capture_score,
+                    "capture_cluster": row.capture_cluster,
+                    "entry_ts": row.entry_ts,
+                    "exit_ts": row.exit_ts,
+                    "rank_by": rank_by,
+                }
+            )
+        equity_points.append({"date": entry_day.date().isoformat(), "cash": cash, "open_positions": len(open_positions), "equity": cash + sum(p["entry_cash"] for p in open_positions)})
+
+    for pos in sorted(open_positions, key=lambda p: p["exit_ts"]):
+        cash += pos["exit_cash"]
+        pos["capital_after_close"] = cash
+        trades.append(pos)
+
+    out = pd.DataFrame(trades).sort_values(["entry_date", "ticker"]) if trades else pd.DataFrame()
+    if not out.empty:
+        out["capital_after"] = out["capital_after_close"]
+    return out
+
+
+def portfolio_backtest_summary(trades: pd.DataFrame, capital: float) -> dict:
+    if trades.empty:
+        return {
+            "trades": 0,
+            "capital_final": capital,
+            "return_pct": 0.0,
+            "avg_trade_return_pct": None,
+            "median_holding_days": None,
+        }
+    final_capital = float(trades.sort_values("exit_date").iloc[-1]["capital_after"])
+    return {
+        "trades": int(len(trades)),
+        "capital_final": final_capital,
+        "return_pct": (final_capital / float(capital) - 1) * 100,
+        "avg_trade_return_pct": float(pd.to_numeric(trades["trade_return_pct"], errors="coerce").mean()),
+        "median_holding_days": float(pd.to_numeric(trades["holding_days"], errors="coerce").median()),
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Backtest de compra pre ex-date y venta al recuperar precio.")
     parser.add_argument("--start", default="2024-01-01")
@@ -662,6 +822,12 @@ def main() -> None:
     parser.add_argument("--save-signal", action="store_true", help="Guarda senales para la app en data/capture_*_signal.csv")
     parser.add_argument("--min-signal-events", type=int, default=2, help="Eventos minimos por ticker para incluirlo en la senal")
     parser.add_argument("--workers", type=int, default=1, help="Tickers en paralelo para acelerar el backtest")
+    parser.add_argument("--max-positions", type=int, default=2, help="Posiciones simultaneas maximas para simulacion de cartera")
+    parser.add_argument("--rank-by", default="event_expected_tae_pct", choices=["event_expected_tae_pct", "event_yield_real_pct", "capture_score", "recovery_rate_pct"])
+    parser.add_argument("--min-event-yield-pct", type=float, default=0.0)
+    parser.add_argument("--min-recovery-rate-pct", type=float, default=0.0)
+    parser.add_argument("--max-median-recovery-days", type=float, default=0.0)
+    parser.add_argument("--compare-rankings", action="store_true")
     args = parser.parse_args()
 
     settings = CaptureSettings(
@@ -696,6 +862,39 @@ def main() -> None:
             print("\nSimulacion reinversion")
             print(trades.tail(10).to_string(index=False))
             print(f"capital_final={trades.iloc[-1]['capital_after']:.2f}")
+
+        ticker_signal = summarize_by_ticker(results)
+        rankers = [args.rank_by]
+        if args.compare_rankings:
+            rankers = ["event_expected_tae_pct", "event_yield_real_pct", "capture_score", "recovery_rate_pct"]
+        portfolio_runs = []
+        portfolio_by_rank: dict[str, pd.DataFrame] = {}
+        for rank_by in rankers:
+            portfolio = simulate_portfolio_capture(
+                results,
+                capital=args.capital,
+                max_positions=args.max_positions,
+                rank_by=rank_by,
+                min_event_yield_pct=args.min_event_yield_pct,
+                min_recovery_rate_pct=args.min_recovery_rate_pct,
+                max_median_recovery_days=args.max_median_recovery_days,
+                ticker_signal=ticker_signal,
+            )
+            summary = portfolio_backtest_summary(portfolio, args.capital)
+            summary["rank_by"] = rank_by
+            summary["max_positions"] = args.max_positions
+            portfolio_runs.append(summary)
+            portfolio_by_rank[rank_by] = portfolio
+        if portfolio_runs:
+            comparison = pd.DataFrame(portfolio_runs).sort_values("capital_final", ascending=False)
+            best_rank = str(comparison.iloc[0]["rank_by"])
+            best_portfolio = portfolio_by_rank.get(best_rank, pd.DataFrame())
+            if not best_portfolio.empty:
+                best_portfolio.to_csv(CAPTURE_PORTFOLIO_BACKTEST_CSV, index=False)
+            print("\nBacktest cartera max posiciones")
+            print(comparison.to_string(index=False))
+            print(f"best_rank_by={best_rank}")
+            print(f"portfolio_backtest={CAPTURE_PORTFOLIO_BACKTEST_CSV}")
 
 
 if __name__ == "__main__":

@@ -498,14 +498,103 @@ def summarize_by_ticker(results: pd.DataFrame) -> pd.DataFrame:
         + out["stability_score"] * 0.15
         + out["avg_dividend_yield_pct"].fillna(0).clip(upper=10) * 1.0
     )
+    out = add_trend_risk_metrics(out)
+    out["trend_adjusted_capture_score"] = out["capture_score"] * out["trend_score_multiplier"].fillna(1.0)
+    out["trend_adjusted_expected_tae_pct"] = out["expected_tae_pct"] * out["trend_score_multiplier"].fillna(1.0)
     out["speed_cluster"] = out["median_recovery_days"].map(classify_speed)
     out["safety_cluster"] = out["recovery_rate_pct"].map(classify_safety)
     out["stability_cluster"] = out["std_recovery_days"].map(classify_stability)
+    out["trend_cluster"] = out["trend_risk_score"].map(classify_trend_risk)
     out["capture_cluster"] = out.apply(classify_capture_cluster, axis=1)
     return out.sort_values(
-        ["recovery_rate_pct", "median_recovery_days", "avg_dividend_yield_pct"],
-        ascending=[False, True, False],
+        ["trend_adjusted_capture_score", "recovery_rate_pct", "median_recovery_days"],
+        ascending=[False, False, True],
     )
+
+
+def add_trend_risk_metrics(ticker_signal: pd.DataFrame) -> pd.DataFrame:
+    if ticker_signal.empty:
+        return ticker_signal
+    out = ticker_signal.copy()
+    metric_rows = []
+    today = date.today()
+    start = (today - timedelta(days=430)).isoformat()
+    end = today.isoformat()
+    for row in out.itertuples(index=False):
+        ticker = str(row.ticker)
+        prices = fetch_yahoo_prices(ticker, start, end, refresh=False, progress=False)
+        metrics = compute_trend_risk_metrics(prices)
+        metrics["ticker"] = ticker
+        metric_rows.append(metrics)
+    metrics_df = pd.DataFrame(metric_rows)
+    if metrics_df.empty:
+        return out
+    out = out.merge(metrics_df, on="ticker", how="left")
+    return out
+
+
+def compute_trend_risk_metrics(prices: pd.DataFrame) -> dict:
+    empty = {
+        "trend_return_3m_pct": pd.NA,
+        "trend_return_6m_pct": pd.NA,
+        "trend_vs_sma200_pct": pd.NA,
+        "trend_drawdown_6m_pct": pd.NA,
+        "trend_risk_score": 50.0,
+        "trend_score_multiplier": 0.75,
+    }
+    if prices.empty:
+        return empty
+    df = prices.copy()
+    df["price_date"] = pd.to_datetime(df["price_date"], errors="coerce")
+    df["close"] = pd.to_numeric(df["close"], errors="coerce")
+    df = df.dropna(subset=["price_date", "close"]).sort_values("price_date")
+    if len(df) < 30:
+        return empty
+    latest = float(df.iloc[-1]["close"])
+
+    def trailing_return(days: int):
+        cutoff = df.iloc[-1]["price_date"] - pd.Timedelta(days=days)
+        window = df[df["price_date"] <= cutoff]
+        if window.empty:
+            return pd.NA
+        base = float(window.iloc[-1]["close"])
+        return (latest / base - 1) * 100 if base > 0 else pd.NA
+
+    ret_3m = trailing_return(90)
+    ret_6m = trailing_return(180)
+    sma_window = df.tail(min(200, len(df)))
+    sma = float(sma_window["close"].mean()) if not sma_window.empty else None
+    vs_sma200 = (latest / sma - 1) * 100 if sma and sma > 0 else pd.NA
+    six_month_cutoff = df.iloc[-1]["price_date"] - pd.Timedelta(days=180)
+    six_month = df[df["price_date"] >= six_month_cutoff]
+    high_6m = float(six_month["close"].max()) if not six_month.empty else latest
+    drawdown_6m = (latest / high_6m - 1) * 100 if high_6m > 0 else pd.NA
+
+    risk = 0.0
+    if pd.notna(ret_3m):
+        risk += min(35, max(0, -float(ret_3m) * 1.4))
+    else:
+        risk += 10
+    if pd.notna(ret_6m):
+        risk += min(25, max(0, -float(ret_6m)))
+    else:
+        risk += 8
+    if pd.notna(vs_sma200):
+        risk += min(25, max(0, -float(vs_sma200) * 1.2))
+    else:
+        risk += 8
+    if pd.notna(drawdown_6m):
+        risk += min(15, max(0, -float(drawdown_6m) * 0.6))
+    risk = min(100.0, risk)
+    multiplier = max(0.20, 1 - risk / 100)
+    return {
+        "trend_return_3m_pct": ret_3m,
+        "trend_return_6m_pct": ret_6m,
+        "trend_vs_sma200_pct": vs_sma200,
+        "trend_drawdown_6m_pct": drawdown_6m,
+        "trend_risk_score": risk,
+        "trend_score_multiplier": multiplier,
+    }
 
 
 def classify_speed(days: object) -> str:
@@ -545,6 +634,19 @@ def classify_stability(std_days: object) -> str:
     if std_days <= 35:
         return "Variable"
     return "Muy variable"
+
+
+def classify_trend_risk(score: object) -> str:
+    if pd.isna(score):
+        return "Sin datos"
+    score = float(score)
+    if score >= 70:
+        return "Tendencia bajista fuerte"
+    if score >= 45:
+        return "Tendencia bajista relevante"
+    if score >= 20:
+        return "Riesgo moderado"
+    return "Tendencia sana"
 
 
 def classify_capture_cluster(row: pd.Series) -> str:
@@ -662,9 +764,18 @@ def enrich_results_with_signal(results: pd.DataFrame, ticker_signal: pd.DataFram
         "avg_dividend_yield_pct",
         "expected_tae_pct",
         "capture_score",
+        "trend_adjusted_capture_score",
+        "trend_adjusted_expected_tae_pct",
+        "trend_risk_score",
+        "trend_score_multiplier",
+        "trend_return_3m_pct",
+        "trend_return_6m_pct",
+        "trend_vs_sma200_pct",
+        "trend_drawdown_6m_pct",
         "speed_cluster",
         "safety_cluster",
         "stability_cluster",
+        "trend_cluster",
         "capture_cluster",
     ]
     signal = ticker_signal[[c for c in signal_cols if c in ticker_signal.columns]].copy()
@@ -675,6 +786,8 @@ def enrich_results_with_signal(results: pd.DataFrame, ticker_signal: pd.DataFram
     recovery_days = pd.to_numeric(enriched["median_recovery_days"], errors="coerce").replace(0, pd.NA)
     recovery_rate = pd.to_numeric(enriched["recovery_rate_pct"], errors="coerce").fillna(0)
     enriched["event_expected_tae_pct"] = enriched["event_yield_real_pct"] * 365 / recovery_days * recovery_rate / 100
+    trend_multiplier = pd.to_numeric(enriched.get("trend_score_multiplier", 1.0), errors="coerce").fillna(1.0)
+    enriched["event_trend_adjusted_tae_pct"] = enriched["event_expected_tae_pct"] * trend_multiplier
     return enriched
 
 
@@ -767,9 +880,18 @@ def simulate_portfolio_capture(
                     "holding_days": row.holding_days,
                     "event_yield_real_pct": row.event_yield_real_pct,
                     "event_expected_tae_pct": row.event_expected_tae_pct,
+                    "event_trend_adjusted_tae_pct": getattr(row, "event_trend_adjusted_tae_pct", None),
                     "recovery_rate_pct": row.recovery_rate_pct,
                     "median_recovery_days": row.median_recovery_days,
                     "capture_score": row.capture_score,
+                    "trend_adjusted_capture_score": getattr(row, "trend_adjusted_capture_score", None),
+                    "trend_risk_score": getattr(row, "trend_risk_score", None),
+                    "trend_score_multiplier": getattr(row, "trend_score_multiplier", None),
+                    "trend_return_3m_pct": getattr(row, "trend_return_3m_pct", None),
+                    "trend_return_6m_pct": getattr(row, "trend_return_6m_pct", None),
+                    "trend_vs_sma200_pct": getattr(row, "trend_vs_sma200_pct", None),
+                    "trend_drawdown_6m_pct": getattr(row, "trend_drawdown_6m_pct", None),
+                    "trend_cluster": getattr(row, "trend_cluster", None),
                     "capture_cluster": row.capture_cluster,
                     "entry_ts": row.entry_ts,
                     "exit_ts": row.exit_ts,
@@ -823,7 +945,7 @@ def main() -> None:
     parser.add_argument("--min-signal-events", type=int, default=2, help="Eventos minimos por ticker para incluirlo en la senal")
     parser.add_argument("--workers", type=int, default=1, help="Tickers en paralelo para acelerar el backtest")
     parser.add_argument("--max-positions", type=int, default=2, help="Posiciones simultaneas maximas para simulacion de cartera")
-    parser.add_argument("--rank-by", default="event_expected_tae_pct", choices=["event_expected_tae_pct", "event_yield_real_pct", "capture_score", "recovery_rate_pct"])
+    parser.add_argument("--rank-by", default="trend_adjusted_capture_score", choices=["trend_adjusted_capture_score", "event_trend_adjusted_tae_pct", "event_expected_tae_pct", "event_yield_real_pct", "capture_score", "recovery_rate_pct"])
     parser.add_argument("--min-event-yield-pct", type=float, default=0.0)
     parser.add_argument("--min-recovery-rate-pct", type=float, default=0.0)
     parser.add_argument("--max-median-recovery-days", type=float, default=0.0)
@@ -866,7 +988,7 @@ def main() -> None:
         ticker_signal = summarize_by_ticker(results)
         rankers = [args.rank_by]
         if args.compare_rankings:
-            rankers = ["event_expected_tae_pct", "event_yield_real_pct", "capture_score", "recovery_rate_pct"]
+            rankers = ["trend_adjusted_capture_score", "event_trend_adjusted_tae_pct", "event_expected_tae_pct", "event_yield_real_pct", "capture_score", "recovery_rate_pct"]
         portfolio_runs = []
         portfolio_by_rank: dict[str, pd.DataFrame] = {}
         for rank_by in rankers:

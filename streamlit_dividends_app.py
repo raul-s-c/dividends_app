@@ -106,6 +106,14 @@ def load_capture_ticker_signal() -> pd.DataFrame:
         "risk_adjusted_tae_pct",
         "expected_tae_pct",
         "capture_score",
+        "trend_adjusted_capture_score",
+        "trend_adjusted_expected_tae_pct",
+        "trend_risk_score",
+        "trend_score_multiplier",
+        "trend_return_3m_pct",
+        "trend_return_6m_pct",
+        "trend_vs_sma200_pct",
+        "trend_drawdown_6m_pct",
     ]
     for col in numeric_cols:
         if col in signal.columns:
@@ -265,9 +273,18 @@ def enrich_events(events_df: pd.DataFrame, universe_df: pd.DataFrame) -> pd.Data
             "expected_tae_pct",
             "risk_adjusted_tae_pct",
             "capture_score",
+            "trend_adjusted_capture_score",
+            "trend_adjusted_expected_tae_pct",
+            "trend_risk_score",
+            "trend_score_multiplier",
+            "trend_return_3m_pct",
+            "trend_return_6m_pct",
+            "trend_vs_sma200_pct",
+            "trend_drawdown_6m_pct",
             "speed_cluster",
             "safety_cluster",
             "stability_cluster",
+            "trend_cluster",
             "capture_cluster",
         ]
         signal = capture_signal[[c for c in signal_cols if c in capture_signal.columns]].copy()
@@ -289,10 +306,12 @@ def enrich_events(events_df: pd.DataFrame, universe_df: pd.DataFrame) -> pd.Data
     recovery_rate = pd.to_numeric(enriched.get("recovery_rate_pct", pd.Series(dtype=float)), errors="coerce").fillna(0)
     event_yield = pd.to_numeric(enriched["event_yield_real_pct"], errors="coerce")
     enriched["event_expected_tae_pct"] = event_yield * 365 / recovery_days * recovery_rate / 100
-    for col in ["expected_tae_pct", "capture_score", "recovery_rate_pct", "median_recovery_days"]:
+    trend_multiplier = pd.to_numeric(enriched.get("trend_score_multiplier", pd.Series(1.0, index=enriched.index)), errors="coerce").fillna(1.0)
+    enriched["event_trend_adjusted_tae_pct"] = enriched["event_expected_tae_pct"] * trend_multiplier
+    for col in ["expected_tae_pct", "capture_score", "trend_adjusted_capture_score", "event_trend_adjusted_tae_pct", "trend_risk_score", "trend_score_multiplier", "recovery_rate_pct", "median_recovery_days"]:
         if col not in enriched.columns:
             enriched[col] = pd.NA
-    for col in ["speed_cluster", "safety_cluster", "stability_cluster", "capture_cluster"]:
+    for col in ["speed_cluster", "safety_cluster", "stability_cluster", "trend_cluster", "capture_cluster"]:
         if col not in enriched.columns:
             enriched[col] = ""
     return enriched
@@ -626,12 +645,14 @@ def ticker_hover_card_html(ticker: str, row, events_df: pd.DataFrame, chart_end:
     pay_label = html.escape(str(pay_label_raw))
     tae = getattr(row, "event_expected_tae_pct", None)
     tae_label = f"{float(tae):.1f}%" if pd.notna(tae) else "-"
+    trend_tae = getattr(row, "event_trend_adjusted_tae_pct", None)
+    trend_tae_label = f"{float(trend_tae):.1f}%" if pd.notna(trend_tae) else "-"
     return f"""
     <span class="ticker-hover-wrap">
       <span class="ticker-hover-symbol">{html.escape(clean)}</span>
       <span class="ticker-hover-card">
         <strong>{html.escape(clean)} - {company}</strong>
-        <span class="ticker-hover-meta">Div: {html.escape(amount_label)} {currency} | pago {pay_label} | TAE {html.escape(tae_label)}</span>
+        <span class="ticker-hover-meta">Div: {html.escape(amount_label)} {currency} | pago {pay_label} | TAE {html.escape(tae_label)} | TAE aj. {html.escape(trend_tae_label)}</span>
         {svg}
         <span class="ticker-hover-meta">Lineas verticales: ex-dividend dates pasados en el rango.</span>
       </span>
@@ -724,10 +745,11 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
         selected_speed_clusters = f13.multiselect("Rapidez", options_for("speed_cluster"), key="global_calendar_speed_clusters")
         selected_safety_clusters = f14.multiselect("Seguridad", options_for("safety_cluster"), key="global_calendar_safety_clusters")
         min_expected_tae = f15.number_input("TAE evento min %", min_value=0.0, value=0.0, step=1.0, key="global_calendar_min_tae")
-        f16, f17, f18 = st.columns(3)
+        f16, f17, f18, f19 = st.columns(4)
         min_dividend_amount = f16.number_input("Dividendo min", min_value=0.0, value=0.0, step=0.01, key="global_calendar_min_dividend_amount")
         min_event_yield = f17.number_input("Yield real min %", min_value=0.0, value=0.0, step=0.05, key="global_calendar_min_event_yield")
         max_recovery_days_filter = f18.number_input("Dias recuperacion max", min_value=0, value=0, step=1, key="global_calendar_max_recovery_days")
+        max_trend_risk_filter = f19.number_input("Riesgo tendencia max", min_value=0.0, max_value=100.0, value=100.0, step=5.0, key="global_calendar_max_trend_risk")
 
     monthly_view = calendar[calendar["ex_dividend_date"].dt.to_period("M").astype(str) == selected_month].copy()
     filter_map = {
@@ -759,6 +781,8 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
         monthly_view = monthly_view[pd.to_numeric(monthly_view["median_recovery_days"], errors="coerce").fillna(10_000) <= float(max_recovery_days_filter)]
     if min_expected_tae > 0 and "event_expected_tae_pct" in monthly_view.columns:
         monthly_view = monthly_view[pd.to_numeric(monthly_view["event_expected_tae_pct"], errors="coerce").fillna(-1) >= float(min_expected_tae)]
+    if max_trend_risk_filter < 100 and "trend_risk_score" in monthly_view.columns:
+        monthly_view = monthly_view[pd.to_numeric(monthly_view["trend_risk_score"], errors="coerce").fillna(100) <= float(max_trend_risk_filter)]
 
     if text_filter.strip():
         q = text_filter.strip().upper()
@@ -867,8 +891,12 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
         "recovery_rate_pct",
         "median_recovery_days",
         "event_expected_tae_pct",
+        "event_trend_adjusted_tae_pct",
         "expected_tae_pct",
         "capture_score",
+        "trend_adjusted_capture_score",
+        "trend_risk_score",
+        "trend_cluster",
         "capture_cluster",
         "speed_cluster",
         "safety_cluster",
@@ -890,8 +918,12 @@ def render_global_monthly_calendar(events_df: pd.DataFrame, universe_df: pd.Data
                 "recovery_rate_pct": "recuperacion %",
                 "median_recovery_days": "dias rec mediana",
                 "event_expected_tae_pct": "TAE evento %",
+                "event_trend_adjusted_tae_pct": "TAE ajust tendencia %",
                 "expected_tae_pct": "TAE hist ticker %",
                 "capture_score": "score captura",
+                "trend_adjusted_capture_score": "score ajust tendencia",
+                "trend_risk_score": "riesgo tendencia",
+                "trend_cluster": "cluster tendencia",
                 "capture_cluster": "cluster captura",
                 "speed_cluster": "rapidez",
                 "safety_cluster": "seguridad",
@@ -961,12 +993,13 @@ def render_instrument_detail(ticker: str, universe_df: pd.DataFrame, events_df: 
         if not capture_row.empty:
             cap = capture_row.iloc[0]
             st.markdown("**Senal historica de captura**")
-            s1, s2, s3, s4, s5 = st.columns(5)
+            s1, s2, s3, s4, s5, s6 = st.columns(6)
             s1.metric("TAE esperado", f"{cap.get('expected_tae_pct'):.1f}%" if pd.notna(cap.get("expected_tae_pct")) else "-")
             s2.metric("Recuperacion", f"{cap.get('recovery_rate_pct'):.1f}%" if pd.notna(cap.get("recovery_rate_pct")) else "-")
             s3.metric("Dias mediana", f"{cap.get('median_recovery_days'):.0f}" if pd.notna(cap.get("median_recovery_days")) else "-")
             s4.metric("Yield medio", f"{cap.get('avg_dividend_yield_pct'):.2f}%" if pd.notna(cap.get("avg_dividend_yield_pct")) else "-")
             s5.metric("Score", f"{cap.get('capture_score'):.1f}" if pd.notna(cap.get("capture_score")) else "-")
+            s6.metric("Score tendencia", f"{cap.get('trend_adjusted_capture_score'):.1f}" if pd.notna(cap.get("trend_adjusted_capture_score")) else "-")
             st.dataframe(
                 pd.DataFrame(
                     [
@@ -975,6 +1008,13 @@ def render_instrument_detail(ticker: str, universe_df: pd.DataFrame, events_df: 
                             "Rapidez": cap.get("speed_cluster", ""),
                             "Seguridad": cap.get("safety_cluster", ""),
                             "Estabilidad": cap.get("stability_cluster", ""),
+                            "Cluster tendencia": cap.get("trend_cluster", ""),
+                            "Riesgo tendencia": cap.get("trend_risk_score", ""),
+                            "Multiplicador tendencia": cap.get("trend_score_multiplier", ""),
+                            "Retorno 3m %": cap.get("trend_return_3m_pct", ""),
+                            "Retorno 6m %": cap.get("trend_return_6m_pct", ""),
+                            "Vs SMA200 %": cap.get("trend_vs_sma200_pct", ""),
+                            "Drawdown 6m %": cap.get("trend_drawdown_6m_pct", ""),
                             "Eventos analizados": cap.get("events", ""),
                             "Eventos recuperados": cap.get("recovered_events", ""),
                         }
@@ -1217,7 +1257,11 @@ def render_portfolio_strategy_charts(
         "holding_days",
         "event_yield_real_pct",
         "event_expected_tae_pct",
+        "event_trend_adjusted_tae_pct",
         "capture_score",
+        "trend_adjusted_capture_score",
+        "trend_risk_score",
+        "trend_cluster",
         "capture_cluster",
     ]
     visible_cols = [c for c in detail_cols if c in selected_trades.columns]
@@ -1262,7 +1306,9 @@ def render_portfolio_strategy_charts(
 
 def strategy_criterion_label(criterion: str) -> str:
     labels = {
+        "trend_adjusted_capture_score": "Score ajustado por tendencia",
         "capture_score": "Score captura",
+        "event_trend_adjusted_tae_pct": "TAE evento ajustada por tendencia",
         "event_expected_tae_pct": "TAE esperada del evento",
         "event_yield_real_pct": "Yield real del reparto",
         "recovery_rate_pct": "Seguridad de recuperacion",
@@ -1279,6 +1325,7 @@ def build_capture_recommendations(
     min_event_yield_pct: float = 0.0,
     min_recovery_rate_pct: float = 0.0,
     max_recovery_days: int = 0,
+    max_trend_risk: float = 100.0,
 ) -> pd.DataFrame:
     if events_df.empty:
         return pd.DataFrame()
@@ -1297,7 +1344,22 @@ def build_capture_recommendations(
     signals["accion"] = signals["days_to_entry"].map(
         lambda days: "Comprar hoy" if days == 0 else ("Vigilar entrada pasada" if days < 0 else f"Esperar {days} dias")
     )
-    for col in ["event_yield_real_pct", "event_expected_tae_pct", "capture_score", "recovery_rate_pct", "median_recovery_days", "cash_amount"]:
+    for col in [
+        "event_yield_real_pct",
+        "event_expected_tae_pct",
+        "event_trend_adjusted_tae_pct",
+        "capture_score",
+        "trend_adjusted_capture_score",
+        "trend_risk_score",
+        "trend_score_multiplier",
+        "trend_return_3m_pct",
+        "trend_return_6m_pct",
+        "trend_vs_sma200_pct",
+        "trend_drawdown_6m_pct",
+        "recovery_rate_pct",
+        "median_recovery_days",
+        "cash_amount",
+    ]:
         if col in signals.columns:
             signals[col] = pd.to_numeric(signals[col], errors="coerce")
     if min_event_yield_pct > 0 and "event_yield_real_pct" in signals.columns:
@@ -1306,6 +1368,8 @@ def build_capture_recommendations(
         signals = signals[signals["recovery_rate_pct"].fillna(-1) >= float(min_recovery_rate_pct)]
     if max_recovery_days > 0 and "median_recovery_days" in signals.columns:
         signals = signals[signals["median_recovery_days"].fillna(10_000) <= float(max_recovery_days)]
+    if max_trend_risk < 100 and "trend_risk_score" in signals.columns:
+        signals = signals[signals["trend_risk_score"].fillna(100) <= float(max_trend_risk)]
     if signals.empty:
         return signals
     sort_ascending = criterion == "median_recovery_days"
@@ -1338,7 +1402,10 @@ def build_capture_recommendations(
             f"yield real {fmt_signal_number(row.get('event_yield_real_pct'), '%', 2)} del reparto; "
             f"recuperacion historica {fmt_signal_number(row.get('recovery_rate_pct'), '%', 1)} en mediana "
             f"{fmt_signal_number(row.get('median_recovery_days'), '', 0)} dias; "
-            f"TAE evento {fmt_signal_number(row.get('event_expected_tae_pct'), '%', 1)}."
+            f"TAE evento {fmt_signal_number(row.get('event_expected_tae_pct'), '%', 1)}; "
+            f"TAE ajustada tendencia {fmt_signal_number(row.get('event_trend_adjusted_tae_pct'), '%', 1)}; "
+            f"riesgo tendencia {fmt_signal_number(row.get('trend_risk_score'), '/100', 0)} "
+            f"({row.get('trend_cluster') or '-'}), multiplicador {fmt_signal_number(row.get('trend_score_multiplier'), 'x', 2)}."
         )
         if pd.notna(row.get("criterio_valor"))
         else "",
@@ -1357,7 +1424,7 @@ def render_capture_recommendation_calendar(events_df: pd.DataFrame, universe_df:
     c1, c2, c3, c4 = st.columns([1.6, 1, 1, 1])
     criterion = c1.selectbox(
         "Criterio",
-        ["capture_score", "event_expected_tae_pct", "event_yield_real_pct", "recovery_rate_pct", "median_recovery_days"],
+        ["trend_adjusted_capture_score", "event_trend_adjusted_tae_pct", "capture_score", "event_expected_tae_pct", "event_yield_real_pct", "recovery_rate_pct", "median_recovery_days"],
         format_func=strategy_criterion_label,
         key="capture_signal_criterion",
     )
@@ -1368,10 +1435,11 @@ def render_capture_recommendation_calendar(events_df: pd.DataFrame, universe_df:
         ["Proximas senales", "Calendario mensual"],
         key="capture_signal_view",
     )
-    f1, f2, f3 = st.columns(3)
+    f1, f2, f3, f4 = st.columns(4)
     min_event_yield = f1.number_input("Yield real min %", min_value=0.0, value=0.0, step=0.05, key="capture_signal_min_yield")
     min_recovery = f2.number_input("Recuperacion min %", min_value=0.0, max_value=100.0, value=0.0, step=5.0, key="capture_signal_min_recovery")
     max_days = f3.number_input("Dias recuperacion max", min_value=0, value=0, step=1, key="capture_signal_max_days")
+    max_trend_risk = f4.number_input("Riesgo tendencia max", min_value=0.0, max_value=100.0, value=70.0, step=5.0, key="capture_signal_max_trend_risk")
 
     recommendations = build_capture_recommendations(
         events_df,
@@ -1381,6 +1449,7 @@ def render_capture_recommendation_calendar(events_df: pd.DataFrame, universe_df:
         min_event_yield_pct=float(min_event_yield),
         min_recovery_rate_pct=float(min_recovery),
         max_recovery_days=int(max_days),
+        max_trend_risk=float(max_trend_risk),
     )
     if recommendations.empty:
         st.info("No hay senales con esos filtros.")
@@ -1394,6 +1463,7 @@ def render_capture_recommendation_calendar(events_df: pd.DataFrame, universe_df:
     n4.metric("Siguiente valor criterio", f"{recommendations['criterio_valor'].iloc[0]:.2f}")
 
     explanation = {
+        "trend_adjusted_capture_score": "Score historico de captura penalizado por tendencia bajista reciente, distancia a media 200 y drawdown.",
         "capture_score": "Mejor equilibrio entre yield del reparto, rapidez, seguridad y consistencia historica.",
         "event_expected_tae_pct": "Prioriza el retorno anualizado esperado de este reparto concreto, usando yield real del evento y recuperacion historica.",
         "event_yield_real_pct": "Prioriza cobrar el dividendo mas grande respecto al precio de referencia, aunque pueda tardar mas en recuperar.",
@@ -1415,10 +1485,19 @@ def render_capture_recommendation_calendar(events_df: pd.DataFrame, universe_df:
         "criterio_valor",
         "event_yield_real_pct",
         "event_expected_tae_pct",
+        "event_trend_adjusted_tae_pct",
         "capture_score",
+        "trend_adjusted_capture_score",
+        "trend_risk_score",
+        "trend_score_multiplier",
+        "trend_return_3m_pct",
+        "trend_return_6m_pct",
+        "trend_vs_sma200_pct",
+        "trend_drawdown_6m_pct",
         "recovery_rate_pct",
         "median_recovery_days",
         "capture_cluster",
+        "trend_cluster",
         "justificacion",
     ]
     visible_cols = [col for col in show_cols if col in recommendations.columns]
@@ -1534,6 +1613,9 @@ def render_capture_strategy_tab() -> None:
                     "avg_dividend_yield_pct",
                     "expected_tae_pct",
                     "capture_score",
+                    "trend_adjusted_capture_score",
+                    "trend_risk_score",
+                    "trend_cluster",
                     "capture_cluster",
                     "speed_cluster",
                     "safety_cluster",
@@ -1615,7 +1697,7 @@ def render_capture_strategy_tab() -> None:
 
     st.markdown("**Simulacion cartera max 2 posiciones**")
     signal_for_run = capture.summarize_by_ticker(results)
-    rank_options = ["event_expected_tae_pct", "event_yield_real_pct", "capture_score", "recovery_rate_pct"]
+    rank_options = ["trend_adjusted_capture_score", "event_trend_adjusted_tae_pct", "event_expected_tae_pct", "event_yield_real_pct", "capture_score", "recovery_rate_pct"]
     portfolio_summaries = []
     portfolio_by_rank = {}
     for rank_by in rank_options:

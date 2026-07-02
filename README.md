@@ -70,6 +70,75 @@ FT cuando encuentra una ficha compatible para el ticker/mercado.
 
 Despues valida que haya eventos y commitea `data/dividends.db` si cambia.
 
+## Alertas por email
+
+El repo incluye otro workflow:
+
+```text
+.github/workflows/weekly-capture-alerts.yml
+```
+
+Se ejecuta cada dia a las `07:45 UTC` y tambien manualmente desde
+`Actions -> Capture alerts -> Run workflow`.
+
+El informe aplica esta regla operativa:
+
+```text
+capital por compra: 1000
+exito 30d minimo: 80%
+riesgo tendencia maximo: 70/100
+horizonte: proximos 7 dias
+```
+
+Solo avisa compras cuyo dia sugerido de entrada sea hoy o futuro. Si el ex-date
+es hoy y la compra tenia que hacerse ayer, ya no lo considera candidato
+operativo.
+
+El email indica para cada candidato:
+
+- dia sugerido de compra;
+- ex-date;
+- dividendo por accion;
+- ganancia esperada por una compra de 1000;
+- yield real del evento;
+- porcentaje historico de recuperacion en 30 dias;
+- recuperacion mediana en dias;
+- riesgo de tendencia;
+- TAE ajustada por tendencia;
+- retorno medio si se vende forzosamente en el dia 30.
+
+Para enviar correos desde GitHub Actions hay que crear estos secrets en
+`Settings -> Secrets and variables -> Actions -> New repository secret`:
+
+```text
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=tu_correo@gmail.com
+SMTP_PASSWORD=app_password_de_gmail
+ALERT_EMAIL_FROM=tu_correo@gmail.com
+ALERT_EMAIL_TO=destino@gmail.com
+```
+
+En Gmail no uses tu password normal: crea una **App password** en tu cuenta de
+Google y ponla como `SMTP_PASSWORD`.
+
+Probar el informe sin enviar email:
+
+```powershell
+python dividend_alerts.py --horizon-days 7 --capital 1000 --min-success-30d-pct 80 --max-trend-risk 70
+```
+
+Enviar email en local, usando variables de entorno:
+
+```powershell
+$env:SMTP_HOST="smtp.gmail.com"
+$env:SMTP_PORT="587"
+$env:SMTP_USER="tu_correo@gmail.com"
+$env:SMTP_PASSWORD="app_password"
+$env:ALERT_EMAIL_TO="destino@gmail.com"
+python dividend_alerts.py --send-email
+```
+
 ## Ejecutar en local
 
 Instalar dependencias:

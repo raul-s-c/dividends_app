@@ -968,6 +968,153 @@ def run_capture_lab(
     return capture.run_capture_backtest(settings, max_events=max_events, workers=workers)
 
 
+def build_portfolio_equity_curve(trades: pd.DataFrame, initial_capital: float, rank_by: str) -> pd.DataFrame:
+    if trades.empty:
+        return pd.DataFrame(columns=["step", "date", "rank_by", "capital", "return_pct"])
+    curve = trades.copy()
+    curve["date"] = pd.to_datetime(curve["exit_date"], errors="coerce")
+    curve = curve.sort_values(["date", "ticker"]).reset_index(drop=True)
+    curve["step"] = range(1, len(curve) + 1)
+    curve["rank_by"] = rank_by
+    curve["capital"] = pd.to_numeric(curve["capital_after"], errors="coerce")
+    curve["return_pct"] = (curve["capital"] / float(initial_capital) - 1) * 100
+    start = pd.DataFrame(
+        [
+            {
+                "step": 0,
+                "date": pd.to_datetime(curve["entry_date"], errors="coerce").min(),
+                "rank_by": rank_by,
+                "capital": float(initial_capital),
+                "return_pct": 0.0,
+            }
+        ]
+    )
+    return pd.concat([start, curve[["step", "date", "rank_by", "capital", "return_pct"]]], ignore_index=True)
+
+
+def render_portfolio_strategy_charts(
+    portfolio_by_rank: dict[str, pd.DataFrame],
+    comparison: pd.DataFrame,
+    initial_capital: float,
+    universe: pd.DataFrame,
+    events: pd.DataFrame,
+) -> None:
+    if comparison.empty:
+        return
+
+    st.markdown("**Comparativa visual de estrategias**")
+    chart_comparison = comparison.copy()
+    chart_comparison["capital_final"] = pd.to_numeric(chart_comparison["capital_final"], errors="coerce")
+    chart_comparison["return_pct"] = pd.to_numeric(chart_comparison["return_pct"], errors="coerce")
+    chart_comparison["avg_trade_return_pct"] = pd.to_numeric(chart_comparison["avg_trade_return_pct"], errors="coerce")
+    chart_comparison["median_holding_days"] = pd.to_numeric(chart_comparison["median_holding_days"], errors="coerce")
+
+    c1, c2 = st.columns(2)
+    c1.bar_chart(chart_comparison.set_index("rank_by")[["capital_final"]])
+    c2.bar_chart(chart_comparison.set_index("rank_by")[["return_pct"]])
+
+    c3, c4 = st.columns(2)
+    c3.bar_chart(chart_comparison.set_index("rank_by")[["avg_trade_return_pct"]])
+    c4.bar_chart(chart_comparison.set_index("rank_by")[["median_holding_days"]])
+
+    curves = []
+    for rank_by, trades in portfolio_by_rank.items():
+        curves.append(build_portfolio_equity_curve(trades, initial_capital, rank_by))
+    curve_df = pd.concat([c for c in curves if not c.empty], ignore_index=True) if curves else pd.DataFrame()
+    if not curve_df.empty:
+        capital_curve = curve_df.pivot_table(index="step", columns="rank_by", values="capital", aggfunc="last").sort_index()
+        st.markdown("**Evolucion del capital por estrategia**")
+        st.line_chart(capital_curve)
+
+    best_rank = str(comparison.iloc[0]["rank_by"])
+    selected_rank = st.selectbox(
+        "Estrategia a inspeccionar",
+        chart_comparison["rank_by"].tolist(),
+        index=chart_comparison["rank_by"].tolist().index(best_rank),
+        key="portfolio_strategy_rank_selector",
+    )
+    selected_trades = portfolio_by_rank.get(selected_rank, pd.DataFrame())
+    if selected_trades.empty:
+        st.info("Esta estrategia no genero operaciones.")
+        return
+
+    selected_summary = capture.portfolio_backtest_summary(selected_trades, initial_capital)
+    s1, s2, s3, s4 = st.columns(4)
+    s1.metric("Operaciones", f"{selected_summary['trades']:,}")
+    s2.metric("Capital final", fmt_money(selected_summary["capital_final"], "EUR"))
+    s3.metric("Retorno total", f"{selected_summary['return_pct']:.2f}%")
+    s4.metric("Mediana dias", f"{selected_summary['median_holding_days']:.0f}" if pd.notna(selected_summary["median_holding_days"]) else "-")
+
+    selected_curve = build_portfolio_equity_curve(selected_trades, initial_capital, selected_rank)
+    if not selected_curve.empty:
+        st.markdown("**Camino de capital de la estrategia seleccionada**")
+        st.line_chart(selected_curve.set_index("step")[["capital", "return_pct"]])
+
+    trade_chart = selected_trades.copy().sort_values(["entry_date", "ticker"]).reset_index(drop=True)
+    trade_chart["operacion"] = trade_chart.index + 1
+    trade_chart["pnl"] = pd.to_numeric(trade_chart["pnl"], errors="coerce")
+    trade_chart["trade_return_pct"] = pd.to_numeric(trade_chart["trade_return_pct"], errors="coerce")
+    trade_chart["holding_days"] = pd.to_numeric(trade_chart["holding_days"], errors="coerce")
+    st.markdown("**Acciones ejecutadas por la estrategia seleccionada**")
+    t1, t2 = st.columns(2)
+    t1.bar_chart(trade_chart.set_index("operacion")[["pnl"]])
+    t2.bar_chart(trade_chart.set_index("operacion")[["holding_days"]])
+
+    detail_cols = [
+        "entry_date",
+        "exit_date",
+        "ticker",
+        "company_name",
+        "entry_cash",
+        "exit_cash",
+        "pnl",
+        "trade_return_pct",
+        "holding_days",
+        "event_yield_real_pct",
+        "event_expected_tae_pct",
+        "capture_score",
+        "capture_cluster",
+    ]
+    visible_cols = [c for c in detail_cols if c in selected_trades.columns]
+    clicked = selectable_ticker_table(
+        selected_trades[visible_cols].sort_values(["entry_date", "ticker"]),
+        "strategy_portfolio_selected_trades_table",
+        use_container_width=True,
+        hide_index=True,
+    )
+    if clicked:
+        render_instrument_detail(clicked, universe, events)
+
+    st.markdown("**Detalle por cada opcion estudiada**")
+    tabs = st.tabs(chart_comparison["rank_by"].tolist())
+    for tab, rank_by in zip(tabs, chart_comparison["rank_by"].tolist()):
+        trades = portfolio_by_rank.get(str(rank_by), pd.DataFrame())
+        with tab:
+            if trades.empty:
+                st.info("Sin operaciones para esta opcion.")
+                continue
+            summary = capture.portfolio_backtest_summary(trades, initial_capital)
+            a1, a2, a3, a4 = st.columns(4)
+            a1.metric("Capital final", fmt_money(summary["capital_final"], "EUR"))
+            a2.metric("Retorno", f"{summary['return_pct']:.2f}%")
+            a3.metric("Operaciones", f"{summary['trades']:,}")
+            a4.metric("Mediana dias", f"{summary['median_holding_days']:.0f}" if pd.notna(summary["median_holding_days"]) else "-")
+            curve = build_portfolio_equity_curve(trades, initial_capital, str(rank_by))
+            if not curve.empty:
+                st.line_chart(curve.set_index("step")[["capital"]])
+            sample = trades.copy().sort_values(["entry_date", "ticker"]).reset_index(drop=True)
+            sample["operacion"] = sample.index + 1
+            st.bar_chart(sample.set_index("operacion")[["trade_return_pct"]])
+            clicked = selectable_ticker_table(
+                sample[[c for c in detail_cols if c in sample.columns]],
+                f"strategy_portfolio_trades_table_{rank_by}",
+                use_container_width=True,
+                hide_index=True,
+            )
+            if clicked:
+                render_instrument_detail(clicked, universe, events)
+
+
 def render_capture_strategy_tab() -> None:
     st.subheader("Estrategia compra pre ex-date")
     st.caption(
@@ -1132,14 +1279,7 @@ def render_capture_strategy_tab() -> None:
         portfolio_summaries.append(summary)
     comparison = pd.DataFrame(portfolio_summaries).sort_values("capital_final", ascending=False)
     st.dataframe(comparison, use_container_width=True, hide_index=True)
-    if not comparison.empty:
-        best_rank = str(comparison.iloc[0]["rank_by"])
-        st.markdown(f"**Operaciones mejor criterio: {best_rank}**")
-        best_trades = portfolio_by_rank.get(best_rank, pd.DataFrame())
-        if not best_trades.empty:
-            clicked = selectable_ticker_table(best_trades, "strategy_portfolio_trades_table", use_container_width=True, hide_index=True)
-            if clicked:
-                render_instrument_detail(clicked, universe, events)
+    render_portfolio_strategy_charts(portfolio_by_rank, comparison, float(capital), universe, events)
 
 
 st.title("Dividend Calendar USA")
